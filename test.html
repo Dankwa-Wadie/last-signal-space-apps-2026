@@ -184,7 +184,7 @@
             <strong class="font-mono-tech tracking-wider text-sky-200">PUBLIC WEB EXPEDITION</strong>
             <span>Playable field guide · simplified procedural terrain</span>
         </div>
-        <a class="mt-1 inline-flex text-amber-200 underline decoration-amber-200/40 underline-offset-2 hover:text-amber-100" href="./">Back to the public project site ↗</a>
+        <a class="mt-1 inline-flex text-amber-200 underline decoration-amber-200/40 underline-offset-2 hover:text-amber-100" href="./project.html">Project overview ↗</a>
     </div>
 
     <!-- Top-Right Collapsible Controls Drawer Button -->
@@ -195,7 +195,7 @@
                 <path stroke-linecap="round" stroke-linejoin="round"
                     d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
             </svg>
-            <span id="hud-toggle-label">Controls</span>
+            <span id="hud-toggle-label">Mission Menu</span>
         </button>
     </div>
 
@@ -208,6 +208,7 @@
             <button id="transit-open" class="rounded-lg border border-slate-700 bg-slate-900 px-2 py-2 text-xs text-slate-100 hover:bg-slate-800">TRANSIT CONSOLE</button>
             <button id="guide-open" class="rounded-lg border border-slate-700 bg-slate-900 px-2 py-2 text-xs text-slate-100 hover:bg-slate-800">MISSION GUIDE</button>
             <button id="map-open" class="rounded-lg border border-slate-700 bg-slate-900 px-2 py-2 text-xs text-slate-100 hover:bg-slate-800">SURVEY MAP</button>
+            <button id="trophy-open" class="rounded-lg border border-yellow-300/40 bg-slate-900 px-2 py-2 text-xs text-yellow-100 hover:bg-slate-800">TROPHY ROOM</button>
             <button id="evidence-open" class="rounded-lg border border-slate-700 bg-slate-900 px-2 py-2 text-xs text-slate-100 hover:bg-slate-800">GAMEPLAY CLIPS</button>
         </div>
         <!-- View Mode Switch: First-Person EVA vs Orbital Globe -->
@@ -333,7 +334,7 @@
     </div>
 
     <div id="story-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4">
-        <div class="w-full max-w-[520px] max-h-[85vh] overflow-y-auto space-scroll rounded-2xl bg-slate-950/95 border border-amber-400/30 p-6 shadow-2xl">
+        <div id="modal-panel" class="w-full max-w-[520px] max-h-[85vh] overflow-y-auto space-scroll rounded-2xl bg-slate-950/95 border border-amber-400/30 p-6 shadow-2xl">
             <div id="modal-kicker" class="text-[10px] font-mono-tech tracking-widest text-amber-300"></div>
             <h2 id="modal-title" class="text-xl font-semibold text-white mt-1"></h2>
             <div id="modal-body" class="text-sm text-slate-300 leading-relaxed mt-3 space-y-3"></div>
@@ -1777,7 +1778,7 @@
         // =========================================================================
         const EYE_HEIGHT = 1.72; // Astronaut helmet eye height in meters
         const player = {
-            pos: new THREE.Vector3(0, EYE_HEIGHT, 6.0),
+            pos: new THREE.Vector3(0, EYE_HEIGHT, 0),
             vel: new THREE.Vector3(0, 0, 0),
             yaw: 0, // Looking toward -Z (toward LM Eagle / Hadley Rille / Shackleton Rim)
             pitch: -0.04,
@@ -2001,8 +2002,9 @@
             setHazard('clear', null);
 
             // Reset astronaut position on clear landing pad facing site landmark
-            const spawnY = getSurfaceHeight(0, 6.0, site) + EYE_HEIGHT;
-            player.pos.set(0, spawnY, 6.0);
+            const spawnZ = site.id === 'tranquility' ? 0 : 6.0;
+            const spawnY = getSurfaceHeight(0, spawnZ, site) + EYE_HEIGHT;
+            player.pos.set(0, spawnY, spawnZ);
             player.vel.set(0, 0, 0);
             player.yaw = 0;
             player.pitch = -0.03;
@@ -2325,6 +2327,7 @@
         function openModal(kicker, title, html, btn, action) {
             $('modal-kicker').textContent = kicker;
             $('modal-title').textContent = title;
+            $('modal-panel').style.maxWidth = ['Survey Map','Trophy Room'].includes(title) ? 'min(980px, 96vw)' : '';
             $('modal-body').innerHTML = html;
             $('modal-btn').textContent = btn || 'Continue';
             modalAction = action || null;
@@ -2452,53 +2455,86 @@
 
         function buildSiteEnhancements(site) {
             worldInteractables=[];
+            const box=(parent,x,y,z,w,h,d,color,opts={})=>{
+                const mat=new THREE.MeshStandardMaterial({color,roughness:opts.roughness??0.72,metalness:opts.metalness??0.18,emissive:opts.emissive??'#000000',emissiveIntensity:opts.emissiveIntensity??0});
+                const mesh=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),mat); mesh.position.set(x,y,z); mesh.castShadow=true; mesh.receiveShadow=true; parent.add(mesh); return mesh;
+            };
+            const light=(parent,x,y,z,color='#ffe5a1',intensity=2,range=18)=>{const l=new THREE.PointLight(color,intensity,range,2);l.position.set(x,y,z);parent.add(l);return l;};
+            const sign=(parent,text,x,y,z,w=10,h=1.15)=>{
+                const canvas=document.createElement('canvas');canvas.width=1024;canvas.height=180;const c=canvas.getContext('2d');
+                c.fillStyle='#0b1016';c.fillRect(0,0,1024,180);c.strokeStyle='#f3dc46';c.lineWidth=8;c.strokeRect(8,8,1008,164);
+                c.fillStyle='#f3dc46';c.font='bold 58px Arial';c.textAlign='center';c.fillText(text,512,76);
+                c.fillStyle='#d5d9df';c.font='30px Arial';c.fillText(site.id==='tranquility'?'MARE TRANQUILLITATIS · OUTSIDE THE APOLLO 11 BOUNDARY':'FIELD HABITAT · GAME-CREATED',512,132);
+                const tex=new THREE.CanvasTexture(canvas);tex.colorSpace=THREE.SRGBColorSpace;
+                const m=new THREE.Mesh(new THREE.PlaneGeometry(w,h),new THREE.MeshBasicMaterial({map:tex,side:THREE.DoubleSide}));m.position.set(x,y,z);parent.add(m);return m;
+            };
+
             for (const item of FIELD_ITEMS.filter((entry) => entry.site === site.id)) {
-                const group=new THREE.Group();
-                const ground=getSurfaceHeight(item.x,item.z,site);
-                group.position.set(item.x,ground,item.z);
-                const core=new THREE.Mesh(new THREE.OctahedronGeometry(0.35,0),new THREE.MeshBasicMaterial({color:foundItems.has(item.id)?'#38bdf8':'#facc15'}));
-                core.position.y=1.45;
-                const beam=new THREE.Mesh(new THREE.CylinderGeometry(0.04,0.16,2.35,10,1,true),new THREE.MeshBasicMaterial({color:'#facc15',transparent:true,opacity:0.22,depthWrite:false}));
-                beam.position.y=1.2;
-                const ring=new THREE.Mesh(new THREE.RingGeometry(0.78,0.94,32),new THREE.MeshBasicMaterial({color:foundItems.has(item.id)?'#38bdf8':'#facc15',side:THREE.DoubleSide,transparent:true,opacity:0.85}));
-                ring.rotation.x=-Math.PI/2; ring.position.y=0.06;
-                const label=makeNameSprite(item.title);
-                label.position.y=3.1;
-                group.add(core,beam,ring,label); surfaceWorldGroup.add(group);
+                const group=new THREE.Group(); const ground=getSurfaceHeight(item.x,item.z,site); group.position.set(item.x,ground,item.z);
+                const core=new THREE.Mesh(new THREE.OctahedronGeometry(0.35,0),new THREE.MeshBasicMaterial({color:foundItems.has(item.id)?'#38bdf8':'#facc15'}));core.position.y=1.45;
+                const beam=new THREE.Mesh(new THREE.CylinderGeometry(0.04,0.16,2.35,10,1,true),new THREE.MeshBasicMaterial({color:'#facc15',transparent:true,opacity:0.22,depthWrite:false}));beam.position.y=1.2;
+                const ring=new THREE.Mesh(new THREE.RingGeometry(0.78,0.94,32),new THREE.MeshBasicMaterial({color:foundItems.has(item.id)?'#38bdf8':'#facc15',side:THREE.DoubleSide,transparent:true,opacity:0.85}));ring.rotation.x=-Math.PI/2;ring.position.y=0.06;
+                const label=makeNameSprite(item.title);label.position.y=3.1;group.add(core,beam,ring,label);surfaceWorldGroup.add(group);
                 worldInteractables.push({kind:'artifact',item,group,core,ring,label});
             }
 
-            const hasHabitat=['tranquility','meridiani','eros'].includes(site.id);
-            const shelter=new THREE.Group();
-            const sx=hasHabitat?24:30, sz=hasHabitat?15:24, gy=getSurfaceHeight(sx,sz,site);
-            shelter.position.set(sx,gy,sz);
-            const baseMat=new THREE.MeshStandardMaterial({color:site.body==='Mars'?'#885138':'#5c626b',roughness:0.86,metalness:0.12});
-            const shellMat=new THREE.MeshStandardMaterial({color:site.body==='Mars'?'#c58b61':'#a7a39a',roughness:0.62,metalness:0.08});
-            const base=new THREE.Mesh(new THREE.CylinderGeometry(hasHabitat?10:6.2,hasHabitat?10:6.2,0.6,24),baseMat); base.position.y=0.3; shelter.add(base);
-            const dome=new THREE.Mesh(new THREE.SphereGeometry(hasHabitat?8.5:5.4,24,14,0,Math.PI*2,0,Math.PI/2),shellMat); dome.position.y=0.56; shelter.add(dome);
-            const door=new THREE.Mesh(new THREE.BoxGeometry(2.4,3.2,0.22),new THREE.MeshStandardMaterial({color:'#28313b',metalness:0.55,roughness:0.4}));
-            door.position.set(0,1.65,hasHabitat?8.25:5.2); shelter.add(door);
-            for (let i=-1;i<=1;i++) {
-                const lamp=new THREE.Mesh(new THREE.BoxGeometry(0.28,0.28,0.24),new THREE.MeshBasicMaterial({color:'#facc15'}));
-                lamp.position.set(i*1.1,3.4,hasHabitat?8.36:5.32); shelter.add(lamp);
+            if(site.id==='tranquility'){
+                // Mirror game/build/station.lua around Roblox's spawn at (0, 0, 150).
+                const originY=getSurfaceHeight(0,0,site), stationScale=.4;const station=new THREE.Group();station.position.y=originY;station.scale.setScalar(stationScale);surfaceWorldGroup.add(station);
+                const metal='#555a60',wall='#e0ded5',frame='#c7c4bb';
+                box(station,0,.2,4,40,.4,34,'#393d43',{metalness:.65});
+                for(const x of [-19,19])for(const z of [-12,20]){box(station,x,.62,z,.8,.5,.8,'#f5d638',{emissive:'#ffc928',emissiveIntensity:1});light(station,x,1,z,'#ffd76a',1.15,14);}
+                // Raised habitat floor, roof, side and rear walls. Front opening is a 7-stud airlock.
+                box(station,0,.25,34,36,.5,22,'#777b7b',{metalness:.64});
+                box(station,0,16.2,34,32,.5,18,wall,{metalness:.22});
+                box(station,-15.7,8.225,34,.6,15.45,18,wall);box(station,15.7,8.225,34,.6,15.45,18,wall);
+                box(station,0,8.225,42.7,32,15.45,.6,wall);
+                box(station,-9.75,8.225,25.3,12.5,15.45,.6,wall);box(station,9.75,8.225,25.3,12.5,15.45,.6,wall);box(station,0,13.65,25.3,7,5,.6,wall);
+                box(station,0,4.6,24.2,6.4,8.5,.12,'#26313c',{emissive:'#101b28',emissiveIntensity:.4});
+                box(station,-9.5,11.7,25.2,11,2.8,.1,'#ffcf78',{emissive:'#ffbf60',emissiveIntensity:.72});box(station,10.5,11.7,25.2,7,2.8,.1,'#ffcf78',{emissive:'#ffbf60',emissiveIntensity:.72});
+                // Life-support kiosk on the back wall, clearly visible from the doorway.
+                box(station,0,3.2,38.7,4.8,4.2,1.1,'#263a48',{metalness:.62});box(station,0,4.15,38.05,3.6,1.35,.08,'#36d9cf',{emissive:'#13c9d7',emissiveIntensity:1.1});
+                box(station,0,5.45,38.7,2.4,.18,.4,'#5bdcf3',{emissive:'#27b9ec',emissiveIntensity:1.3});light(station,0,5.7,38.4,'#6adfff',2,12);
+                const lifeGroup=new THREE.Group();lifeGroup.position.set(0,originY,0); // interact location is in world coordinates below
+                for(const [x,z,col] of [[-7,29,'#ffe1ab'],[5,34,'#d7e9ff'],[-7,39,'#ffe1ab']]){box(station,x,15.75,z,6,.18,.7,'#fff0ce',{emissive:col,emissiveIntensity:1});light(station,x,14.7,z,col,2.2,28);}
+                // Radio mast and dish
+                box(station,13,21,41,.4,10,.4,'#b9b8b1',{metalness:.68});
+                const dish=new THREE.Mesh(new THREE.CylinderGeometry(.15,.15,4.8,20),new THREE.MeshStandardMaterial({color:'#deded8',metalness:.62,roughness:.32}));dish.position.set(13,26,41);dish.rotation.z=Math.PI/2;dish.rotation.y=.55;station.add(dish);
+                sign(station,'TRANQUILITY HERITAGE STATION',0,18.2,24.5,26,3);
+                // Transit console and deep-space network terminal on the station grounds.
+                const consoleAt=(x,z,title,kind)=>{const g=new THREE.Group();g.position.set(x,originY,z);box(g,0,1.3,0,2.6,2.6,1.4,metal,{metalness:.68});box(g,0,2.55,-.42,2.1,1.25,.08,'#132833',{emissive:'#178bb7',emissiveIntensity:.8});box(g,0,3.22,-.42,1.65,.12,.08,'#f2d84d',{emissive:'#f2d84d',emissiveIntensity:1});surfaceWorldGroup.add(g);worldInteractables.push({kind,siteId:site.id,group:g,position:new THREE.Vector3(x,originY,z),radius:5,title});};
+                consoleAt(21*stationScale,10*stationScale,'TRANSIT CONSOLE','transit');consoleAt(-23*stationScale,-10*stationScale,'DEEP SPACE NETWORK','archive-terminal');
+                const life=new THREE.Group();life.position.set(0,originY,38.7*stationScale);surfaceWorldGroup.add(life);worldInteractables.push({kind:'life-support',siteId:site.id,group:life,position:new THREE.Vector3(0,originY,38.7*stationScale),radius:3.8});
+                // Keep the station walkable and breathable; the habitat is explicitly game-created.
+                worldInteractables.push({kind:'shelter',siteId:site.id,group:station,position:new THREE.Vector3(0,originY,34*stationScale),radius:7});
+            } else if(['meridiani','eros'].includes(site.id)) {
+                // Purpose-built outpost/habitat, with a walkable entrance and visible service point.
+                const x=0,z=20,gy=getSurfaceHeight(x,z,site),base=new THREE.Group();base.position.set(x,gy,z);surfaceWorldGroup.add(base);
+                const mars=site.id==='meridiani', bodyColor=mars?'#a65f3c':'#777f88',trim=mars?'#d0a16c':'#b4c0c9';
+                const cylinder=(parent,rad,h,y,color,rad2=rad)=>{const m=new THREE.Mesh(new THREE.CylinderGeometry(rad2,rad,h,32),new THREE.MeshStandardMaterial({color,roughness:.68,metalness:.25}));m.position.y=y;m.castShadow=true;parent.add(m);return m;};
+                if(mars){
+                    cylinder(base,8,.8,.4,metal);cylinder(base,6.7,6,3.8,bodyColor);cylinder(base,6.9,.5,6.9,trim);
+                    const dome=new THREE.Mesh(new THREE.SphereGeometry(6.3,28,16,0,Math.PI*2,0,Math.PI/2),new THREE.MeshStandardMaterial({color:'#b8784d',roughness:.48,metalness:.12}));dome.position.y=6.9;base.add(dome);
+                    box(base,0,2,6.5,3,3.6,.3,'#25313a',{metalness:.55});box(base,0,3,6.28,1.8,.7,.1,'#58cde4',{emissive:'#22b7d4',emissiveIntensity:.8});
+                    for(const side of [-1,1]){box(base,side*12,4,0,8,.18,5,'#1d3f68',{metalness:.5});box(base,side*12,4.16,0,8,.08,5,'#3477a3',{emissive:'#183f67',emissiveIntensity:.3});box(base,side*8,1.4,0,.45,2.8,.45,trim);}
+                }else{
+                    cylinder(base,7,.6,.3,metal);cylinder(base,5.8,4.5,2.85,bodyColor);cylinder(base,6,.4,5.15,trim);
+                    const cap=new THREE.Mesh(new THREE.SphereGeometry(5.6,28,16,0,Math.PI*2,0,Math.PI/2),new THREE.MeshStandardMaterial({color:'#9aa6ae',roughness:.44,metalness:.18}));cap.position.y=5.15;base.add(cap);
+                    box(base,0,1.8,5.7,2.7,3.1,.3,'#263440',{metalness:.56});box(base,0,2.75,5.5,1.6,.7,.1,'#55d2df',{emissive:'#24bfd4',emissiveIntensity:.8});
+                }
+                sign(base,mars?'MERIDIANI FIELD OUTPOST':'EROS RESEARCH HABITAT',0,mars?14:11,6.7,18,2.2);
+                for(const [lx,lz] of [[-3,0],[3,0],[0,-3]])light(base,lx,mars?9:7,lz,'#ffdfa9',1.6,20);
+                const life=new THREE.Group();life.position.set(x,gy,z+1);surfaceWorldGroup.add(life);worldInteractables.push({kind:'life-support',siteId:site.id,group:life,position:new THREE.Vector3(x,gy,z+1),radius:14});
+                worldInteractables.push({kind:'shelter',siteId:site.id,group:base,position:new THREE.Vector3(x,gy,z),radius:18});
+                if(mars){const transit=new THREE.Group();transit.position.set(-12,gy,8);box(transit,0,1.4,0,2.6,2.8,1.4,metal);box(transit,0,2.8,-.42,2.2,1.25,.08,'#16303d',{emissive:'#26bfe5',emissiveIntensity:.9});surfaceWorldGroup.add(transit);worldInteractables.push({kind:'transit',siteId:site.id,group:transit,position:new THREE.Vector3(-12,gy,8),radius:5,title:'TRANSIT CONSOLE'});}
+            } else {
+                // Unlabelled field shelters at the remaining sites, as in the Roblox world.
+                const x=30,z=24,gy=getSurfaceHeight(x,z,site),shelter=new THREE.Group();shelter.position.set(x,gy,z);surfaceWorldGroup.add(shelter);
+                const base=new THREE.Mesh(new THREE.CylinderGeometry(6.2,6.2,.6,24),new THREE.MeshStandardMaterial({color:'#5c626b',roughness:.86,metalness:.12}));base.position.y=.3;shelter.add(base);
+                const dome=new THREE.Mesh(new THREE.SphereGeometry(5.4,24,14,0,Math.PI*2,0,Math.PI/2),new THREE.MeshStandardMaterial({color:'#a7a39a',roughness:.62,metalness:.08,transparent:true,opacity:.72}));dome.position.y=.56;shelter.add(dome);
+                worldInteractables.push({kind:'shelter',siteId:site.id,group:shelter,position:new THREE.Vector3(x,gy,z),radius:shelterRadius});
             }
-            surfaceWorldGroup.add(shelter);
-            worldInteractables.push({kind:'shelter',siteId:site.id,group:shelter,position:new THREE.Vector3(sx,gy,sz),radius:hasHabitat?22: shelterRadius});
-
-            if (hasHabitat) {
-                const kiosk=new THREE.Group();
-                const kx=sx-5.5,kz=sz+4.4,ky=getSurfaceHeight(kx,kz,site);
-                kiosk.position.set(kx,ky,kz);
-                const pedestal=new THREE.Mesh(new THREE.BoxGeometry(1.45,2.4,1.1),new THREE.MeshStandardMaterial({color:'#424951',metalness:0.52,roughness:0.42}));
-                pedestal.position.y=1.2;
-                const screen=new THREE.Mesh(new THREE.BoxGeometry(1.15,0.74,0.08),new THREE.MeshBasicMaterial({color:'#43d9be'}));
-                screen.position.set(0,1.62,-0.57);
-                const header=new THREE.Mesh(new THREE.BoxGeometry(1.3,0.14,0.08),new THREE.MeshBasicMaterial({color:'#facc15'}));
-                header.position.set(0,2.08,-0.57);
-                kiosk.add(pedestal,screen,header); surfaceWorldGroup.add(kiosk);
-                worldInteractables.push({kind:'life-support',siteId:site.id,group:kiosk,position:new THREE.Vector3(kx,ky,kz),radius:9});
-            }
-            if (site.id==='tranquility' && markerPlaced) buildSurveyMarker(site);
+            if(site.id==='tranquility'&&markerPlaced)buildSurveyMarker(site);
             refreshBeaconColours();
         }
 
@@ -2521,7 +2557,7 @@
                 const p=obj.group.position;
                 const d=Math.hypot(player.pos.x-p.x,player.pos.z-p.z);
                 const radius=obj.kind==='artifact'?9:obj.radius;
-                const priority=obj.kind==='artifact'?0:obj.kind==='life-support'?1:2;
+                const priority=obj.kind==='artifact'?0:obj.kind==='life-support'?1:['transit','archive-terminal'].includes(obj.kind)?2:3;
                 if (d<=radius && (priority<bestPriority || (priority===bestPriority && d<best))) {
                     nearestWorldInteractable=obj; best=d; bestPriority=priority;
                 }
@@ -2532,6 +2568,8 @@
             if (nearestWorldInteractable.kind==='artifact') {
                 prompt.textContent=`[E] ${foundItems.has(nearestWorldInteractable.item.id)?'REVIEW':'SCAN'} · ${nearestWorldInteractable.item.title}`;
             } else if (nearestWorldInteractable.kind==='life-support') prompt.textContent='[E] LIFE SUPPORT CONSOLE · REFILL O₂ + POWER';
+            else if(nearestWorldInteractable.kind==='transit')prompt.textContent='[E] TRANSIT CONSOLE · TRAVEL BETWEEN WORLDS';
+            else if(nearestWorldInteractable.kind==='archive-terminal')prompt.textContent='[E] DEEP SPACE NETWORK · MISSION ARCHIVE';
             else prompt.textContent='SHELTER · protected during solar events';
         }
 
@@ -2598,6 +2636,8 @@
             if (!nearestWorldInteractable) { showPrompt('No artifact or station console is in range. Follow the floating gold beacons.'); return; }
             const obj=nearestWorldInteractable;
             if (obj.kind==='artifact') { openArtifact(obj.item); return; }
+            if(obj.kind==='transit'){openTransit();return;}
+            if(obj.kind==='archive-terminal'){archiveFilter='Beyond';openArchive();return;}
             if (obj.kind==='life-support') {
                 openModal('HABITAT LIFE SUPPORT',obj.siteId==='tranquility'?'Tranquility Heritage Station':obj.siteId==='meridiani'?'Meridiani Outpost':'Eros Research Habitat',
                     `<p>Recharge your suit’s oxygen and power reserves before the next EVA.</p><p class="mt-3 font-mono-tech text-emerald-200">O₂ ${oxygen.toFixed(0)}% · POWER ${suitPower.toFixed(0)}%</p><button id="refill-suit" class="mt-4 rounded-lg bg-emerald-300 px-4 py-2 text-sm font-bold text-slate-950">REFILL OXYGEN + POWER</button>`, 'Close');
@@ -2648,11 +2688,30 @@
             $('archive-search').addEventListener('input',(event)=>{archiveQuery=event.target.value;const cursor=event.target.selectionStart;openArchive();const input=$('archive-search');input.focus();input.setSelectionRange(cursor,cursor);});
         }
 
+        let surveyBody='Moon', selectedSurveySite='tranquility';
         function openSurveyMap() {
-            const groups=[['Moon',SITES.filter((s)=>s.body==='Moon')],['Mars',SITES.filter((s)=>s.body==='Mars')],['433 Eros',SITES.filter((s)=>s.body==='Eros')]];
-            const html=groups.map(([name,sites])=>`<section class="mb-5"><h3 class="mb-2 border-b border-slate-700 pb-1 font-mono-tech text-xs tracking-wider text-sky-200">${name.toUpperCase()}</h3><div class="grid gap-2 sm:grid-cols-2">${sites.map((site)=>`<button data-map-site="${site.id}" class="rounded-lg border border-slate-700 bg-slate-900 p-3 text-left hover:border-amber-300/60"><b class="block text-sm">${escapeHtml(site.name)}</b><span class="mt-1 block text-[10px] text-amber-200">${formatLatLon(site.lat,site.lon)}</span><span class="mt-1 block text-[11px] text-slate-400">${escapeHtml(site.description)}</span></button>`).join('')}</div></section>`).join('');
-            openModal('13 SITES · 3 BODIES','Survey map',`<p class="mb-3 text-xs text-slate-400">Select a landing site. Crossings between worlds use the transit timeline.</p><div class="max-h-[62vh] overflow-y-auto pr-1">${html}</div>`,'Close');
-            document.querySelectorAll('[data-map-site]').forEach((button)=>button.addEventListener('click',()=>navigateToSite(SITE_BY_ID[button.dataset.mapSite])));
+            const bodySites=SITES.filter(site=>site.body===surveyBody);
+            const siteProgress=site=>{const rows=FIELD_ITEMS.filter(item=>item.site===site.id),count=rows.filter(item=>foundItems.has(item.id)).length;return {rows,count,complete:rows.length>0&&count===rows.length};};
+            const dots=bodySites.map(site=>{const {rows,count,complete}=siteProgress(site),x=((site.lon+180)/360*100).toFixed(2),y=((90-site.lat)/180*100).toFixed(2),state=complete?'#4ade80':count?'#facc15':'#38bdf8';return `<button data-survey-pin="${site.id}" title="${escapeHtml(site.shortName)} · ${count}/${rows.length} field objects" style="left:${x}%;top:${y}%;--pin:${state}" class="absolute z-10 grid h-7 w-7 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border-2 border-slate-950 bg-[var(--pin)] text-[11px] font-black text-slate-950 shadow-[0_0_12px_var(--pin)]">${rows.length?(complete?'✓':count||'?'):'•'}</button>`;}).join('');
+            const picked=SITE_BY_ID[selectedSurveySite]&&SITE_BY_ID[selectedSurveySite].body===surveyBody?SITE_BY_ID[selectedSurveySite]:bodySites[0];
+            const detail=site=>{if(!site)return '<p>No landing sites.</p>';const {rows,count}=siteProgress(site);return `<div class="text-[10px] font-mono-tech tracking-widest text-sky-200">${escapeHtml(site.body.toUpperCase())} · ${formatLatLon(site.lat,site.lon)}</div><h3 class="mt-2 text-xl font-bold text-white">${escapeHtml(site.shortName)}</h3><p class="mt-3 text-xs leading-relaxed text-slate-300">${escapeHtml(site.description)}</p><p class="mt-3 text-xs text-amber-200">${count}/${rows.length} field objects confirmed</p><button data-survey-travel="${site.id}" class="mt-4 w-full rounded-lg bg-yellow-300 px-3 py-2 text-xs font-bold text-slate-950">${currentSite.id===site.id?'YOU ARE HERE':'PLOT COURSE'}</button>`;};
+            const tally=FIELD_ITEMS.filter(item=>{const site=SITE_BY_ID[item.site];return site.body===surveyBody&&foundItems.has(item.id);}).length,bodyTotal=FIELD_ITEMS.filter(item=>SITE_BY_ID[item.site].body===surveyBody).length;
+            const html=`<div class="mb-3 flex items-center justify-between"><div class="flex gap-2">${['Moon','Mars','Eros'].map(b=>`<button data-survey-body="${b}" class="rounded-lg border px-3 py-1.5 text-xs ${surveyBody===b?'border-yellow-300 bg-yellow-300 text-slate-950':'border-slate-600 bg-slate-900 text-slate-200'}">${b.toUpperCase()}</button>`).join('')}</div><span class="text-xs font-mono-tech text-amber-200">${tally}/${bodyTotal} FIELD OBJECTS</span></div><div class="grid gap-3 lg:grid-cols-[1fr_290px]"><div class="relative h-[min(54vh,390px)] min-h-[260px] overflow-hidden rounded-xl border border-slate-600 bg-[#32363b]" style="background-image:linear-gradient(#ffffff13 1px,transparent 1px),linear-gradient(90deg,#ffffff13 1px,transparent 1px),radial-gradient(ellipse at center,#696a65 0%,#383a3d 70%,#191c20 100%);background-size:16.666% 16.666%,16.666% 16.666%,100% 100%">${surveyBody==='Moon'?'<div class="pointer-events-none absolute inset-y-0 left-0 w-[14%] bg-slate-950/60"></div><div class="pointer-events-none absolute inset-y-0 right-0 w-[14%] bg-slate-950/60"></div><span class="absolute left-1 top-1/2 -rotate-90 text-[9px] text-slate-400">FAR SIDE</span><span class="absolute right-1 top-1/2 rotate-90 text-[9px] text-slate-400">FAR SIDE</span>':''}<span class="absolute left-2 top-2 text-[9px] font-mono-tech text-slate-300">90°N</span><span class="absolute bottom-2 left-2 text-[9px] font-mono-tech text-slate-300">90°S</span>${dots}<div class="absolute bottom-2 right-2 rounded bg-slate-950/75 px-2 py-1 text-[9px] text-slate-300">LAT / LONG · SITE MARKERS</div></div><aside id="survey-detail" class="min-h-[230px] rounded-xl border border-slate-700 bg-slate-900/80 p-4">${detail(picked)}</aside></div><div class="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-[10px] text-slate-400"><span><b class="text-sky-300">?</b> not yet surveyed</span><span><b class="text-yellow-300">#</b> partly found</span><span><b class="text-emerald-300">✓</b> all field objects</span><span class="ml-auto">Orbital survey · spotted from orbit · ground truth</span></div>`;
+            openModal('SURVEY MAP · 13 SITES · 3 BODIES','Survey Map',html,'Close');
+            document.querySelectorAll('[data-survey-body]').forEach(b=>b.addEventListener('click',()=>{surveyBody=b.dataset.surveyBody;const first=SITES.find(site=>site.body===surveyBody);selectedSurveySite=first?.id;openSurveyMap();}));
+            document.querySelectorAll('[data-survey-pin]').forEach(b=>b.addEventListener('click',()=>{selectedSurveySite=b.dataset.surveyPin;const site=SITE_BY_ID[selectedSurveySite];$('survey-detail').innerHTML=detail(site);$('survey-detail').querySelector('[data-survey-travel]')?.addEventListener('click',()=>navigateToSite(site));}));
+            $('survey-detail').querySelector('[data-survey-travel]')?.addEventListener('click',()=>navigateToSite(picked));
+        }
+
+        const TROPHY_ORDER=['lm','seis','retro','surv3','a12alsep','falcon','lrv','lrrr15','oppy','heatshield','pathfinder','sojourner','viking1','viking2','spirit','phoenix','insight','ingenuity','ranger4','near'];
+        function openTrophyRoom(){
+            const ordered=TROPHY_ORDER.map(id=>FIELD_ITEMS.find(item=>item.id===id)).filter(Boolean),unreachable=['dawn','kepler','pioneer10','pioneer11','voyager1'].map(id=>ARCHIVE_ITEMS.find(item=>item.id===id)).filter(Boolean);
+            const cards=ordered.map(item=>{const found=foundItems.has(item.id);return `<button data-trophy-field="${item.id}" class="rounded-xl border ${found?'border-emerald-400/40':'border-slate-700'} bg-slate-900/75 p-3 text-left"><div class="${found?'':'brightness-0 opacity-35'}">${illustration(item.id)}</div><span class="mt-2 block text-xs font-bold text-white">${found?'✓ ':''}${found?escapeHtml(item.title):'UNDISCOVERED'}</span><span class="mt-1 block text-[10px] text-slate-400">${escapeHtml(item.siteName)}</span></button>`;}).join('');
+            const remote=unreachable.map(item=>`<button data-trophy-archive="${item.id}" class="rounded-xl border border-sky-400/25 bg-slate-900/80 p-3 text-left"><div>${illustration(item.id)}</div><span class="mt-2 block text-xs font-bold text-white">${escapeHtml(item.name)}</span><span class="mt-1 block text-[10px] text-sky-200">${cataloguedItems.has(item.id)?'✓ CATALOGUED':'ORBITAL ARCHIVE · NOT A SURFACE OBJECT'}</span></button>`).join('');
+            const html=`<div class="mb-4 rounded-xl border border-slate-700 bg-slate-900/80 p-4"><div class="flex items-center justify-between text-xs"><span class="font-mono-tech tracking-widest text-sky-200">ASTROLOG · RECOVERED BY THIS CREW</span><b class="text-yellow-300">${foundItems.size}/20 FIELD · ${unreachable.filter(item=>cataloguedItems.has(item.id)).length}/5 ORBITAL</b></div><div class="mt-3 h-2 rounded-full bg-slate-700"><div class="h-full rounded-full bg-yellow-300" style="width:${foundItems.size/20*100}%"></div></div><p class="mt-2 text-[10px] text-slate-400">Field objects are scanned at their landing sites. Distant spacecraft can be catalogued from the archive.</p></div><div class="grid max-h-[56vh] grid-cols-2 gap-2 overflow-y-auto pr-1 sm:grid-cols-3 lg:grid-cols-5">${cards}</div><h3 class="mb-2 mt-5 border-b border-slate-700 pb-2 text-xs font-mono-tech tracking-widest text-sky-200">TOO FAR TO STAND ON · CATALOGUED FROM THE ARCHIVE</h3><div class="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-5">${remote}</div>`;
+            openModal('ASTROLOG · TROPHY CASE','Trophy Room',html,'Close');
+            document.querySelectorAll('[data-trophy-field]').forEach(b=>b.addEventListener('click',()=>{const item=FIELD_ITEMS.find(it=>it.id===b.dataset.trophyField);if(foundItems.has(item.id))openArtifact(item);else{closeModal();navigateToSite(SITE_BY_ID[item.site]);}}));
+            document.querySelectorAll('[data-trophy-archive]').forEach(b=>b.addEventListener('click',()=>openArchiveRecord(ARCHIVE_ITEMS.find(it=>it.id===b.dataset.trophyArchive))));
         }
 
         const DESTINATION_HOME={Moon:'tranquility',Mars:'meridiani',Eros:'eros'};
@@ -2757,6 +2816,7 @@
         $('transit-open').addEventListener('click',openTransit);
         $('guide-open').addEventListener('click',openGuide);
         $('map-open').addEventListener('click',openSurveyMap);
+        $('trophy-open').addEventListener('click',openTrophyRoom);
         $('evidence-open').addEventListener('click',openEvidence);
         $('interaction-prompt').addEventListener('click',interact);
         $('astrolog-btn')?.addEventListener('click',renderFieldLog);
@@ -2780,11 +2840,10 @@
         populateSiteSelectors();
         warpToSite(SITES.find((s) => s.id === 'tranquility'));
         animate();
-        openModal('NASA SPACE APPS · ABANDONED BUT NOT FORGOTTEN', 'LAST SIGNAL',
-            `<p>Explore Last Signal. Scan mission hardware across the Moon, Mars and asteroid 433 Eros, solve instrument challenges, manage suit life support, shelter from hazards, read the NASA archive and complete the crew handover.</p>
-             <p class="text-[12px] text-slate-400">This public web expedition is the playable project. It recreates the core exploration and storytelling loop with simplified procedural models. Progress is saved on this device; the project overview and complete field catalog are available on the page behind this expedition.</p>
-             <p class="text-[12px] text-slate-400 font-mono-tech">WASD move · Mouse look · Space hop · E interact · R remember · F reactivate · choose a destination to travel</p>`,
-            'Explore Tranquility', () => {});
+        player.yaw=0.14;player.pitch=0.48;
+        openModal('TRANQUILITY STATION · RADIO','LAST SIGNAL',
+            `<p class="text-lg text-white">“Surveyor, your transit is down safe. Welcome to the Moon.”</p><p>Before you do anything else — look up. That’s home. From here it never moves.</p><p class="text-xs text-slate-400">You’re on the Tranquility Heritage Station landing pad. Eagle is ahead; the station and its survey systems are behind you.</p><p class="text-[11px] font-mono-tech text-sky-200">WASD MOVE · MOUSE LOOK · SPACE HOP · E INTERACT · ESC PAUSE</p>`,
+            'SKIP ARRIVAL',()=>{player.yaw=0;player.pitch=-0.03;});
 
     </script>
 </body>

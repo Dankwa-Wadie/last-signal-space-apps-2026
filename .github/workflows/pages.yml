@@ -37,8 +37,9 @@ jobs:
       - name: Prepare site
         run: |
           mkdir -p _site
-          cp index.html _site/index.html
+          cp test.html _site/index.html
           cp test.html _site/field.html
+          cp index.html _site/project.html
           cp field_artifacts.json _site/field_artifacts.json
           cp README.md REFERENCES.md AI_DISCLOSURE.md LICENSE LICENSE-MEDIA.md _site/
           mkdir -p _site/game

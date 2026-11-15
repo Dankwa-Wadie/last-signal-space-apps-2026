@@ -4,15 +4,15 @@
 
 Made by **Astrolog** for NASA Space Apps Challenge 2026, challenge [Abandoned but not Forgotten: Storytelling about NASA's Discarded Equipment on the Moon and Mars](https://www.spaceappschallenge.org/2026/challenges/nasas-discarded-equipment-storytelling/?tab=details).
 
-Last Signal is a website-first educational project for NASA Space Apps Challenge 2026. Anyone can open the project site, read the mission stories and sources, watch the demonstration, and launch the playable expedition in the browser without a password, account, or registration. Visitors explore the Moon, Mars, and 433 Eros, find historical spacecraft and instruments, scan them, and learn what they were designed to do and what their missions taught us.
+Last Signal is a website-first educational project for NASA Space Apps Challenge 2026. Anyone can open the public URL and enter the playable expedition immediately, without a password, account, or registration. The start, station, destination map, survey map and trophy room follow the Roblox game. A separate project overview contains mission stories, sources and gameplay evidence. Visitors explore the Moon, Mars, and 433 Eros, find historical spacecraft and instruments, scan them, and learn what they were designed to do and what their missions taught us.
 
 ## Public project website
 
-**The submitted project is the public website:** [Last Signal — open project](https://dankwa-wadie.github.io/last-signal-space-apps-2026/). Its main page presents the challenge, complete field-object catalog, a playable embedded expedition, live gameplay evidence, source links, and disclosures. The expedition includes 13 destinations, 20 field artifact scans, six reactivation challenges, an 18-record NSSDCA archive, transit timelines, life-support refills, shelters and timed hazards, a survey map, a saved field log, and the final marker handover. Browser progress is saved locally on the player’s device.
+**The submitted project is the public website:** [Last Signal — play](https://dankwa-wadie.github.io/last-signal-space-apps-2026/). The home page opens directly into the playable expedition, starting at Tranquility Heritage Station and continuing into the same field sites, building options, Survey Map and Trophy Room as the Roblox game. The [project overview](https://dankwa-wadie.github.io/last-signal-space-apps-2026/project.html) contains mission stories, the complete field catalog, gameplay evidence, references and disclosures. The expedition includes 13 destinations, 20 field artifact scans, six reactivation challenges, an 18-record NSSDCA archive, transit timelines, life-support refills, shelters and timed hazards, a survey map, a saved field log, and the final marker handover. Browser progress is saved locally on the player’s device.
 
 The [interactive expedition](https://dankwa-wadie.github.io/last-signal-space-apps-2026/field.html) also has a direct URL. It uses WebGL and procedural models; the project’s core story and sources remain available on the main page.
 
-The Pages site is built from [`index.html`](index.html) and published by [`.github/workflows/pages.yml`](.github/workflows/pages.yml). The 3D expedition is built from [`test.html`](test.html) and published at `field.html`.
+The Pages home page is built from [`test.html`](test.html); the project overview source is [`index.html`](index.html), published at `project.html`. Both are published by [`.github/workflows/pages.yml`](.github/workflows/pages.yml).
 
 ## Live gameplay videos
 

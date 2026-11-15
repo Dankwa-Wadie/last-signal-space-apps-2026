@@ -14,7 +14,7 @@ A public, browser-playable field guide that turns spacecraft and instruments lef
 
 ## Project description
 
-Last Signal is a public educational website created by Astrolog for NASA Space Apps Challenge 2026. It opens without a password, account or registration. Visitors can read the project story, search a 20-object field catalog, follow NASA and NSSDC sources, watch gameplay evidence, and launch the playable browser expedition from the same page.
+Last Signal is a public educational website created by Astrolog for NASA Space Apps Challenge 2026. It opens without a password, account or registration. The public link opens directly into the playable expedition at Tranquility Heritage Station. The website reproduces the Roblox opening, habitats, transit choices, Survey Map and Trophy Room; a project overview provides the catalog, source links and gameplay evidence.
 
 The expedition features Apollo-era equipment and lunar experiments, Mars rovers and landers, and a catalog of additional deep-space missions. Players travel among 13 regions on the Moon, Mars and Eros, scan field objects, solve six instrument challenges, track suit oxygen and power, seek shelter from hazards, and read an 18-record NASA archive. Browser progress is saved locally. Procedural terrain and mission-scale distances are simplified for interactive storytelling. Any fictional heritage station is identified as game-created, not a current or historical NASA facility.
 
@@ -22,7 +22,8 @@ The project uses storytelling and exploration to make discarded equipment feel p
 
 ## Demo / gameplay links
 
-- **Public project website:** https://dankwa-wadie.github.io/last-signal-space-apps-2026/ — project overview, searchable field catalog, embedded playable expedition, video evidence, references and disclosures.
+- **Public project website:** https://dankwa-wadie.github.io/last-signal-space-apps-2026/ — opens directly into the playable expedition, with a Tranquility arrival, station, destinations, Survey Map and Trophy Room.
+- Project overview, catalog, references and disclosures: https://dankwa-wadie.github.io/last-signal-space-apps-2026/project.html
 - Direct playable expedition: https://dankwa-wadie.github.io/last-signal-space-apps-2026/field.html
 - Supplementary Moon live gameplay: [moon-live-gameplay.mp4](https://github.com/Dankwa-Wadie/last-signal-space-apps-2026/blob/main/game/videos/moon-live-gameplay.mp4)
 - Supplementary Mars live gameplay: [mars-live-gameplay.mp4](https://github.com/Dankwa-Wadie/last-signal-space-apps-2026/blob/main/game/videos/mars-live-gameplay.mp4)
