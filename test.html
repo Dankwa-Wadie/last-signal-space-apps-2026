@@ -3808,7 +3808,13 @@
             const yOff = (x, z) => site.id === 'tranquility' ? getSurfaceHeight(x * GS, z * GS, site) : 0;
             const meshes = [];
             const M4 = new THREE.Matrix4();
+            // The game has a boulder sitting on Eros's transit console (Workspace.Game.Eros.Boulder): the
+            // console still works there, because Roblox prompts ignore line of sight, but you cannot see it.
+            // Here no rock may bury something you board or use: such a rock is left out.
+            const consoles = data.prompts.filter((pr) => pr.a !== 'Scan' && pr.a !== 'Brush solar panel');
+            const buries = (p) => p[17] === 'Slate' && consoles.some((pr) => Math.abs(pr.x - p[1]) <= p[13] / 2 + 1 && Math.abs(pr.z - p[3]) <= p[15] / 2 + 1 && pr.y > p[2] - p[14] / 2 && pr.y < p[2] + p[14] / 2 + 1);
             for (const p of data.parts) {
+                if (buries(p)) { meshes.push(null); continue; }
                 const [sh, x, y, z, a, b, c, d, e, f, g, h, i, sx, sy, sz, hex, mat, t, , k, mode] = p;
                 // the game leaves some hardware walk-through (Opportunity is CanCollide off); here everything
                 // you can see is solid, except the glass shelter domes you walk into and soft dust mounds
