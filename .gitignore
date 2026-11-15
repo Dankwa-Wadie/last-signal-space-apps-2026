@@ -37,3 +37,13 @@ game/build/caps/
 !game/videos/moon-live-gameplay.mp4
 !game/videos/mars-live-gameplay.mp4
 !game/videos/competition-demo-live-gameplay.mp4
+!game/videos/last-signal-30s-trailer.mp4
+
+# Reworked 30-second video cut with live gameplay ending
+!pipeline/v4_30s/last_signal_30s_v4_16x9.mp4
+!pipeline/v4_30s/last_signal_30s_v4_4x5.mp4
+!pipeline/v4_30s/qc_sheet_v4_reworked.jpg
+
+# Local scratch/milestone folders
+pipeline/v5_30s/
+

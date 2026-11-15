@@ -14,7 +14,18 @@ The [interactive expedition](https://dankwa-wadie.github.io/last-signal-space-ap
 
 The Pages home page is built from [`test.html`](test.html); the project overview source is [`index.html`](index.html), published at `project.html`. Both are published by [`.github/workflows/pages.yml`](.github/workflows/pages.yml).
 
-## Live gameplay videos
+## Official Trailer & Gameplay Videos
+
+### 30-Second Film & Trailer · Reworked with Live Gameplay Ending
+
+[![30-Second Film Preview](pipeline/v4_30s/qc_sheet_v4_reworked.jpg)](https://github.com/Dankwa-Wadie/last-signal-space-apps-2026/blob/main/pipeline/v4_30s/last_signal_30s_v4_16x9.mp4)
+
+▶️ **[Watch `last_signal_30s_v4_16x9.mp4` on GitHub](https://github.com/Dankwa-Wadie/last-signal-space-apps-2026/blob/main/pipeline/v4_30s/last_signal_30s_v4_16x9.mp4)** *(open with GitHub's built-in video player)*
+
+- **Widescreen (16:9)**: [`pipeline/v4_30s/last_signal_30s_v4_16x9.mp4`](https://github.com/Dankwa-Wadie/last-signal-space-apps-2026/blob/main/pipeline/v4_30s/last_signal_30s_v4_16x9.mp4) · [`game/videos/last-signal-30s-trailer.mp4`](https://github.com/Dankwa-Wadie/last-signal-space-apps-2026/blob/main/game/videos/last-signal-30s-trailer.mp4)
+- **Mobile/Social (4:5)**: [`pipeline/v4_30s/last_signal_30s_v4_4x5.mp4`](https://github.com/Dankwa-Wadie/last-signal-space-apps-2026/blob/main/pipeline/v4_30s/last_signal_30s_v4_4x5.mp4)
+
+*Traces exploration from ocean voyages to the Moon, Mars, and deep space, concluding with live Roblox gameplay showing the player exploring Tranquility Base (Apollo 11) and Meridiani Planum (Opportunity).*
 
 ### Combined demo · 26 seconds
 
