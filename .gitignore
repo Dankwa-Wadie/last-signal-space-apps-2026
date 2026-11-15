@@ -3,6 +3,7 @@
 .claude/
 .vscode/
 .idea/
+/HANDOFF.md
 
 # Python caches and virtual environments
 __pycache__/

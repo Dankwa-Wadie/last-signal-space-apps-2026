@@ -2,7 +2,7 @@
 
 Target team page: https://www.spaceappschallenge.org/2026/find-a-team/astrolog/?tab=project
 
-Challenge: [NASA's Discarded Equipment Storytelling](https://www.spaceappschallenge.org/2026/challenges/nasas-discarded-equipment-storytelling/?tab=details)
+Challenge: [Abandoned but not Forgotten: Storytelling about NASA's Discarded Equipment on the Moon and Mars](https://www.spaceappschallenge.org/2026/challenges/nasas-discarded-equipment-storytelling/?tab=details)
 
 ## Project title
 
@@ -26,7 +26,7 @@ The project uses storytelling and exploration to make discarded equipment feel p
 - Mars live gameplay: [mars-live-gameplay.mp4](https://github.com/Dankwa-Wadie/last-signal-space-apps-2026/blob/main/game/videos/mars-live-gameplay.mp4)
 - Combined 26-second gameplay demo: [competition-demo-live-gameplay.mp4](https://github.com/Dankwa-Wadie/last-signal-space-apps-2026/blob/main/game/videos/competition-demo-live-gameplay.mp4)
 - Repository and project files: https://github.com/Dankwa-Wadie/last-signal-space-apps-2026
-- Roblox experience: **Add the public Roblox experience URL here after confirming it is public and playable.**
+- Roblox experience: https://www.roblox.com/games/104157966303180 — confirm public access from a logged-out browser before submitting.
 
 These clips were captured from a running Roblox Studio Play session. The Moon clip shows the lunar site and an artifact scan. The Mars clip shows the transit interface, arrival on Mars, and exploration near the Opportunity rover.
 
@@ -49,7 +49,7 @@ Original code is MIT-licensed and original project text/graphics are CC BY 4.0, 
 ## Items to confirm in the official form
 
 - Confirm the exact required fields and maximum lengths in the 2026 Project tab.
-- Add the actual public Roblox experience URL.
+- Confirm the Roblox experience link opens for judges without sign-in or group access.
 - Confirm the experience and its third-party assets are public and reusable under the competition terms.
 - Check the team’s complete AI/SI-tool use and citations.
 - Confirm all team contributors and any additional media/data sources.

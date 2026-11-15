@@ -2,7 +2,7 @@
 
 **A Roblox exploration game about the spacecraft and instruments humanity left behind.**
 
-Made by **Astrolog** for NASA Space Apps Challenge 2026, challenge [NASA's Discarded Equipment Storytelling](https://www.spaceappschallenge.org/2026/challenges/nasas-discarded-equipment-storytelling/?tab=details).
+Made by **Astrolog** for NASA Space Apps Challenge 2026, challenge [Abandoned but not Forgotten: Storytelling about NASA's Discarded Equipment on the Moon and Mars](https://www.spaceappschallenge.org/2026/challenges/nasas-discarded-equipment-storytelling/?tab=details).
 
 Players explore the Moon, Mars, and 433 Eros, find historical spacecraft and instruments, scan them, and learn what they were designed to do and what their missions taught us. The experience includes a guided opening, an artifact log, environmental suit gauges, transit between bodies, archive puzzles, and clearly marked fictional heritage stations used to support exploration.
 
@@ -29,7 +29,7 @@ These are direct recordings from Roblox Studio's live Play session. They show th
 
 ## Roblox experience
 
-The playable source of truth is the live Roblox place, not the exported files in this repository. The repository contains the script and world-manifest export as a recovery backup; it does not contain a complete `.rbxl` place file, and some models are referenced by Roblox asset IDs. To play the current build, use the public experience link added to `SUBMISSION.md` once confirmed.
+The playable source of truth is the live Roblox place, not the exported files in this repository. The repository contains the script and world-manifest export as a recovery backup; it does not contain a complete `.rbxl` place file, and some models are referenced by Roblox asset IDs. The experience link is https://www.roblox.com/games/104157966303180; confirm that it opens for logged-out visitors before relying on it for judging.
 
 ## Rebuilding and development
 
