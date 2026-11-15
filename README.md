@@ -10,17 +10,23 @@ Players explore the Moon, Mars, and 433 Eros, find historical spacecraft and ins
 
 ### Combined demo · 26 seconds
 
-![](https://github.com/user-attachments/assets/5a5b403f-88c3-4c91-a7e8-494c66ca8a1d)
+https://github.com/user-attachments/assets/5a5b403f-88c3-4c91-a7e8-494c66ca8a1d
+
+<sub>If the player above does not load, open the clip directly: [`competition-demo-live-gameplay.mp4`](https://github.com/Dankwa-Wadie/last-signal-space-apps-2026/blob/main/game/videos/competition-demo-live-gameplay.mp4)</sub>
 
 ### Moon · Apollo 11 artifact scan
 
-![](https://github.com/user-attachments/assets/647b436b-9217-49f9-8a40-588c612a1db0)
+https://github.com/user-attachments/assets/647b436b-9217-49f9-8a40-588c612a1db0
+
+<sub>If the player above does not load, open the clip directly: [`moon-live-gameplay.mp4`](https://github.com/Dankwa-Wadie/last-signal-space-apps-2026/blob/main/game/videos/moon-live-gameplay.mp4)</sub>
 
 ### Mars · transit and Opportunity
 
-![](https://github.com/user-attachments/assets/e0249a10-30ce-4fd0-b899-73c474396500)
+https://github.com/user-attachments/assets/e0249a10-30ce-4fd0-b899-73c474396500
 
-These are direct recordings from Roblox Studio's live Play session. The video attachments above are embedded players; the MP4 files are also preserved in `game/videos/`. If a repository preview does not initialize playback, open the [dedicated GitHub demo page](https://github.com/Dankwa-Wadie/last-signal-space-apps-2026/issues/1).
+<sub>If the player above does not load, open the clip directly: [`mars-live-gameplay.mp4`](https://github.com/Dankwa-Wadie/last-signal-space-apps-2026/blob/main/game/videos/mars-live-gameplay.mp4)</sub>
+
+These are direct recordings from Roblox Studio's live Play session. The same MP4 files are committed to [`game/videos/`](game/videos), so they remain available even if an embedded player fails. A [dedicated demo page](https://github.com/Dankwa-Wadie/last-signal-space-apps-2026/issues/1) collects all three clips in one place.
 
 ## Project contents
 
