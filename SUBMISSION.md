@@ -23,7 +23,7 @@ The project uses storytelling and exploration to make discarded equipment feel p
 ## Demo / gameplay links
 
 - **Public project website:** https://dankwa-wadie.github.io/last-signal-space-apps-2026/ — opens directly into the playable expedition, with a Tranquility arrival, station, destinations, Survey Map and Trophy Room.
-- **Official 30-second cinematic film & trailer (live gameplay ending):** [last_signal_30s_v4_16x9.mp4](https://github.com/Dankwa-Wadie/last-signal-space-apps-2026/blob/main/pipeline/v4_30s/last_signal_30s_v4_16x9.mp4) · [Social 4:5 cut](https://github.com/Dankwa-Wadie/last-signal-space-apps-2026/blob/main/pipeline/v4_30s/last_signal_30s_v4_4x5.mp4)
+- **Official 30-second cinematic film & trailer (live gameplay ending):** [Play on GitHub](https://github.com/user-attachments/assets/d6698b05-cb32-403b-96d0-03fb360a34e2) · [Direct repository MP4](https://github.com/Dankwa-Wadie/last-signal-space-apps-2026/blob/main/pipeline/v4_30s/last_signal_30s_v4_16x9.mp4) · [Social 4:5 Cut](https://github.com/user-attachments/assets/279e0bbc-7d95-4d40-a51e-91364791cf3c)
 - Project overview, catalog, references and disclosures: https://dankwa-wadie.github.io/last-signal-space-apps-2026/project.html
 - Direct playable expedition: https://dankwa-wadie.github.io/last-signal-space-apps-2026/field.html
 - Supplementary Moon live gameplay: [moon-live-gameplay.mp4](https://github.com/Dankwa-Wadie/last-signal-space-apps-2026/blob/main/game/videos/moon-live-gameplay.mp4)
