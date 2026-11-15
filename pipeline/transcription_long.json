@@ -1,0 +1,3952 @@
+[
+  {
+    "id": 1,
+    "start": 0.0,
+    "end": 2.26,
+    "text": "On this planet, we have never been good at staying still.",
+    "words": [
+      {
+        "word": " On",
+        "start": 0.0,
+        "end": 0.1
+      },
+      {
+        "word": " this",
+        "start": 0.1,
+        "end": 0.22
+      },
+      {
+        "word": " planet,",
+        "start": 0.22,
+        "end": 0.5
+      },
+      {
+        "word": " we",
+        "start": 0.74,
+        "end": 0.96
+      },
+      {
+        "word": " have",
+        "start": 0.96,
+        "end": 1.04
+      },
+      {
+        "word": " never",
+        "start": 1.04,
+        "end": 1.18
+      },
+      {
+        "word": " been",
+        "start": 1.18,
+        "end": 1.34
+      },
+      {
+        "word": " good",
+        "start": 1.34,
+        "end": 1.56
+      },
+      {
+        "word": " at",
+        "start": 1.56,
+        "end": 1.7
+      },
+      {
+        "word": " staying",
+        "start": 1.7,
+        "end": 1.88
+      },
+      {
+        "word": " still.",
+        "start": 1.88,
+        "end": 2.26
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "start": 2.74,
+    "end": 5.62,
+    "text": "We sailed across every ocean, we walked across every desert.",
+    "words": [
+      {
+        "word": " We",
+        "start": 2.74,
+        "end": 2.92
+      },
+      {
+        "word": " sailed",
+        "start": 2.92,
+        "end": 3.08
+      },
+      {
+        "word": " across",
+        "start": 3.08,
+        "end": 3.4
+      },
+      {
+        "word": " every",
+        "start": 3.4,
+        "end": 3.72
+      },
+      {
+        "word": " ocean,",
+        "start": 3.72,
+        "end": 4.02
+      },
+      {
+        "word": " we",
+        "start": 4.46,
+        "end": 4.54
+      },
+      {
+        "word": " walked",
+        "start": 4.54,
+        "end": 4.74
+      },
+      {
+        "word": " across",
+        "start": 4.74,
+        "end": 5.02
+      },
+      {
+        "word": " every",
+        "start": 5.02,
+        "end": 5.32
+      },
+      {
+        "word": " desert.",
+        "start": 5.32,
+        "end": 5.62
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "start": 6.22,
+    "end": 7.82,
+    "text": "And when there was nowhere left on Earth to explore,",
+    "words": [
+      {
+        "word": " And",
+        "start": 6.22,
+        "end": 6.34
+      },
+      {
+        "word": " when",
+        "start": 6.34,
+        "end": 6.42
+      },
+      {
+        "word": " there",
+        "start": 6.42,
+        "end": 6.56
+      },
+      {
+        "word": " was",
+        "start": 6.56,
+        "end": 6.66
+      },
+      {
+        "word": " nowhere",
+        "start": 6.66,
+        "end": 6.84
+      },
+      {
+        "word": " left",
+        "start": 6.84,
+        "end": 7.12
+      },
+      {
+        "word": " on",
+        "start": 7.12,
+        "end": 7.3
+      },
+      {
+        "word": " Earth",
+        "start": 7.3,
+        "end": 7.44
+      },
+      {
+        "word": " to",
+        "start": 7.44,
+        "end": 7.62
+      },
+      {
+        "word": " explore,",
+        "start": 7.62,
+        "end": 7.82
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "start": 8.28,
+    "end": 9.16,
+    "text": "we looked up at the stars.",
+    "words": [
+      {
+        "word": " we",
+        "start": 8.28,
+        "end": 8.42
+      },
+      {
+        "word": " looked",
+        "start": 8.42,
+        "end": 8.56
+      },
+      {
+        "word": " up",
+        "start": 8.56,
+        "end": 8.76
+      },
+      {
+        "word": " at",
+        "start": 8.76,
+        "end": 8.86
+      },
+      {
+        "word": " the",
+        "start": 8.86,
+        "end": 8.94
+      },
+      {
+        "word": " stars.",
+        "start": 8.94,
+        "end": 9.16
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "start": 9.68,
+    "end": 12.64,
+    "text": "In 1969, two human beings landed on the moon.",
+    "words": [
+      {
+        "word": " In",
+        "start": 9.68,
+        "end": 9.78
+      },
+      {
+        "word": " 1969,",
+        "start": 9.78,
+        "end": 10.3
+      },
+      {
+        "word": " two",
+        "start": 10.92,
+        "end": 11.14
+      },
+      {
+        "word": " human",
+        "start": 11.14,
+        "end": 11.52
+      },
+      {
+        "word": " beings",
+        "start": 11.52,
+        "end": 11.76
+      },
+      {
+        "word": " landed",
+        "start": 11.76,
+        "end": 12.2
+      },
+      {
+        "word": " on",
+        "start": 12.2,
+        "end": 12.42
+      },
+      {
+        "word": " the",
+        "start": 12.42,
+        "end": 12.5
+      },
+      {
+        "word": " moon.",
+        "start": 12.5,
+        "end": 12.64
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "start": 13.14,
+    "end": 14.26,
+    "text": "They stayed for 21 hours.",
+    "words": [
+      {
+        "word": " They",
+        "start": 13.14,
+        "end": 13.28
+      },
+      {
+        "word": " stayed",
+        "start": 13.28,
+        "end": 13.46
+      },
+      {
+        "word": " for",
+        "start": 13.46,
+        "end": 13.66
+      },
+      {
+        "word": " 21",
+        "start": 13.66,
+        "end": 13.84
+      },
+      {
+        "word": " hours.",
+        "start": 13.84,
+        "end": 14.26
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "start": 14.68,
+    "end": 16.94,
+    "text": "They planted a flag, collected bags of moon rocks,",
+    "words": [
+      {
+        "word": " They",
+        "start": 14.68,
+        "end": 14.76
+      },
+      {
+        "word": " planted",
+        "start": 14.76,
+        "end": 14.98
+      },
+      {
+        "word": " a",
+        "start": 14.98,
+        "end": 15.16
+      },
+      {
+        "word": " flag,",
+        "start": 15.16,
+        "end": 15.36
+      },
+      {
+        "word": " collected",
+        "start": 15.4,
+        "end": 16.04
+      },
+      {
+        "word": " bags",
+        "start": 16.04,
+        "end": 16.26
+      },
+      {
+        "word": " of",
+        "start": 16.26,
+        "end": 16.5
+      },
+      {
+        "word": " moon",
+        "start": 16.5,
+        "end": 16.68
+      },
+      {
+        "word": " rocks,",
+        "start": 16.68,
+        "end": 16.94
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "start": 17.04,
+    "end": 19.12,
+    "text": "and took pictures of their own footprints in the dust.",
+    "words": [
+      {
+        "word": " and",
+        "start": 17.04,
+        "end": 17.42
+      },
+      {
+        "word": " took",
+        "start": 17.42,
+        "end": 17.52
+      },
+      {
+        "word": " pictures",
+        "start": 17.52,
+        "end": 17.84
+      },
+      {
+        "word": " of",
+        "start": 17.84,
+        "end": 18.0
+      },
+      {
+        "word": " their",
+        "start": 18.0,
+        "end": 18.12
+      },
+      {
+        "word": " own",
+        "start": 18.12,
+        "end": 18.28
+      },
+      {
+        "word": " footprints",
+        "start": 18.28,
+        "end": 18.5
+      },
+      {
+        "word": " in",
+        "start": 18.5,
+        "end": 18.88
+      },
+      {
+        "word": " the",
+        "start": 18.88,
+        "end": 18.94
+      },
+      {
+        "word": " dust.",
+        "start": 18.94,
+        "end": 19.12
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "start": 19.7,
+    "end": 20.3,
+    "text": "Then they flew home,",
+    "words": [
+      {
+        "word": " Then",
+        "start": 19.7,
+        "end": 19.8
+      },
+      {
+        "word": " they",
+        "start": 19.8,
+        "end": 19.92
+      },
+      {
+        "word": " flew",
+        "start": 19.92,
+        "end": 20.06
+      },
+      {
+        "word": " home,",
+        "start": 20.06,
+        "end": 20.3
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "start": 20.8,
+    "end": 22.38,
+    "text": "but they couldn't take everything with them.",
+    "words": [
+      {
+        "word": " but",
+        "start": 20.8,
+        "end": 21.02
+      },
+      {
+        "word": " they",
+        "start": 21.02,
+        "end": 21.12
+      },
+      {
+        "word": " couldn't",
+        "start": 21.12,
+        "end": 21.4
+      },
+      {
+        "word": " take",
+        "start": 21.4,
+        "end": 21.58
+      },
+      {
+        "word": " everything",
+        "start": 21.58,
+        "end": 21.86
+      },
+      {
+        "word": " with",
+        "start": 21.86,
+        "end": 22.2
+      },
+      {
+        "word": " them.",
+        "start": 22.2,
+        "end": 22.38
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "start": 22.78,
+    "end": 23.82,
+    "text": "The bottom half of the eagle,",
+    "words": [
+      {
+        "word": " The",
+        "start": 22.78,
+        "end": 22.94
+      },
+      {
+        "word": " bottom",
+        "start": 22.94,
+        "end": 23.16
+      },
+      {
+        "word": " half",
+        "start": 23.16,
+        "end": 23.4
+      },
+      {
+        "word": " of",
+        "start": 23.4,
+        "end": 23.52
+      },
+      {
+        "word": " the",
+        "start": 23.52,
+        "end": 23.6
+      },
+      {
+        "word": " eagle,",
+        "start": 23.6,
+        "end": 23.82
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "start": 24.2,
+    "end": 26.2,
+    "text": "the golden descent stage that carried them down",
+    "words": [
+      {
+        "word": " the",
+        "start": 24.2,
+        "end": 24.4
+      },
+      {
+        "word": " golden",
+        "start": 24.4,
+        "end": 24.6
+      },
+      {
+        "word": " descent",
+        "start": 24.6,
+        "end": 24.8
+      },
+      {
+        "word": " stage",
+        "start": 24.8,
+        "end": 25.26
+      },
+      {
+        "word": " that",
+        "start": 25.26,
+        "end": 25.54
+      },
+      {
+        "word": " carried",
+        "start": 25.54,
+        "end": 25.8
+      },
+      {
+        "word": " them",
+        "start": 25.8,
+        "end": 26.0
+      },
+      {
+        "word": " down",
+        "start": 26.0,
+        "end": 26.2
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "start": 26.2,
+    "end": 27.78,
+    "text": "to the moon was never meant to come home.",
+    "words": [
+      {
+        "word": " to",
+        "start": 26.2,
+        "end": 26.42
+      },
+      {
+        "word": " the",
+        "start": 26.42,
+        "end": 26.5
+      },
+      {
+        "word": " moon",
+        "start": 26.5,
+        "end": 26.66
+      },
+      {
+        "word": " was",
+        "start": 26.66,
+        "end": 26.98
+      },
+      {
+        "word": " never",
+        "start": 26.98,
+        "end": 27.12
+      },
+      {
+        "word": " meant",
+        "start": 27.12,
+        "end": 27.34
+      },
+      {
+        "word": " to",
+        "start": 27.34,
+        "end": 27.48
+      },
+      {
+        "word": " come",
+        "start": 27.48,
+        "end": 27.62
+      },
+      {
+        "word": " home.",
+        "start": 27.62,
+        "end": 27.78
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "start": 28.24,
+    "end": 29.42,
+    "text": "When it was time to leave,",
+    "words": [
+      {
+        "word": " When",
+        "start": 28.239999999999995,
+        "end": 28.68
+      },
+      {
+        "word": " it",
+        "start": 28.68,
+        "end": 28.78
+      },
+      {
+        "word": " was",
+        "start": 28.78,
+        "end": 28.88
+      },
+      {
+        "word": " time",
+        "start": 28.88,
+        "end": 29.04
+      },
+      {
+        "word": " to",
+        "start": 29.04,
+        "end": 29.24
+      },
+      {
+        "word": " leave,",
+        "start": 29.24,
+        "end": 29.42
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "start": 29.7,
+    "end": 31.6,
+    "text": "only the top cabin blasted into space.",
+    "words": [
+      {
+        "word": " only",
+        "start": 29.7,
+        "end": 29.98
+      },
+      {
+        "word": " the",
+        "start": 29.98,
+        "end": 30.14
+      },
+      {
+        "word": " top",
+        "start": 30.14,
+        "end": 30.3
+      },
+      {
+        "word": " cabin",
+        "start": 30.3,
+        "end": 30.68
+      },
+      {
+        "word": " blasted",
+        "start": 30.68,
+        "end": 30.96
+      },
+      {
+        "word": " into",
+        "start": 30.96,
+        "end": 31.3
+      },
+      {
+        "word": " space.",
+        "start": 31.3,
+        "end": 31.6
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "start": 32.26,
+    "end": 34.14,
+    "text": "The bottom half, with its golden legs and ladder,",
+    "words": [
+      {
+        "word": " The",
+        "start": 32.26,
+        "end": 32.36
+      },
+      {
+        "word": " bottom",
+        "start": 32.36,
+        "end": 32.56
+      },
+      {
+        "word": " half,",
+        "start": 32.56,
+        "end": 32.82
+      },
+      {
+        "word": " with",
+        "start": 32.82,
+        "end": 33.02
+      },
+      {
+        "word": " its",
+        "start": 33.02,
+        "end": 33.16
+      },
+      {
+        "word": " golden",
+        "start": 33.16,
+        "end": 33.34
+      },
+      {
+        "word": " legs",
+        "start": 33.34,
+        "end": 33.7
+      },
+      {
+        "word": " and",
+        "start": 33.7,
+        "end": 33.92
+      },
+      {
+        "word": " ladder,",
+        "start": 33.92,
+        "end": 34.14
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "start": 34.46,
+    "end": 34.98,
+    "text": "stayed behind.",
+    "words": [
+      {
+        "word": " stayed",
+        "start": 34.46,
+        "end": 34.7
+      },
+      {
+        "word": " behind.",
+        "start": 34.7,
+        "end": 34.98
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "start": 35.92,
+    "end": 37.7,
+    "text": "It is still standing at Tranquility Base today,",
+    "words": [
+      {
+        "word": " It",
+        "start": 35.92,
+        "end": 36.06
+      },
+      {
+        "word": " is",
+        "start": 36.06,
+        "end": 36.14
+      },
+      {
+        "word": " still",
+        "start": 36.14,
+        "end": 36.3
+      },
+      {
+        "word": " standing",
+        "start": 36.3,
+        "end": 36.64
+      },
+      {
+        "word": " at",
+        "start": 36.64,
+        "end": 36.8
+      },
+      {
+        "word": " Tranquility",
+        "start": 36.8,
+        "end": 37.2
+      },
+      {
+        "word": " Base",
+        "start": 37.2,
+        "end": 37.5
+      },
+      {
+        "word": " today,",
+        "start": 37.5,
+        "end": 37.7
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "start": 38.24,
+    "end": 39.38,
+    "text": "exactly where they left it.",
+    "words": [
+      {
+        "word": " exactly",
+        "start": 38.24,
+        "end": 38.56
+      },
+      {
+        "word": " where",
+        "start": 38.56,
+        "end": 38.92
+      },
+      {
+        "word": " they",
+        "start": 38.92,
+        "end": 39.06
+      },
+      {
+        "word": " left",
+        "start": 39.06,
+        "end": 39.22
+      },
+      {
+        "word": " it.",
+        "start": 39.22,
+        "end": 39.38
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "start": 39.72,
+    "end": 42.28,
+    "text": "Beside the lander, the astronauts placed a seismometer.",
+    "words": [
+      {
+        "word": " Beside",
+        "start": 39.72,
+        "end": 40.04
+      },
+      {
+        "word": " the",
+        "start": 40.04,
+        "end": 40.16
+      },
+      {
+        "word": " lander,",
+        "start": 40.16,
+        "end": 40.56
+      },
+      {
+        "word": " the",
+        "start": 40.62,
+        "end": 40.68
+      },
+      {
+        "word": " astronauts",
+        "start": 40.68,
+        "end": 40.92
+      },
+      {
+        "word": " placed",
+        "start": 40.92,
+        "end": 41.48
+      },
+      {
+        "word": " a",
+        "start": 41.48,
+        "end": 41.76
+      },
+      {
+        "word": " seismometer.",
+        "start": 41.76,
+        "end": 42.28
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "start": 42.74,
+    "end": 45.08,
+    "text": "That is an electronic ear pressed against the ground",
+    "words": [
+      {
+        "word": " That",
+        "start": 42.74,
+        "end": 43.0
+      },
+      {
+        "word": " is",
+        "start": 43.0,
+        "end": 43.2
+      },
+      {
+        "word": " an",
+        "start": 43.2,
+        "end": 43.3
+      },
+      {
+        "word": " electronic",
+        "start": 43.3,
+        "end": 43.62
+      },
+      {
+        "word": " ear",
+        "start": 43.62,
+        "end": 44.0
+      },
+      {
+        "word": " pressed",
+        "start": 44.0,
+        "end": 44.32
+      },
+      {
+        "word": " against",
+        "start": 44.32,
+        "end": 44.6
+      },
+      {
+        "word": " the",
+        "start": 44.6,
+        "end": 44.8
+      },
+      {
+        "word": " ground",
+        "start": 44.8,
+        "end": 45.08
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "start": 45.08,
+    "end": 46.32,
+    "text": "to listen for moon quakes.",
+    "words": [
+      {
+        "word": " to",
+        "start": 45.08,
+        "end": 45.3
+      },
+      {
+        "word": " listen",
+        "start": 45.3,
+        "end": 45.5
+      },
+      {
+        "word": " for",
+        "start": 45.5,
+        "end": 45.72
+      },
+      {
+        "word": " moon",
+        "start": 45.72,
+        "end": 45.94
+      },
+      {
+        "word": " quakes.",
+        "start": 45.94,
+        "end": 46.32
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "start": 46.84,
+    "end": 49.18,
+    "text": "Later, when NASA crashed a rocket stage into the moon",
+    "words": [
+      {
+        "word": " Later,",
+        "start": 46.84,
+        "end": 47.12
+      },
+      {
+        "word": " when",
+        "start": 47.24,
+        "end": 47.38
+      },
+      {
+        "word": " NASA",
+        "start": 47.38,
+        "end": 47.56
+      },
+      {
+        "word": " crashed",
+        "start": 47.56,
+        "end": 47.9
+      },
+      {
+        "word": " a",
+        "start": 47.9,
+        "end": 48.12
+      },
+      {
+        "word": " rocket",
+        "start": 48.12,
+        "end": 48.3
+      },
+      {
+        "word": " stage",
+        "start": 48.3,
+        "end": 48.6
+      },
+      {
+        "word": " into",
+        "start": 48.6,
+        "end": 48.86
+      },
+      {
+        "word": " the",
+        "start": 48.86,
+        "end": 49.02
+      },
+      {
+        "word": " moon",
+        "start": 49.02,
+        "end": 49.18
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "start": 49.18,
+    "end": 50.46,
+    "text": "about 70 kilometers away,",
+    "words": [
+      {
+        "word": " about",
+        "start": 49.18,
+        "end": 49.4
+      },
+      {
+        "word": " 70",
+        "start": 49.4,
+        "end": 49.76
+      },
+      {
+        "word": " kilometers",
+        "start": 49.76,
+        "end": 49.96
+      },
+      {
+        "word": " away,",
+        "start": 49.96,
+        "end": 50.46
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "start": 51.1,
+    "end": 52.32,
+    "text": "roughly an hour's drive in a car,",
+    "words": [
+      {
+        "word": " roughly",
+        "start": 51.1,
+        "end": 51.1
+      },
+      {
+        "word": " an",
+        "start": 51.1,
+        "end": 51.26
+      },
+      {
+        "word": " hour's",
+        "start": 51.26,
+        "end": 51.62
+      },
+      {
+        "word": " drive",
+        "start": 51.62,
+        "end": 51.8
+      },
+      {
+        "word": " in",
+        "start": 51.8,
+        "end": 52.04
+      },
+      {
+        "word": " a",
+        "start": 52.04,
+        "end": 52.08
+      },
+      {
+        "word": " car,",
+        "start": 52.08,
+        "end": 52.32
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "start": 52.74,
+    "end": 54.9,
+    "text": "the dry lunar rock had no water to absorb the shake.",
+    "words": [
+      {
+        "word": " the",
+        "start": 52.74,
+        "end": 52.82
+      },
+      {
+        "word": " dry",
+        "start": 52.82,
+        "end": 53.04
+      },
+      {
+        "word": " lunar",
+        "start": 53.04,
+        "end": 53.26
+      },
+      {
+        "word": " rock",
+        "start": 53.26,
+        "end": 53.56
+      },
+      {
+        "word": " had",
+        "start": 53.56,
+        "end": 53.72
+      },
+      {
+        "word": " no",
+        "start": 53.72,
+        "end": 53.94
+      },
+      {
+        "word": " water",
+        "start": 53.94,
+        "end": 54.18
+      },
+      {
+        "word": " to",
+        "start": 54.18,
+        "end": 54.36
+      },
+      {
+        "word": " absorb",
+        "start": 54.36,
+        "end": 54.46
+      },
+      {
+        "word": " the",
+        "start": 54.46,
+        "end": 54.74
+      },
+      {
+        "word": " shake.",
+        "start": 54.74,
+        "end": 54.9
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "start": 54.9,
+    "end": 57.78,
+    "text": "The entire moon rang like a giant playground bell",
+    "words": [
+      {
+        "word": " The",
+        "start": 54.9,
+        "end": 55.4
+      },
+      {
+        "word": " entire",
+        "start": 55.4,
+        "end": 55.88
+      },
+      {
+        "word": " moon",
+        "start": 55.88,
+        "end": 56.1
+      },
+      {
+        "word": " rang",
+        "start": 56.1,
+        "end": 56.38
+      },
+      {
+        "word": " like",
+        "start": 56.38,
+        "end": 56.66
+      },
+      {
+        "word": " a",
+        "start": 56.66,
+        "end": 56.74
+      },
+      {
+        "word": " giant",
+        "start": 56.74,
+        "end": 57.02
+      },
+      {
+        "word": " playground",
+        "start": 57.02,
+        "end": 57.26
+      },
+      {
+        "word": " bell",
+        "start": 57.26,
+        "end": 57.78
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "start": 57.78,
+    "end": 58.6,
+    "text": "for nearly an hour.",
+    "words": [
+      {
+        "word": " for",
+        "start": 57.78,
+        "end": 58.02
+      },
+      {
+        "word": " nearly",
+        "start": 58.02,
+        "end": 58.18
+      },
+      {
+        "word": " an",
+        "start": 58.18,
+        "end": 58.38
+      },
+      {
+        "word": " hour.",
+        "start": 58.38,
+        "end": 58.6
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "start": 59.04,
+    "end": 61.06,
+    "text": "That long ringing told us the crust is dry",
+    "words": [
+      {
+        "word": " That",
+        "start": 59.04,
+        "end": 59.18
+      },
+      {
+        "word": " long",
+        "start": 59.18,
+        "end": 59.38
+      },
+      {
+        "word": " ringing",
+        "start": 59.38,
+        "end": 59.72
+      },
+      {
+        "word": " told",
+        "start": 59.72,
+        "end": 60.06
+      },
+      {
+        "word": " us",
+        "start": 60.06,
+        "end": 60.32
+      },
+      {
+        "word": " the",
+        "start": 60.32,
+        "end": 60.42
+      },
+      {
+        "word": " crust",
+        "start": 60.42,
+        "end": 60.58
+      },
+      {
+        "word": " is",
+        "start": 60.58,
+        "end": 60.8
+      },
+      {
+        "word": " dry",
+        "start": 60.8,
+        "end": 61.06
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "start": 61.06,
+    "end": 62.18,
+    "text": "and deeply fractured.",
+    "words": [
+      {
+        "word": " and",
+        "start": 61.06,
+        "end": 61.6
+      },
+      {
+        "word": " deeply",
+        "start": 61.6,
+        "end": 61.82
+      },
+      {
+        "word": " fractured.",
+        "start": 61.82,
+        "end": 62.18
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "start": 62.88,
+    "end": 65.76,
+    "text": "Further away at a moon valley lunar crater named Hadley Reel,",
+    "words": [
+      {
+        "word": " Further",
+        "start": 62.88,
+        "end": 63.12
+      },
+      {
+        "word": " away",
+        "start": 63.12,
+        "end": 63.4
+      },
+      {
+        "word": " at",
+        "start": 63.4,
+        "end": 63.58
+      },
+      {
+        "word": " a",
+        "start": 63.58,
+        "end": 63.64
+      },
+      {
+        "word": " moon",
+        "start": 63.64,
+        "end": 63.8
+      },
+      {
+        "word": " valley",
+        "start": 63.8,
+        "end": 64.06
+      },
+      {
+        "word": " lunar",
+        "start": 64.06,
+        "end": 64.32
+      },
+      {
+        "word": " crater",
+        "start": 64.32,
+        "end": 64.58
+      },
+      {
+        "word": " named",
+        "start": 64.58,
+        "end": 64.96
+      },
+      {
+        "word": " Hadley",
+        "start": 64.96,
+        "end": 65.4
+      },
+      {
+        "word": " Reel,",
+        "start": 65.4,
+        "end": 65.76
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "start": 66.1,
+    "end": 68.64,
+    "text": "Apollo 15 parked a car on the moon in 1971.",
+    "words": [
+      {
+        "word": " Apollo",
+        "start": 66.1,
+        "end": 66.24
+      },
+      {
+        "word": " 15",
+        "start": 66.24,
+        "end": 66.76
+      },
+      {
+        "word": " parked",
+        "start": 66.76,
+        "end": 67.06
+      },
+      {
+        "word": " a",
+        "start": 67.06,
+        "end": 67.18
+      },
+      {
+        "word": " car",
+        "start": 67.18,
+        "end": 67.38
+      },
+      {
+        "word": " on",
+        "start": 67.38,
+        "end": 67.56
+      },
+      {
+        "word": " the",
+        "start": 67.56,
+        "end": 67.66
+      },
+      {
+        "word": " moon",
+        "start": 67.66,
+        "end": 67.86
+      },
+      {
+        "word": " in",
+        "start": 67.86,
+        "end": 68.02
+      },
+      {
+        "word": " 1971.",
+        "start": 68.02,
+        "end": 68.64
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "start": 69.5,
+    "end": 71.7,
+    "text": "It was an electric space buggy with wire mesh tires.",
+    "words": [
+      {
+        "word": " It",
+        "start": 69.5,
+        "end": 69.64
+      },
+      {
+        "word": " was",
+        "start": 69.64,
+        "end": 69.72
+      },
+      {
+        "word": " an",
+        "start": 69.72,
+        "end": 69.82
+      },
+      {
+        "word": " electric",
+        "start": 69.82,
+        "end": 70.1
+      },
+      {
+        "word": " space",
+        "start": 70.1,
+        "end": 70.38
+      },
+      {
+        "word": " buggy",
+        "start": 70.38,
+        "end": 70.68
+      },
+      {
+        "word": " with",
+        "start": 70.68,
+        "end": 70.9
+      },
+      {
+        "word": " wire",
+        "start": 70.9,
+        "end": 71.14
+      },
+      {
+        "word": " mesh",
+        "start": 71.14,
+        "end": 71.4
+      },
+      {
+        "word": " tires.",
+        "start": 71.4,
+        "end": 71.7
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "start": 72.34,
+    "end": 74.14,
+    "text": "It has not moved an inch in over 50 years.",
+    "words": [
+      {
+        "word": " It",
+        "start": 72.34,
+        "end": 72.44
+      },
+      {
+        "word": " has",
+        "start": 72.44,
+        "end": 72.5
+      },
+      {
+        "word": " not",
+        "start": 72.5,
+        "end": 72.64
+      },
+      {
+        "word": " moved",
+        "start": 72.64,
+        "end": 72.88
+      },
+      {
+        "word": " an",
+        "start": 72.88,
+        "end": 73.0
+      },
+      {
+        "word": " inch",
+        "start": 73.0,
+        "end": 73.28
+      },
+      {
+        "word": " in",
+        "start": 73.28,
+        "end": 73.4
+      },
+      {
+        "word": " over",
+        "start": 73.4,
+        "end": 73.56
+      },
+      {
+        "word": " 50",
+        "start": 73.56,
+        "end": 73.84
+      },
+      {
+        "word": " years.",
+        "start": 73.84,
+        "end": 74.14
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "start": 74.7,
+    "end": 75.54,
+    "text": "If you visited today,",
+    "words": [
+      {
+        "word": " If",
+        "start": 74.7,
+        "end": 74.88
+      },
+      {
+        "word": " you",
+        "start": 74.88,
+        "end": 74.96
+      },
+      {
+        "word": " visited",
+        "start": 74.96,
+        "end": 75.14
+      },
+      {
+        "word": " today,",
+        "start": 75.14,
+        "end": 75.54
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "start": 75.66,
+    "end": 76.46,
+    "text": "it would look like the astronauts",
+    "words": [
+      {
+        "word": " it",
+        "start": 75.66,
+        "end": 75.76
+      },
+      {
+        "word": " would",
+        "start": 75.76,
+        "end": 75.86
+      },
+      {
+        "word": " look",
+        "start": 75.86,
+        "end": 76.0
+      },
+      {
+        "word": " like",
+        "start": 76.0,
+        "end": 76.12
+      },
+      {
+        "word": " the",
+        "start": 76.12,
+        "end": 76.24
+      },
+      {
+        "word": " astronauts",
+        "start": 76.24,
+        "end": 76.46
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "start": 76.46,
+    "end": 77.84,
+    "text": "just stepped away for a moment.",
+    "words": [
+      {
+        "word": " just",
+        "start": 76.46,
+        "end": 76.92
+      },
+      {
+        "word": " stepped",
+        "start": 76.92,
+        "end": 77.1
+      },
+      {
+        "word": " away",
+        "start": 77.1,
+        "end": 77.38
+      },
+      {
+        "word": " for",
+        "start": 77.38,
+        "end": 77.56
+      },
+      {
+        "word": " a",
+        "start": 77.56,
+        "end": 77.62
+      },
+      {
+        "word": " moment.",
+        "start": 77.62,
+        "end": 77.84
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "start": 78.34,
+    "end": 79.8,
+    "text": "On Mars, the story is different.",
+    "words": [
+      {
+        "word": " On",
+        "start": 78.34,
+        "end": 78.6
+      },
+      {
+        "word": " Mars,",
+        "start": 78.6,
+        "end": 78.76
+      },
+      {
+        "word": " the",
+        "start": 79.18,
+        "end": 79.22
+      },
+      {
+        "word": " story",
+        "start": 79.22,
+        "end": 79.44
+      },
+      {
+        "word": " is",
+        "start": 79.44,
+        "end": 79.58
+      },
+      {
+        "word": " different.",
+        "start": 79.58,
+        "end": 79.8
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "start": 80.28,
+    "end": 80.86,
+    "text": "Mars has weather.",
+    "words": [
+      {
+        "word": " Mars",
+        "start": 80.28,
+        "end": 80.42
+      },
+      {
+        "word": " has",
+        "start": 80.42,
+        "end": 80.68
+      },
+      {
+        "word": " weather.",
+        "start": 80.68,
+        "end": 80.86
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "start": 81.4,
+    "end": 83.84,
+    "text": "For 14 years, a little robot rover named Opportunity",
+    "words": [
+      {
+        "word": " For",
+        "start": 81.4,
+        "end": 81.62
+      },
+      {
+        "word": " 14",
+        "start": 81.62,
+        "end": 81.9
+      },
+      {
+        "word": " years,",
+        "start": 81.9,
+        "end": 82.2
+      },
+      {
+        "word": " a",
+        "start": 82.26,
+        "end": 82.44
+      },
+      {
+        "word": " little",
+        "start": 82.44,
+        "end": 82.54
+      },
+      {
+        "word": " robot",
+        "start": 82.54,
+        "end": 82.88
+      },
+      {
+        "word": " rover",
+        "start": 82.88,
+        "end": 83.08
+      },
+      {
+        "word": " named",
+        "start": 83.08,
+        "end": 83.44
+      },
+      {
+        "word": " Opportunity",
+        "start": 83.44,
+        "end": 83.84
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "start": 83.84,
+    "end": 85.32,
+    "text": "rolled across the red dust.",
+    "words": [
+      {
+        "word": " rolled",
+        "start": 83.84,
+        "end": 84.32
+      },
+      {
+        "word": " across",
+        "start": 84.32,
+        "end": 84.62
+      },
+      {
+        "word": " the",
+        "start": 84.62,
+        "end": 84.88
+      },
+      {
+        "word": " red",
+        "start": 84.88,
+        "end": 85.02
+      },
+      {
+        "word": " dust.",
+        "start": 85.02,
+        "end": 85.32
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "start": 85.66,
+    "end": 87.26,
+    "text": "It was only built to last 90 days",
+    "words": [
+      {
+        "word": " It",
+        "start": 85.66,
+        "end": 85.76
+      },
+      {
+        "word": " was",
+        "start": 85.76,
+        "end": 85.84
+      },
+      {
+        "word": " only",
+        "start": 85.84,
+        "end": 86.04
+      },
+      {
+        "word": " built",
+        "start": 86.04,
+        "end": 86.26
+      },
+      {
+        "word": " to",
+        "start": 86.26,
+        "end": 86.42
+      },
+      {
+        "word": " last",
+        "start": 86.42,
+        "end": 86.58
+      },
+      {
+        "word": " 90",
+        "start": 86.58,
+        "end": 86.94
+      },
+      {
+        "word": " days",
+        "start": 86.94,
+        "end": 87.26
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "start": 87.26,
+    "end": 88.82,
+    "text": "about the length of a summer vacation.",
+    "words": [
+      {
+        "word": " about",
+        "start": 87.26,
+        "end": 87.72
+      },
+      {
+        "word": " the",
+        "start": 87.72,
+        "end": 87.9
+      },
+      {
+        "word": " length",
+        "start": 87.9,
+        "end": 88.1
+      },
+      {
+        "word": " of",
+        "start": 88.1,
+        "end": 88.24
+      },
+      {
+        "word": " a",
+        "start": 88.24,
+        "end": 88.32
+      },
+      {
+        "word": " summer",
+        "start": 88.32,
+        "end": 88.48
+      },
+      {
+        "word": " vacation.",
+        "start": 88.48,
+        "end": 88.82
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "start": 89.34,
+    "end": 91.78,
+    "text": "Instead, it explored for over 5,000 days.",
+    "words": [
+      {
+        "word": " Instead,",
+        "start": 89.34,
+        "end": 89.64
+      },
+      {
+        "word": " it",
+        "start": 89.84,
+        "end": 89.94
+      },
+      {
+        "word": " explored",
+        "start": 89.94,
+        "end": 90.22
+      },
+      {
+        "word": " for",
+        "start": 90.22,
+        "end": 90.54
+      },
+      {
+        "word": " over",
+        "start": 90.54,
+        "end": 90.72
+      },
+      {
+        "word": " 5",
+        "start": 90.72,
+        "end": 91.1
+      },
+      {
+        "word": ",000",
+        "start": 91.1,
+        "end": 91.52
+      },
+      {
+        "word": " days.",
+        "start": 91.52,
+        "end": 91.78
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "start": 92.24,
+    "end": 94.64,
+    "text": "But in 2018, a dust storm so huge",
+    "words": [
+      {
+        "word": " But",
+        "start": 92.24,
+        "end": 92.42
+      },
+      {
+        "word": " in",
+        "start": 92.42,
+        "end": 92.52
+      },
+      {
+        "word": " 2018,",
+        "start": 92.52,
+        "end": 92.9
+      },
+      {
+        "word": " a",
+        "start": 92.9,
+        "end": 93.34
+      },
+      {
+        "word": " dust",
+        "start": 93.34,
+        "end": 93.54
+      },
+      {
+        "word": " storm",
+        "start": 93.54,
+        "end": 93.92
+      },
+      {
+        "word": " so",
+        "start": 93.92,
+        "end": 94.16
+      },
+      {
+        "word": " huge",
+        "start": 94.16,
+        "end": 94.64
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "start": 94.64,
+    "end": 96.64,
+    "text": "it covered the entire planet blocked out the sun.",
+    "words": [
+      {
+        "word": " it",
+        "start": 94.64,
+        "end": 94.8
+      },
+      {
+        "word": " covered",
+        "start": 94.8,
+        "end": 95.0
+      },
+      {
+        "word": " the",
+        "start": 95.0,
+        "end": 95.14
+      },
+      {
+        "word": " entire",
+        "start": 95.14,
+        "end": 95.26
+      },
+      {
+        "word": " planet",
+        "start": 95.26,
+        "end": 95.82
+      },
+      {
+        "word": " blocked",
+        "start": 95.82,
+        "end": 96.02
+      },
+      {
+        "word": " out",
+        "start": 96.02,
+        "end": 96.26
+      },
+      {
+        "word": " the",
+        "start": 96.26,
+        "end": 96.42
+      },
+      {
+        "word": " sun.",
+        "start": 96.42,
+        "end": 96.64
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "start": 97.14,
+    "end": 98.76,
+    "text": "Opportunity solar panels went dark.",
+    "words": [
+      {
+        "word": " Opportunity",
+        "start": 97.14,
+        "end": 97.5
+      },
+      {
+        "word": " solar",
+        "start": 97.5,
+        "end": 97.88
+      },
+      {
+        "word": " panels",
+        "start": 97.88,
+        "end": 98.18
+      },
+      {
+        "word": " went",
+        "start": 98.18,
+        "end": 98.48
+      },
+      {
+        "word": " dark.",
+        "start": 98.48,
+        "end": 98.76
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "start": 99.3,
+    "end": 101.58,
+    "text": "And on June 10th, it sent one final message home",
+    "words": [
+      {
+        "word": " And",
+        "start": 99.3,
+        "end": 99.36
+      },
+      {
+        "word": " on",
+        "start": 99.36,
+        "end": 99.48
+      },
+      {
+        "word": " June",
+        "start": 99.48,
+        "end": 99.68
+      },
+      {
+        "word": " 10th,",
+        "start": 99.68,
+        "end": 100.2
+      },
+      {
+        "word": " it",
+        "start": 100.22,
+        "end": 100.28
+      },
+      {
+        "word": " sent",
+        "start": 100.28,
+        "end": 100.42
+      },
+      {
+        "word": " one",
+        "start": 100.42,
+        "end": 100.66
+      },
+      {
+        "word": " final",
+        "start": 100.66,
+        "end": 101.02
+      },
+      {
+        "word": " message",
+        "start": 101.02,
+        "end": 101.34
+      },
+      {
+        "word": " home",
+        "start": 101.34,
+        "end": 101.58
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "start": 101.58,
+    "end": 102.78,
+    "text": "before falling asleep forever.",
+    "words": [
+      {
+        "word": " before",
+        "start": 101.58,
+        "end": 101.84
+      },
+      {
+        "word": " falling",
+        "start": 101.84,
+        "end": 102.22
+      },
+      {
+        "word": " asleep",
+        "start": 102.22,
+        "end": 102.44
+      },
+      {
+        "word": " forever.",
+        "start": 102.44,
+        "end": 102.78
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "start": 103.26,
+    "end": 105.04,
+    "text": "We sent over 1,000 commands trying to wake it.",
+    "words": [
+      {
+        "word": " We",
+        "start": 103.26,
+        "end": 103.4
+      },
+      {
+        "word": " sent",
+        "start": 103.4,
+        "end": 103.52
+      },
+      {
+        "word": " over",
+        "start": 103.52,
+        "end": 103.7
+      },
+      {
+        "word": " 1",
+        "start": 103.7,
+        "end": 103.82
+      },
+      {
+        "word": ",000",
+        "start": 103.82,
+        "end": 104.08
+      },
+      {
+        "word": " commands",
+        "start": 104.08,
+        "end": 104.34
+      },
+      {
+        "word": " trying",
+        "start": 104.34,
+        "end": 104.64
+      },
+      {
+        "word": " to",
+        "start": 104.64,
+        "end": 104.76
+      },
+      {
+        "word": " wake",
+        "start": 104.76,
+        "end": 104.9
+      },
+      {
+        "word": " it.",
+        "start": 104.9,
+        "end": 105.04
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "start": 105.38,
+    "end": 106.04,
+    "text": "It never answered.",
+    "words": [
+      {
+        "word": " It",
+        "start": 105.38,
+        "end": 105.56
+      },
+      {
+        "word": " never",
+        "start": 105.56,
+        "end": 105.68
+      },
+      {
+        "word": " answered.",
+        "start": 105.68,
+        "end": 106.04
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "start": 106.48,
+    "end": 107.98,
+    "text": "And further out, passed all the planets.",
+    "words": [
+      {
+        "word": " And",
+        "start": 106.48,
+        "end": 106.56
+      },
+      {
+        "word": " further",
+        "start": 106.56,
+        "end": 106.72
+      },
+      {
+        "word": " out,",
+        "start": 106.72,
+        "end": 107.0
+      },
+      {
+        "word": " passed",
+        "start": 107.22,
+        "end": 107.42
+      },
+      {
+        "word": " all",
+        "start": 107.42,
+        "end": 107.72
+      },
+      {
+        "word": " the",
+        "start": 107.72,
+        "end": 107.8
+      },
+      {
+        "word": " planets.",
+        "start": 107.8,
+        "end": 107.98
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "start": 108.4,
+    "end": 111.4,
+    "text": "A robotic probe named Voyager 1 launched in 1977",
+    "words": [
+      {
+        "word": " A",
+        "start": 108.4,
+        "end": 108.54
+      },
+      {
+        "word": " robotic",
+        "start": 108.54,
+        "end": 108.74
+      },
+      {
+        "word": " probe",
+        "start": 108.74,
+        "end": 109.08
+      },
+      {
+        "word": " named",
+        "start": 109.08,
+        "end": 109.44
+      },
+      {
+        "word": " Voyager",
+        "start": 109.44,
+        "end": 109.66
+      },
+      {
+        "word": " 1",
+        "start": 109.66,
+        "end": 110.18
+      },
+      {
+        "word": " launched",
+        "start": 110.18,
+        "end": 110.6
+      },
+      {
+        "word": " in",
+        "start": 110.6,
+        "end": 110.86
+      },
+      {
+        "word": " 1977",
+        "start": 110.86,
+        "end": 111.4
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "start": 111.98,
+    "end": 112.88,
+    "text": "and just kept flying.",
+    "words": [
+      {
+        "word": " and",
+        "start": 111.81,
+        "end": 112.06
+      },
+      {
+        "word": " just",
+        "start": 112.06,
+        "end": 112.28
+      },
+      {
+        "word": " kept",
+        "start": 112.28,
+        "end": 112.54
+      },
+      {
+        "word": " flying.",
+        "start": 112.54,
+        "end": 112.88
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "start": 113.5,
+    "end": 115.34,
+    "text": "It is now 26 billion kilometers away.",
+    "words": [
+      {
+        "word": " It",
+        "start": 113.3,
+        "end": 113.52
+      },
+      {
+        "word": " is",
+        "start": 113.52,
+        "end": 113.64
+      },
+      {
+        "word": " now",
+        "start": 113.64,
+        "end": 113.78
+      },
+      {
+        "word": " 26",
+        "start": 113.78,
+        "end": 114.12
+      },
+      {
+        "word": " billion",
+        "start": 114.12,
+        "end": 114.6
+      },
+      {
+        "word": " kilometers",
+        "start": 114.6,
+        "end": 114.84
+      },
+      {
+        "word": " away.",
+        "start": 114.84,
+        "end": 115.34
+      }
+    ]
+  },
+  {
+    "id": 56,
+    "start": 115.72,
+    "end": 117.7,
+    "text": "That is so far that if you shown the fastest beam",
+    "words": [
+      {
+        "word": " That",
+        "start": 115.72,
+        "end": 115.8
+      },
+      {
+        "word": " is",
+        "start": 115.8,
+        "end": 115.88
+      },
+      {
+        "word": " so",
+        "start": 115.88,
+        "end": 116.06
+      },
+      {
+        "word": " far",
+        "start": 116.06,
+        "end": 116.3
+      },
+      {
+        "word": " that",
+        "start": 116.3,
+        "end": 116.52
+      },
+      {
+        "word": " if",
+        "start": 116.52,
+        "end": 116.62
+      },
+      {
+        "word": " you",
+        "start": 116.62,
+        "end": 116.72
+      },
+      {
+        "word": " shown",
+        "start": 116.72,
+        "end": 116.96
+      },
+      {
+        "word": " the",
+        "start": 116.96,
+        "end": 117.16
+      },
+      {
+        "word": " fastest",
+        "start": 117.16,
+        "end": 117.42
+      },
+      {
+        "word": " beam",
+        "start": 117.42,
+        "end": 117.7
+      }
+    ]
+  },
+  {
+    "id": 57,
+    "start": 117.7,
+    "end": 118.54,
+    "text": "of light in the universe,",
+    "words": [
+      {
+        "word": " of",
+        "start": 117.7,
+        "end": 117.86
+      },
+      {
+        "word": " light",
+        "start": 117.86,
+        "end": 118.02
+      },
+      {
+        "word": " in",
+        "start": 118.02,
+        "end": 118.16
+      },
+      {
+        "word": " the",
+        "start": 118.16,
+        "end": 118.22
+      },
+      {
+        "word": " universe,",
+        "start": 118.22,
+        "end": 118.54
+      }
+    ]
+  },
+  {
+    "id": 58,
+    "start": 118.76,
+    "end": 120.18,
+    "text": "it would take 24 whole hours.",
+    "words": [
+      {
+        "word": " it",
+        "start": 118.76,
+        "end": 118.92
+      },
+      {
+        "word": " would",
+        "start": 118.92,
+        "end": 119.0
+      },
+      {
+        "word": " take",
+        "start": 119.0,
+        "end": 119.16
+      },
+      {
+        "word": " 24",
+        "start": 119.16,
+        "end": 119.44
+      },
+      {
+        "word": " whole",
+        "start": 119.44,
+        "end": 119.78
+      },
+      {
+        "word": " hours.",
+        "start": 119.78,
+        "end": 120.18
+      }
+    ]
+  },
+  {
+    "id": 59,
+    "start": 120.54,
+    "end": 122.86,
+    "text": "One full day and night just to reach it.",
+    "words": [
+      {
+        "word": " One",
+        "start": 120.54,
+        "end": 120.74
+      },
+      {
+        "word": " full",
+        "start": 120.74,
+        "end": 121.08
+      },
+      {
+        "word": " day",
+        "start": 121.08,
+        "end": 121.38
+      },
+      {
+        "word": " and",
+        "start": 121.38,
+        "end": 121.62
+      },
+      {
+        "word": " night",
+        "start": 121.62,
+        "end": 121.9
+      },
+      {
+        "word": " just",
+        "start": 121.9,
+        "end": 122.32
+      },
+      {
+        "word": " to",
+        "start": 122.32,
+        "end": 122.54
+      },
+      {
+        "word": " reach",
+        "start": 122.54,
+        "end": 122.68
+      },
+      {
+        "word": " it.",
+        "start": 122.68,
+        "end": 122.86
+      }
+    ]
+  },
+  {
+    "id": 60,
+    "start": 123.34,
+    "end": 125.08,
+    "text": "Yet even from that unimaginable distance,",
+    "words": [
+      {
+        "word": " Yet",
+        "start": 123.34,
+        "end": 123.62
+      },
+      {
+        "word": " even",
+        "start": 123.62,
+        "end": 123.8
+      },
+      {
+        "word": " from",
+        "start": 123.8,
+        "end": 123.98
+      },
+      {
+        "word": " that",
+        "start": 123.98,
+        "end": 124.14
+      },
+      {
+        "word": " unimaginable",
+        "start": 124.14,
+        "end": 124.42
+      },
+      {
+        "word": " distance,",
+        "start": 124.42,
+        "end": 125.08
+      }
+    ]
+  },
+  {
+    "id": 61,
+    "start": 125.56,
+    "end": 128.12,
+    "text": "its tiny radio is still whispering science back to us.",
+    "words": [
+      {
+        "word": " its",
+        "start": 125.56,
+        "end": 125.68
+      },
+      {
+        "word": " tiny",
+        "start": 125.68,
+        "end": 125.9
+      },
+      {
+        "word": " radio",
+        "start": 125.9,
+        "end": 126.26
+      },
+      {
+        "word": " is",
+        "start": 126.26,
+        "end": 126.52
+      },
+      {
+        "word": " still",
+        "start": 126.52,
+        "end": 126.72
+      },
+      {
+        "word": " whispering",
+        "start": 126.72,
+        "end": 127.08
+      },
+      {
+        "word": " science",
+        "start": 127.08,
+        "end": 127.4
+      },
+      {
+        "word": " back",
+        "start": 127.4,
+        "end": 127.78
+      },
+      {
+        "word": " to",
+        "start": 127.78,
+        "end": 127.96
+      },
+      {
+        "word": " us.",
+        "start": 127.96,
+        "end": 128.12
+      }
+    ]
+  },
+  {
+    "id": 62,
+    "start": 128.58,
+    "end": 130.46,
+    "text": "Two of its 10 instruments are still transmitting.",
+    "words": [
+      {
+        "word": " Two",
+        "start": 128.58,
+        "end": 128.8
+      },
+      {
+        "word": " of",
+        "start": 128.8,
+        "end": 128.94
+      },
+      {
+        "word": " its",
+        "start": 128.94,
+        "end": 129.06
+      },
+      {
+        "word": " 10",
+        "start": 129.06,
+        "end": 129.3
+      },
+      {
+        "word": " instruments",
+        "start": 129.3,
+        "end": 129.64
+      },
+      {
+        "word": " are",
+        "start": 129.64,
+        "end": 129.92
+      },
+      {
+        "word": " still",
+        "start": 129.92,
+        "end": 130.1
+      },
+      {
+        "word": " transmitting.",
+        "start": 130.1,
+        "end": 130.46
+      }
+    ]
+  },
+  {
+    "id": 63,
+    "start": 131.32,
+    "end": 132.12,
+    "text": "Back on the moon,",
+    "words": [
+      {
+        "word": " Back",
+        "start": 131.32,
+        "end": 131.74
+      },
+      {
+        "word": " on",
+        "start": 131.74,
+        "end": 131.88
+      },
+      {
+        "word": " the",
+        "start": 131.88,
+        "end": 131.96
+      },
+      {
+        "word": " moon,",
+        "start": 131.96,
+        "end": 132.12
+      }
+    ]
+  },
+  {
+    "id": 64,
+    "start": 132.38,
+    "end": 133.66,
+    "text": "there is one piece of Apollo equipment",
+    "words": [
+      {
+        "word": " there",
+        "start": 132.38,
+        "end": 132.52
+      },
+      {
+        "word": " is",
+        "start": 132.52,
+        "end": 132.64
+      },
+      {
+        "word": " one",
+        "start": 132.64,
+        "end": 132.78
+      },
+      {
+        "word": " piece",
+        "start": 132.78,
+        "end": 133.02
+      },
+      {
+        "word": " of",
+        "start": 133.02,
+        "end": 133.14
+      },
+      {
+        "word": " Apollo",
+        "start": 133.14,
+        "end": 133.28
+      },
+      {
+        "word": " equipment",
+        "start": 133.28,
+        "end": 133.66
+      }
+    ]
+  },
+  {
+    "id": 65,
+    "start": 133.66,
+    "end": 134.7,
+    "text": "that still works perfectly.",
+    "words": [
+      {
+        "word": " that",
+        "start": 133.66,
+        "end": 133.94
+      },
+      {
+        "word": " still",
+        "start": 133.94,
+        "end": 134.1
+      },
+      {
+        "word": " works",
+        "start": 134.1,
+        "end": 134.36
+      },
+      {
+        "word": " perfectly.",
+        "start": 134.36,
+        "end": 134.7
+      }
+    ]
+  },
+  {
+    "id": 66,
+    "start": 135.3,
+    "end": 137.34,
+    "text": "Not because it has nuclear batteries or supercomputers,",
+    "words": [
+      {
+        "word": " Not",
+        "start": 135.3,
+        "end": 135.38
+      },
+      {
+        "word": " because",
+        "start": 135.38,
+        "end": 135.6
+      },
+      {
+        "word": " it",
+        "start": 135.6,
+        "end": 135.74
+      },
+      {
+        "word": " has",
+        "start": 135.74,
+        "end": 135.86
+      },
+      {
+        "word": " nuclear",
+        "start": 135.86,
+        "end": 136.04
+      },
+      {
+        "word": " batteries",
+        "start": 136.04,
+        "end": 136.64
+      },
+      {
+        "word": " or",
+        "start": 136.64,
+        "end": 136.8
+      },
+      {
+        "word": " supercomputers,",
+        "start": 136.8,
+        "end": 137.34
+      }
+    ]
+  },
+  {
+    "id": 67,
+    "start": 137.36,
+    "end": 139.3,
+    "text": "but because it doesn't need any power at all.",
+    "words": [
+      {
+        "word": " but",
+        "start": 137.36,
+        "end": 137.92
+      },
+      {
+        "word": " because",
+        "start": 137.92,
+        "end": 138.12
+      },
+      {
+        "word": " it",
+        "start": 138.12,
+        "end": 138.22
+      },
+      {
+        "word": " doesn't",
+        "start": 138.22,
+        "end": 138.44
+      },
+      {
+        "word": " need",
+        "start": 138.44,
+        "end": 138.56
+      },
+      {
+        "word": " any",
+        "start": 138.56,
+        "end": 138.66
+      },
+      {
+        "word": " power",
+        "start": 138.66,
+        "end": 138.98
+      },
+      {
+        "word": " at",
+        "start": 138.98,
+        "end": 139.12
+      },
+      {
+        "word": " all.",
+        "start": 139.12,
+        "end": 139.3
+      }
+    ]
+  },
+  {
+    "id": 68,
+    "start": 139.9,
+    "end": 141.54,
+    "text": "It is a tray of special glass prisms",
+    "words": [
+      {
+        "word": " It",
+        "start": 139.9,
+        "end": 140.14
+      },
+      {
+        "word": " is",
+        "start": 140.14,
+        "end": 140.2
+      },
+      {
+        "word": " a",
+        "start": 140.2,
+        "end": 140.26
+      },
+      {
+        "word": " tray",
+        "start": 140.26,
+        "end": 140.42
+      },
+      {
+        "word": " of",
+        "start": 140.42,
+        "end": 140.62
+      },
+      {
+        "word": " special",
+        "start": 140.62,
+        "end": 140.92
+      },
+      {
+        "word": " glass",
+        "start": 140.92,
+        "end": 141.14
+      },
+      {
+        "word": " prisms",
+        "start": 141.14,
+        "end": 141.54
+      }
+    ]
+  },
+  {
+    "id": 69,
+    "start": 141.54,
+    "end": 143.22,
+    "text": "called corner cube reflectors,",
+    "words": [
+      {
+        "word": " called",
+        "start": 141.54,
+        "end": 141.92
+      },
+      {
+        "word": " corner",
+        "start": 141.92,
+        "end": 142.26
+      },
+      {
+        "word": " cube",
+        "start": 142.26,
+        "end": 142.58
+      },
+      {
+        "word": " reflectors,",
+        "start": 142.58,
+        "end": 143.22
+      }
+    ]
+  },
+  {
+    "id": 70,
+    "start": 143.38,
+    "end": 145.12,
+    "text": "just like the safety reflectors on the wheels",
+    "words": [
+      {
+        "word": " just",
+        "start": 143.38,
+        "end": 143.66
+      },
+      {
+        "word": " like",
+        "start": 143.66,
+        "end": 143.8
+      },
+      {
+        "word": " the",
+        "start": 143.8,
+        "end": 143.92
+      },
+      {
+        "word": " safety",
+        "start": 143.92,
+        "end": 144.14
+      },
+      {
+        "word": " reflectors",
+        "start": 144.14,
+        "end": 144.76
+      },
+      {
+        "word": " on",
+        "start": 144.76,
+        "end": 144.86
+      },
+      {
+        "word": " the",
+        "start": 144.86,
+        "end": 144.94
+      },
+      {
+        "word": " wheels",
+        "start": 144.94,
+        "end": 145.12
+      }
+    ]
+  },
+  {
+    "id": 71,
+    "start": 145.12,
+    "end": 147.28,
+    "text": "of your bicycle that shine when headlights hit them.",
+    "words": [
+      {
+        "word": " of",
+        "start": 145.12,
+        "end": 145.32
+      },
+      {
+        "word": " your",
+        "start": 145.32,
+        "end": 145.4
+      },
+      {
+        "word": " bicycle",
+        "start": 145.4,
+        "end": 145.74
+      },
+      {
+        "word": " that",
+        "start": 145.74,
+        "end": 146.0
+      },
+      {
+        "word": " shine",
+        "start": 146.0,
+        "end": 146.18
+      },
+      {
+        "word": " when",
+        "start": 146.18,
+        "end": 146.5
+      },
+      {
+        "word": " headlights",
+        "start": 146.5,
+        "end": 146.74
+      },
+      {
+        "word": " hit",
+        "start": 146.74,
+        "end": 147.1
+      },
+      {
+        "word": " them.",
+        "start": 147.1,
+        "end": 147.28
+      }
+    ]
+  },
+  {
+    "id": 72,
+    "start": 147.5,
+    "end": 148.22,
+    "text": "Several times a month,",
+    "words": [
+      {
+        "word": " Several",
+        "start": 147.5,
+        "end": 147.66
+      },
+      {
+        "word": " times",
+        "start": 147.66,
+        "end": 147.94
+      },
+      {
+        "word": " a",
+        "start": 147.94,
+        "end": 148.1
+      },
+      {
+        "word": " month,",
+        "start": 148.1,
+        "end": 148.22
+      }
+    ]
+  },
+  {
+    "id": 73,
+    "start": 148.24,
+    "end": 150.28,
+    "text": "scientists shoot a beam of green laser light",
+    "words": [
+      {
+        "word": " scientists",
+        "start": 148.24,
+        "end": 148.64
+      },
+      {
+        "word": " shoot",
+        "start": 148.64,
+        "end": 149.08
+      },
+      {
+        "word": " a",
+        "start": 149.08,
+        "end": 149.2
+      },
+      {
+        "word": " beam",
+        "start": 149.2,
+        "end": 149.38
+      },
+      {
+        "word": " of",
+        "start": 149.38,
+        "end": 149.52
+      },
+      {
+        "word": " green",
+        "start": 149.52,
+        "end": 149.68
+      },
+      {
+        "word": " laser",
+        "start": 149.68,
+        "end": 150.08
+      },
+      {
+        "word": " light",
+        "start": 150.08,
+        "end": 150.28
+      }
+    ]
+  },
+  {
+    "id": 74,
+    "start": 150.28,
+    "end": 151.32,
+    "text": "straight at that little tray.",
+    "words": [
+      {
+        "word": " straight",
+        "start": 150.28,
+        "end": 150.52
+      },
+      {
+        "word": " at",
+        "start": 150.52,
+        "end": 150.72
+      },
+      {
+        "word": " that",
+        "start": 150.72,
+        "end": 150.84
+      },
+      {
+        "word": " little",
+        "start": 150.84,
+        "end": 151.06
+      },
+      {
+        "word": " tray.",
+        "start": 151.06,
+        "end": 151.32
+      }
+    ]
+  },
+  {
+    "id": 75,
+    "start": 151.92,
+    "end": 154.98,
+    "text": "The beam travels across almost 400,000 kilometers of space,",
+    "words": [
+      {
+        "word": " The",
+        "start": 151.92,
+        "end": 152.02
+      },
+      {
+        "word": " beam",
+        "start": 152.02,
+        "end": 152.16
+      },
+      {
+        "word": " travels",
+        "start": 152.16,
+        "end": 152.46
+      },
+      {
+        "word": " across",
+        "start": 152.46,
+        "end": 152.78
+      },
+      {
+        "word": " almost",
+        "start": 152.78,
+        "end": 153.18
+      },
+      {
+        "word": " 400",
+        "start": 153.18,
+        "end": 153.5
+      },
+      {
+        "word": ",000",
+        "start": 153.5,
+        "end": 154.12
+      },
+      {
+        "word": " kilometers",
+        "start": 154.12,
+        "end": 154.42
+      },
+      {
+        "word": " of",
+        "start": 154.42,
+        "end": 154.72
+      },
+      {
+        "word": " space,",
+        "start": 154.72,
+        "end": 154.98
+      }
+    ]
+  },
+  {
+    "id": 76,
+    "start": 155.32,
+    "end": 157.16,
+    "text": "far enough to wrap around the Earth 10 times.",
+    "words": [
+      {
+        "word": " far",
+        "start": 155.32,
+        "end": 155.56
+      },
+      {
+        "word": " enough",
+        "start": 155.56,
+        "end": 155.74
+      },
+      {
+        "word": " to",
+        "start": 155.74,
+        "end": 155.9
+      },
+      {
+        "word": " wrap",
+        "start": 155.9,
+        "end": 156.04
+      },
+      {
+        "word": " around",
+        "start": 156.04,
+        "end": 156.34
+      },
+      {
+        "word": " the",
+        "start": 156.34,
+        "end": 156.44
+      },
+      {
+        "word": " Earth",
+        "start": 156.44,
+        "end": 156.58
+      },
+      {
+        "word": " 10",
+        "start": 156.58,
+        "end": 156.86
+      },
+      {
+        "word": " times.",
+        "start": 156.86,
+        "end": 157.16
+      }
+    ]
+  },
+  {
+    "id": 77,
+    "start": 157.84,
+    "end": 158.56,
+    "text": "It hits the mirrors.",
+    "words": [
+      {
+        "word": " It",
+        "start": 157.84,
+        "end": 158.06
+      },
+      {
+        "word": " hits",
+        "start": 158.06,
+        "end": 158.22
+      },
+      {
+        "word": " the",
+        "start": 158.22,
+        "end": 158.38
+      },
+      {
+        "word": " mirrors.",
+        "start": 158.38,
+        "end": 158.56
+      }
+    ]
+  },
+  {
+    "id": 78,
+    "start": 159.14,
+    "end": 160.82,
+    "text": "And exactly two and a half seconds later,",
+    "words": [
+      {
+        "word": " And",
+        "start": 159.14,
+        "end": 159.32
+      },
+      {
+        "word": " exactly",
+        "start": 159.32,
+        "end": 159.62
+      },
+      {
+        "word": " two",
+        "start": 159.62,
+        "end": 159.94
+      },
+      {
+        "word": " and",
+        "start": 159.94,
+        "end": 160.06
+      },
+      {
+        "word": " a",
+        "start": 160.06,
+        "end": 160.12
+      },
+      {
+        "word": " half",
+        "start": 160.12,
+        "end": 160.24
+      },
+      {
+        "word": " seconds",
+        "start": 160.24,
+        "end": 160.46
+      },
+      {
+        "word": " later,",
+        "start": 160.46,
+        "end": 160.82
+      }
+    ]
+  },
+  {
+    "id": 79,
+    "start": 161.04,
+    "end": 163.58,
+    "text": "the light bounces straight back into our telescopes on Earth.",
+    "words": [
+      {
+        "word": " the",
+        "start": 161.04,
+        "end": 161.18
+      },
+      {
+        "word": " light",
+        "start": 161.18,
+        "end": 161.38
+      },
+      {
+        "word": " bounces",
+        "start": 161.38,
+        "end": 161.74
+      },
+      {
+        "word": " straight",
+        "start": 161.74,
+        "end": 162.08
+      },
+      {
+        "word": " back",
+        "start": 162.08,
+        "end": 162.34
+      },
+      {
+        "word": " into",
+        "start": 162.34,
+        "end": 162.58
+      },
+      {
+        "word": " our",
+        "start": 162.58,
+        "end": 162.74
+      },
+      {
+        "word": " telescopes",
+        "start": 162.74,
+        "end": 163.06
+      },
+      {
+        "word": " on",
+        "start": 163.06,
+        "end": 163.4
+      },
+      {
+        "word": " Earth.",
+        "start": 163.4,
+        "end": 163.58
+      }
+    ]
+  },
+  {
+    "id": 80,
+    "start": 164.08,
+    "end": 165.38,
+    "text": "Because of those bouncing laser beams,",
+    "words": [
+      {
+        "word": " Because",
+        "start": 164.08,
+        "end": 164.3
+      },
+      {
+        "word": " of",
+        "start": 164.3,
+        "end": 164.44
+      },
+      {
+        "word": " those",
+        "start": 164.44,
+        "end": 164.54
+      },
+      {
+        "word": " bouncing",
+        "start": 164.54,
+        "end": 164.76
+      },
+      {
+        "word": " laser",
+        "start": 164.76,
+        "end": 165.1
+      },
+      {
+        "word": " beams,",
+        "start": 165.1,
+        "end": 165.38
+      }
+    ]
+  },
+  {
+    "id": 81,
+    "start": 165.38,
+    "end": 167.32,
+    "text": "we know the moon is slowly drifting away from us",
+    "words": [
+      {
+        "word": " we",
+        "start": 165.38,
+        "end": 165.62
+      },
+      {
+        "word": " know",
+        "start": 165.62,
+        "end": 165.76
+      },
+      {
+        "word": " the",
+        "start": 165.76,
+        "end": 165.88
+      },
+      {
+        "word": " moon",
+        "start": 165.88,
+        "end": 166.0
+      },
+      {
+        "word": " is",
+        "start": 166.0,
+        "end": 166.18
+      },
+      {
+        "word": " slowly",
+        "start": 166.18,
+        "end": 166.38
+      },
+      {
+        "word": " drifting",
+        "start": 166.38,
+        "end": 166.64
+      },
+      {
+        "word": " away",
+        "start": 166.64,
+        "end": 166.96
+      },
+      {
+        "word": " from",
+        "start": 166.96,
+        "end": 167.2
+      },
+      {
+        "word": " us",
+        "start": 167.2,
+        "end": 167.32
+      }
+    ]
+  },
+  {
+    "id": 82,
+    "start": 167.32,
+    "end": 168.82,
+    "text": "by about four centimeters every year,",
+    "words": [
+      {
+        "word": " by",
+        "start": 167.32,
+        "end": 167.48
+      },
+      {
+        "word": " about",
+        "start": 167.48,
+        "end": 167.64
+      },
+      {
+        "word": " four",
+        "start": 167.64,
+        "end": 167.88
+      },
+      {
+        "word": " centimeters",
+        "start": 167.88,
+        "end": 168.12
+      },
+      {
+        "word": " every",
+        "start": 168.12,
+        "end": 168.56
+      },
+      {
+        "word": " year,",
+        "start": 168.56,
+        "end": 168.82
+      }
+    ]
+  },
+  {
+    "id": 83,
+    "start": 169.2,
+    "end": 170.76,
+    "text": "about as fast as your fingernails grow.",
+    "words": [
+      {
+        "word": " about",
+        "start": 169.2,
+        "end": 169.44
+      },
+      {
+        "word": " as",
+        "start": 169.44,
+        "end": 169.58
+      },
+      {
+        "word": " fast",
+        "start": 169.58,
+        "end": 169.74
+      },
+      {
+        "word": " as",
+        "start": 169.74,
+        "end": 169.98
+      },
+      {
+        "word": " your",
+        "start": 169.98,
+        "end": 170.06
+      },
+      {
+        "word": " fingernails",
+        "start": 170.06,
+        "end": 170.52
+      },
+      {
+        "word": " grow.",
+        "start": 170.52,
+        "end": 170.76
+      }
+    ]
+  },
+  {
+    "id": 84,
+    "start": 171.54,
+    "end": 172.54,
+    "text": "These equipments may have been abandoned,",
+    "words": [
+      {
+        "word": " These",
+        "start": 171.37,
+        "end": 171.58
+      },
+      {
+        "word": " equipments",
+        "start": 171.58,
+        "end": 171.98
+      },
+      {
+        "word": " may",
+        "start": 171.98,
+        "end": 172.12
+      },
+      {
+        "word": " have",
+        "start": 172.12,
+        "end": 172.24
+      },
+      {
+        "word": " been",
+        "start": 172.24,
+        "end": 172.32
+      },
+      {
+        "word": " abandoned,",
+        "start": 172.32,
+        "end": 172.54
+      }
+    ]
+  },
+  {
+    "id": 85,
+    "start": 172.54,
+    "end": 173.18,
+    "text": "but not forgotten.",
+    "words": [
+      {
+        "word": " but",
+        "start": 172.54,
+        "end": 172.86
+      },
+      {
+        "word": " not",
+        "start": 172.86,
+        "end": 172.98
+      },
+      {
+        "word": " forgotten.",
+        "start": 172.98,
+        "end": 173.18
+      }
+    ]
+  },
+  {
+    "id": 86,
+    "start": 173.84,
+    "end": 174.86,
+    "text": "Now you can explore them yourself.",
+    "words": [
+      {
+        "word": " Now",
+        "start": 173.84,
+        "end": 173.88
+      },
+      {
+        "word": " you",
+        "start": 173.88,
+        "end": 174.04
+      },
+      {
+        "word": " can",
+        "start": 174.04,
+        "end": 174.14
+      },
+      {
+        "word": " explore",
+        "start": 174.14,
+        "end": 174.4
+      },
+      {
+        "word": " them",
+        "start": 174.4,
+        "end": 174.6
+      },
+      {
+        "word": " yourself.",
+        "start": 174.6,
+        "end": 174.86
+      }
+    ]
+  },
+  {
+    "id": 87,
+    "start": 175.38,
+    "end": 177.4,
+    "text": "Put on your space suit, jump in low moon gravity,",
+    "words": [
+      {
+        "word": " Put",
+        "start": 175.38,
+        "end": 175.42
+      },
+      {
+        "word": " on",
+        "start": 175.42,
+        "end": 175.54
+      },
+      {
+        "word": " your",
+        "start": 175.54,
+        "end": 175.66
+      },
+      {
+        "word": " space",
+        "start": 175.66,
+        "end": 175.84
+      },
+      {
+        "word": " suit,",
+        "start": 175.84,
+        "end": 176.12
+      },
+      {
+        "word": " jump",
+        "start": 176.24,
+        "end": 176.44
+      },
+      {
+        "word": " in",
+        "start": 176.44,
+        "end": 176.64
+      },
+      {
+        "word": " low",
+        "start": 176.64,
+        "end": 176.86
+      },
+      {
+        "word": " moon",
+        "start": 176.86,
+        "end": 177.08
+      },
+      {
+        "word": " gravity,",
+        "start": 177.08,
+        "end": 177.4
+      }
+    ]
+  },
+  {
+    "id": 88,
+    "start": 177.78,
+    "end": 179.5,
+    "text": "scan the relics and write down your discoveries",
+    "words": [
+      {
+        "word": " scan",
+        "start": 177.78,
+        "end": 177.96
+      },
+      {
+        "word": " the",
+        "start": 177.96,
+        "end": 178.18
+      },
+      {
+        "word": " relics",
+        "start": 178.18,
+        "end": 178.32
+      },
+      {
+        "word": " and",
+        "start": 178.32,
+        "end": 178.74
+      },
+      {
+        "word": " write",
+        "start": 178.74,
+        "end": 178.86
+      },
+      {
+        "word": " down",
+        "start": 178.86,
+        "end": 179.1
+      },
+      {
+        "word": " your",
+        "start": 179.1,
+        "end": 179.24
+      },
+      {
+        "word": " discoveries",
+        "start": 179.24,
+        "end": 179.5
+      }
+    ]
+  },
+  {
+    "id": 89,
+    "start": 179.5,
+    "end": 180.78,
+    "text": "in your Astrolog log book.",
+    "words": [
+      {
+        "word": " in",
+        "start": 179.5,
+        "end": 179.8
+      },
+      {
+        "word": " your",
+        "start": 179.8,
+        "end": 179.88
+      },
+      {
+        "word": " Astrolog",
+        "start": 179.88,
+        "end": 180.38
+      },
+      {
+        "word": " log",
+        "start": 180.38,
+        "end": 180.58
+      },
+      {
+        "word": " book.",
+        "start": 180.58,
+        "end": 180.78
+      }
+    ]
+  },
+  {
+    "id": 90,
+    "start": 181.1,
+    "end": 182.96,
+    "text": "Check out last signal on Roblox.",
+    "words": [
+      {
+        "word": " Check",
+        "start": 181.1,
+        "end": 181.26
+      },
+      {
+        "word": " out",
+        "start": 181.26,
+        "end": 181.46
+      },
+      {
+        "word": " last",
+        "start": 181.46,
+        "end": 181.7
+      },
+      {
+        "word": " signal",
+        "start": 181.7,
+        "end": 181.98
+      },
+      {
+        "word": " on",
+        "start": 181.98,
+        "end": 182.46
+      },
+      {
+        "word": " Roblox.",
+        "start": 182.46,
+        "end": 182.96
+      }
+    ]
+  }
+]

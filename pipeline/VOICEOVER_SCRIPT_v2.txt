@@ -1,0 +1,47 @@
+# VOICEOVER SCRIPT v2 — "One Thing Still Answers" (Film v2)
+# Team Astrolog — Game: "Last Signal" (Roblox: https://www.roblox.com/games/104157966303180)
+# Pacing: ~130 words per minute. Total spoken time: ~2:15.
+
+======================================================================
+PART 1: FULL FILM NARRATION (~2:15)
+======================================================================
+
+[0:00 - 0:12 | PROLOGUE: EARTH ORBIT]
+The oldest human-made object still in space is silently racing above our heads right now.
+
+[0:12 - 0:30 | VANGUARD 1]
+Launched in 1958, Vanguard 1 was the first satellite powered by solar cells. Its radio went silent in 1964. But over sixty years later, it is still orbiting Earth every one hundred and thirty-four minutes. In low Earth orbit, objects move at nearly eight kilometers per second. In the four seconds it takes to read this sentence, Vanguard travels over thirty kilometers.
+
+[0:30 - 0:42 | PULL BACK TO THE MOON]
+Further out into the solar system, we left behind even more.
+
+[0:42 - 0:55 | LRO DISCOVERY]
+Twenty-four kilometers above the lunar surface, NASA's Lunar Reconnaissance Orbiter turned its cameras toward the Sea of Tranquility. There, sharp shadows revealed something historic.
+
+[0:55 - 1:15 | APOLLO 11 LANDER & FOOTSTEPS]
+In July 1969, humans walked on another world. With no atmosphere, no wind, and no rain, almost nothing erases their footprints. When Neil Armstrong and Buzz Aldrin blasted off to return home, they left the golden descent stage of the Eagle behind.
+
+[1:15 - 1:30 | SEISMOMETER & THE MOON BELL]
+Beside the lander sat the first lunar seismometer, beginning the era of Moon seismology. When the Apollo 12 ascent stage was later crashed into the surface on purpose, scientists discovered lunar rock has no water to absorb shockwaves. The Moon rang like a bell for fifty-five minutes.
+
+[1:30 - 1:40 | APOLLO 15 LUNAR ROVER]
+At Hadley Rille, Apollo 15 parked this Lunar Roving Vehicle in 1971. Its tires have not turned an inch in over fifty years.
+
+[1:40 - 1:55 | OPPORTUNITY ON MARS]
+On Mars, the story is different. Mars has weather. For fourteen years, the Opportunity rover explored the red planet. But in 2018, a planet-wide dust storm blotted out the sun. On June 10th, 2018, Opportunity sent its final message home.
+
+[1:55 - 2:05 | VOYAGER 1: ONE LIGHT-DAY]
+In deep space, Voyager 1 launched in 1977 and pushed beyond our solar system. This week, it reaches a historic milestone: one full light-day from Earth. Over twenty-five billion kilometers away, its instruments are still transmitting data.
+
+[2:05 - 2:15 | RETROREFLECTOR PAYOFF]
+And back on the Moon, one piece of Apollo hardware still answers. Several times a month, scientists fire lasers from Earth at Apollo's retroreflectors. Exactly two and a half seconds later, the light bounces right back into our telescopes.
+
+[2:15 - 2:25 | CALL TO ACTION: THE GAME]
+They are abandoned, but not forgotten. Now, you can explore them yourself. Suit up, walk the lunar surface, scan the relics, and record your discoveries in the ASTROLOG logbook in LAST SIGNAL on Roblox.
+
+
+======================================================================
+PART 2: 30-SECOND SUBMISSION CUT SCRIPT (~30s)
+======================================================================
+The oldest relics of human exploration are still out there. In Earth orbit, Vanguard 1 has circled silently since 1964. On Mars, Opportunity sleeps under the dust. And on the Moon, Apollo's retroreflectors still bounce our laser signals back to Earth today. They are abandoned, but not forgotten. Step onto the Moon and record your discoveries in LAST SIGNAL on Roblox.
+

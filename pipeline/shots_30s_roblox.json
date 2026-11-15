@@ -1,0 +1,82 @@
+[
+ {
+  "name": "s4_mars",
+  "setup": "s4_mars.lua",
+  "frames": 82,
+  "mode": "lerp",
+  "camA": [
+   -18,
+   6.0,
+   20
+  ],
+  "camB": [
+   -9.5,
+   3.5,
+   11
+  ],
+  "tgtA": [
+   0,
+   3.2,
+   0
+  ],
+  "tgtB": [
+   0,
+   3.4,
+   0
+  ]
+ },
+ {
+  "name": "s6_retro",
+  "setup": "s6_retro.lua",
+  "frame_code": "s6_frame.lua",
+  "frames": 98,
+  "mode": "lerp",
+  "camA": [
+   -16,
+   5.5,
+   18
+  ],
+  "camB": [
+   -8.5,
+   3.6,
+   10
+  ],
+  "tgtA": [
+   0,
+   2.8,
+   0
+  ],
+  "tgtB": [
+   0,
+   2.9,
+   0
+  ]
+ },
+ {
+  "name": "s2_boot",
+  "setup": "s2_boot.lua",
+  "frames": 60,
+  "mode": "lerp",
+  "camA": [
+   5.0,
+   2.2,
+   30
+  ],
+  "camB": [
+   4.2,
+   2.5,
+   21
+  ],
+  "tgtA": [
+   0.5,
+   1.0,
+   20
+  ],
+  "tgtB": [
+   0,
+   5.5,
+   2
+  ]
+ }
+]
+

@@ -1,0 +1,51 @@
+ABANDONED BUT NOT FORGOTTEN - voiceover script
+60 seconds, 24fps, 1080x1920
+
+Captions are already burned into the video at these exact times.
+In CapCut: add a text layer per line, set Text-to-speech, then delete the
+text layer's visibility (keep the audio) so you don't double up on captions.
+Suggested voice: the default TikTok narrator.
+
+==========================================================
+
+Shot 1 - Apollo descent stage  [0:00.00 - 0:08.00]
+   0:00.50 -> 0:02.70   "In 1969"
+   0:03.00 -> 0:05.40   "we left something"
+   0:05.70 -> 0:07.80   "on the Moon"
+
+Shot 2 - Bootprints  [0:08.00 - 0:16.00]
+   0:08.40 -> 0:10.60   "No wind."
+   0:10.90 -> 0:13.00   "No rain."
+   0:13.30 -> 0:15.70   "Nothing to erase it."
+
+Shot 3 - Lunar rover  [0:16.00 - 0:26.00]
+   0:16.40 -> 0:19.00   "Apollo 15 parked this"
+   0:19.30 -> 0:21.70   "rover in 1971."
+   0:22.10 -> 0:25.60   "It has not moved since."
+
+Shot 4 - Opportunity on Mars  [0:26.00 - 0:38.00]
+   0:26.40 -> 0:28.90   "Mars is different."
+   0:29.20 -> 0:31.70   "Mars has weather."
+   0:32.10 -> 0:35.00   "A dust storm took"
+   0:35.30 -> 0:37.70   "Opportunity in 2018."
+
+Shot 5 - Voyager  [0:38.00 - 0:48.00]
+   0:38.50 -> 0:41.20   "Voyager 1 left in 1977."
+   0:41.60 -> 0:44.20   "It is still going."
+   0:44.60 -> 0:47.60   "Still sending data."
+
+Shot 6 - Retroreflector  [0:48.00 - 1:00.00]
+   0:48.50 -> 0:50.90   "And on the Moon,"
+   0:51.20 -> 0:53.70   "one thing still answers."
+   0:54.10 -> 0:56.70   "We still bounce lasers"
+   0:57.00 -> 0:59.60   "off Apollo's mirrors."
+
+==========================================================
+
+Full narration as one block (if you prefer a single TTS pass):
+
+In 1969 we left something on the Moon No wind. No rain. Nothing to erase it. Apollo 15 parked this rover in 1971. It has not moved since. Mars is different. Mars has weather. A dust storm took Opportunity in 2018. Voyager 1 left in 1977. It is still going. Still sending data. And on the Moon, one thing still answers. We still bounce lasers off Apollo's mirrors.
+
+Music: something slow and wide. Try 'ambient', 'cinematic' or 'space' in
+CapCut's audio library. Keep it under the voice - around -18 dB.
+Leave the last 2 seconds quiet so '...off Apollo's mirrors' lands clean.

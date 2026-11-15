@@ -1,0 +1,135 @@
+{
+ "fps": 24,
+ "duration": 24.0,
+ "voiceover": "../voiceover.mp3",
+ "voiceover_note": "20.1 s of speech then silence; phrase timings measured with silencedetect (-35 dB, 0.35 s)",
+ "shots": [
+  {
+   "id": "earth",
+   "start": 0.0,
+   "end": 3.2,
+   "source": "blender",
+   "note": "Earth wide, slow push"
+  },
+  {
+   "id": "vanguard",
+   "start": 3.2,
+   "end": 7.0,
+   "source": "blender",
+   "note": "Vanguard 1 on its real ellipse, Kepler timing, time-lapse badge"
+  },
+  {
+   "id": "mars",
+   "start": 7.0,
+   "end": 9.2,
+   "source": "roblox",
+   "scene": "s4_mars.lua",
+   "note": "Opportunity + LAST SIGNAL 10 JUNE 2018 stamp"
+  },
+  {
+   "id": "retro",
+   "start": 9.2,
+   "end": 14.4,
+   "source": "roblox",
+   "scene": "s6_retro.lua",
+   "note": "laser out, 2.5 s round-trip timer, return pulse"
+  },
+  {
+   "id": "lander",
+   "start": 14.4,
+   "end": 16.7,
+   "source": "roblox",
+   "scene": "s2_boot.lua",
+   "note": "bootprints to the descent stage"
+  },
+  {
+   "id": "cta",
+   "start": 16.7,
+   "end": 24.0,
+   "source": "graphics",
+   "note": "Astrolog presents LAST SIGNAL, QR, play on Roblox"
+  }
+ ],
+ "captions": [
+  [
+   0.55,
+   1.9,
+   "The oldest relics of human exploration"
+  ],
+  [
+   1.9,
+   3.1,
+   "are still out there."
+  ],
+  [
+   3.38,
+   4.9,
+   "In Earth orbit, *Vanguard 1*"
+  ],
+  [
+   4.9,
+   6.75,
+   "has circled silently since *1964*."
+  ],
+  [
+   7.0,
+   7.95,
+   "On Mars, *Opportunity*"
+  ],
+  [
+   7.95,
+   9.05,
+   "sleeps under the dust."
+  ],
+  [
+   9.34,
+   10.1,
+   "And on the *Moon*,"
+  ],
+  [
+   10.33,
+   12.2,
+   "Apollo's *retroreflectors* still bounce"
+  ],
+  [
+   12.2,
+   14.25,
+   "our laser signals back to Earth today."
+  ],
+  [
+   14.52,
+   15.4,
+   "They are abandoned,"
+  ],
+  [
+   15.4,
+   16.5,
+   "but not forgotten."
+  ],
+  [
+   16.77,
+   18.55,
+   "Step onto the Moon and record your discoveries"
+  ],
+  [
+   18.55,
+   20.3,
+   "in *LAST SIGNAL* on Roblox."
+  ]
+ ],
+ "formats": {
+  "16x9": {
+   "w": 1920,
+   "h": 1080
+  },
+  "4x5": {
+   "w": 1080,
+   "h": 1350
+  }
+ },
+ "orbit": {
+  "compression": 2400,
+  "t0_fraction": -0.32,
+  "note": "Vanguard 1: perigee 654 km, apogee 3,969 km (Wikipedia). Shot 2 is a x2400 time-lapse; perigee passes 1.07 s into the shot. One real orbit (134 min) takes 3.35 s on screen."
+ }
+}

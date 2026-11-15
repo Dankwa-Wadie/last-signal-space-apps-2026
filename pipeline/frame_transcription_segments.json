@@ -1,0 +1,1118 @@
+[
+  {
+    "endFrame" : 12,
+    "startSeconds" : 0,
+    "startTime" : "00:00.00",
+    "text" : "",
+    "startFrame" : 1,
+    "endTime" : "00:00.45",
+    "endSeconds" : 0.46
+  },
+  {
+    "endFrame" : 65,
+    "startSeconds" : 0.5,
+    "startTime" : "00:00.50",
+    "text" : "In 1969",
+    "startFrame" : 13,
+    "endTime" : "00:02.66",
+    "endSeconds" : 2.67
+  },
+  {
+    "endFrame" : 72,
+    "startSeconds" : 2.71,
+    "startTime" : "00:02.70",
+    "text" : "",
+    "startFrame" : 66,
+    "endTime" : "00:02.95",
+    "endSeconds" : 2.96
+  },
+  {
+    "endFrame" : 96,
+    "startSeconds" : 3,
+    "startTime" : "00:03.00",
+    "text" : "we left something",
+    "startFrame" : 73,
+    "endTime" : "00:03.95",
+    "endSeconds" : 3.96
+  },
+  {
+    "endFrame" : 97,
+    "startSeconds" : 4,
+    "startTime" : "00:04.00",
+    "text" : "wé left something",
+    "startFrame" : 97,
+    "endTime" : "00:04.00",
+    "endSeconds" : 4
+  },
+  {
+    "endFrame" : 130,
+    "startSeconds" : 4.04,
+    "startTime" : "00:04.04",
+    "text" : "we left something",
+    "startFrame" : 98,
+    "endTime" : "00:05.37",
+    "endSeconds" : 5.38
+  },
+  {
+    "endFrame" : 137,
+    "startSeconds" : 5.42,
+    "startTime" : "00:05.41",
+    "text" : "",
+    "startFrame" : 131,
+    "endTime" : "00:05.66",
+    "endSeconds" : 5.67
+  },
+  {
+    "endFrame" : 154,
+    "startSeconds" : 5.71,
+    "startTime" : "00:05.70",
+    "text" : "on the Moon",
+    "startFrame" : 138,
+    "endTime" : "00:06.37",
+    "endSeconds" : 6.38
+  },
+  {
+    "endFrame" : 155,
+    "startSeconds" : 6.42,
+    "startTime" : "00:06.41",
+    "text" : "on-the Moon",
+    "startFrame" : 155,
+    "endTime" : "00:06.41",
+    "endSeconds" : 6.42
+  },
+  {
+    "endFrame" : 160,
+    "startSeconds" : 6.46,
+    "startTime" : "00:06.45",
+    "text" : "on the Moon",
+    "startFrame" : 156,
+    "endTime" : "00:06.62",
+    "endSeconds" : 6.63
+  },
+  {
+    "endFrame" : 161,
+    "startSeconds" : 6.67,
+    "startTime" : "00:06.66",
+    "text" : "on-the Moon",
+    "startFrame" : 161,
+    "endTime" : "00:06.66",
+    "endSeconds" : 6.67
+  },
+  {
+    "endFrame" : 162,
+    "startSeconds" : 6.71,
+    "startTime" : "00:06.70",
+    "text" : "on the Moon",
+    "startFrame" : 162,
+    "endTime" : "00:06.70",
+    "endSeconds" : 6.71
+  },
+  {
+    "endFrame" : 166,
+    "startSeconds" : 6.75,
+    "startTime" : "00:06.75",
+    "text" : "on-the Moon",
+    "startFrame" : 163,
+    "endTime" : "00:06.87",
+    "endSeconds" : 6.88
+  },
+  {
+    "endFrame" : 188,
+    "startSeconds" : 6.92,
+    "startTime" : "00:06.91",
+    "text" : "on the Moon",
+    "startFrame" : 167,
+    "endTime" : "00:07.79",
+    "endSeconds" : 7.79
+  },
+  {
+    "endFrame" : 202,
+    "startSeconds" : 7.83,
+    "startTime" : "00:07.83",
+    "text" : "",
+    "startFrame" : 189,
+    "endTime" : "00:08.37",
+    "endSeconds" : 8.38
+  },
+  {
+    "endFrame" : 232,
+    "startSeconds" : 8.42,
+    "startTime" : "00:08.41",
+    "text" : "No wind.",
+    "startFrame" : 203,
+    "endTime" : "00:09.62",
+    "endSeconds" : 9.63
+  },
+  {
+    "endFrame" : 233,
+    "startSeconds" : 9.67,
+    "startTime" : "00:09.66",
+    "text" : "15-0 \n No wind.",
+    "startFrame" : 233,
+    "endTime" : "00:09.66",
+    "endSeconds" : 9.67
+  },
+  {
+    "endFrame" : 238,
+    "startSeconds" : 9.71,
+    "startTime" : "00:09.70",
+    "text" : "No wind.",
+    "startFrame" : 234,
+    "endTime" : "00:09.87",
+    "endSeconds" : 9.88
+  },
+  {
+    "endFrame" : 239,
+    "startSeconds" : 9.92,
+    "startTime" : "00:09.91",
+    "text" : "= \n No wind.",
+    "startFrame" : 239,
+    "endTime" : "00:09.91",
+    "endSeconds" : 9.92
+  },
+  {
+    "endFrame" : 246,
+    "startSeconds" : 9.96,
+    "startTime" : "00:09.95",
+    "text" : "No wind.",
+    "startFrame" : 240,
+    "endTime" : "00:10.20",
+    "endSeconds" : 10.21
+  },
+  {
+    "endTime" : "00:10.29",
+    "startFrame" : 247,
+    "endSeconds" : 10.29,
+    "startTime" : "00:10.25",
+    "startSeconds" : 10.25,
+    "text" : "= \n No wind.",
+    "endFrame" : 248
+  },
+  {
+    "endTime" : "00:10.45",
+    "startFrame" : 249,
+    "endSeconds" : 10.46,
+    "startTime" : "00:10.33",
+    "startSeconds" : 10.33,
+    "text" : "No wind.",
+    "endFrame" : 252
+  },
+  {
+    "endTime" : "00:10.50",
+    "startFrame" : 253,
+    "endSeconds" : 10.5,
+    "startTime" : "00:10.50",
+    "startSeconds" : 10.5,
+    "text" : "= \n No wind.",
+    "endFrame" : 253
+  },
+  {
+    "endTime" : "00:10.58",
+    "startFrame" : 254,
+    "endSeconds" : 10.58,
+    "startTime" : "00:10.54",
+    "startSeconds" : 10.54,
+    "text" : "No wind.",
+    "endFrame" : 255
+  },
+  {
+    "endTime" : "00:10.87",
+    "startFrame" : 256,
+    "endSeconds" : 10.88,
+    "startTime" : "00:10.62",
+    "startSeconds" : 10.63,
+    "text" : "",
+    "endFrame" : 262
+  },
+  {
+    "endTime" : "00:12.25",
+    "startFrame" : 263,
+    "endSeconds" : 12.25,
+    "startTime" : "00:10.91",
+    "startSeconds" : 10.92,
+    "text" : "No rain.",
+    "endFrame" : 295
+  },
+  {
+    "endTime" : "00:12.29",
+    "startFrame" : 296,
+    "endSeconds" : 12.29,
+    "startTime" : "00:12.29",
+    "startSeconds" : 12.29,
+    "text" : "No-rain.",
+    "endFrame" : 296
+  },
+  {
+    "endTime" : "00:12.45",
+    "startFrame" : 297,
+    "endSeconds" : 12.46,
+    "startTime" : "00:12.33",
+    "startSeconds" : 12.33,
+    "text" : "No rain.",
+    "endFrame" : 300
+  },
+  {
+    "endTime" : "00:12.50",
+    "startFrame" : 301,
+    "endSeconds" : 12.5,
+    "startTime" : "00:12.50",
+    "startSeconds" : 12.5,
+    "text" : "No rain. \n •..",
+    "endFrame" : 301
+  },
+  {
+    "endTime" : "00:13.00",
+    "startFrame" : 302,
+    "endSeconds" : 13,
+    "startTime" : "00:12.54",
+    "startSeconds" : 12.54,
+    "text" : "No rain.",
+    "endFrame" : 313
+  },
+  {
+    "endTime" : "00:13.29",
+    "startFrame" : 314,
+    "endSeconds" : 13.29,
+    "startTime" : "00:13.04",
+    "startSeconds" : 13.04,
+    "text" : "",
+    "endFrame" : 320
+  },
+  {
+    "endTime" : "00:13.37",
+    "startFrame" : 321,
+    "endSeconds" : 13.38,
+    "startTime" : "00:13.33",
+    "startSeconds" : 13.33,
+    "text" : "Nothing to erase it.",
+    "endFrame" : 322
+  },
+  {
+    "endTime" : "00:13.41",
+    "startFrame" : 323,
+    "endSeconds" : 13.42,
+    "startTime" : "00:13.41",
+    "startSeconds" : 13.42,
+    "text" : "Nothing to erase it:",
+    "endFrame" : 323
+  },
+  {
+    "endTime" : "00:13.45",
+    "startFrame" : 324,
+    "endSeconds" : 13.46,
+    "startTime" : "00:13.45",
+    "startSeconds" : 13.46,
+    "text" : "Nothing to erase it.",
+    "endFrame" : 324
+  },
+  {
+    "endTime" : "00:13.50",
+    "startFrame" : 325,
+    "endSeconds" : 13.5,
+    "startTime" : "00:13.50",
+    "startSeconds" : 13.5,
+    "text" : "Nothing to erase it:",
+    "endFrame" : 325
+  },
+  {
+    "endTime" : "00:13.54",
+    "startFrame" : 326,
+    "endSeconds" : 13.54,
+    "startTime" : "00:13.54",
+    "startSeconds" : 13.54,
+    "text" : "Nothing to erase it.",
+    "endFrame" : 326
+  },
+  {
+    "endTime" : "00:13.58",
+    "startFrame" : 327,
+    "endSeconds" : 13.58,
+    "startTime" : "00:13.58",
+    "startSeconds" : 13.58,
+    "text" : "Nothing to erase it:",
+    "endFrame" : 327
+  },
+  {
+    "endTime" : "00:13.62",
+    "startFrame" : 328,
+    "endSeconds" : 13.63,
+    "startTime" : "00:13.62",
+    "startSeconds" : 13.63,
+    "text" : "Nothing to erase it-",
+    "endFrame" : 328
+  },
+  {
+    "endTime" : "00:15.66",
+    "startFrame" : 329,
+    "endSeconds" : 15.67,
+    "startTime" : "00:13.66",
+    "startSeconds" : 13.67,
+    "text" : "Nothing to erase it.",
+    "endFrame" : 377
+  },
+  {
+    "endTime" : "00:16.37",
+    "startFrame" : 378,
+    "endSeconds" : 16.38,
+    "startTime" : "00:15.70",
+    "startSeconds" : 15.71,
+    "text" : "",
+    "endFrame" : 394
+  },
+  {
+    "endTime" : "00:17.62",
+    "startFrame" : 395,
+    "endSeconds" : 17.63,
+    "startTime" : "00:16.41",
+    "startSeconds" : 16.42,
+    "text" : "Apollo 15 parked this",
+    "endFrame" : 424
+  },
+  {
+    "endFrame" : 427,
+    "startTime" : "00:17.66",
+    "startFrame" : 425,
+    "startSeconds" : 17.67,
+    "endTime" : "00:17.75",
+    "endSeconds" : 17.75,
+    "text" : "Apollo 15 parked this."
+  },
+  {
+    "endFrame" : 430,
+    "startTime" : "00:17.79",
+    "startFrame" : 428,
+    "startSeconds" : 17.79,
+    "endTime" : "00:17.87",
+    "endSeconds" : 17.88,
+    "text" : "Apollo 15 parked this"
+  },
+  {
+    "endFrame" : 431,
+    "startTime" : "00:17.91",
+    "startFrame" : 431,
+    "startSeconds" : 17.92,
+    "endTime" : "00:17.91",
+    "endSeconds" : 17.92,
+    "text" : "Apollo 15 parked this."
+  },
+  {
+    "endFrame" : 433,
+    "startTime" : "00:17.95",
+    "startFrame" : 432,
+    "startSeconds" : 17.96,
+    "endTime" : "00:18.00",
+    "endSeconds" : 18,
+    "text" : "Apollo 15 parked this"
+  },
+  {
+    "endFrame" : 434,
+    "startTime" : "00:18.04",
+    "startFrame" : 434,
+    "startSeconds" : 18.04,
+    "endTime" : "00:18.04",
+    "endSeconds" : 18.04,
+    "text" : "Apollo 15 parked this,"
+  },
+  {
+    "endFrame" : 437,
+    "startTime" : "00:18.08",
+    "startFrame" : 435,
+    "startSeconds" : 18.08,
+    "endTime" : "00:18.16",
+    "endSeconds" : 18.17,
+    "text" : "Apollo 15 parked this."
+  },
+  {
+    "endFrame" : 438,
+    "startTime" : "00:18.20",
+    "startFrame" : 438,
+    "startSeconds" : 18.21,
+    "endTime" : "00:18.20",
+    "endSeconds" : 18.21,
+    "text" : "Apollo 15 parked this"
+  },
+  {
+    "endFrame" : 441,
+    "startTime" : "00:18.25",
+    "startFrame" : 439,
+    "startSeconds" : 18.25,
+    "endTime" : "00:18.33",
+    "endSeconds" : 18.33,
+    "text" : "Apollo 15 parked thiş"
+  },
+  {
+    "endFrame" : 442,
+    "startTime" : "00:18.37",
+    "startFrame" : 442,
+    "startSeconds" : 18.38,
+    "endTime" : "00:18.37",
+    "endSeconds" : 18.38,
+    "text" : "Apollo 15 parked this,"
+  },
+  {
+    "endFrame" : 443,
+    "startTime" : "00:18.41",
+    "startFrame" : 443,
+    "startSeconds" : 18.42,
+    "endTime" : "00:18.41",
+    "endSeconds" : 18.42,
+    "text" : "Apollo 15 parked this"
+  },
+  {
+    "endFrame" : 444,
+    "startTime" : "00:18.45",
+    "startFrame" : 444,
+    "startSeconds" : 18.46,
+    "endTime" : "00:18.45",
+    "endSeconds" : 18.46,
+    "text" : "Apollo 15 parked this,"
+  },
+  {
+    "endFrame" : 457,
+    "startTime" : "00:18.50",
+    "startFrame" : 445,
+    "startSeconds" : 18.5,
+    "endTime" : "00:19.00",
+    "endSeconds" : 19,
+    "text" : "Apollo 15 parked this"
+  },
+  {
+    "endFrame" : 464,
+    "startTime" : "00:19.04",
+    "startFrame" : 458,
+    "startSeconds" : 19.04,
+    "endTime" : "00:19.29",
+    "endSeconds" : 19.29,
+    "text" : ""
+  },
+  {
+    "endFrame" : 521,
+    "startTime" : "00:19.33",
+    "startFrame" : 465,
+    "startSeconds" : 19.33,
+    "endTime" : "00:21.66",
+    "endSeconds" : 21.67,
+    "text" : "rover in 1971."
+  },
+  {
+    "endFrame" : 531,
+    "startTime" : "00:21.70",
+    "startFrame" : 522,
+    "startSeconds" : 21.71,
+    "endTime" : "00:22.08",
+    "endSeconds" : 22.08,
+    "text" : ""
+  },
+  {
+    "endFrame" : 549,
+    "startTime" : "00:22.12",
+    "startFrame" : 532,
+    "startSeconds" : 22.13,
+    "endTime" : "00:22.83",
+    "endSeconds" : 22.83,
+    "text" : "It has not moved since."
+  },
+  {
+    "endFrame" : 550,
+    "startTime" : "00:22.87",
+    "startFrame" : 550,
+    "startSeconds" : 22.88,
+    "endTime" : "00:22.87",
+    "endSeconds" : 22.88,
+    "text" : "It' has not moved since."
+  },
+  {
+    "endFrame" : 557,
+    "startTime" : "00:22.91",
+    "startFrame" : 551,
+    "startSeconds" : 22.92,
+    "endTime" : "00:23.16",
+    "endSeconds" : 23.17,
+    "text" : "It has not moved since."
+  },
+  {
+    "endFrame" : 558,
+    "startTime" : "00:23.20",
+    "startFrame" : 558,
+    "startSeconds" : 23.21,
+    "endTime" : "00:23.20",
+    "endSeconds" : 23.21,
+    "text" : "it has not moved since."
+  },
+  {
+    "endFrame" : 559,
+    "startTime" : "00:23.25",
+    "startFrame" : 559,
+    "startSeconds" : 23.25,
+    "endTime" : "00:23.25",
+    "endSeconds" : 23.25,
+    "text" : "\/it-has not moved since."
+  },
+  {
+    "endFrame" : 560,
+    "startTime" : "00:23.29",
+    "startFrame" : 560,
+    "startSeconds" : 23.29,
+    "endTime" : "00:23.29",
+    "endSeconds" : 23.29,
+    "text" : "it.has not moved since."
+  },
+  {
+    "startFrame" : 561,
+    "startTime" : "00:23.33",
+    "text" : "it has not moved since.",
+    "endSeconds" : 23.33,
+    "endTime" : "00:23.33",
+    "startSeconds" : 23.33,
+    "endFrame" : 561
+  },
+  {
+    "startFrame" : 562,
+    "startTime" : "00:23.37",
+    "text" : "(It-has not moved since.",
+    "endSeconds" : 23.38,
+    "endTime" : "00:23.37",
+    "startSeconds" : 23.38,
+    "endFrame" : 562
+  },
+  {
+    "startFrame" : 563,
+    "startTime" : "00:23.41",
+    "text" : "(It has not moved since.",
+    "endSeconds" : 23.42,
+    "endTime" : "00:23.41",
+    "startSeconds" : 23.42,
+    "endFrame" : 563
+  },
+  {
+    "startFrame" : 564,
+    "startTime" : "00:23.45",
+    "text" : "It has not moved since.",
+    "endSeconds" : 23.63,
+    "endTime" : "00:23.62",
+    "startSeconds" : 23.46,
+    "endFrame" : 568
+  },
+  {
+    "startFrame" : 569,
+    "startTime" : "00:23.66",
+    "text" : "It-has not moved since.",
+    "endSeconds" : 23.75,
+    "endTime" : "00:23.75",
+    "startSeconds" : 23.67,
+    "endFrame" : 571
+  },
+  {
+    "startFrame" : 572,
+    "startTime" : "00:23.79",
+    "text" : "It has not moved since.",
+    "endSeconds" : 25.58,
+    "endTime" : "00:25.58",
+    "startSeconds" : 23.79,
+    "endFrame" : 615
+  },
+  {
+    "startFrame" : 616,
+    "startTime" : "00:25.62",
+    "text" : "",
+    "endSeconds" : 26.38,
+    "endTime" : "00:26.37",
+    "startSeconds" : 25.63,
+    "endFrame" : 634
+  },
+  {
+    "startFrame" : 635,
+    "startTime" : "00:26.41",
+    "text" : "Mars is different.",
+    "endSeconds" : 28.88,
+    "endTime" : "00:28.87",
+    "startSeconds" : 26.42,
+    "endFrame" : 694
+  },
+  {
+    "startFrame" : 695,
+    "startTime" : "00:28.91",
+    "text" : "",
+    "endSeconds" : 29.17,
+    "endTime" : "00:29.16",
+    "startSeconds" : 28.92,
+    "endFrame" : 701
+  },
+  {
+    "startFrame" : 702,
+    "startTime" : "00:29.20",
+    "text" : "Mars has weather.",
+    "endSeconds" : 31.67,
+    "endTime" : "00:31.66",
+    "startSeconds" : 29.21,
+    "endFrame" : 761
+  },
+  {
+    "startFrame" : 762,
+    "startTime" : "00:31.70",
+    "text" : "",
+    "endSeconds" : 32.08,
+    "endTime" : "00:32.08",
+    "startSeconds" : 31.71,
+    "endFrame" : 771
+  },
+  {
+    "startFrame" : 772,
+    "startTime" : "00:32.12",
+    "text" : "A dust storm took",
+    "endSeconds" : 35,
+    "endTime" : "00:35.00",
+    "startSeconds" : 32.13,
+    "endFrame" : 841
+  },
+  {
+    "startFrame" : 842,
+    "startTime" : "00:35.04",
+    "text" : "",
+    "endSeconds" : 35.29,
+    "endTime" : "00:35.29",
+    "startSeconds" : 35.04,
+    "endFrame" : 848
+  },
+  {
+    "startFrame" : 849,
+    "startTime" : "00:35.33",
+    "text" : "Opportunity in 2018.",
+    "endSeconds" : 37.67,
+    "endTime" : "00:37.66",
+    "startSeconds" : 35.33,
+    "endFrame" : 905
+  },
+  {
+    "startFrame" : 906,
+    "startTime" : "00:37.70",
+    "text" : "",
+    "endSeconds" : 38.46,
+    "endTime" : "00:38.45",
+    "startSeconds" : 37.71,
+    "endFrame" : 924
+  },
+  {
+    "startFrame" : 925,
+    "startTime" : "00:38.50",
+    "text" : "Voyager 1 left in 1977.",
+    "endSeconds" : 38.5,
+    "endTime" : "00:38.50",
+    "startSeconds" : 38.5,
+    "endFrame" : 925
+  },
+  {
+    "startFrame" : 926,
+    "startTime" : "00:38.54",
+    "text" : "Voyager 1 left-fin 1977.",
+    "endSeconds" : 38.54,
+    "endTime" : "00:38.54",
+    "startSeconds" : 38.54,
+    "endFrame" : 926
+  },
+  {
+    "startFrame" : 927,
+    "startTime" : "00:38.58",
+    "text" : "Voyager 1 left in 1977.",
+    "endSeconds" : 38.79,
+    "endTime" : "00:38.79",
+    "startSeconds" : 38.58,
+    "endFrame" : 932
+  },
+  {
+    "startFrame" : 933,
+    "startTime" : "00:38.83",
+    "text" : "Voyager 1. eft in 1977.",
+    "endSeconds" : 38.96,
+    "endTime" : "00:38.95",
+    "startSeconds" : 38.83,
+    "endFrame" : 936
+  },
+  {
+    "startFrame" : 937,
+    "startTime" : "00:39.00",
+    "text" : "Voyager 1, left in 1977.",
+    "endSeconds" : 39.29,
+    "endTime" : "00:39.29",
+    "startSeconds" : 39,
+    "endFrame" : 944
+  },
+  {
+    "startFrame" : 945,
+    "startTime" : "00:39.33",
+    "text" : "Voyager 1 left in 1977.",
+    "endSeconds" : 39.42,
+    "endTime" : "00:39.41",
+    "startSeconds" : 39.33,
+    "endFrame" : 947
+  },
+  {
+    "startSeconds" : 39.46,
+    "endFrame" : 949,
+    "startTime" : "00:39.45",
+    "startFrame" : 948,
+    "endSeconds" : 39.5,
+    "text" : "Voyager 1, left in 1977.",
+    "endTime" : "00:39.50"
+  },
+  {
+    "startSeconds" : 39.54,
+    "endFrame" : 950,
+    "startTime" : "00:39.54",
+    "startFrame" : 950,
+    "endSeconds" : 39.54,
+    "text" : "Voyager 1 left in 1977.",
+    "endTime" : "00:39.54"
+  },
+  {
+    "startSeconds" : 39.58,
+    "endFrame" : 951,
+    "startTime" : "00:39.58",
+    "startFrame" : 951,
+    "endSeconds" : 39.58,
+    "text" : "Voyager 1, left in 1977.",
+    "endTime" : "00:39.58"
+  },
+  {
+    "startSeconds" : 39.63,
+    "endFrame" : 952,
+    "startTime" : "00:39.62",
+    "startFrame" : 952,
+    "endSeconds" : 39.63,
+    "text" : "Voyager 1 left in 1977.",
+    "endTime" : "00:39.62"
+  },
+  {
+    "startSeconds" : 39.67,
+    "endFrame" : 954,
+    "startTime" : "00:39.66",
+    "startFrame" : 953,
+    "endSeconds" : 39.71,
+    "text" : "Voyager 1, left in 1977.",
+    "endTime" : "00:39.70"
+  },
+  {
+    "startSeconds" : 39.75,
+    "endFrame" : 955,
+    "startTime" : "00:39.75",
+    "startFrame" : 955,
+    "endSeconds" : 39.75,
+    "text" : "Voyager 1, left in \n 1977.",
+    "endTime" : "00:39.75"
+  },
+  {
+    "startSeconds" : 39.79,
+    "endFrame" : 956,
+    "startTime" : "00:39.79",
+    "startFrame" : 956,
+    "endSeconds" : 39.79,
+    "text" : "Voyager 1, left in 1977.",
+    "endTime" : "00:39.79"
+  },
+  {
+    "startSeconds" : 39.83,
+    "endFrame" : 957,
+    "startTime" : "00:39.83",
+    "startFrame" : 957,
+    "endSeconds" : 39.83,
+    "text" : "Voyager 1, left in \n 1977.",
+    "endTime" : "00:39.83"
+  },
+  {
+    "startSeconds" : 39.88,
+    "endFrame" : 958,
+    "startTime" : "00:39.87",
+    "startFrame" : 958,
+    "endSeconds" : 39.88,
+    "text" : "Voyager 1 left in \n 1977.",
+    "endTime" : "00:39.87"
+  },
+  {
+    "startSeconds" : 39.92,
+    "endFrame" : 959,
+    "startTime" : "00:39.91",
+    "startFrame" : 959,
+    "endSeconds" : 39.92,
+    "text" : "Voyager 1, left in \n 1977.",
+    "endTime" : "00:39.91"
+  },
+  {
+    "startSeconds" : 39.96,
+    "endFrame" : 961,
+    "startTime" : "00:39.95",
+    "startFrame" : 960,
+    "endSeconds" : 40,
+    "text" : "Voyager 1 left in 1977.",
+    "endTime" : "00:40.00"
+  },
+  {
+    "startSeconds" : 40.04,
+    "endFrame" : 962,
+    "startTime" : "00:40.04",
+    "startFrame" : 962,
+    "endSeconds" : 40.04,
+    "text" : "Voyager 1, left in 1977.",
+    "endTime" : "00:40.04"
+  },
+  {
+    "startSeconds" : 40.08,
+    "endFrame" : 965,
+    "startTime" : "00:40.08",
+    "startFrame" : 963,
+    "endSeconds" : 40.17,
+    "text" : "Voyager 1 left in 1977.",
+    "endTime" : "00:40.16"
+  },
+  {
+    "startSeconds" : 40.21,
+    "endFrame" : 966,
+    "startTime" : "00:40.20",
+    "startFrame" : 966,
+    "endSeconds" : 40.21,
+    "text" : "Voyager 1 left in \n 1977.",
+    "endTime" : "00:40.20"
+  },
+  {
+    "startSeconds" : 40.25,
+    "endFrame" : 989,
+    "startTime" : "00:40.25",
+    "startFrame" : 967,
+    "endSeconds" : 41.17,
+    "text" : "Voyager 1 left in 1977.",
+    "endTime" : "00:41.16"
+  },
+  {
+    "startSeconds" : 41.21,
+    "endFrame" : 999,
+    "startTime" : "00:41.20",
+    "startFrame" : 990,
+    "endSeconds" : 41.58,
+    "text" : "",
+    "endTime" : "00:41.58"
+  },
+  {
+    "startSeconds" : 41.63,
+    "endFrame" : 1020,
+    "startTime" : "00:41.62",
+    "startFrame" : 1000,
+    "endSeconds" : 42.46,
+    "text" : "It is still going.",
+    "endTime" : "00:42.45"
+  },
+  {
+    "startSeconds" : 42.5,
+    "endFrame" : 1021,
+    "startTime" : "00:42.50",
+    "startFrame" : 1021,
+    "endSeconds" : 42.5,
+    "text" : "Kis still going.",
+    "endTime" : "00:42.50"
+  },
+  {
+    "startSeconds" : 42.54,
+    "endFrame" : 1022,
+    "startTime" : "00:42.54",
+    "startFrame" : 1022,
+    "endSeconds" : 42.54,
+    "text" : "It is still going.",
+    "endTime" : "00:42.54"
+  },
+  {
+    "startSeconds" : 42.58,
+    "endFrame" : 1023,
+    "startTime" : "00:42.58",
+    "startFrame" : 1023,
+    "endSeconds" : 42.58,
+    "text" : "n is sill going.",
+    "endTime" : "00:42.58"
+  },
+  {
+    "startSeconds" : 42.63,
+    "endFrame" : 1024,
+    "startTime" : "00:42.62",
+    "startFrame" : 1024,
+    "endSeconds" : 42.63,
+    "text" : "his still going.",
+    "endTime" : "00:42.62"
+  },
+  {
+    "text" : "",
+    "startTime" : "00:42.66",
+    "endSeconds" : 42.67,
+    "startFrame" : 1025,
+    "startSeconds" : 42.67,
+    "endTime" : "00:42.66",
+    "endFrame" : 1025
+  },
+  {
+    "text" : "it is sill going.",
+    "startTime" : "00:42.70",
+    "endSeconds" : 42.71,
+    "startFrame" : 1026,
+    "startSeconds" : 42.71,
+    "endTime" : "00:42.70",
+    "endFrame" : 1026
+  },
+  {
+    "text" : "it is stlll going.",
+    "startTime" : "00:42.75",
+    "endSeconds" : 42.75,
+    "startFrame" : 1027,
+    "startSeconds" : 42.75,
+    "endTime" : "00:42.75",
+    "endFrame" : 1027
+  },
+  {
+    "text" : "It is still going.",
+    "startTime" : "00:42.79",
+    "endSeconds" : 42.79,
+    "startFrame" : 1028,
+    "startSeconds" : 42.79,
+    "endTime" : "00:42.79",
+    "endFrame" : 1028
+  },
+  {
+    "text" : "nils sill going",
+    "startTime" : "00:42.83",
+    "endSeconds" : 42.83,
+    "startFrame" : 1029,
+    "startSeconds" : 42.83,
+    "endTime" : "00:42.83",
+    "endFrame" : 1029
+  },
+  {
+    "text" : "it is still going.",
+    "startTime" : "00:42.87",
+    "endSeconds" : 42.88,
+    "startFrame" : 1030,
+    "startSeconds" : 42.88,
+    "endTime" : "00:42.87",
+    "endFrame" : 1030
+  },
+  {
+    "text" : "It is still going.",
+    "startTime" : "00:42.91",
+    "endSeconds" : 44.17,
+    "startFrame" : 1031,
+    "startSeconds" : 42.92,
+    "endTime" : "00:44.16",
+    "endFrame" : 1061
+  },
+  {
+    "text" : "",
+    "startTime" : "00:44.20",
+    "endSeconds" : 44.58,
+    "startFrame" : 1062,
+    "startSeconds" : 44.21,
+    "endTime" : "00:44.58",
+    "endFrame" : 1071
+  },
+  {
+    "text" : "Still sending data.",
+    "startTime" : "00:44.62",
+    "endSeconds" : 45.29,
+    "startFrame" : 1072,
+    "startSeconds" : 44.63,
+    "endTime" : "00:45.29",
+    "endFrame" : 1088
+  },
+  {
+    "text" : "Still sending data!",
+    "startTime" : "00:45.33",
+    "endSeconds" : 45.54,
+    "startFrame" : 1089,
+    "startSeconds" : 45.33,
+    "endTime" : "00:45.54",
+    "endFrame" : 1094
+  },
+  {
+    "text" : "Still sending data.",
+    "startTime" : "00:45.58",
+    "endSeconds" : 47.58,
+    "startFrame" : 1095,
+    "startSeconds" : 45.58,
+    "endTime" : "00:47.58",
+    "endFrame" : 1143
+  },
+  {
+    "text" : "",
+    "startTime" : "00:47.62",
+    "endSeconds" : 48.46,
+    "startFrame" : 1144,
+    "startSeconds" : 47.63,
+    "endTime" : "00:48.45",
+    "endFrame" : 1164
+  },
+  {
+    "text" : "And on the Moon,",
+    "startTime" : "00:48.50",
+    "endSeconds" : 50.88,
+    "startFrame" : 1165,
+    "startSeconds" : 48.5,
+    "endTime" : "00:50.87",
+    "endFrame" : 1222
+  },
+  {
+    "text" : "",
+    "startTime" : "00:50.91",
+    "endSeconds" : 51.17,
+    "startFrame" : 1223,
+    "startSeconds" : 50.92,
+    "endTime" : "00:51.16",
+    "endFrame" : 1229
+  },
+  {
+    "text" : "one thing still answers.",
+    "startTime" : "00:51.20",
+    "endSeconds" : 53.67,
+    "startFrame" : 1230,
+    "startSeconds" : 51.21,
+    "endTime" : "00:53.66",
+    "endFrame" : 1289
+  },
+  {
+    "text" : "",
+    "startTime" : "00:53.70",
+    "endSeconds" : 54.08,
+    "startFrame" : 1290,
+    "startSeconds" : 53.71,
+    "endTime" : "00:54.08",
+    "endFrame" : 1299
+  },
+  {
+    "text" : "We still bounce lasers",
+    "startTime" : "00:54.12",
+    "endSeconds" : 56.67,
+    "startFrame" : 1300,
+    "startSeconds" : 54.13,
+    "endTime" : "00:56.66",
+    "endFrame" : 1361
+  },
+  {
+    "text" : "",
+    "startTime" : "00:56.70",
+    "endSeconds" : 56.96,
+    "startFrame" : 1362,
+    "startSeconds" : 56.71,
+    "endTime" : "00:56.95",
+    "endFrame" : 1368
+  },
+  {
+    "text" : "off Apollo's mirrors.",
+    "startTime" : "00:57.00",
+    "endSeconds" : 59.58,
+    "startFrame" : 1369,
+    "startSeconds" : 57,
+    "endTime" : "00:59.58",
+    "endFrame" : 1431
+  },
+  {
+    "text" : "",
+    "startTime" : "00:59.62",
+    "endSeconds" : 59.96,
+    "startFrame" : 1432,
+    "startSeconds" : 59.63,
+    "endTime" : "00:59.95",
+    "endFrame" : 1440
+  }
+]

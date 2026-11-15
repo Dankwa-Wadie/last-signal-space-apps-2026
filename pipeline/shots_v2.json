@@ -1,0 +1,177 @@
+[
+ {
+  "name": "s1",
+  "setup": "s1_lm.lua",
+  "frames": 288,
+  "mode": "lerp",
+  "camA": [
+   -26,
+   8.5,
+   30
+  ],
+  "camB": [
+   -15,
+   5.5,
+   17
+  ],
+  "tgtA": [
+   0,
+   6.5,
+   0
+  ],
+  "tgtB": [
+   0,
+   7.0,
+   0
+  ]
+ },
+ {
+  "name": "s2",
+  "setup": "s2_boot.lua",
+  "frames": 264,
+  "mode": "lerp",
+  "camA": [
+   5.0,
+   2.2,
+   34
+  ],
+  "camB": [
+   4.2,
+   2.6,
+   21
+  ],
+  "tgtA": [
+   0.5,
+   1.0,
+   22
+  ],
+  "tgtB": [
+   0,
+   6.0,
+   2
+  ]
+ },
+ {
+  "name": "s_seis",
+  "setup": "s_seis.lua",
+  "frames": 504,
+  "mode": "lerp",
+  "camA": [
+   8.5,
+   3.2,
+   10.5
+  ],
+  "camB": [
+   5.0,
+   2.2,
+   6.8
+  ],
+  "tgtA": [
+   0,
+   1.2,
+   0
+  ],
+  "tgtB": [
+   0,
+   1.0,
+   0
+  ]
+ },
+ {
+  "name": "s3",
+  "setup": "s3_lrv.lua",
+  "frames": 264,
+  "mode": "orbit",
+  "radius": 13,
+  "height": 4.4,
+  "a0": -45,
+  "a1": 50,
+  "tgt": [
+   0,
+   3.2,
+   0
+  ],
+  "frame_code": "s3_frame.lua"
+ },
+ {
+  "name": "s4",
+  "setup": "s4_mars.lua",
+  "frames": 408,
+  "mode": "lerp",
+  "camA": [
+   -19,
+   6.5,
+   22
+  ],
+  "camB": [
+   -9,
+   3.4,
+   10.5
+  ],
+  "tgtA": [
+   0,
+   3.2,
+   0
+  ],
+  "tgtB": [
+   0,
+   3.4,
+   0
+  ]
+ },
+ {
+  "name": "s5",
+  "setup": "s5_voyager.lua",
+  "frame_code": "s5_frame.lua",
+  "frames": 336,
+  "mode": "lerp",
+  "camA": [
+   17,
+   9,
+   20
+  ],
+  "camB": [
+   9.5,
+   6.5,
+   11
+  ],
+  "tgtA": [
+   0,
+   6,
+   0
+  ],
+  "tgtB": [
+   0,
+   6,
+   0
+  ]
+ },
+ {
+  "name": "s6",
+  "setup": "s6_retro.lua",
+  "frame_code": "s6_frame.lua",
+  "frames": 336,
+  "mode": "lerp",
+  "camA": [
+   -17,
+   6.0,
+   19
+  ],
+  "camB": [
+   -8.5,
+   3.8,
+   10
+  ],
+  "tgtA": [
+   0,
+   2.8,
+   0
+  ],
+  "tgtB": [
+   0,
+   2.9,
+   0
+  ]
+ }
+]
+

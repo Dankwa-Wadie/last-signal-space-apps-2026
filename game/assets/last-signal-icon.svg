@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="space" x1="0" y1="0" x2="0.8" y2="1">
+      <stop stop-color="#07101f"/><stop offset=".58" stop-color="#101a2d"/><stop offset="1" stop-color="#243044"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="62%" r="60%">
+      <stop stop-color="#173d61" stop-opacity=".7"/><stop offset="1" stop-color="#09111f" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#a49a84"/><stop offset=".22" stop-color="#68665f"/><stop offset="1" stop-color="#292d35"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#fff4d0"/><stop offset=".35" stop-color="#c8d6dc"/><stop offset=".68" stop-color="#71808d"/><stop offset="1" stop-color="#293747"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#fff1a3"/><stop offset="1" stop-color="#ffc83d"/>
+    </linearGradient>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="24" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="7"/></filter>
+    <clipPath id="round"><rect width="1024" height="1024" rx="220"/></clipPath>
+  </defs>
+  <g clip-path="url(#round)">
+    <rect width="1024" height="1024" fill="url(#space)"/>
+    <rect width="1024" height="800" fill="url(#halo)"/>
+    <!-- sparse star field -->
+    <g fill="#d8e8f4" opacity=".8">
+      <circle cx="113" cy="166" r="3"/><circle cx="261" cy="107" r="2"/><circle cx="408" cy="202" r="2.5"/>
+      <circle cx="877" cy="143" r="3"/><circle cx="786" cy="251" r="2"/><circle cx="935" cy="351" r="2.5"/>
+      <circle cx="159" cy="355" r="2"/><circle cx="340" cy="309" r="1.8"/><circle cx="685" cy="119" r="1.8"/>
+    </g>
+    <!-- distant Earth -->
+    <circle cx="770" cy="427" r="121" fill="#6fd7ff" opacity=".15" filter="url(#soft)"/>
+    <circle cx="770" cy="427" r="91" fill="#277bb4"/>
+    <path d="M696 389q18-32 45-23l19 17-7 20-28 8-14 28-25-5-9-24zm91-50 26 12 9 22-19 13-21-19zm4 91 30-12 24 15-4 30-23 13-25-21z" fill="#67d4be"/>
+    <path d="M685 397a91 91 0 0 1 162-39" fill="none" stroke="#c5f3ff" stroke-width="8" opacity=".75"/>
+    <circle cx="770" cy="427" r="91" fill="none" stroke="#a8eaff" stroke-width="3" opacity=".75"/>
+    <!-- signal arcs -->
+    <g fill="none" stroke-linecap="round">
+      <path d="M411 563c-50-47-50-112 0-159" stroke="#58d8ff" stroke-width="11" opacity=".9"/>
+      <path d="M369 592c-75-73-75-182 0-255" stroke="#58d8ff" stroke-width="8" opacity=".58"/>
+      <path d="M622 563c50-47 50-112 0-159" stroke="#58d8ff" stroke-width="11" opacity=".9"/>
+      <path d="M664 592c75-73 75-182 0-255" stroke="#58d8ff" stroke-width="8" opacity=".58"/>
+    </g>
+    <!-- moon ridge -->
+    <path d="M0 680 119 637l120 38 102-64 105 50 112-39 112 53 117-52 117 54 120-38v425H0z" fill="url(#ground)"/>
+    <path d="M0 733q184-65 350-23t348 8q168-28 326 13" fill="none" stroke="#d1c6ac" stroke-width="13" opacity=".22"/>
+    <path d="M84 807l114-31 60 18-110 29zm595-53 105 21 50 29-138-26zM263 922l93-24 58 19-111 25z" fill="#c6b99b" opacity=".2"/>
+    <!-- abandoned lunar instrument: broad reflector dish, mast and tripod -->
+    <ellipse cx="518" cy="807" rx="184" ry="38" fill="#111721" opacity=".55"/>
+    <path d="M475 664h87l28 193h-33l-29-115-24 115h-34l24-193z" fill="url(#metal)" stroke="#24323e" stroke-width="8"/>
+    <path d="M438 626q80-102 160 0-80 69-160 0z" fill="url(#metal)" stroke="#e2edf0" stroke-width="10"/>
+    <path d="M455 621q61-57 126 0-62 33-126 0z" fill="#7c93a1" opacity=".8"/>
+    <path d="M518 610v-110m-35 66 35-66 38 68" fill="none" stroke="#d7e4e4" stroke-width="13" stroke-linecap="round"/>
+    <rect x="504" y="480" width="29" height="104" rx="12" fill="#e1e8df" stroke="#576875" stroke-width="6"/>
+    <circle cx="518" cy="471" r="22" fill="url(#gold)" filter="url(#glow)"/>
+    <circle cx="518" cy="471" r="14" fill="#fff6bf"/>
+    <path d="M438 626l-40 143m200-143 43 143m-122-50-73 47m125-47 70 47" fill="none" stroke="#abb9bc" stroke-width="12" stroke-linecap="round"/>
+    <path d="M381 777h43m166 0h47m-197 0h-39m242 0h38" stroke="#e0c879" stroke-width="11" stroke-linecap="round"/>
+    <circle cx="441" cy="656" r="7" fill="#ffd45b"/><circle cx="591" cy="656" r="7" fill="#ffd45b"/>
+    <!-- astronaut silhouette, turned toward the relic -->
+    <g transform="translate(253 600)">
+      <path d="M-39 76q-20 26-20 75l-13 84h35l27-79 13 79h35l-9-92q-2-41-20-63z" fill="#171f2c" stroke="#5b6a78" stroke-width="8"/>
+      <path d="M-40 77q0-40 40-44 43 4 43 44v29h-83z" fill="#d7e0de" stroke="#f4e9ca" stroke-width="10"/>
+      <ellipse cx="1" cy="47" rx="26" ry="30" fill="#101b2c"/>
+      <path d="M-29 102h60v33h-60z" fill="#435568"/>
+      <path d="M-59 146l-27 55 21 10 34-43m63-22 27 55-20 10-36-43" fill="none" stroke="#1b2430" stroke-width="23" stroke-linecap="round"/>
+      <path d="M-8 48q19-18 37-7" fill="none" stroke="#6de0ff" stroke-width="5" opacity=".8"/>
+    </g>
+    <!-- signal sparkles -->
+    <g fill="#ffe47b">
+      <path d="M704 591l10 24 24 10-24 10-10 24-10-24-24-10 24-10z"/>
+      <path d="M321 539l7 16 16 7-16 7-7 16-7-16-16-7 16-7z" opacity=".75"/>
+      <circle cx="664" cy="687" r="6"/><circle cx="354" cy="713" r="5"/><circle cx="713" cy="739" r="4"/>
+    </g>
+    <!-- clean dark vignette keeps the silhouette readable -->
+    <rect width="1024" height="1024" fill="none" stroke="#07101b" stroke-width="20" opacity=".35"/>
+  </g>
+</svg>

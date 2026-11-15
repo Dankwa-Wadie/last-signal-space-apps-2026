@@ -1,0 +1,44 @@
+# VOICEOVER SCRIPT (LONG VERSION) — "One Thing Still Answers"
+# NASA Space Apps Challenge 2026 | Team Astrolog | Game: "Last Signal"
+# Total Runtime: ~2:30 (150 seconds, ~315 words at ~130 wpm)
+
+======================================================================
+CLEAN COPY-PASTE TEXT FOR TTS
+======================================================================
+
+On this planet, we have never been good at staying still.
+
+We mapped every ocean. We crossed every desert. And when there was nowhere left to walk, we looked up.
+
+In 1969, two human beings stepped onto the Moon. They stayed for twenty-one hours. They planted a flag, collected rocks, set up experiments, and took photographs of their own footprints.
+
+Then they climbed back into a tiny capsule and flew home.
+
+But they didn't take everything with them.
+
+The bottom half of the Eagle — the golden descent stage that carried them down — was never meant to come home. It is still standing at Tranquility Base, exactly where it landed.
+
+Beside it, they placed the first seismometer on another world. When the Apollo 12 crew deliberately crashed their ascent stage into the surface seventy-three kilometres away, the Moon rang like a bell for fifty-five minutes. That long ringing told us the crust is dry and deeply fractured.
+
+At Hadley Rille, Apollo 15 parked a car on the Moon in 1971. It has not moved an inch in over fifty years.
+
+On Mars, the story is different. Mars has weather. For fourteen years, a rover called Opportunity drove across the red planet, far outliving its ninety-day mission. Then in 2018, a planet-wide dust storm blotted out the sun. On June the tenth, Opportunity sent one final message home. We sent over a thousand commands trying to wake it. It never answered.
+
+And further out — much further — Voyager 1 launched in 1977 and just kept going. This week it reaches one full light-day from Earth: twenty-six billion kilometres away. Two of its ten instruments are still transmitting. It has never stopped.
+
+But back on the Moon, there is one piece of Apollo hardware that still works — not because it has power or electronics, but because it doesn't need any.
+
+It is a panel of mirrors. Corner cubes, angled so that any light that hits them bounces straight back the way it came.
+
+Several times a month, scientists fire a laser from Earth at that panel. The beam crosses three hundred and eighty-four thousand kilometres of empty space. Hits the mirrors. And exactly two and a half seconds later, the light comes back.
+
+From those return pulses, we know the Moon is drifting away from us at three point eight centimetres a year. We have been measuring it for over fifty years. And the mirrors have never failed, because there is nothing in them to fail.
+
+One thing still answers.
+
+They are abandoned, but not forgotten.
+
+Now you can walk there yourself. Suit up and record your discoveries in the Astrolog logbook.
+
+Last Signal. On Roblox.
+

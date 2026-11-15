@@ -1,0 +1,571 @@
+{
+ "library": [
+  {
+   "name": "ROVER",
+   "parts": [
+    {
+     "size": [
+      4.504055023193359,
+      4.549993991851807,
+      5.625032424926758
+     ],
+     "meshId": "",
+     "name": "MeshPart",
+     "textureId": "rbxassetid://108665711047160"
+    }
+   ]
+  },
+  {
+   "name": "LM",
+   "parts": [
+    {
+     "name": "Leg1",
+     "cframe": [
+      -3.3320019245147705,
+      -5002.3193359375,
+      3.3320019245147705,
+      -0.7071068286895752,
+      0.5049132704734802,
+      0.4950379729270935,
+      0,
+      0.7000893354415894,
+      -0.7140552997589111,
+      -0.7071068286895752,
+      -0.5049132704734802,
+      -0.4950379729270935
+     ],
+     "color": [
+      0.8392156958580017,
+      0.6901960968971252,
+      0.27450981736183167
+     ],
+     "class": "Part",
+     "material": "SmoothPlastic",
+     "size": [
+      0.3400000035762787,
+      3.5995404720306396,
+      0.3400000035762787
+     ]
+    },
+    {
+     "name": "Pad0",
+     "cframe": [
+      4.240729808807373,
+      -5003.75927734375,
+      4.240729808807373,
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      1
+     ],
+     "color": [
+      0.7686274647712708,
+      0.7686274647712708,
+      0.7843137383460999
+     ],
+     "class": "Part",
+     "material": "Metal",
+     "size": [
+      1.5,
+      0.3400000035762787,
+      1.5
+     ]
+    },
+    {
+     "name": "Leg0",
+     "cframe": [
+      3.3320019245147705,
+      -5002.3193359375,
+      3.3320019245147705,
+      -0.7071068286895752,
+      -0.5049132704734802,
+      -0.4950379729270935,
+      0,
+      0.7000893354415894,
+      -0.7140552997589111,
+      0.7071068286895752,
+      -0.5049132704734802,
+      -0.4950379729270935
+     ],
+     "color": [
+      0.8392156958580017,
+      0.6901960968971252,
+      0.27450981736183167
+     ],
+     "class": "Part",
+     "material": "SmoothPlastic",
+     "size": [
+      0.3400000035762787,
+      3.5995404720306396,
+      0.3400000035762787
+     ]
+    },
+    {
+     "name": "Pad2",
+     "cframe": [
+      -4.240729808807373,
+      -5003.75927734375,
+      -4.240729808807373,
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      1
+     ],
+     "color": [
+      0.7686274647712708,
+      0.7686274647712708,
+      0.7843137383460999
+     ],
+     "class": "Part",
+     "material": "Metal",
+     "size": [
+      1.5,
+      0.3400000035762787,
+      1.5
+     ]
+    },
+    {
+     "name": "Bell",
+     "cframe": [
+      0,
+      -5002.45947265625,
+      0,
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      1
+     ],
+     "color": [
+      0.1882352977991104,
+      0.18039216101169586,
+      0.1725490242242813
+     ],
+     "class": "Part",
+     "material": "Metal",
+     "size": [
+      1.8359074592590332,
+      2.200000047683716,
+      1.8359074592590332
+     ]
+    },
+    {
+     "name": "Leg3",
+     "cframe": [
+      3.3320019245147705,
+      -5002.3193359375,
+      -3.3320019245147705,
+      0.7071068286895752,
+      -0.5049132704734802,
+      -0.4950379729270935,
+      0,
+      0.7000893354415894,
+      -0.7140552997589111,
+      0.7071068286895752,
+      0.5049132704734802,
+      0.4950379729270935
+     ],
+     "color": [
+      0.8392156958580017,
+      0.6901960968971252,
+      0.27450981736183167
+     ],
+     "class": "Part",
+     "material": "SmoothPlastic",
+     "size": [
+      0.3400000035762787,
+      3.5995404720306396,
+      0.3400000035762787
+     ]
+    },
+    {
+     "name": "Strut3",
+     "cframe": [
+      3.2108383178710938,
+      -5002.9697265625,
+      -3.2108383178710938,
+      0.7071067690849304,
+      -0.6522151231765747,
+      -0.27315816283226013,
+      0,
+      0.38630399107933044,
+      -0.9223714470863342,
+      0.7071067690849304,
+      0.6522151231765747,
+      0.27315816283226013
+     ],
+     "color": [
+      0.7686274647712708,
+      0.7686274647712708,
+      0.7843137383460999
+     ],
+     "class": "Part",
+     "material": "Metal",
+     "size": [
+      0.17000000178813934,
+      3.1581342220306396,
+      0.17000000178813934
+     ]
+    },
+    {
+     "name": "Pad1",
+     "cframe": [
+      -4.240729808807373,
+      -5003.75927734375,
+      4.240729808807373,
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      1
+     ],
+     "color": [
+      0.7686274647712708,
+      0.7686274647712708,
+      0.7843137383460999
+     ],
+     "class": "Part",
+     "material": "Metal",
+     "size": [
+      1.5,
+      0.3400000035762787,
+      1.5
+     ]
+    },
+    {
+     "name": "Leg2",
+     "cframe": [
+      -3.3320019245147705,
+      -5002.3193359375,
+      -3.3320019245147705,
+      0.7071068286895752,
+      0.5049132704734802,
+      0.4950379729270935,
+      0,
+      0.7000893354415894,
+      -0.7140552997589111,
+      -0.7071068286895752,
+      0.5049132704734802,
+      0.4950379729270935
+     ],
+     "color": [
+      0.8392156958580017,
+      0.6901960968971252,
+      0.27450981736183167
+     ],
+     "class": "Part",
+     "material": "SmoothPlastic",
+     "size": [
+      0.3400000035762787,
+      3.5995404720306396,
+      0.3400000035762787
+     ]
+    },
+    {
+     "name": "Strut2",
+     "cframe": [
+      -3.2108383178710938,
+      -5002.9697265625,
+      -3.2108383178710938,
+      0.7071067690849304,
+      0.6522151231765747,
+      0.27315816283226013,
+      0,
+      0.38630399107933044,
+      -0.9223714470863342,
+      -0.7071067690849304,
+      0.6522151231765747,
+      0.27315816283226013
+     ],
+     "color": [
+      0.7686274647712708,
+      0.7686274647712708,
+      0.7843137383460999
+     ],
+     "class": "Part",
+     "material": "Metal",
+     "size": [
+      0.17000000178813934,
+      3.1581342220306396,
+      0.17000000178813934
+     ]
+    },
+    {
+     "name": "Strut1",
+     "cframe": [
+      -3.2108383178710938,
+      -5002.9697265625,
+      3.2108383178710938,
+      -0.7071067690849304,
+      0.6522151231765747,
+      0.27315816283226013,
+      0,
+      0.38630399107933044,
+      -0.9223714470863342,
+      -0.7071067690849304,
+      -0.6522151231765747,
+      -0.27315816283226013
+     ],
+     "color": [
+      0.7686274647712708,
+      0.7686274647712708,
+      0.7843137383460999
+     ],
+     "class": "Part",
+     "material": "Metal",
+     "size": [
+      0.17000000178813934,
+      3.1581342220306396,
+      0.17000000178813934
+     ]
+    },
+    {
+     "size": [
+      6.119691371917725,
+      5.288968563079834,
+      5.763362884521484
+     ],
+     "meshId": "rbxassetid://138220452695783",
+     "name": "Body",
+     "textureId": "rbxassetid://90593912714301"
+    },
+    {
+     "name": "Pad3",
+     "cframe": [
+      4.240729808807373,
+      -5003.75927734375,
+      -4.240729808807373,
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      1
+     ],
+     "color": [
+      0.7686274647712708,
+      0.7686274647712708,
+      0.7843137383460999
+     ],
+     "class": "Part",
+     "material": "Metal",
+     "size": [
+      1.5,
+      0.3400000035762787,
+      1.5
+     ]
+    },
+    {
+     "name": "Strut0",
+     "cframe": [
+      3.2108383178710938,
+      -5002.9697265625,
+      3.2108383178710938,
+      -0.7071067690849304,
+      -0.6522151231765747,
+      -0.27315816283226013,
+      0,
+      0.38630399107933044,
+      -0.9223714470863342,
+      0.7071067690849304,
+      -0.6522151231765747,
+      -0.27315816283226013
+     ],
+     "color": [
+      0.7686274647712708,
+      0.7686274647712708,
+      0.7843137383460999
+     ],
+     "class": "Part",
+     "material": "Metal",
+     "size": [
+      0.17000000178813934,
+      3.1581342220306396,
+      0.17000000178813934
+     ]
+    }
+   ]
+  },
+  {
+   "name": "LRV",
+   "parts": [
+    {
+     "size": [
+      3.865945339202881,
+      4.259169101715088,
+      6
+     ],
+     "meshId": "",
+     "name": "MeshPart",
+     "textureId": "rbxassetid://124259753685908"
+    }
+   ]
+  },
+  {
+   "name": "VOYAGER",
+   "parts": [
+    {
+     "size": [
+      6.864851474761963,
+      9.150012016296387,
+      6.494625091552734
+     ],
+     "meshId": "",
+     "name": "MeshPart",
+     "textureId": "rbxassetid://122625251370433"
+    }
+   ]
+  }
+ ],
+ "site": [
+  {
+   "anchor": [
+    36,
+    2.6000003814697266,
+    -25.999998092651367
+   ],
+   "attributes": {
+    "Science": "Still in use today. It showed the Moon is drifting away from Earth by about 3.8 centimetres a year \u2014 the only Apollo experiment still returning data.",
+    "Title": "Laser Ranging Retroreflector (LRRR)",
+    "What": "An array of corner-cube prisms. Any light hitting a corner cube bounces straight back the way it came.",
+    "Why": "So observatories on Earth could fire a laser at the Moon and time how long the light takes to come back.",
+    "ArtifactId": "retro",
+    "Year": "Deployed 21 July 1969"
+   },
+   "name": "Retroreflector",
+   "pivot": [
+    36,
+    1.3262689113616943,
+    -26.165241241455078,
+    0.9396926164627075,
+    0,
+    0.3420201241970062,
+    -0.09427352249622345,
+    0.9612616896629333,
+    0.25901439785957336,
+    -0.32877084612846375,
+    -0.27563735842704773,
+    0.9032905101776123
+   ]
+  },
+  {
+   "anchor": [
+    -33,
+    2.4000000953674316,
+    19
+   ],
+   "attributes": {
+    "Science": "It found the Moon rings for a long time after an impact \u2014 evidence of a dry, fractured crust. It ran for three weeks before overheating.",
+    "Title": "Passive Seismic Experiment (EASEP)",
+    "What": "A solar-powered seismometer, levelled by hand on the regolith and shielded from the Sun.",
+    "Why": "To listen for moonquakes and meteorite strikes, and use them to read the Moon's interior the way an X-ray reads a body.",
+    "ArtifactId": "seis",
+    "Year": "Deployed 21 July 1969"
+   },
+   "name": "Seismometer",
+   "pivot": [
+    -33,
+    1.5450000762939453,
+    19,
+    1,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    1
+   ]
+  },
+  {
+   "anchor": [
+    0,
+    4,
+    8
+   ],
+   "attributes": {
+    "Science": "Its landing proved a crewed vehicle could touch down and lift off from another world. It is still standing at Tranquility Base.",
+    "Title": "Apollo 11 Lunar Module \u2014 Descent Stage \"Eagle\"",
+    "What": "The lower half of the lander. It carried the descent engine, fuel, landing gear and the science packages down to the surface.",
+    "Why": "It was never meant to come home. The descent stage stayed behind as the launch platform for the ascent stage that carried Armstrong and Aldrin back to orbit.",
+    "ArtifactId": "lm",
+    "Year": "Landed 20 July 1969"
+   },
+   "name": "LM_DescentStage",
+   "pivot": [
+    0,
+    6.349999904632568,
+    0,
+    0.9063077569007874,
+    0,
+    -0.4226182699203491,
+    0,
+    1,
+    0,
+    0.4226182699203491,
+    0,
+    0.9063077569007874
+   ]
+  }
+ ],
+ "settings": {
+  "clockTime": 16.5,
+  "gravity": 16.200000762939453,
+  "sky": "Sky present (asset 101379085951893)",
+  "cameraMode": "LockFirstPerson"
+ },
+ "recovery": {
+  "note": "Shapes for LRV/ROVER/VOYAGER exist only inside the Studio place (SubtractAsync output, no hosted MeshId). If the place is lost, rebuild them from the ORIGINAL generations below, then re-run the plinth cut (GeometryService:SubtractAsync with a box over the bottom ~9% of height, keep the largest fragment).",
+  "LM": {
+   "status": "hosted",
+   "meshId": "rbxassetid://138220452695783",
+   "rebuild": "segmented body + procedural legs; see scenes/_prelude + game build code"
+  },
+  "LRV": {
+   "status": "saved inside the cloud place (v4); still no standalone MeshId",
+   "original_published_asset": "83588677401508",
+   "plinth_cut_fraction": 0.09
+  },
+  "ROVER": {
+   "status": "saved inside the cloud place (v4); still no standalone MeshId",
+   "original_published_asset": "140476596063186",
+   "plinth_cut_fraction": 0.09
+  },
+  "VOYAGER": {
+   "status": "saved inside the cloud place (v4); still no standalone MeshId",
+   "original_published_asset": null,
+   "rebuild": "regenerate: generate_mesh 'Voyager deep space probe floating free in space, large white parabolic dish antenna, ten sided bus, long thin instrument booms, no stand, no base' size 12x10x12, then plinth cut 0.085"
+  },
+  "skybox_asset": "101379085951893"
+ },
+ "place": {
+  "name_in_roblox": "Astrolog",
+  "placeId": 104157966303180,
+  "universeId": 10776127244,
+  "saved_version": 4,
+  "location": "TeamCreate",
+  "game_title": "Last Signal"
+ }
+}

@@ -1,0 +1,1440 @@
+Frame 1 [00:00.00]: 
+Frame 2 [00:00.04]: 
+Frame 3 [00:00.08]: 
+Frame 4 [00:00.12]: 
+Frame 5 [00:00.16]: 
+Frame 6 [00:00.20]: 
+Frame 7 [00:00.25]: 
+Frame 8 [00:00.29]: 
+Frame 9 [00:00.33]: 
+Frame 10 [00:00.37]: 
+Frame 11 [00:00.41]: 
+Frame 12 [00:00.45]: 
+Frame 13 [00:00.50]: In 1969
+Frame 14 [00:00.54]: In 1969
+Frame 15 [00:00.58]: In 1969
+Frame 16 [00:00.62]: In 1969
+Frame 17 [00:00.66]: In 1969
+Frame 18 [00:00.70]: In 1969
+Frame 19 [00:00.75]: In 1969
+Frame 20 [00:00.79]: In 1969
+Frame 21 [00:00.83]: In 1969
+Frame 22 [00:00.87]: In 1969
+Frame 23 [00:00.91]: In 1969
+Frame 24 [00:00.95]: In 1969
+Frame 25 [00:01.00]: In 1969
+Frame 26 [00:01.04]: In 1969
+Frame 27 [00:01.08]: In 1969
+Frame 28 [00:01.12]: In 1969
+Frame 29 [00:01.16]: In 1969
+Frame 30 [00:01.20]: In 1969
+Frame 31 [00:01.25]: In 1969
+Frame 32 [00:01.29]: In 1969
+Frame 33 [00:01.33]: In 1969
+Frame 34 [00:01.37]: In 1969
+Frame 35 [00:01.41]: In 1969
+Frame 36 [00:01.45]: In 1969
+Frame 37 [00:01.50]: In 1969
+Frame 38 [00:01.54]: In 1969
+Frame 39 [00:01.58]: In 1969
+Frame 40 [00:01.62]: In 1969
+Frame 41 [00:01.66]: In 1969
+Frame 42 [00:01.70]: In 1969
+Frame 43 [00:01.75]: In 1969
+Frame 44 [00:01.79]: In 1969
+Frame 45 [00:01.83]: In 1969
+Frame 46 [00:01.87]: In 1969
+Frame 47 [00:01.91]: In 1969
+Frame 48 [00:01.95]: In 1969
+Frame 49 [00:02.00]: In 1969
+Frame 50 [00:02.04]: In 1969
+Frame 51 [00:02.08]: In 1969
+Frame 52 [00:02.12]: In 1969
+Frame 53 [00:02.16]: In 1969
+Frame 54 [00:02.20]: In 1969
+Frame 55 [00:02.25]: In 1969
+Frame 56 [00:02.29]: In 1969
+Frame 57 [00:02.33]: In 1969
+Frame 58 [00:02.37]: In 1969
+Frame 59 [00:02.41]: In 1969
+Frame 60 [00:02.45]: In 1969
+Frame 61 [00:02.50]: In 1969
+Frame 62 [00:02.54]: In 1969
+Frame 63 [00:02.58]: In 1969
+Frame 64 [00:02.62]: In 1969
+Frame 65 [00:02.66]: In 1969
+Frame 66 [00:02.70]: 
+Frame 67 [00:02.75]: 
+Frame 68 [00:02.79]: 
+Frame 69 [00:02.83]: 
+Frame 70 [00:02.87]: 
+Frame 71 [00:02.91]: 
+Frame 72 [00:02.95]: 
+Frame 73 [00:03.00]: we left something
+Frame 74 [00:03.04]: we left something
+Frame 75 [00:03.08]: we left something
+Frame 76 [00:03.12]: we left something
+Frame 77 [00:03.16]: we left something
+Frame 78 [00:03.20]: we left something
+Frame 79 [00:03.25]: we left something
+Frame 80 [00:03.29]: we left something
+Frame 81 [00:03.33]: we left something
+Frame 82 [00:03.37]: we left something
+Frame 83 [00:03.41]: we left something
+Frame 84 [00:03.45]: we left something
+Frame 85 [00:03.50]: we left something
+Frame 86 [00:03.54]: we left something
+Frame 87 [00:03.58]: we left something
+Frame 88 [00:03.62]: we left something
+Frame 89 [00:03.66]: we left something
+Frame 90 [00:03.70]: we left something
+Frame 91 [00:03.75]: we left something
+Frame 92 [00:03.79]: we left something
+Frame 93 [00:03.83]: we left something
+Frame 94 [00:03.87]: we left something
+Frame 95 [00:03.91]: we left something
+Frame 96 [00:03.95]: we left something
+Frame 97 [00:04.00]: wé left something
+Frame 98 [00:04.04]: we left something
+Frame 99 [00:04.08]: we left something
+Frame 100 [00:04.12]: we left something
+Frame 101 [00:04.16]: we left something
+Frame 102 [00:04.20]: we left something
+Frame 103 [00:04.25]: we left something
+Frame 104 [00:04.29]: we left something
+Frame 105 [00:04.33]: we left something
+Frame 106 [00:04.37]: we left something
+Frame 107 [00:04.41]: we left something
+Frame 108 [00:04.45]: we left something
+Frame 109 [00:04.50]: we left something
+Frame 110 [00:04.54]: we left something
+Frame 111 [00:04.58]: we left something
+Frame 112 [00:04.62]: we left something
+Frame 113 [00:04.66]: we left something
+Frame 114 [00:04.70]: we left something
+Frame 115 [00:04.75]: we left something
+Frame 116 [00:04.79]: we left something
+Frame 117 [00:04.83]: we left something
+Frame 118 [00:04.87]: we left something
+Frame 119 [00:04.91]: we left something
+Frame 120 [00:04.95]: we left something
+Frame 121 [00:05.00]: we left something
+Frame 122 [00:05.04]: we left something
+Frame 123 [00:05.08]: we left something
+Frame 124 [00:05.12]: we left something
+Frame 125 [00:05.16]: we left something
+Frame 126 [00:05.20]: we left something
+Frame 127 [00:05.25]: we left something
+Frame 128 [00:05.29]: we left something
+Frame 129 [00:05.33]: we left something
+Frame 130 [00:05.37]: we left something
+Frame 131 [00:05.41]: 
+Frame 132 [00:05.45]: 
+Frame 133 [00:05.50]: 
+Frame 134 [00:05.54]: 
+Frame 135 [00:05.58]: 
+Frame 136 [00:05.62]: 
+Frame 137 [00:05.66]: 
+Frame 138 [00:05.70]: on the Moon
+Frame 139 [00:05.75]: on the Moon
+Frame 140 [00:05.79]: on the Moon
+Frame 141 [00:05.83]: on the Moon
+Frame 142 [00:05.87]: on the Moon
+Frame 143 [00:05.91]: on the Moon
+Frame 144 [00:05.95]: on the Moon
+Frame 145 [00:06.00]: on the Moon
+Frame 146 [00:06.04]: on the Moon
+Frame 147 [00:06.08]: on the Moon
+Frame 148 [00:06.12]: on the Moon
+Frame 149 [00:06.16]: on the Moon
+Frame 150 [00:06.20]: on the Moon
+Frame 151 [00:06.25]: on the Moon
+Frame 152 [00:06.29]: on the Moon
+Frame 153 [00:06.33]: on the Moon
+Frame 154 [00:06.37]: on the Moon
+Frame 155 [00:06.41]: on-the Moon
+Frame 156 [00:06.45]: on the Moon
+Frame 157 [00:06.50]: on the Moon
+Frame 158 [00:06.54]: on the Moon
+Frame 159 [00:06.58]: on the Moon
+Frame 160 [00:06.62]: on the Moon
+Frame 161 [00:06.66]: on-the Moon
+Frame 162 [00:06.70]: on the Moon
+Frame 163 [00:06.75]: on-the Moon
+Frame 164 [00:06.79]: on-the Moon
+Frame 165 [00:06.83]: on-the Moon
+Frame 166 [00:06.87]: on-the Moon
+Frame 167 [00:06.91]: on the Moon
+Frame 168 [00:06.95]: on the Moon
+Frame 169 [00:07.00]: on the Moon
+Frame 170 [00:07.04]: on the Moon
+Frame 171 [00:07.08]: on the Moon
+Frame 172 [00:07.12]: on the Moon
+Frame 173 [00:07.16]: on the Moon
+Frame 174 [00:07.20]: on the Moon
+Frame 175 [00:07.25]: on the Moon
+Frame 176 [00:07.29]: on the Moon
+Frame 177 [00:07.33]: on the Moon
+Frame 178 [00:07.37]: on the Moon
+Frame 179 [00:07.41]: on the Moon
+Frame 180 [00:07.45]: on the Moon
+Frame 181 [00:07.50]: on the Moon
+Frame 182 [00:07.54]: on the Moon
+Frame 183 [00:07.58]: on the Moon
+Frame 184 [00:07.62]: on the Moon
+Frame 185 [00:07.66]: on the Moon
+Frame 186 [00:07.70]: on the Moon
+Frame 187 [00:07.75]: on the Moon
+Frame 188 [00:07.79]: on the Moon
+Frame 189 [00:07.83]: 
+Frame 190 [00:07.87]: 
+Frame 191 [00:07.91]: 
+Frame 192 [00:07.95]: 
+Frame 193 [00:08.00]: 
+Frame 194 [00:08.04]: 
+Frame 195 [00:08.08]: 
+Frame 196 [00:08.12]: 
+Frame 197 [00:08.16]: 
+Frame 198 [00:08.20]: 
+Frame 199 [00:08.25]: 
+Frame 200 [00:08.29]: 
+Frame 201 [00:08.33]: 
+Frame 202 [00:08.37]: 
+Frame 203 [00:08.41]: No wind.
+Frame 204 [00:08.45]: No wind.
+Frame 205 [00:08.50]: No wind.
+Frame 206 [00:08.54]: No wind.
+Frame 207 [00:08.58]: No wind.
+Frame 208 [00:08.62]: No wind.
+Frame 209 [00:08.66]: No wind.
+Frame 210 [00:08.70]: No wind.
+Frame 211 [00:08.75]: No wind.
+Frame 212 [00:08.79]: No wind.
+Frame 213 [00:08.83]: No wind.
+Frame 214 [00:08.87]: No wind.
+Frame 215 [00:08.91]: No wind.
+Frame 216 [00:08.95]: No wind.
+Frame 217 [00:09.00]: No wind.
+Frame 218 [00:09.04]: No wind.
+Frame 219 [00:09.08]: No wind.
+Frame 220 [00:09.12]: No wind.
+Frame 221 [00:09.16]: No wind.
+Frame 222 [00:09.20]: No wind.
+Frame 223 [00:09.25]: No wind.
+Frame 224 [00:09.29]: No wind.
+Frame 225 [00:09.33]: No wind.
+Frame 226 [00:09.37]: No wind.
+Frame 227 [00:09.41]: No wind.
+Frame 228 [00:09.45]: No wind.
+Frame 229 [00:09.50]: No wind.
+Frame 230 [00:09.54]: No wind.
+Frame 231 [00:09.58]: No wind.
+Frame 232 [00:09.62]: No wind.
+Frame 233 [00:09.66]: 15-0   No wind.
+Frame 234 [00:09.70]: No wind.
+Frame 235 [00:09.75]: No wind.
+Frame 236 [00:09.79]: No wind.
+Frame 237 [00:09.83]: No wind.
+Frame 238 [00:09.87]: No wind.
+Frame 239 [00:09.91]: =   No wind.
+Frame 240 [00:09.95]: No wind.
+Frame 241 [00:10.00]: No wind.
+Frame 242 [00:10.04]: No wind.
+Frame 243 [00:10.08]: No wind.
+Frame 244 [00:10.12]: No wind.
+Frame 245 [00:10.16]: No wind.
+Frame 246 [00:10.20]: No wind.
+Frame 247 [00:10.25]: =   No wind.
+Frame 248 [00:10.29]: =   No wind.
+Frame 249 [00:10.33]: No wind.
+Frame 250 [00:10.37]: No wind.
+Frame 251 [00:10.41]: No wind.
+Frame 252 [00:10.45]: No wind.
+Frame 253 [00:10.50]: =   No wind.
+Frame 254 [00:10.54]: No wind.
+Frame 255 [00:10.58]: No wind.
+Frame 256 [00:10.62]: 
+Frame 257 [00:10.66]: 
+Frame 258 [00:10.70]: 
+Frame 259 [00:10.75]: 
+Frame 260 [00:10.79]: 
+Frame 261 [00:10.83]: 
+Frame 262 [00:10.87]: 
+Frame 263 [00:10.91]: No rain.
+Frame 264 [00:10.95]: No rain.
+Frame 265 [00:11.00]: No rain.
+Frame 266 [00:11.04]: No rain.
+Frame 267 [00:11.08]: No rain.
+Frame 268 [00:11.12]: No rain.
+Frame 269 [00:11.16]: No rain.
+Frame 270 [00:11.20]: No rain.
+Frame 271 [00:11.25]: No rain.
+Frame 272 [00:11.29]: No rain.
+Frame 273 [00:11.33]: No rain.
+Frame 274 [00:11.37]: No rain.
+Frame 275 [00:11.41]: No rain.
+Frame 276 [00:11.45]: No rain.
+Frame 277 [00:11.50]: No rain.
+Frame 278 [00:11.54]: No rain.
+Frame 279 [00:11.58]: No rain.
+Frame 280 [00:11.62]: No rain.
+Frame 281 [00:11.66]: No rain.
+Frame 282 [00:11.70]: No rain.
+Frame 283 [00:11.75]: No rain.
+Frame 284 [00:11.79]: No rain.
+Frame 285 [00:11.83]: No rain.
+Frame 286 [00:11.87]: No rain.
+Frame 287 [00:11.91]: No rain.
+Frame 288 [00:11.95]: No rain.
+Frame 289 [00:12.00]: No rain.
+Frame 290 [00:12.04]: No rain.
+Frame 291 [00:12.08]: No rain.
+Frame 292 [00:12.12]: No rain.
+Frame 293 [00:12.16]: No rain.
+Frame 294 [00:12.20]: No rain.
+Frame 295 [00:12.25]: No rain.
+Frame 296 [00:12.29]: No-rain.
+Frame 297 [00:12.33]: No rain.
+Frame 298 [00:12.37]: No rain.
+Frame 299 [00:12.41]: No rain.
+Frame 300 [00:12.45]: No rain.
+Frame 301 [00:12.50]: No rain.   •..
+Frame 302 [00:12.54]: No rain.
+Frame 303 [00:12.58]: No rain.
+Frame 304 [00:12.62]: No rain.
+Frame 305 [00:12.66]: No rain.
+Frame 306 [00:12.70]: No rain.
+Frame 307 [00:12.75]: No rain.
+Frame 308 [00:12.79]: No rain.
+Frame 309 [00:12.83]: No rain.
+Frame 310 [00:12.87]: No rain.
+Frame 311 [00:12.91]: No rain.
+Frame 312 [00:12.95]: No rain.
+Frame 313 [00:13.00]: No rain.
+Frame 314 [00:13.04]: 
+Frame 315 [00:13.08]: 
+Frame 316 [00:13.12]: 
+Frame 317 [00:13.16]: 
+Frame 318 [00:13.20]: 
+Frame 319 [00:13.25]: 
+Frame 320 [00:13.29]: 
+Frame 321 [00:13.33]: Nothing to erase it.
+Frame 322 [00:13.37]: Nothing to erase it.
+Frame 323 [00:13.41]: Nothing to erase it:
+Frame 324 [00:13.45]: Nothing to erase it.
+Frame 325 [00:13.50]: Nothing to erase it:
+Frame 326 [00:13.54]: Nothing to erase it.
+Frame 327 [00:13.58]: Nothing to erase it:
+Frame 328 [00:13.62]: Nothing to erase it-
+Frame 329 [00:13.66]: Nothing to erase it.
+Frame 330 [00:13.70]: Nothing to erase it.
+Frame 331 [00:13.75]: Nothing to erase it.
+Frame 332 [00:13.79]: Nothing to erase it.
+Frame 333 [00:13.83]: Nothing to erase it.
+Frame 334 [00:13.87]: Nothing to erase it.
+Frame 335 [00:13.91]: Nothing to erase it.
+Frame 336 [00:13.95]: Nothing to erase it.
+Frame 337 [00:14.00]: Nothing to erase it.
+Frame 338 [00:14.04]: Nothing to erase it.
+Frame 339 [00:14.08]: Nothing to erase it.
+Frame 340 [00:14.12]: Nothing to erase it.
+Frame 341 [00:14.16]: Nothing to erase it.
+Frame 342 [00:14.20]: Nothing to erase it.
+Frame 343 [00:14.25]: Nothing to erase it.
+Frame 344 [00:14.29]: Nothing to erase it.
+Frame 345 [00:14.33]: Nothing to erase it.
+Frame 346 [00:14.37]: Nothing to erase it.
+Frame 347 [00:14.41]: Nothing to erase it.
+Frame 348 [00:14.45]: Nothing to erase it.
+Frame 349 [00:14.50]: Nothing to erase it.
+Frame 350 [00:14.54]: Nothing to erase it.
+Frame 351 [00:14.58]: Nothing to erase it.
+Frame 352 [00:14.62]: Nothing to erase it.
+Frame 353 [00:14.66]: Nothing to erase it.
+Frame 354 [00:14.70]: Nothing to erase it.
+Frame 355 [00:14.75]: Nothing to erase it.
+Frame 356 [00:14.79]: Nothing to erase it.
+Frame 357 [00:14.83]: Nothing to erase it.
+Frame 358 [00:14.87]: Nothing to erase it.
+Frame 359 [00:14.91]: Nothing to erase it.
+Frame 360 [00:14.95]: Nothing to erase it.
+Frame 361 [00:15.00]: Nothing to erase it.
+Frame 362 [00:15.04]: Nothing to erase it.
+Frame 363 [00:15.08]: Nothing to erase it.
+Frame 364 [00:15.12]: Nothing to erase it.
+Frame 365 [00:15.16]: Nothing to erase it.
+Frame 366 [00:15.20]: Nothing to erase it.
+Frame 367 [00:15.25]: Nothing to erase it.
+Frame 368 [00:15.29]: Nothing to erase it.
+Frame 369 [00:15.33]: Nothing to erase it.
+Frame 370 [00:15.37]: Nothing to erase it.
+Frame 371 [00:15.41]: Nothing to erase it.
+Frame 372 [00:15.45]: Nothing to erase it.
+Frame 373 [00:15.50]: Nothing to erase it.
+Frame 374 [00:15.54]: Nothing to erase it.
+Frame 375 [00:15.58]: Nothing to erase it.
+Frame 376 [00:15.62]: Nothing to erase it.
+Frame 377 [00:15.66]: Nothing to erase it.
+Frame 378 [00:15.70]: 
+Frame 379 [00:15.75]: 
+Frame 380 [00:15.79]: 
+Frame 381 [00:15.83]: 
+Frame 382 [00:15.87]: 
+Frame 383 [00:15.91]: 
+Frame 384 [00:15.95]: 
+Frame 385 [00:16.00]: 
+Frame 386 [00:16.04]: 
+Frame 387 [00:16.08]: 
+Frame 388 [00:16.12]: 
+Frame 389 [00:16.16]: 
+Frame 390 [00:16.20]: 
+Frame 391 [00:16.25]: 
+Frame 392 [00:16.29]: 
+Frame 393 [00:16.33]: 
+Frame 394 [00:16.37]: 
+Frame 395 [00:16.41]: Apollo 15 parked this
+Frame 396 [00:16.45]: Apollo 15 parked this
+Frame 397 [00:16.50]: Apollo 15 parked this
+Frame 398 [00:16.54]: Apollo 15 parked this
+Frame 399 [00:16.58]: Apollo 15 parked this
+Frame 400 [00:16.62]: Apollo 15 parked this
+Frame 401 [00:16.66]: Apollo 15 parked this
+Frame 402 [00:16.70]: Apollo 15 parked this
+Frame 403 [00:16.75]: Apollo 15 parked this
+Frame 404 [00:16.79]: Apollo 15 parked this
+Frame 405 [00:16.83]: Apollo 15 parked this
+Frame 406 [00:16.87]: Apollo 15 parked this
+Frame 407 [00:16.91]: Apollo 15 parked this
+Frame 408 [00:16.95]: Apollo 15 parked this
+Frame 409 [00:17.00]: Apollo 15 parked this
+Frame 410 [00:17.04]: Apollo 15 parked this
+Frame 411 [00:17.08]: Apollo 15 parked this
+Frame 412 [00:17.12]: Apollo 15 parked this
+Frame 413 [00:17.16]: Apollo 15 parked this
+Frame 414 [00:17.20]: Apollo 15 parked this
+Frame 415 [00:17.25]: Apollo 15 parked this
+Frame 416 [00:17.29]: Apollo 15 parked this
+Frame 417 [00:17.33]: Apollo 15 parked this
+Frame 418 [00:17.37]: Apollo 15 parked this
+Frame 419 [00:17.41]: Apollo 15 parked this
+Frame 420 [00:17.45]: Apollo 15 parked this
+Frame 421 [00:17.50]: Apollo 15 parked this
+Frame 422 [00:17.54]: Apollo 15 parked this
+Frame 423 [00:17.58]: Apollo 15 parked this
+Frame 424 [00:17.62]: Apollo 15 parked this
+Frame 425 [00:17.66]: Apollo 15 parked this.
+Frame 426 [00:17.70]: Apollo 15 parked this.
+Frame 427 [00:17.75]: Apollo 15 parked this.
+Frame 428 [00:17.79]: Apollo 15 parked this
+Frame 429 [00:17.83]: Apollo 15 parked this
+Frame 430 [00:17.87]: Apollo 15 parked this
+Frame 431 [00:17.91]: Apollo 15 parked this.
+Frame 432 [00:17.95]: Apollo 15 parked this
+Frame 433 [00:18.00]: Apollo 15 parked this
+Frame 434 [00:18.04]: Apollo 15 parked this,
+Frame 435 [00:18.08]: Apollo 15 parked this.
+Frame 436 [00:18.12]: Apollo 15 parked this.
+Frame 437 [00:18.16]: Apollo 15 parked this.
+Frame 438 [00:18.20]: Apollo 15 parked this
+Frame 439 [00:18.25]: Apollo 15 parked thiş
+Frame 440 [00:18.29]: Apollo 15 parked thiş
+Frame 441 [00:18.33]: Apollo 15 parked thiş
+Frame 442 [00:18.37]: Apollo 15 parked this,
+Frame 443 [00:18.41]: Apollo 15 parked this
+Frame 444 [00:18.45]: Apollo 15 parked this,
+Frame 445 [00:18.50]: Apollo 15 parked this
+Frame 446 [00:18.54]: Apollo 15 parked this
+Frame 447 [00:18.58]: Apollo 15 parked this
+Frame 448 [00:18.62]: Apollo 15 parked this
+Frame 449 [00:18.66]: Apollo 15 parked this
+Frame 450 [00:18.70]: Apollo 15 parked this
+Frame 451 [00:18.75]: Apollo 15 parked this
+Frame 452 [00:18.79]: Apollo 15 parked this
+Frame 453 [00:18.83]: Apollo 15 parked this
+Frame 454 [00:18.87]: Apollo 15 parked this
+Frame 455 [00:18.91]: Apollo 15 parked this
+Frame 456 [00:18.95]: Apollo 15 parked this
+Frame 457 [00:19.00]: Apollo 15 parked this
+Frame 458 [00:19.04]: 
+Frame 459 [00:19.08]: 
+Frame 460 [00:19.12]: 
+Frame 461 [00:19.16]: 
+Frame 462 [00:19.20]: 
+Frame 463 [00:19.25]: 
+Frame 464 [00:19.29]: 
+Frame 465 [00:19.33]: rover in 1971.
+Frame 466 [00:19.37]: rover in 1971.
+Frame 467 [00:19.41]: rover in 1971.
+Frame 468 [00:19.45]: rover in 1971.
+Frame 469 [00:19.50]: rover in 1971.
+Frame 470 [00:19.54]: rover in 1971.
+Frame 471 [00:19.58]: rover in 1971.
+Frame 472 [00:19.62]: rover in 1971.
+Frame 473 [00:19.66]: rover in 1971.
+Frame 474 [00:19.70]: rover in 1971.
+Frame 475 [00:19.75]: rover in 1971.
+Frame 476 [00:19.79]: rover in 1971.
+Frame 477 [00:19.83]: rover in 1971.
+Frame 478 [00:19.87]: rover in 1971.
+Frame 479 [00:19.91]: rover in 1971.
+Frame 480 [00:19.95]: rover in 1971.
+Frame 481 [00:20.00]: rover in 1971.
+Frame 482 [00:20.04]: rover in 1971.
+Frame 483 [00:20.08]: rover in 1971.
+Frame 484 [00:20.12]: rover in 1971.
+Frame 485 [00:20.16]: rover in 1971.
+Frame 486 [00:20.20]: rover in 1971.
+Frame 487 [00:20.25]: rover in 1971.
+Frame 488 [00:20.29]: rover in 1971.
+Frame 489 [00:20.33]: rover in 1971.
+Frame 490 [00:20.37]: rover in 1971.
+Frame 491 [00:20.41]: rover in 1971.
+Frame 492 [00:20.45]: rover in 1971.
+Frame 493 [00:20.50]: rover in 1971.
+Frame 494 [00:20.54]: rover in 1971.
+Frame 495 [00:20.58]: rover in 1971.
+Frame 496 [00:20.62]: rover in 1971.
+Frame 497 [00:20.66]: rover in 1971.
+Frame 498 [00:20.70]: rover in 1971.
+Frame 499 [00:20.75]: rover in 1971.
+Frame 500 [00:20.79]: rover in 1971.
+Frame 501 [00:20.83]: rover in 1971.
+Frame 502 [00:20.87]: rover in 1971.
+Frame 503 [00:20.91]: rover in 1971.
+Frame 504 [00:20.95]: rover in 1971.
+Frame 505 [00:21.00]: rover in 1971.
+Frame 506 [00:21.04]: rover in 1971.
+Frame 507 [00:21.08]: rover in 1971.
+Frame 508 [00:21.12]: rover in 1971.
+Frame 509 [00:21.16]: rover in 1971.
+Frame 510 [00:21.20]: rover in 1971.
+Frame 511 [00:21.25]: rover in 1971.
+Frame 512 [00:21.29]: rover in 1971.
+Frame 513 [00:21.33]: rover in 1971.
+Frame 514 [00:21.37]: rover in 1971.
+Frame 515 [00:21.41]: rover in 1971.
+Frame 516 [00:21.45]: rover in 1971.
+Frame 517 [00:21.50]: rover in 1971.
+Frame 518 [00:21.54]: rover in 1971.
+Frame 519 [00:21.58]: rover in 1971.
+Frame 520 [00:21.62]: rover in 1971.
+Frame 521 [00:21.66]: rover in 1971.
+Frame 522 [00:21.70]: 
+Frame 523 [00:21.75]: 
+Frame 524 [00:21.79]: 
+Frame 525 [00:21.83]: 
+Frame 526 [00:21.87]: 
+Frame 527 [00:21.91]: 
+Frame 528 [00:21.95]: 
+Frame 529 [00:22.00]: 
+Frame 530 [00:22.04]: 
+Frame 531 [00:22.08]: 
+Frame 532 [00:22.12]: It has not moved since.
+Frame 533 [00:22.16]: It has not moved since.
+Frame 534 [00:22.20]: It has not moved since.
+Frame 535 [00:22.25]: It has not moved since.
+Frame 536 [00:22.29]: It has not moved since.
+Frame 537 [00:22.33]: It has not moved since.
+Frame 538 [00:22.37]: It has not moved since.
+Frame 539 [00:22.41]: It has not moved since.
+Frame 540 [00:22.45]: It has not moved since.
+Frame 541 [00:22.50]: It has not moved since.
+Frame 542 [00:22.54]: It has not moved since.
+Frame 543 [00:22.58]: It has not moved since.
+Frame 544 [00:22.62]: It has not moved since.
+Frame 545 [00:22.66]: It has not moved since.
+Frame 546 [00:22.70]: It has not moved since.
+Frame 547 [00:22.75]: It has not moved since.
+Frame 548 [00:22.79]: It has not moved since.
+Frame 549 [00:22.83]: It has not moved since.
+Frame 550 [00:22.87]: It' has not moved since.
+Frame 551 [00:22.91]: It has not moved since.
+Frame 552 [00:22.95]: It has not moved since.
+Frame 553 [00:23.00]: It has not moved since.
+Frame 554 [00:23.04]: It has not moved since.
+Frame 555 [00:23.08]: It has not moved since.
+Frame 556 [00:23.12]: It has not moved since.
+Frame 557 [00:23.16]: It has not moved since.
+Frame 558 [00:23.20]: it has not moved since.
+Frame 559 [00:23.25]: /it-has not moved since.
+Frame 560 [00:23.29]: it.has not moved since.
+Frame 561 [00:23.33]: it has not moved since.
+Frame 562 [00:23.37]: (It-has not moved since.
+Frame 563 [00:23.41]: (It has not moved since.
+Frame 564 [00:23.45]: It has not moved since.
+Frame 565 [00:23.50]: It has not moved since.
+Frame 566 [00:23.54]: It has not moved since.
+Frame 567 [00:23.58]: It has not moved since.
+Frame 568 [00:23.62]: It has not moved since.
+Frame 569 [00:23.66]: It-has not moved since.
+Frame 570 [00:23.70]: It-has not moved since.
+Frame 571 [00:23.75]: It-has not moved since.
+Frame 572 [00:23.79]: It has not moved since.
+Frame 573 [00:23.83]: It has not moved since.
+Frame 574 [00:23.87]: It has not moved since.
+Frame 575 [00:23.91]: It has not moved since.
+Frame 576 [00:23.95]: It has not moved since.
+Frame 577 [00:24.00]: It has not moved since.
+Frame 578 [00:24.04]: It has not moved since.
+Frame 579 [00:24.08]: It has not moved since.
+Frame 580 [00:24.12]: It has not moved since.
+Frame 581 [00:24.16]: It has not moved since.
+Frame 582 [00:24.20]: It has not moved since.
+Frame 583 [00:24.25]: It has not moved since.
+Frame 584 [00:24.29]: It has not moved since.
+Frame 585 [00:24.33]: It has not moved since.
+Frame 586 [00:24.37]: It has not moved since.
+Frame 587 [00:24.41]: It has not moved since.
+Frame 588 [00:24.45]: It has not moved since.
+Frame 589 [00:24.50]: It has not moved since.
+Frame 590 [00:24.54]: It has not moved since.
+Frame 591 [00:24.58]: It has not moved since.
+Frame 592 [00:24.62]: It has not moved since.
+Frame 593 [00:24.66]: It has not moved since.
+Frame 594 [00:24.70]: It has not moved since.
+Frame 595 [00:24.75]: It has not moved since.
+Frame 596 [00:24.79]: It has not moved since.
+Frame 597 [00:24.83]: It has not moved since.
+Frame 598 [00:24.87]: It has not moved since.
+Frame 599 [00:24.91]: It has not moved since.
+Frame 600 [00:24.95]: It has not moved since.
+Frame 601 [00:25.00]: It has not moved since.
+Frame 602 [00:25.04]: It has not moved since.
+Frame 603 [00:25.08]: It has not moved since.
+Frame 604 [00:25.12]: It has not moved since.
+Frame 605 [00:25.16]: It has not moved since.
+Frame 606 [00:25.20]: It has not moved since.
+Frame 607 [00:25.25]: It has not moved since.
+Frame 608 [00:25.29]: It has not moved since.
+Frame 609 [00:25.33]: It has not moved since.
+Frame 610 [00:25.37]: It has not moved since.
+Frame 611 [00:25.41]: It has not moved since.
+Frame 612 [00:25.45]: It has not moved since.
+Frame 613 [00:25.50]: It has not moved since.
+Frame 614 [00:25.54]: It has not moved since.
+Frame 615 [00:25.58]: It has not moved since.
+Frame 616 [00:25.62]: 
+Frame 617 [00:25.66]: 
+Frame 618 [00:25.70]: 
+Frame 619 [00:25.75]: 
+Frame 620 [00:25.79]: 
+Frame 621 [00:25.83]: 
+Frame 622 [00:25.87]: 
+Frame 623 [00:25.91]: 
+Frame 624 [00:25.95]: 
+Frame 625 [00:26.00]: 
+Frame 626 [00:26.04]: 
+Frame 627 [00:26.08]: 
+Frame 628 [00:26.12]: 
+Frame 629 [00:26.16]: 
+Frame 630 [00:26.20]: 
+Frame 631 [00:26.25]: 
+Frame 632 [00:26.29]: 
+Frame 633 [00:26.33]: 
+Frame 634 [00:26.37]: 
+Frame 635 [00:26.41]: Mars is different.
+Frame 636 [00:26.45]: Mars is different.
+Frame 637 [00:26.50]: Mars is different.
+Frame 638 [00:26.54]: Mars is different.
+Frame 639 [00:26.58]: Mars is different.
+Frame 640 [00:26.62]: Mars is different.
+Frame 641 [00:26.66]: Mars is different.
+Frame 642 [00:26.70]: Mars is different.
+Frame 643 [00:26.75]: Mars is different.
+Frame 644 [00:26.79]: Mars is different.
+Frame 645 [00:26.83]: Mars is different.
+Frame 646 [00:26.87]: Mars is different.
+Frame 647 [00:26.91]: Mars is different.
+Frame 648 [00:26.95]: Mars is different.
+Frame 649 [00:27.00]: Mars is different.
+Frame 650 [00:27.04]: Mars is different.
+Frame 651 [00:27.08]: Mars is different.
+Frame 652 [00:27.12]: Mars is different.
+Frame 653 [00:27.16]: Mars is different.
+Frame 654 [00:27.20]: Mars is different.
+Frame 655 [00:27.25]: Mars is different.
+Frame 656 [00:27.29]: Mars is different.
+Frame 657 [00:27.33]: Mars is different.
+Frame 658 [00:27.37]: Mars is different.
+Frame 659 [00:27.41]: Mars is different.
+Frame 660 [00:27.45]: Mars is different.
+Frame 661 [00:27.50]: Mars is different.
+Frame 662 [00:27.54]: Mars is different.
+Frame 663 [00:27.58]: Mars is different.
+Frame 664 [00:27.62]: Mars is different.
+Frame 665 [00:27.66]: Mars is different.
+Frame 666 [00:27.70]: Mars is different.
+Frame 667 [00:27.75]: Mars is different.
+Frame 668 [00:27.79]: Mars is different.
+Frame 669 [00:27.83]: Mars is different.
+Frame 670 [00:27.87]: Mars is different.
+Frame 671 [00:27.91]: Mars is different.
+Frame 672 [00:27.95]: Mars is different.
+Frame 673 [00:28.00]: Mars is different.
+Frame 674 [00:28.04]: Mars is different.
+Frame 675 [00:28.08]: Mars is different.
+Frame 676 [00:28.12]: Mars is different.
+Frame 677 [00:28.16]: Mars is different.
+Frame 678 [00:28.20]: Mars is different.
+Frame 679 [00:28.25]: Mars is different.
+Frame 680 [00:28.29]: Mars is different.
+Frame 681 [00:28.33]: Mars is different.
+Frame 682 [00:28.37]: Mars is different.
+Frame 683 [00:28.41]: Mars is different.
+Frame 684 [00:28.45]: Mars is different.
+Frame 685 [00:28.50]: Mars is different.
+Frame 686 [00:28.54]: Mars is different.
+Frame 687 [00:28.58]: Mars is different.
+Frame 688 [00:28.62]: Mars is different.
+Frame 689 [00:28.66]: Mars is different.
+Frame 690 [00:28.70]: Mars is different.
+Frame 691 [00:28.75]: Mars is different.
+Frame 692 [00:28.79]: Mars is different.
+Frame 693 [00:28.83]: Mars is different.
+Frame 694 [00:28.87]: Mars is different.
+Frame 695 [00:28.91]: 
+Frame 696 [00:28.95]: 
+Frame 697 [00:29.00]: 
+Frame 698 [00:29.04]: 
+Frame 699 [00:29.08]: 
+Frame 700 [00:29.12]: 
+Frame 701 [00:29.16]: 
+Frame 702 [00:29.20]: Mars has weather.
+Frame 703 [00:29.25]: Mars has weather.
+Frame 704 [00:29.29]: Mars has weather.
+Frame 705 [00:29.33]: Mars has weather.
+Frame 706 [00:29.37]: Mars has weather.
+Frame 707 [00:29.41]: Mars has weather.
+Frame 708 [00:29.45]: Mars has weather.
+Frame 709 [00:29.50]: Mars has weather.
+Frame 710 [00:29.54]: Mars has weather.
+Frame 711 [00:29.58]: Mars has weather.
+Frame 712 [00:29.62]: Mars has weather.
+Frame 713 [00:29.66]: Mars has weather.
+Frame 714 [00:29.70]: Mars has weather.
+Frame 715 [00:29.75]: Mars has weather.
+Frame 716 [00:29.79]: Mars has weather.
+Frame 717 [00:29.83]: Mars has weather.
+Frame 718 [00:29.87]: Mars has weather.
+Frame 719 [00:29.91]: Mars has weather.
+Frame 720 [00:29.95]: Mars has weather.
+Frame 721 [00:30.00]: Mars has weather.
+Frame 722 [00:30.04]: Mars has weather.
+Frame 723 [00:30.08]: Mars has weather.
+Frame 724 [00:30.12]: Mars has weather.
+Frame 725 [00:30.16]: Mars has weather.
+Frame 726 [00:30.20]: Mars has weather.
+Frame 727 [00:30.25]: Mars has weather.
+Frame 728 [00:30.29]: Mars has weather.
+Frame 729 [00:30.33]: Mars has weather.
+Frame 730 [00:30.37]: Mars has weather.
+Frame 731 [00:30.41]: Mars has weather.
+Frame 732 [00:30.45]: Mars has weather.
+Frame 733 [00:30.50]: Mars has weather.
+Frame 734 [00:30.54]: Mars has weather.
+Frame 735 [00:30.58]: Mars has weather.
+Frame 736 [00:30.62]: Mars has weather.
+Frame 737 [00:30.66]: Mars has weather.
+Frame 738 [00:30.70]: Mars has weather.
+Frame 739 [00:30.75]: Mars has weather.
+Frame 740 [00:30.79]: Mars has weather.
+Frame 741 [00:30.83]: Mars has weather.
+Frame 742 [00:30.87]: Mars has weather.
+Frame 743 [00:30.91]: Mars has weather.
+Frame 744 [00:30.95]: Mars has weather.
+Frame 745 [00:31.00]: Mars has weather.
+Frame 746 [00:31.04]: Mars has weather.
+Frame 747 [00:31.08]: Mars has weather.
+Frame 748 [00:31.12]: Mars has weather.
+Frame 749 [00:31.16]: Mars has weather.
+Frame 750 [00:31.20]: Mars has weather.
+Frame 751 [00:31.25]: Mars has weather.
+Frame 752 [00:31.29]: Mars has weather.
+Frame 753 [00:31.33]: Mars has weather.
+Frame 754 [00:31.37]: Mars has weather.
+Frame 755 [00:31.41]: Mars has weather.
+Frame 756 [00:31.45]: Mars has weather.
+Frame 757 [00:31.50]: Mars has weather.
+Frame 758 [00:31.54]: Mars has weather.
+Frame 759 [00:31.58]: Mars has weather.
+Frame 760 [00:31.62]: Mars has weather.
+Frame 761 [00:31.66]: Mars has weather.
+Frame 762 [00:31.70]: 
+Frame 763 [00:31.75]: 
+Frame 764 [00:31.79]: 
+Frame 765 [00:31.83]: 
+Frame 766 [00:31.87]: 
+Frame 767 [00:31.91]: 
+Frame 768 [00:31.95]: 
+Frame 769 [00:32.00]: 
+Frame 770 [00:32.04]: 
+Frame 771 [00:32.08]: 
+Frame 772 [00:32.12]: A dust storm took
+Frame 773 [00:32.16]: A dust storm took
+Frame 774 [00:32.20]: A dust storm took
+Frame 775 [00:32.25]: A dust storm took
+Frame 776 [00:32.29]: A dust storm took
+Frame 777 [00:32.33]: A dust storm took
+Frame 778 [00:32.37]: A dust storm took
+Frame 779 [00:32.41]: A dust storm took
+Frame 780 [00:32.45]: A dust storm took
+Frame 781 [00:32.50]: A dust storm took
+Frame 782 [00:32.54]: A dust storm took
+Frame 783 [00:32.58]: A dust storm took
+Frame 784 [00:32.62]: A dust storm took
+Frame 785 [00:32.66]: A dust storm took
+Frame 786 [00:32.70]: A dust storm took
+Frame 787 [00:32.75]: A dust storm took
+Frame 788 [00:32.79]: A dust storm took
+Frame 789 [00:32.83]: A dust storm took
+Frame 790 [00:32.87]: A dust storm took
+Frame 791 [00:32.91]: A dust storm took
+Frame 792 [00:32.95]: A dust storm took
+Frame 793 [00:33.00]: A dust storm took
+Frame 794 [00:33.04]: A dust storm took
+Frame 795 [00:33.08]: A dust storm took
+Frame 796 [00:33.12]: A dust storm took
+Frame 797 [00:33.16]: A dust storm took
+Frame 798 [00:33.20]: A dust storm took
+Frame 799 [00:33.25]: A dust storm took
+Frame 800 [00:33.29]: A dust storm took
+Frame 801 [00:33.33]: A dust storm took
+Frame 802 [00:33.37]: A dust storm took
+Frame 803 [00:33.41]: A dust storm took
+Frame 804 [00:33.45]: A dust storm took
+Frame 805 [00:33.50]: A dust storm took
+Frame 806 [00:33.54]: A dust storm took
+Frame 807 [00:33.58]: A dust storm took
+Frame 808 [00:33.62]: A dust storm took
+Frame 809 [00:33.66]: A dust storm took
+Frame 810 [00:33.70]: A dust storm took
+Frame 811 [00:33.75]: A dust storm took
+Frame 812 [00:33.79]: A dust storm took
+Frame 813 [00:33.83]: A dust storm took
+Frame 814 [00:33.87]: A dust storm took
+Frame 815 [00:33.91]: A dust storm took
+Frame 816 [00:33.95]: A dust storm took
+Frame 817 [00:34.00]: A dust storm took
+Frame 818 [00:34.04]: A dust storm took
+Frame 819 [00:34.08]: A dust storm took
+Frame 820 [00:34.12]: A dust storm took
+Frame 821 [00:34.16]: A dust storm took
+Frame 822 [00:34.20]: A dust storm took
+Frame 823 [00:34.25]: A dust storm took
+Frame 824 [00:34.29]: A dust storm took
+Frame 825 [00:34.33]: A dust storm took
+Frame 826 [00:34.37]: A dust storm took
+Frame 827 [00:34.41]: A dust storm took
+Frame 828 [00:34.45]: A dust storm took
+Frame 829 [00:34.50]: A dust storm took
+Frame 830 [00:34.54]: A dust storm took
+Frame 831 [00:34.58]: A dust storm took
+Frame 832 [00:34.62]: A dust storm took
+Frame 833 [00:34.66]: A dust storm took
+Frame 834 [00:34.70]: A dust storm took
+Frame 835 [00:34.75]: A dust storm took
+Frame 836 [00:34.79]: A dust storm took
+Frame 837 [00:34.83]: A dust storm took
+Frame 838 [00:34.87]: A dust storm took
+Frame 839 [00:34.91]: A dust storm took
+Frame 840 [00:34.95]: A dust storm took
+Frame 841 [00:35.00]: A dust storm took
+Frame 842 [00:35.04]: 
+Frame 843 [00:35.08]: 
+Frame 844 [00:35.12]: 
+Frame 845 [00:35.16]: 
+Frame 846 [00:35.20]: 
+Frame 847 [00:35.25]: 
+Frame 848 [00:35.29]: 
+Frame 849 [00:35.33]: Opportunity in 2018.
+Frame 850 [00:35.37]: Opportunity in 2018.
+Frame 851 [00:35.41]: Opportunity in 2018.
+Frame 852 [00:35.45]: Opportunity in 2018.
+Frame 853 [00:35.50]: Opportunity in 2018.
+Frame 854 [00:35.54]: Opportunity in 2018.
+Frame 855 [00:35.58]: Opportunity in 2018.
+Frame 856 [00:35.62]: Opportunity in 2018.
+Frame 857 [00:35.66]: Opportunity in 2018.
+Frame 858 [00:35.70]: Opportunity in 2018.
+Frame 859 [00:35.75]: Opportunity in 2018.
+Frame 860 [00:35.79]: Opportunity in 2018.
+Frame 861 [00:35.83]: Opportunity in 2018.
+Frame 862 [00:35.87]: Opportunity in 2018.
+Frame 863 [00:35.91]: Opportunity in 2018.
+Frame 864 [00:35.95]: Opportunity in 2018.
+Frame 865 [00:36.00]: Opportunity in 2018.
+Frame 866 [00:36.04]: Opportunity in 2018.
+Frame 867 [00:36.08]: Opportunity in 2018.
+Frame 868 [00:36.12]: Opportunity in 2018.
+Frame 869 [00:36.16]: Opportunity in 2018.
+Frame 870 [00:36.20]: Opportunity in 2018.
+Frame 871 [00:36.25]: Opportunity in 2018.
+Frame 872 [00:36.29]: Opportunity in 2018.
+Frame 873 [00:36.33]: Opportunity in 2018.
+Frame 874 [00:36.37]: Opportunity in 2018.
+Frame 875 [00:36.41]: Opportunity in 2018.
+Frame 876 [00:36.45]: Opportunity in 2018.
+Frame 877 [00:36.50]: Opportunity in 2018.
+Frame 878 [00:36.54]: Opportunity in 2018.
+Frame 879 [00:36.58]: Opportunity in 2018.
+Frame 880 [00:36.62]: Opportunity in 2018.
+Frame 881 [00:36.66]: Opportunity in 2018.
+Frame 882 [00:36.70]: Opportunity in 2018.
+Frame 883 [00:36.75]: Opportunity in 2018.
+Frame 884 [00:36.79]: Opportunity in 2018.
+Frame 885 [00:36.83]: Opportunity in 2018.
+Frame 886 [00:36.87]: Opportunity in 2018.
+Frame 887 [00:36.91]: Opportunity in 2018.
+Frame 888 [00:36.95]: Opportunity in 2018.
+Frame 889 [00:37.00]: Opportunity in 2018.
+Frame 890 [00:37.04]: Opportunity in 2018.
+Frame 891 [00:37.08]: Opportunity in 2018.
+Frame 892 [00:37.12]: Opportunity in 2018.
+Frame 893 [00:37.16]: Opportunity in 2018.
+Frame 894 [00:37.20]: Opportunity in 2018.
+Frame 895 [00:37.25]: Opportunity in 2018.
+Frame 896 [00:37.29]: Opportunity in 2018.
+Frame 897 [00:37.33]: Opportunity in 2018.
+Frame 898 [00:37.37]: Opportunity in 2018.
+Frame 899 [00:37.41]: Opportunity in 2018.
+Frame 900 [00:37.45]: Opportunity in 2018.
+Frame 901 [00:37.50]: Opportunity in 2018.
+Frame 902 [00:37.54]: Opportunity in 2018.
+Frame 903 [00:37.58]: Opportunity in 2018.
+Frame 904 [00:37.62]: Opportunity in 2018.
+Frame 905 [00:37.66]: Opportunity in 2018.
+Frame 906 [00:37.70]: 
+Frame 907 [00:37.75]: 
+Frame 908 [00:37.79]: 
+Frame 909 [00:37.83]: 
+Frame 910 [00:37.87]: 
+Frame 911 [00:37.91]: 
+Frame 912 [00:37.95]: 
+Frame 913 [00:38.00]: 
+Frame 914 [00:38.04]: 
+Frame 915 [00:38.08]: 
+Frame 916 [00:38.12]: 
+Frame 917 [00:38.16]: 
+Frame 918 [00:38.20]: 
+Frame 919 [00:38.25]: 
+Frame 920 [00:38.29]: 
+Frame 921 [00:38.33]: 
+Frame 922 [00:38.37]: 
+Frame 923 [00:38.41]: 
+Frame 924 [00:38.45]: 
+Frame 925 [00:38.50]: Voyager 1 left in 1977.
+Frame 926 [00:38.54]: Voyager 1 left-fin 1977.
+Frame 927 [00:38.58]: Voyager 1 left in 1977.
+Frame 928 [00:38.62]: Voyager 1 left in 1977.
+Frame 929 [00:38.66]: Voyager 1 left in 1977.
+Frame 930 [00:38.70]: Voyager 1 left in 1977.
+Frame 931 [00:38.75]: Voyager 1 left in 1977.
+Frame 932 [00:38.79]: Voyager 1 left in 1977.
+Frame 933 [00:38.83]: Voyager 1. eft in 1977.
+Frame 934 [00:38.87]: Voyager 1. eft in 1977.
+Frame 935 [00:38.91]: Voyager 1. eft in 1977.
+Frame 936 [00:38.95]: Voyager 1. eft in 1977.
+Frame 937 [00:39.00]: Voyager 1, left in 1977.
+Frame 938 [00:39.04]: Voyager 1, left in 1977.
+Frame 939 [00:39.08]: Voyager 1, left in 1977.
+Frame 940 [00:39.12]: Voyager 1, left in 1977.
+Frame 941 [00:39.16]: Voyager 1, left in 1977.
+Frame 942 [00:39.20]: Voyager 1, left in 1977.
+Frame 943 [00:39.25]: Voyager 1, left in 1977.
+Frame 944 [00:39.29]: Voyager 1, left in 1977.
+Frame 945 [00:39.33]: Voyager 1 left in 1977.
+Frame 946 [00:39.37]: Voyager 1 left in 1977.
+Frame 947 [00:39.41]: Voyager 1 left in 1977.
+Frame 948 [00:39.45]: Voyager 1, left in 1977.
+Frame 949 [00:39.50]: Voyager 1, left in 1977.
+Frame 950 [00:39.54]: Voyager 1 left in 1977.
+Frame 951 [00:39.58]: Voyager 1, left in 1977.
+Frame 952 [00:39.62]: Voyager 1 left in 1977.
+Frame 953 [00:39.66]: Voyager 1, left in 1977.
+Frame 954 [00:39.70]: Voyager 1, left in 1977.
+Frame 955 [00:39.75]: Voyager 1, left in   1977.
+Frame 956 [00:39.79]: Voyager 1, left in 1977.
+Frame 957 [00:39.83]: Voyager 1, left in   1977.
+Frame 958 [00:39.87]: Voyager 1 left in   1977.
+Frame 959 [00:39.91]: Voyager 1, left in   1977.
+Frame 960 [00:39.95]: Voyager 1 left in 1977.
+Frame 961 [00:40.00]: Voyager 1 left in 1977.
+Frame 962 [00:40.04]: Voyager 1, left in 1977.
+Frame 963 [00:40.08]: Voyager 1 left in 1977.
+Frame 964 [00:40.12]: Voyager 1 left in 1977.
+Frame 965 [00:40.16]: Voyager 1 left in 1977.
+Frame 966 [00:40.20]: Voyager 1 left in   1977.
+Frame 967 [00:40.25]: Voyager 1 left in 1977.
+Frame 968 [00:40.29]: Voyager 1 left in 1977.
+Frame 969 [00:40.33]: Voyager 1 left in 1977.
+Frame 970 [00:40.37]: Voyager 1 left in 1977.
+Frame 971 [00:40.41]: Voyager 1 left in 1977.
+Frame 972 [00:40.45]: Voyager 1 left in 1977.
+Frame 973 [00:40.50]: Voyager 1 left in 1977.
+Frame 974 [00:40.54]: Voyager 1 left in 1977.
+Frame 975 [00:40.58]: Voyager 1 left in 1977.
+Frame 976 [00:40.62]: Voyager 1 left in 1977.
+Frame 977 [00:40.66]: Voyager 1 left in 1977.
+Frame 978 [00:40.70]: Voyager 1 left in 1977.
+Frame 979 [00:40.75]: Voyager 1 left in 1977.
+Frame 980 [00:40.79]: Voyager 1 left in 1977.
+Frame 981 [00:40.83]: Voyager 1 left in 1977.
+Frame 982 [00:40.87]: Voyager 1 left in 1977.
+Frame 983 [00:40.91]: Voyager 1 left in 1977.
+Frame 984 [00:40.95]: Voyager 1 left in 1977.
+Frame 985 [00:41.00]: Voyager 1 left in 1977.
+Frame 986 [00:41.04]: Voyager 1 left in 1977.
+Frame 987 [00:41.08]: Voyager 1 left in 1977.
+Frame 988 [00:41.12]: Voyager 1 left in 1977.
+Frame 989 [00:41.16]: Voyager 1 left in 1977.
+Frame 990 [00:41.20]: 
+Frame 991 [00:41.25]: 
+Frame 992 [00:41.29]: 
+Frame 993 [00:41.33]: 
+Frame 994 [00:41.37]: 
+Frame 995 [00:41.41]: 
+Frame 996 [00:41.45]: 
+Frame 997 [00:41.50]: 
+Frame 998 [00:41.54]: 
+Frame 999 [00:41.58]: 
+Frame 1000 [00:41.62]: It is still going.
+Frame 1001 [00:41.66]: It is still going.
+Frame 1002 [00:41.70]: It is still going.
+Frame 1003 [00:41.75]: It is still going.
+Frame 1004 [00:41.79]: It is still going.
+Frame 1005 [00:41.83]: It is still going.
+Frame 1006 [00:41.87]: It is still going.
+Frame 1007 [00:41.91]: It is still going.
+Frame 1008 [00:41.95]: It is still going.
+Frame 1009 [00:42.00]: It is still going.
+Frame 1010 [00:42.04]: It is still going.
+Frame 1011 [00:42.08]: It is still going.
+Frame 1012 [00:42.12]: It is still going.
+Frame 1013 [00:42.16]: It is still going.
+Frame 1014 [00:42.20]: It is still going.
+Frame 1015 [00:42.25]: It is still going.
+Frame 1016 [00:42.29]: It is still going.
+Frame 1017 [00:42.33]: It is still going.
+Frame 1018 [00:42.37]: It is still going.
+Frame 1019 [00:42.41]: It is still going.
+Frame 1020 [00:42.45]: It is still going.
+Frame 1021 [00:42.50]: Kis still going.
+Frame 1022 [00:42.54]: It is still going.
+Frame 1023 [00:42.58]: n is sill going.
+Frame 1024 [00:42.62]: his still going.
+Frame 1025 [00:42.66]: 
+Frame 1026 [00:42.70]: it is sill going.
+Frame 1027 [00:42.75]: it is stlll going.
+Frame 1028 [00:42.79]: It is still going.
+Frame 1029 [00:42.83]: nils sill going
+Frame 1030 [00:42.87]: it is still going.
+Frame 1031 [00:42.91]: It is still going.
+Frame 1032 [00:42.95]: It is still going.
+Frame 1033 [00:43.00]: It is still going.
+Frame 1034 [00:43.04]: It is still going.
+Frame 1035 [00:43.08]: It is still going.
+Frame 1036 [00:43.12]: It is still going.
+Frame 1037 [00:43.16]: It is still going.
+Frame 1038 [00:43.20]: It is still going.
+Frame 1039 [00:43.25]: It is still going.
+Frame 1040 [00:43.29]: It is still going.
+Frame 1041 [00:43.33]: It is still going.
+Frame 1042 [00:43.37]: It is still going.
+Frame 1043 [00:43.41]: It is still going.
+Frame 1044 [00:43.45]: It is still going.
+Frame 1045 [00:43.50]: It is still going.
+Frame 1046 [00:43.54]: It is still going.
+Frame 1047 [00:43.58]: It is still going.
+Frame 1048 [00:43.62]: It is still going.
+Frame 1049 [00:43.66]: It is still going.
+Frame 1050 [00:43.70]: It is still going.
+Frame 1051 [00:43.75]: It is still going.
+Frame 1052 [00:43.79]: It is still going.
+Frame 1053 [00:43.83]: It is still going.
+Frame 1054 [00:43.87]: It is still going.
+Frame 1055 [00:43.91]: It is still going.
+Frame 1056 [00:43.95]: It is still going.
+Frame 1057 [00:44.00]: It is still going.
+Frame 1058 [00:44.04]: It is still going.
+Frame 1059 [00:44.08]: It is still going.
+Frame 1060 [00:44.12]: It is still going.
+Frame 1061 [00:44.16]: It is still going.
+Frame 1062 [00:44.20]: 
+Frame 1063 [00:44.25]: 
+Frame 1064 [00:44.29]: 
+Frame 1065 [00:44.33]: 
+Frame 1066 [00:44.37]: 
+Frame 1067 [00:44.41]: 
+Frame 1068 [00:44.45]: 
+Frame 1069 [00:44.50]: 
+Frame 1070 [00:44.54]: 
+Frame 1071 [00:44.58]: 
+Frame 1072 [00:44.62]: Still sending data.
+Frame 1073 [00:44.66]: Still sending data.
+Frame 1074 [00:44.70]: Still sending data.
+Frame 1075 [00:44.75]: Still sending data.
+Frame 1076 [00:44.79]: Still sending data.
+Frame 1077 [00:44.83]: Still sending data.
+Frame 1078 [00:44.87]: Still sending data.
+Frame 1079 [00:44.91]: Still sending data.
+Frame 1080 [00:44.95]: Still sending data.
+Frame 1081 [00:45.00]: Still sending data.
+Frame 1082 [00:45.04]: Still sending data.
+Frame 1083 [00:45.08]: Still sending data.
+Frame 1084 [00:45.12]: Still sending data.
+Frame 1085 [00:45.16]: Still sending data.
+Frame 1086 [00:45.20]: Still sending data.
+Frame 1087 [00:45.25]: Still sending data.
+Frame 1088 [00:45.29]: Still sending data.
+Frame 1089 [00:45.33]: Still sending data!
+Frame 1090 [00:45.37]: Still sending data!
+Frame 1091 [00:45.41]: Still sending data!
+Frame 1092 [00:45.45]: Still sending data!
+Frame 1093 [00:45.50]: Still sending data!
+Frame 1094 [00:45.54]: Still sending data!
+Frame 1095 [00:45.58]: Still sending data.
+Frame 1096 [00:45.62]: Still sending data.
+Frame 1097 [00:45.66]: Still sending data.
+Frame 1098 [00:45.70]: Still sending data.
+Frame 1099 [00:45.75]: Still sending data.
+Frame 1100 [00:45.79]: Still sending data.
+Frame 1101 [00:45.83]: Still sending data.
+Frame 1102 [00:45.87]: Still sending data.
+Frame 1103 [00:45.91]: Still sending data.
+Frame 1104 [00:45.95]: Still sending data.
+Frame 1105 [00:46.00]: Still sending data.
+Frame 1106 [00:46.04]: Still sending data.
+Frame 1107 [00:46.08]: Still sending data.
+Frame 1108 [00:46.12]: Still sending data.
+Frame 1109 [00:46.16]: Still sending data.
+Frame 1110 [00:46.20]: Still sending data.
+Frame 1111 [00:46.25]: Still sending data.
+Frame 1112 [00:46.29]: Still sending data.
+Frame 1113 [00:46.33]: Still sending data.
+Frame 1114 [00:46.37]: Still sending data.
+Frame 1115 [00:46.41]: Still sending data.
+Frame 1116 [00:46.45]: Still sending data.
+Frame 1117 [00:46.50]: Still sending data.
+Frame 1118 [00:46.54]: Still sending data.
+Frame 1119 [00:46.58]: Still sending data.
+Frame 1120 [00:46.62]: Still sending data.
+Frame 1121 [00:46.66]: Still sending data.
+Frame 1122 [00:46.70]: Still sending data.
+Frame 1123 [00:46.75]: Still sending data.
+Frame 1124 [00:46.79]: Still sending data.
+Frame 1125 [00:46.83]: Still sending data.
+Frame 1126 [00:46.87]: Still sending data.
+Frame 1127 [00:46.91]: Still sending data.
+Frame 1128 [00:46.95]: Still sending data.
+Frame 1129 [00:47.00]: Still sending data.
+Frame 1130 [00:47.04]: Still sending data.
+Frame 1131 [00:47.08]: Still sending data.
+Frame 1132 [00:47.12]: Still sending data.
+Frame 1133 [00:47.16]: Still sending data.
+Frame 1134 [00:47.20]: Still sending data.
+Frame 1135 [00:47.25]: Still sending data.
+Frame 1136 [00:47.29]: Still sending data.
+Frame 1137 [00:47.33]: Still sending data.
+Frame 1138 [00:47.37]: Still sending data.
+Frame 1139 [00:47.41]: Still sending data.
+Frame 1140 [00:47.45]: Still sending data.
+Frame 1141 [00:47.50]: Still sending data.
+Frame 1142 [00:47.54]: Still sending data.
+Frame 1143 [00:47.58]: Still sending data.
+Frame 1144 [00:47.62]: 
+Frame 1145 [00:47.66]: 
+Frame 1146 [00:47.70]: 
+Frame 1147 [00:47.75]: 
+Frame 1148 [00:47.79]: 
+Frame 1149 [00:47.83]: 
+Frame 1150 [00:47.87]: 
+Frame 1151 [00:47.91]: 
+Frame 1152 [00:47.95]: 
+Frame 1153 [00:48.00]: 
+Frame 1154 [00:48.04]: 
+Frame 1155 [00:48.08]: 
+Frame 1156 [00:48.12]: 
+Frame 1157 [00:48.16]: 
+Frame 1158 [00:48.20]: 
+Frame 1159 [00:48.25]: 
+Frame 1160 [00:48.29]: 
+Frame 1161 [00:48.33]: 
+Frame 1162 [00:48.37]: 
+Frame 1163 [00:48.41]: 
+Frame 1164 [00:48.45]: 
+Frame 1165 [00:48.50]: And on the Moon,
+Frame 1166 [00:48.54]: And on the Moon,
+Frame 1167 [00:48.58]: And on the Moon,
+Frame 1168 [00:48.62]: And on the Moon,
+Frame 1169 [00:48.66]: And on the Moon,
+Frame 1170 [00:48.70]: And on the Moon,
+Frame 1171 [00:48.75]: And on the Moon,
+Frame 1172 [00:48.79]: And on the Moon,
+Frame 1173 [00:48.83]: And on the Moon,
+Frame 1174 [00:48.87]: And on the Moon,
+Frame 1175 [00:48.91]: And on the Moon,
+Frame 1176 [00:48.95]: And on the Moon,
+Frame 1177 [00:49.00]: And on the Moon,
+Frame 1178 [00:49.04]: And on the Moon,
+Frame 1179 [00:49.08]: And on the Moon,
+Frame 1180 [00:49.12]: And on the Moon,
+Frame 1181 [00:49.16]: And on the Moon,
+Frame 1182 [00:49.20]: And on the Moon,
+Frame 1183 [00:49.25]: And on the Moon,
+Frame 1184 [00:49.29]: And on the Moon,
+Frame 1185 [00:49.33]: And on the Moon,
+Frame 1186 [00:49.37]: And on the Moon,
+Frame 1187 [00:49.41]: And on the Moon,
+Frame 1188 [00:49.45]: And on the Moon,
+Frame 1189 [00:49.50]: And on the Moon,
+Frame 1190 [00:49.54]: And on the Moon,
+Frame 1191 [00:49.58]: And on the Moon,
+Frame 1192 [00:49.62]: And on the Moon,
+Frame 1193 [00:49.66]: And on the Moon,
+Frame 1194 [00:49.70]: And on the Moon,
+Frame 1195 [00:49.75]: And on the Moon,
+Frame 1196 [00:49.79]: And on the Moon,
+Frame 1197 [00:49.83]: And on the Moon,
+Frame 1198 [00:49.87]: And on the Moon,
+Frame 1199 [00:49.91]: And on the Moon,
+Frame 1200 [00:49.95]: And on the Moon,
+Frame 1201 [00:50.00]: And on the Moon,
+Frame 1202 [00:50.04]: And on the Moon,
+Frame 1203 [00:50.08]: And on the Moon,
+Frame 1204 [00:50.12]: And on the Moon,
+Frame 1205 [00:50.16]: And on the Moon,
+Frame 1206 [00:50.20]: And on the Moon,
+Frame 1207 [00:50.25]: And on the Moon,
+Frame 1208 [00:50.29]: And on the Moon,
+Frame 1209 [00:50.33]: And on the Moon,
+Frame 1210 [00:50.37]: And on the Moon,
+Frame 1211 [00:50.41]: And on the Moon,
+Frame 1212 [00:50.45]: And on the Moon,
+Frame 1213 [00:50.50]: And on the Moon,
+Frame 1214 [00:50.54]: And on the Moon,
+Frame 1215 [00:50.58]: And on the Moon,
+Frame 1216 [00:50.62]: And on the Moon,
+Frame 1217 [00:50.66]: And on the Moon,
+Frame 1218 [00:50.70]: And on the Moon,
+Frame 1219 [00:50.75]: And on the Moon,
+Frame 1220 [00:50.79]: And on the Moon,
+Frame 1221 [00:50.83]: And on the Moon,
+Frame 1222 [00:50.87]: And on the Moon,
+Frame 1223 [00:50.91]: 
+Frame 1224 [00:50.95]: 
+Frame 1225 [00:51.00]: 
+Frame 1226 [00:51.04]: 
+Frame 1227 [00:51.08]: 
+Frame 1228 [00:51.12]: 
+Frame 1229 [00:51.16]: 
+Frame 1230 [00:51.20]: one thing still answers.
+Frame 1231 [00:51.25]: one thing still answers.
+Frame 1232 [00:51.29]: one thing still answers.
+Frame 1233 [00:51.33]: one thing still answers.
+Frame 1234 [00:51.37]: one thing still answers.
+Frame 1235 [00:51.41]: one thing still answers.
+Frame 1236 [00:51.45]: one thing still answers.
+Frame 1237 [00:51.50]: one thing still answers.
+Frame 1238 [00:51.54]: one thing still answers.
+Frame 1239 [00:51.58]: one thing still answers.
+Frame 1240 [00:51.62]: one thing still answers.
+Frame 1241 [00:51.66]: one thing still answers.
+Frame 1242 [00:51.70]: one thing still answers.
+Frame 1243 [00:51.75]: one thing still answers.
+Frame 1244 [00:51.79]: one thing still answers.
+Frame 1245 [00:51.83]: one thing still answers.
+Frame 1246 [00:51.87]: one thing still answers.
+Frame 1247 [00:51.91]: one thing still answers.
+Frame 1248 [00:51.95]: one thing still answers.
+Frame 1249 [00:52.00]: one thing still answers.
+Frame 1250 [00:52.04]: one thing still answers.
+Frame 1251 [00:52.08]: one thing still answers.
+Frame 1252 [00:52.12]: one thing still answers.
+Frame 1253 [00:52.16]: one thing still answers.
+Frame 1254 [00:52.20]: one thing still answers.
+Frame 1255 [00:52.25]: one thing still answers.
+Frame 1256 [00:52.29]: one thing still answers.
+Frame 1257 [00:52.33]: one thing still answers.
+Frame 1258 [00:52.37]: one thing still answers.
+Frame 1259 [00:52.41]: one thing still answers.
+Frame 1260 [00:52.45]: one thing still answers.
+Frame 1261 [00:52.50]: one thing still answers.
+Frame 1262 [00:52.54]: one thing still answers.
+Frame 1263 [00:52.58]: one thing still answers.
+Frame 1264 [00:52.62]: one thing still answers.
+Frame 1265 [00:52.66]: one thing still answers.
+Frame 1266 [00:52.70]: one thing still answers.
+Frame 1267 [00:52.75]: one thing still answers.
+Frame 1268 [00:52.79]: one thing still answers.
+Frame 1269 [00:52.83]: one thing still answers.
+Frame 1270 [00:52.87]: one thing still answers.
+Frame 1271 [00:52.91]: one thing still answers.
+Frame 1272 [00:52.95]: one thing still answers.
+Frame 1273 [00:53.00]: one thing still answers.
+Frame 1274 [00:53.04]: one thing still answers.
+Frame 1275 [00:53.08]: one thing still answers.
+Frame 1276 [00:53.12]: one thing still answers.
+Frame 1277 [00:53.16]: one thing still answers.
+Frame 1278 [00:53.20]: one thing still answers.
+Frame 1279 [00:53.25]: one thing still answers.
+Frame 1280 [00:53.29]: one thing still answers.
+Frame 1281 [00:53.33]: one thing still answers.
+Frame 1282 [00:53.37]: one thing still answers.
+Frame 1283 [00:53.41]: one thing still answers.
+Frame 1284 [00:53.45]: one thing still answers.
+Frame 1285 [00:53.50]: one thing still answers.
+Frame 1286 [00:53.54]: one thing still answers.
+Frame 1287 [00:53.58]: one thing still answers.
+Frame 1288 [00:53.62]: one thing still answers.
+Frame 1289 [00:53.66]: one thing still answers.
+Frame 1290 [00:53.70]: 
+Frame 1291 [00:53.75]: 
+Frame 1292 [00:53.79]: 
+Frame 1293 [00:53.83]: 
+Frame 1294 [00:53.87]: 
+Frame 1295 [00:53.91]: 
+Frame 1296 [00:53.95]: 
+Frame 1297 [00:54.00]: 
+Frame 1298 [00:54.04]: 
+Frame 1299 [00:54.08]: 
+Frame 1300 [00:54.12]: We still bounce lasers
+Frame 1301 [00:54.16]: We still bounce lasers
+Frame 1302 [00:54.20]: We still bounce lasers
+Frame 1303 [00:54.25]: We still bounce lasers
+Frame 1304 [00:54.29]: We still bounce lasers
+Frame 1305 [00:54.33]: We still bounce lasers
+Frame 1306 [00:54.37]: We still bounce lasers
+Frame 1307 [00:54.41]: We still bounce lasers
+Frame 1308 [00:54.45]: We still bounce lasers
+Frame 1309 [00:54.50]: We still bounce lasers
+Frame 1310 [00:54.54]: We still bounce lasers
+Frame 1311 [00:54.58]: We still bounce lasers
+Frame 1312 [00:54.62]: We still bounce lasers
+Frame 1313 [00:54.66]: We still bounce lasers
+Frame 1314 [00:54.70]: We still bounce lasers
+Frame 1315 [00:54.75]: We still bounce lasers
+Frame 1316 [00:54.79]: We still bounce lasers
+Frame 1317 [00:54.83]: We still bounce lasers
+Frame 1318 [00:54.87]: We still bounce lasers
+Frame 1319 [00:54.91]: We still bounce lasers
+Frame 1320 [00:54.95]: We still bounce lasers
+Frame 1321 [00:55.00]: We still bounce lasers
+Frame 1322 [00:55.04]: We still bounce lasers
+Frame 1323 [00:55.08]: We still bounce lasers
+Frame 1324 [00:55.12]: We still bounce lasers
+Frame 1325 [00:55.16]: We still bounce lasers
+Frame 1326 [00:55.20]: We still bounce lasers
+Frame 1327 [00:55.25]: We still bounce lasers
+Frame 1328 [00:55.29]: We still bounce lasers
+Frame 1329 [00:55.33]: We still bounce lasers
+Frame 1330 [00:55.37]: We still bounce lasers
+Frame 1331 [00:55.41]: We still bounce lasers
+Frame 1332 [00:55.45]: We still bounce lasers
+Frame 1333 [00:55.50]: We still bounce lasers
+Frame 1334 [00:55.54]: We still bounce lasers
+Frame 1335 [00:55.58]: We still bounce lasers
+Frame 1336 [00:55.62]: We still bounce lasers
+Frame 1337 [00:55.66]: We still bounce lasers
+Frame 1338 [00:55.70]: We still bounce lasers
+Frame 1339 [00:55.75]: We still bounce lasers
+Frame 1340 [00:55.79]: We still bounce lasers
+Frame 1341 [00:55.83]: We still bounce lasers
+Frame 1342 [00:55.87]: We still bounce lasers
+Frame 1343 [00:55.91]: We still bounce lasers
+Frame 1344 [00:55.95]: We still bounce lasers
+Frame 1345 [00:56.00]: We still bounce lasers
+Frame 1346 [00:56.04]: We still bounce lasers
+Frame 1347 [00:56.08]: We still bounce lasers
+Frame 1348 [00:56.12]: We still bounce lasers
+Frame 1349 [00:56.16]: We still bounce lasers
+Frame 1350 [00:56.20]: We still bounce lasers
+Frame 1351 [00:56.25]: We still bounce lasers
+Frame 1352 [00:56.29]: We still bounce lasers
+Frame 1353 [00:56.33]: We still bounce lasers
+Frame 1354 [00:56.37]: We still bounce lasers
+Frame 1355 [00:56.41]: We still bounce lasers
+Frame 1356 [00:56.45]: We still bounce lasers
+Frame 1357 [00:56.50]: We still bounce lasers
+Frame 1358 [00:56.54]: We still bounce lasers
+Frame 1359 [00:56.58]: We still bounce lasers
+Frame 1360 [00:56.62]: We still bounce lasers
+Frame 1361 [00:56.66]: We still bounce lasers
+Frame 1362 [00:56.70]: 
+Frame 1363 [00:56.75]: 
+Frame 1364 [00:56.79]: 
+Frame 1365 [00:56.83]: 
+Frame 1366 [00:56.87]: 
+Frame 1367 [00:56.91]: 
+Frame 1368 [00:56.95]: 
+Frame 1369 [00:57.00]: off Apollo's mirrors.
+Frame 1370 [00:57.04]: off Apollo's mirrors.
+Frame 1371 [00:57.08]: off Apollo's mirrors.
+Frame 1372 [00:57.12]: off Apollo's mirrors.
+Frame 1373 [00:57.16]: off Apollo's mirrors.
+Frame 1374 [00:57.20]: off Apollo's mirrors.
+Frame 1375 [00:57.25]: off Apollo's mirrors.
+Frame 1376 [00:57.29]: off Apollo's mirrors.
+Frame 1377 [00:57.33]: off Apollo's mirrors.
+Frame 1378 [00:57.37]: off Apollo's mirrors.
+Frame 1379 [00:57.41]: off Apollo's mirrors.
+Frame 1380 [00:57.45]: off Apollo's mirrors.
+Frame 1381 [00:57.50]: off Apollo's mirrors.
+Frame 1382 [00:57.54]: off Apollo's mirrors.
+Frame 1383 [00:57.58]: off Apollo's mirrors.
+Frame 1384 [00:57.62]: off Apollo's mirrors.
+Frame 1385 [00:57.66]: off Apollo's mirrors.
+Frame 1386 [00:57.70]: off Apollo's mirrors.
+Frame 1387 [00:57.75]: off Apollo's mirrors.
+Frame 1388 [00:57.79]: off Apollo's mirrors.
+Frame 1389 [00:57.83]: off Apollo's mirrors.
+Frame 1390 [00:57.87]: off Apollo's mirrors.
+Frame 1391 [00:57.91]: off Apollo's mirrors.
+Frame 1392 [00:57.95]: off Apollo's mirrors.
+Frame 1393 [00:58.00]: off Apollo's mirrors.
+Frame 1394 [00:58.04]: off Apollo's mirrors.
+Frame 1395 [00:58.08]: off Apollo's mirrors.
+Frame 1396 [00:58.12]: off Apollo's mirrors.
+Frame 1397 [00:58.16]: off Apollo's mirrors.
+Frame 1398 [00:58.20]: off Apollo's mirrors.
+Frame 1399 [00:58.25]: off Apollo's mirrors.
+Frame 1400 [00:58.29]: off Apollo's mirrors.
+Frame 1401 [00:58.33]: off Apollo's mirrors.
+Frame 1402 [00:58.37]: off Apollo's mirrors.
+Frame 1403 [00:58.41]: off Apollo's mirrors.
+Frame 1404 [00:58.45]: off Apollo's mirrors.
+Frame 1405 [00:58.50]: off Apollo's mirrors.
+Frame 1406 [00:58.54]: off Apollo's mirrors.
+Frame 1407 [00:58.58]: off Apollo's mirrors.
+Frame 1408 [00:58.62]: off Apollo's mirrors.
+Frame 1409 [00:58.66]: off Apollo's mirrors.
+Frame 1410 [00:58.70]: off Apollo's mirrors.
+Frame 1411 [00:58.75]: off Apollo's mirrors.
+Frame 1412 [00:58.79]: off Apollo's mirrors.
+Frame 1413 [00:58.83]: off Apollo's mirrors.
+Frame 1414 [00:58.87]: off Apollo's mirrors.
+Frame 1415 [00:58.91]: off Apollo's mirrors.
+Frame 1416 [00:58.95]: off Apollo's mirrors.
+Frame 1417 [00:59.00]: off Apollo's mirrors.
+Frame 1418 [00:59.04]: off Apollo's mirrors.
+Frame 1419 [00:59.08]: off Apollo's mirrors.
+Frame 1420 [00:59.12]: off Apollo's mirrors.
+Frame 1421 [00:59.16]: off Apollo's mirrors.
+Frame 1422 [00:59.20]: off Apollo's mirrors.
+Frame 1423 [00:59.25]: off Apollo's mirrors.
+Frame 1424 [00:59.29]: off Apollo's mirrors.
+Frame 1425 [00:59.33]: off Apollo's mirrors.
+Frame 1426 [00:59.37]: off Apollo's mirrors.
+Frame 1427 [00:59.41]: off Apollo's mirrors.
+Frame 1428 [00:59.45]: off Apollo's mirrors.
+Frame 1429 [00:59.50]: off Apollo's mirrors.
+Frame 1430 [00:59.54]: off Apollo's mirrors.
+Frame 1431 [00:59.58]: off Apollo's mirrors.
+Frame 1432 [00:59.62]: 
+Frame 1433 [00:59.66]: 
+Frame 1434 [00:59.70]: 
+Frame 1435 [00:59.75]: 
+Frame 1436 [00:59.79]: 
+Frame 1437 [00:59.83]: 
+Frame 1438 [00:59.87]: 
+Frame 1439 [00:59.91]: 
+Frame 1440 [00:59.95]: 

@@ -1,0 +1,27 @@
+[
+ [0.5,  2.7,  "In 1969"],
+ [3.0,  5.4,  "we left something"],
+ [5.7,  7.8,  "on the Moon"],
+
+ [8.4,  10.6, "No wind."],
+ [10.9, 13.0, "No rain."],
+ [13.3, 15.7, "Nothing to erase it."],
+
+ [16.4, 19.0, "Apollo 15 parked this"],
+ [19.3, 21.7, "rover in 1971."],
+ [22.1, 25.6, "It has not moved since."],
+
+ [26.4, 28.9, "Mars is different."],
+ [29.2, 31.7, "Mars has weather."],
+ [32.1, 35.0, "A dust storm took"],
+ [35.3, 37.7, "Opportunity in 2018."],
+
+ [38.5, 41.2, "Voyager 1 left in 1977."],
+ [41.6, 44.2, "It is still going."],
+ [44.6, 47.6, "Still sending data."],
+
+ [48.5, 50.9, "And on the Moon,"],
+ [51.2, 53.7, "one thing still answers."],
+ [54.1, 56.7, "We still bounce lasers"],
+ [57.0, 59.6, "off Apollo's mirrors."]
+]

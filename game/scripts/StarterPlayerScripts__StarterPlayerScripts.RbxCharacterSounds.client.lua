@@ -1,0 +1,5 @@
+-- LocalScript  StarterPlayerScripts/RbxCharacterSounds  (deliberately empty)
+-- A script with this exact name replaces Roblox's default character sounds. Those play
+-- footsteps, jumps and landings through the air -- but there is no air on the Moon or on
+-- Eros, and on Mars it is too thin to carry them more than a few metres. The Sound script
+-- plays footsteps the way they really arrive: through your boots and suit.

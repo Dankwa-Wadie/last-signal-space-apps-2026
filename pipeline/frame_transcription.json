@@ -1,0 +1,8642 @@
+[
+  {
+    "timestamp" : "00:00.00",
+    "seconds" : 0,
+    "text" : "",
+    "frame" : 1
+  },
+  {
+    "timestamp" : "00:00.04",
+    "seconds" : 0.04,
+    "text" : "",
+    "frame" : 2
+  },
+  {
+    "timestamp" : "00:00.08",
+    "seconds" : 0.08,
+    "text" : "",
+    "frame" : 3
+  },
+  {
+    "timestamp" : "00:00.12",
+    "seconds" : 0.13,
+    "text" : "",
+    "frame" : 4
+  },
+  {
+    "timestamp" : "00:00.16",
+    "seconds" : 0.17,
+    "text" : "",
+    "frame" : 5
+  },
+  {
+    "timestamp" : "00:00.20",
+    "seconds" : 0.21,
+    "text" : "",
+    "frame" : 6
+  },
+  {
+    "timestamp" : "00:00.25",
+    "seconds" : 0.25,
+    "text" : "",
+    "frame" : 7
+  },
+  {
+    "timestamp" : "00:00.29",
+    "seconds" : 0.29,
+    "text" : "",
+    "frame" : 8
+  },
+  {
+    "timestamp" : "00:00.33",
+    "seconds" : 0.33,
+    "text" : "",
+    "frame" : 9
+  },
+  {
+    "timestamp" : "00:00.37",
+    "seconds" : 0.38,
+    "text" : "",
+    "frame" : 10
+  },
+  {
+    "timestamp" : "00:00.41",
+    "seconds" : 0.42,
+    "text" : "",
+    "frame" : 11
+  },
+  {
+    "timestamp" : "00:00.45",
+    "seconds" : 0.46,
+    "text" : "",
+    "frame" : 12
+  },
+  {
+    "timestamp" : "00:00.50",
+    "seconds" : 0.5,
+    "text" : "In 1969",
+    "frame" : 13
+  },
+  {
+    "timestamp" : "00:00.54",
+    "seconds" : 0.54,
+    "text" : "In 1969",
+    "frame" : 14
+  },
+  {
+    "timestamp" : "00:00.58",
+    "seconds" : 0.58,
+    "text" : "In 1969",
+    "frame" : 15
+  },
+  {
+    "timestamp" : "00:00.62",
+    "seconds" : 0.63,
+    "text" : "In 1969",
+    "frame" : 16
+  },
+  {
+    "timestamp" : "00:00.66",
+    "seconds" : 0.67,
+    "text" : "In 1969",
+    "frame" : 17
+  },
+  {
+    "timestamp" : "00:00.70",
+    "seconds" : 0.71,
+    "text" : "In 1969",
+    "frame" : 18
+  },
+  {
+    "timestamp" : "00:00.75",
+    "seconds" : 0.75,
+    "text" : "In 1969",
+    "frame" : 19
+  },
+  {
+    "timestamp" : "00:00.79",
+    "seconds" : 0.79,
+    "text" : "In 1969",
+    "frame" : 20
+  },
+  {
+    "timestamp" : "00:00.83",
+    "seconds" : 0.83,
+    "text" : "In 1969",
+    "frame" : 21
+  },
+  {
+    "timestamp" : "00:00.87",
+    "seconds" : 0.88,
+    "text" : "In 1969",
+    "frame" : 22
+  },
+  {
+    "timestamp" : "00:00.91",
+    "seconds" : 0.92,
+    "text" : "In 1969",
+    "frame" : 23
+  },
+  {
+    "timestamp" : "00:00.95",
+    "seconds" : 0.96,
+    "text" : "In 1969",
+    "frame" : 24
+  },
+  {
+    "timestamp" : "00:01.00",
+    "seconds" : 1,
+    "text" : "In 1969",
+    "frame" : 25
+  },
+  {
+    "timestamp" : "00:01.04",
+    "seconds" : 1.04,
+    "text" : "In 1969",
+    "frame" : 26
+  },
+  {
+    "timestamp" : "00:01.08",
+    "seconds" : 1.08,
+    "text" : "In 1969",
+    "frame" : 27
+  },
+  {
+    "timestamp" : "00:01.12",
+    "seconds" : 1.13,
+    "text" : "In 1969",
+    "frame" : 28
+  },
+  {
+    "timestamp" : "00:01.16",
+    "seconds" : 1.17,
+    "text" : "In 1969",
+    "frame" : 29
+  },
+  {
+    "timestamp" : "00:01.20",
+    "seconds" : 1.21,
+    "text" : "In 1969",
+    "frame" : 30
+  },
+  {
+    "timestamp" : "00:01.25",
+    "seconds" : 1.25,
+    "text" : "In 1969",
+    "frame" : 31
+  },
+  {
+    "text" : "In 1969",
+    "frame" : 32,
+    "timestamp" : "00:01.29",
+    "seconds" : 1.29
+  },
+  {
+    "text" : "In 1969",
+    "frame" : 33,
+    "timestamp" : "00:01.33",
+    "seconds" : 1.33
+  },
+  {
+    "text" : "In 1969",
+    "frame" : 34,
+    "timestamp" : "00:01.37",
+    "seconds" : 1.38
+  },
+  {
+    "text" : "In 1969",
+    "frame" : 35,
+    "timestamp" : "00:01.41",
+    "seconds" : 1.42
+  },
+  {
+    "text" : "In 1969",
+    "frame" : 36,
+    "timestamp" : "00:01.45",
+    "seconds" : 1.46
+  },
+  {
+    "text" : "In 1969",
+    "frame" : 37,
+    "timestamp" : "00:01.50",
+    "seconds" : 1.5
+  },
+  {
+    "text" : "In 1969",
+    "frame" : 38,
+    "timestamp" : "00:01.54",
+    "seconds" : 1.54
+  },
+  {
+    "text" : "In 1969",
+    "frame" : 39,
+    "timestamp" : "00:01.58",
+    "seconds" : 1.58
+  },
+  {
+    "text" : "In 1969",
+    "frame" : 40,
+    "timestamp" : "00:01.62",
+    "seconds" : 1.63
+  },
+  {
+    "text" : "In 1969",
+    "frame" : 41,
+    "timestamp" : "00:01.66",
+    "seconds" : 1.67
+  },
+  {
+    "text" : "In 1969",
+    "frame" : 42,
+    "timestamp" : "00:01.70",
+    "seconds" : 1.71
+  },
+  {
+    "text" : "In 1969",
+    "frame" : 43,
+    "timestamp" : "00:01.75",
+    "seconds" : 1.75
+  },
+  {
+    "text" : "In 1969",
+    "frame" : 44,
+    "timestamp" : "00:01.79",
+    "seconds" : 1.79
+  },
+  {
+    "text" : "In 1969",
+    "frame" : 45,
+    "timestamp" : "00:01.83",
+    "seconds" : 1.83
+  },
+  {
+    "text" : "In 1969",
+    "frame" : 46,
+    "timestamp" : "00:01.87",
+    "seconds" : 1.88
+  },
+  {
+    "text" : "In 1969",
+    "frame" : 47,
+    "timestamp" : "00:01.91",
+    "seconds" : 1.92
+  },
+  {
+    "text" : "In 1969",
+    "frame" : 48,
+    "timestamp" : "00:01.95",
+    "seconds" : 1.96
+  },
+  {
+    "text" : "In 1969",
+    "frame" : 49,
+    "timestamp" : "00:02.00",
+    "seconds" : 2
+  },
+  {
+    "text" : "In 1969",
+    "frame" : 50,
+    "timestamp" : "00:02.04",
+    "seconds" : 2.04
+  },
+  {
+    "text" : "In 1969",
+    "frame" : 51,
+    "timestamp" : "00:02.08",
+    "seconds" : 2.08
+  },
+  {
+    "text" : "In 1969",
+    "frame" : 52,
+    "timestamp" : "00:02.12",
+    "seconds" : 2.13
+  },
+  {
+    "text" : "In 1969",
+    "frame" : 53,
+    "timestamp" : "00:02.16",
+    "seconds" : 2.17
+  },
+  {
+    "text" : "In 1969",
+    "frame" : 54,
+    "timestamp" : "00:02.20",
+    "seconds" : 2.21
+  },
+  {
+    "text" : "In 1969",
+    "frame" : 55,
+    "timestamp" : "00:02.25",
+    "seconds" : 2.25
+  },
+  {
+    "text" : "In 1969",
+    "frame" : 56,
+    "timestamp" : "00:02.29",
+    "seconds" : 2.29
+  },
+  {
+    "text" : "In 1969",
+    "frame" : 57,
+    "timestamp" : "00:02.33",
+    "seconds" : 2.33
+  },
+  {
+    "text" : "In 1969",
+    "frame" : 58,
+    "timestamp" : "00:02.37",
+    "seconds" : 2.38
+  },
+  {
+    "text" : "In 1969",
+    "frame" : 59,
+    "timestamp" : "00:02.41",
+    "seconds" : 2.42
+  },
+  {
+    "text" : "In 1969",
+    "frame" : 60,
+    "timestamp" : "00:02.45",
+    "seconds" : 2.46
+  },
+  {
+    "text" : "In 1969",
+    "frame" : 61,
+    "timestamp" : "00:02.50",
+    "seconds" : 2.5
+  },
+  {
+    "text" : "In 1969",
+    "frame" : 62,
+    "timestamp" : "00:02.54",
+    "seconds" : 2.54
+  },
+  {
+    "text" : "In 1969",
+    "frame" : 63,
+    "timestamp" : "00:02.58",
+    "seconds" : 2.58
+  },
+  {
+    "text" : "In 1969",
+    "frame" : 64,
+    "timestamp" : "00:02.62",
+    "seconds" : 2.63
+  },
+  {
+    "text" : "In 1969",
+    "frame" : 65,
+    "timestamp" : "00:02.66",
+    "seconds" : 2.67
+  },
+  {
+    "text" : "",
+    "frame" : 66,
+    "timestamp" : "00:02.70",
+    "seconds" : 2.71
+  },
+  {
+    "text" : "",
+    "frame" : 67,
+    "timestamp" : "00:02.75",
+    "seconds" : 2.75
+  },
+  {
+    "text" : "",
+    "frame" : 68,
+    "timestamp" : "00:02.79",
+    "seconds" : 2.79
+  },
+  {
+    "text" : "",
+    "frame" : 69,
+    "timestamp" : "00:02.83",
+    "seconds" : 2.83
+  },
+  {
+    "text" : "",
+    "frame" : 70,
+    "timestamp" : "00:02.87",
+    "seconds" : 2.88
+  },
+  {
+    "text" : "",
+    "frame" : 71,
+    "timestamp" : "00:02.91",
+    "seconds" : 2.92
+  },
+  {
+    "text" : "",
+    "frame" : 72,
+    "timestamp" : "00:02.95",
+    "seconds" : 2.96
+  },
+  {
+    "text" : "we left something",
+    "frame" : 73,
+    "timestamp" : "00:03.00",
+    "seconds" : 3
+  },
+  {
+    "text" : "we left something",
+    "frame" : 74,
+    "timestamp" : "00:03.04",
+    "seconds" : 3.04
+  },
+  {
+    "text" : "we left something",
+    "frame" : 75,
+    "timestamp" : "00:03.08",
+    "seconds" : 3.08
+  },
+  {
+    "text" : "we left something",
+    "frame" : 76,
+    "timestamp" : "00:03.12",
+    "seconds" : 3.13
+  },
+  {
+    "text" : "we left something",
+    "frame" : 77,
+    "timestamp" : "00:03.16",
+    "seconds" : 3.17
+  },
+  {
+    "text" : "we left something",
+    "frame" : 78,
+    "timestamp" : "00:03.20",
+    "seconds" : 3.21
+  },
+  {
+    "text" : "we left something",
+    "frame" : 79,
+    "timestamp" : "00:03.25",
+    "seconds" : 3.25
+  },
+  {
+    "text" : "we left something",
+    "frame" : 80,
+    "timestamp" : "00:03.29",
+    "seconds" : 3.29
+  },
+  {
+    "text" : "we left something",
+    "frame" : 81,
+    "timestamp" : "00:03.33",
+    "seconds" : 3.33
+  },
+  {
+    "text" : "we left something",
+    "frame" : 82,
+    "timestamp" : "00:03.37",
+    "seconds" : 3.38
+  },
+  {
+    "text" : "we left something",
+    "frame" : 83,
+    "timestamp" : "00:03.41",
+    "seconds" : 3.42
+  },
+  {
+    "text" : "we left something",
+    "frame" : 84,
+    "timestamp" : "00:03.45",
+    "seconds" : 3.46
+  },
+  {
+    "text" : "we left something",
+    "frame" : 85,
+    "timestamp" : "00:03.50",
+    "seconds" : 3.5
+  },
+  {
+    "text" : "we left something",
+    "frame" : 86,
+    "timestamp" : "00:03.54",
+    "seconds" : 3.54
+  },
+  {
+    "text" : "we left something",
+    "frame" : 87,
+    "timestamp" : "00:03.58",
+    "seconds" : 3.58
+  },
+  {
+    "text" : "we left something",
+    "frame" : 88,
+    "timestamp" : "00:03.62",
+    "seconds" : 3.63
+  },
+  {
+    "text" : "we left something",
+    "frame" : 89,
+    "timestamp" : "00:03.66",
+    "seconds" : 3.67
+  },
+  {
+    "text" : "we left something",
+    "frame" : 90,
+    "timestamp" : "00:03.70",
+    "seconds" : 3.71
+  },
+  {
+    "text" : "we left something",
+    "frame" : 91,
+    "timestamp" : "00:03.75",
+    "seconds" : 3.75
+  },
+  {
+    "text" : "we left something",
+    "frame" : 92,
+    "timestamp" : "00:03.79",
+    "seconds" : 3.79
+  },
+  {
+    "text" : "we left something",
+    "frame" : 93,
+    "timestamp" : "00:03.83",
+    "seconds" : 3.83
+  },
+  {
+    "text" : "we left something",
+    "frame" : 94,
+    "timestamp" : "00:03.87",
+    "seconds" : 3.88
+  },
+  {
+    "text" : "we left something",
+    "frame" : 95,
+    "timestamp" : "00:03.91",
+    "seconds" : 3.92
+  },
+  {
+    "text" : "we left something",
+    "frame" : 96,
+    "timestamp" : "00:03.95",
+    "seconds" : 3.96
+  },
+  {
+    "text" : "wé left something",
+    "frame" : 97,
+    "timestamp" : "00:04.00",
+    "seconds" : 4
+  },
+  {
+    "text" : "we left something",
+    "frame" : 98,
+    "timestamp" : "00:04.04",
+    "seconds" : 4.04
+  },
+  {
+    "text" : "we left something",
+    "frame" : 99,
+    "timestamp" : "00:04.08",
+    "seconds" : 4.08
+  },
+  {
+    "text" : "we left something",
+    "frame" : 100,
+    "timestamp" : "00:04.12",
+    "seconds" : 4.13
+  },
+  {
+    "text" : "we left something",
+    "frame" : 101,
+    "timestamp" : "00:04.16",
+    "seconds" : 4.17
+  },
+  {
+    "text" : "we left something",
+    "frame" : 102,
+    "timestamp" : "00:04.20",
+    "seconds" : 4.21
+  },
+  {
+    "text" : "we left something",
+    "frame" : 103,
+    "timestamp" : "00:04.25",
+    "seconds" : 4.25
+  },
+  {
+    "seconds" : 4.29,
+    "text" : "we left something",
+    "timestamp" : "00:04.29",
+    "frame" : 104
+  },
+  {
+    "seconds" : 4.33,
+    "text" : "we left something",
+    "timestamp" : "00:04.33",
+    "frame" : 105
+  },
+  {
+    "seconds" : 4.38,
+    "text" : "we left something",
+    "timestamp" : "00:04.37",
+    "frame" : 106
+  },
+  {
+    "seconds" : 4.42,
+    "text" : "we left something",
+    "timestamp" : "00:04.41",
+    "frame" : 107
+  },
+  {
+    "seconds" : 4.46,
+    "text" : "we left something",
+    "timestamp" : "00:04.45",
+    "frame" : 108
+  },
+  {
+    "seconds" : 4.5,
+    "text" : "we left something",
+    "timestamp" : "00:04.50",
+    "frame" : 109
+  },
+  {
+    "seconds" : 4.54,
+    "text" : "we left something",
+    "timestamp" : "00:04.54",
+    "frame" : 110
+  },
+  {
+    "seconds" : 4.58,
+    "text" : "we left something",
+    "timestamp" : "00:04.58",
+    "frame" : 111
+  },
+  {
+    "seconds" : 4.63,
+    "text" : "we left something",
+    "timestamp" : "00:04.62",
+    "frame" : 112
+  },
+  {
+    "seconds" : 4.67,
+    "text" : "we left something",
+    "timestamp" : "00:04.66",
+    "frame" : 113
+  },
+  {
+    "seconds" : 4.71,
+    "text" : "we left something",
+    "timestamp" : "00:04.70",
+    "frame" : 114
+  },
+  {
+    "seconds" : 4.75,
+    "text" : "we left something",
+    "timestamp" : "00:04.75",
+    "frame" : 115
+  },
+  {
+    "seconds" : 4.79,
+    "text" : "we left something",
+    "timestamp" : "00:04.79",
+    "frame" : 116
+  },
+  {
+    "seconds" : 4.83,
+    "text" : "we left something",
+    "timestamp" : "00:04.83",
+    "frame" : 117
+  },
+  {
+    "seconds" : 4.88,
+    "text" : "we left something",
+    "timestamp" : "00:04.87",
+    "frame" : 118
+  },
+  {
+    "seconds" : 4.92,
+    "text" : "we left something",
+    "timestamp" : "00:04.91",
+    "frame" : 119
+  },
+  {
+    "seconds" : 4.96,
+    "text" : "we left something",
+    "timestamp" : "00:04.95",
+    "frame" : 120
+  },
+  {
+    "seconds" : 5,
+    "text" : "we left something",
+    "timestamp" : "00:05.00",
+    "frame" : 121
+  },
+  {
+    "seconds" : 5.04,
+    "text" : "we left something",
+    "timestamp" : "00:05.04",
+    "frame" : 122
+  },
+  {
+    "seconds" : 5.08,
+    "text" : "we left something",
+    "timestamp" : "00:05.08",
+    "frame" : 123
+  },
+  {
+    "seconds" : 5.13,
+    "text" : "we left something",
+    "timestamp" : "00:05.12",
+    "frame" : 124
+  },
+  {
+    "seconds" : 5.17,
+    "text" : "we left something",
+    "timestamp" : "00:05.16",
+    "frame" : 125
+  },
+  {
+    "seconds" : 5.21,
+    "text" : "we left something",
+    "timestamp" : "00:05.20",
+    "frame" : 126
+  },
+  {
+    "seconds" : 5.25,
+    "text" : "we left something",
+    "timestamp" : "00:05.25",
+    "frame" : 127
+  },
+  {
+    "seconds" : 5.29,
+    "text" : "we left something",
+    "timestamp" : "00:05.29",
+    "frame" : 128
+  },
+  {
+    "seconds" : 5.33,
+    "text" : "we left something",
+    "timestamp" : "00:05.33",
+    "frame" : 129
+  },
+  {
+    "seconds" : 5.38,
+    "text" : "we left something",
+    "timestamp" : "00:05.37",
+    "frame" : 130
+  },
+  {
+    "seconds" : 5.42,
+    "text" : "",
+    "timestamp" : "00:05.41",
+    "frame" : 131
+  },
+  {
+    "seconds" : 5.46,
+    "text" : "",
+    "timestamp" : "00:05.45",
+    "frame" : 132
+  },
+  {
+    "seconds" : 5.5,
+    "text" : "",
+    "timestamp" : "00:05.50",
+    "frame" : 133
+  },
+  {
+    "seconds" : 5.54,
+    "text" : "",
+    "timestamp" : "00:05.54",
+    "frame" : 134
+  },
+  {
+    "seconds" : 5.58,
+    "text" : "",
+    "timestamp" : "00:05.58",
+    "frame" : 135
+  },
+  {
+    "seconds" : 5.63,
+    "text" : "",
+    "timestamp" : "00:05.62",
+    "frame" : 136
+  },
+  {
+    "seconds" : 5.67,
+    "text" : "",
+    "timestamp" : "00:05.66",
+    "frame" : 137
+  },
+  {
+    "seconds" : 5.71,
+    "text" : "on the Moon",
+    "timestamp" : "00:05.70",
+    "frame" : 138
+  },
+  {
+    "seconds" : 5.75,
+    "text" : "on the Moon",
+    "timestamp" : "00:05.75",
+    "frame" : 139
+  },
+  {
+    "timestamp" : "00:05.79",
+    "frame" : 140,
+    "text" : "on the Moon",
+    "seconds" : 5.79
+  },
+  {
+    "timestamp" : "00:05.83",
+    "frame" : 141,
+    "text" : "on the Moon",
+    "seconds" : 5.83
+  },
+  {
+    "timestamp" : "00:05.87",
+    "frame" : 142,
+    "text" : "on the Moon",
+    "seconds" : 5.88
+  },
+  {
+    "timestamp" : "00:05.91",
+    "frame" : 143,
+    "text" : "on the Moon",
+    "seconds" : 5.92
+  },
+  {
+    "timestamp" : "00:05.95",
+    "frame" : 144,
+    "text" : "on the Moon",
+    "seconds" : 5.96
+  },
+  {
+    "timestamp" : "00:06.00",
+    "frame" : 145,
+    "text" : "on the Moon",
+    "seconds" : 6
+  },
+  {
+    "timestamp" : "00:06.04",
+    "frame" : 146,
+    "text" : "on the Moon",
+    "seconds" : 6.04
+  },
+  {
+    "timestamp" : "00:06.08",
+    "frame" : 147,
+    "text" : "on the Moon",
+    "seconds" : 6.08
+  },
+  {
+    "timestamp" : "00:06.12",
+    "frame" : 148,
+    "text" : "on the Moon",
+    "seconds" : 6.13
+  },
+  {
+    "timestamp" : "00:06.16",
+    "frame" : 149,
+    "text" : "on the Moon",
+    "seconds" : 6.17
+  },
+  {
+    "timestamp" : "00:06.20",
+    "frame" : 150,
+    "text" : "on the Moon",
+    "seconds" : 6.21
+  },
+  {
+    "timestamp" : "00:06.25",
+    "frame" : 151,
+    "text" : "on the Moon",
+    "seconds" : 6.25
+  },
+  {
+    "timestamp" : "00:06.29",
+    "frame" : 152,
+    "text" : "on the Moon",
+    "seconds" : 6.29
+  },
+  {
+    "timestamp" : "00:06.33",
+    "frame" : 153,
+    "text" : "on the Moon",
+    "seconds" : 6.33
+  },
+  {
+    "timestamp" : "00:06.37",
+    "frame" : 154,
+    "text" : "on the Moon",
+    "seconds" : 6.38
+  },
+  {
+    "timestamp" : "00:06.41",
+    "frame" : 155,
+    "text" : "on-the Moon",
+    "seconds" : 6.42
+  },
+  {
+    "timestamp" : "00:06.45",
+    "frame" : 156,
+    "text" : "on the Moon",
+    "seconds" : 6.46
+  },
+  {
+    "timestamp" : "00:06.50",
+    "frame" : 157,
+    "text" : "on the Moon",
+    "seconds" : 6.5
+  },
+  {
+    "timestamp" : "00:06.54",
+    "frame" : 158,
+    "text" : "on the Moon",
+    "seconds" : 6.54
+  },
+  {
+    "timestamp" : "00:06.58",
+    "frame" : 159,
+    "text" : "on the Moon",
+    "seconds" : 6.58
+  },
+  {
+    "timestamp" : "00:06.62",
+    "frame" : 160,
+    "text" : "on the Moon",
+    "seconds" : 6.63
+  },
+  {
+    "timestamp" : "00:06.66",
+    "frame" : 161,
+    "text" : "on-the Moon",
+    "seconds" : 6.67
+  },
+  {
+    "timestamp" : "00:06.70",
+    "frame" : 162,
+    "text" : "on the Moon",
+    "seconds" : 6.71
+  },
+  {
+    "timestamp" : "00:06.75",
+    "frame" : 163,
+    "text" : "on-the Moon",
+    "seconds" : 6.75
+  },
+  {
+    "timestamp" : "00:06.79",
+    "frame" : 164,
+    "text" : "on-the Moon",
+    "seconds" : 6.79
+  },
+  {
+    "timestamp" : "00:06.83",
+    "frame" : 165,
+    "text" : "on-the Moon",
+    "seconds" : 6.83
+  },
+  {
+    "timestamp" : "00:06.87",
+    "frame" : 166,
+    "text" : "on-the Moon",
+    "seconds" : 6.88
+  },
+  {
+    "timestamp" : "00:06.91",
+    "frame" : 167,
+    "text" : "on the Moon",
+    "seconds" : 6.92
+  },
+  {
+    "timestamp" : "00:06.95",
+    "frame" : 168,
+    "text" : "on the Moon",
+    "seconds" : 6.96
+  },
+  {
+    "timestamp" : "00:07.00",
+    "frame" : 169,
+    "text" : "on the Moon",
+    "seconds" : 7
+  },
+  {
+    "timestamp" : "00:07.04",
+    "frame" : 170,
+    "text" : "on the Moon",
+    "seconds" : 7.04
+  },
+  {
+    "timestamp" : "00:07.08",
+    "frame" : 171,
+    "text" : "on the Moon",
+    "seconds" : 7.08
+  },
+  {
+    "timestamp" : "00:07.12",
+    "frame" : 172,
+    "text" : "on the Moon",
+    "seconds" : 7.13
+  },
+  {
+    "timestamp" : "00:07.16",
+    "frame" : 173,
+    "text" : "on the Moon",
+    "seconds" : 7.17
+  },
+  {
+    "timestamp" : "00:07.20",
+    "frame" : 174,
+    "text" : "on the Moon",
+    "seconds" : 7.21
+  },
+  {
+    "timestamp" : "00:07.25",
+    "frame" : 175,
+    "text" : "on the Moon",
+    "seconds" : 7.25
+  },
+  {
+    "frame" : 176,
+    "timestamp" : "00:07.29",
+    "text" : "on the Moon",
+    "seconds" : 7.29
+  },
+  {
+    "frame" : 177,
+    "timestamp" : "00:07.33",
+    "text" : "on the Moon",
+    "seconds" : 7.33
+  },
+  {
+    "frame" : 178,
+    "timestamp" : "00:07.37",
+    "text" : "on the Moon",
+    "seconds" : 7.38
+  },
+  {
+    "frame" : 179,
+    "timestamp" : "00:07.41",
+    "text" : "on the Moon",
+    "seconds" : 7.42
+  },
+  {
+    "frame" : 180,
+    "timestamp" : "00:07.45",
+    "text" : "on the Moon",
+    "seconds" : 7.46
+  },
+  {
+    "frame" : 181,
+    "timestamp" : "00:07.50",
+    "text" : "on the Moon",
+    "seconds" : 7.5
+  },
+  {
+    "frame" : 182,
+    "timestamp" : "00:07.54",
+    "text" : "on the Moon",
+    "seconds" : 7.54
+  },
+  {
+    "frame" : 183,
+    "timestamp" : "00:07.58",
+    "text" : "on the Moon",
+    "seconds" : 7.58
+  },
+  {
+    "frame" : 184,
+    "timestamp" : "00:07.62",
+    "text" : "on the Moon",
+    "seconds" : 7.63
+  },
+  {
+    "frame" : 185,
+    "timestamp" : "00:07.66",
+    "text" : "on the Moon",
+    "seconds" : 7.67
+  },
+  {
+    "frame" : 186,
+    "timestamp" : "00:07.70",
+    "text" : "on the Moon",
+    "seconds" : 7.71
+  },
+  {
+    "frame" : 187,
+    "timestamp" : "00:07.75",
+    "text" : "on the Moon",
+    "seconds" : 7.75
+  },
+  {
+    "frame" : 188,
+    "timestamp" : "00:07.79",
+    "text" : "on the Moon",
+    "seconds" : 7.79
+  },
+  {
+    "frame" : 189,
+    "timestamp" : "00:07.83",
+    "text" : "",
+    "seconds" : 7.83
+  },
+  {
+    "frame" : 190,
+    "timestamp" : "00:07.87",
+    "text" : "",
+    "seconds" : 7.88
+  },
+  {
+    "frame" : 191,
+    "timestamp" : "00:07.91",
+    "text" : "",
+    "seconds" : 7.92
+  },
+  {
+    "frame" : 192,
+    "timestamp" : "00:07.95",
+    "text" : "",
+    "seconds" : 7.96
+  },
+  {
+    "frame" : 193,
+    "timestamp" : "00:08.00",
+    "text" : "",
+    "seconds" : 8
+  },
+  {
+    "frame" : 194,
+    "timestamp" : "00:08.04",
+    "text" : "",
+    "seconds" : 8.04
+  },
+  {
+    "frame" : 195,
+    "timestamp" : "00:08.08",
+    "text" : "",
+    "seconds" : 8.08
+  },
+  {
+    "frame" : 196,
+    "timestamp" : "00:08.12",
+    "text" : "",
+    "seconds" : 8.13
+  },
+  {
+    "frame" : 197,
+    "timestamp" : "00:08.16",
+    "text" : "",
+    "seconds" : 8.17
+  },
+  {
+    "frame" : 198,
+    "timestamp" : "00:08.20",
+    "text" : "",
+    "seconds" : 8.21
+  },
+  {
+    "frame" : 199,
+    "timestamp" : "00:08.25",
+    "text" : "",
+    "seconds" : 8.25
+  },
+  {
+    "frame" : 200,
+    "timestamp" : "00:08.29",
+    "text" : "",
+    "seconds" : 8.29
+  },
+  {
+    "frame" : 201,
+    "timestamp" : "00:08.33",
+    "text" : "",
+    "seconds" : 8.33
+  },
+  {
+    "frame" : 202,
+    "timestamp" : "00:08.37",
+    "text" : "",
+    "seconds" : 8.38
+  },
+  {
+    "frame" : 203,
+    "timestamp" : "00:08.41",
+    "text" : "No wind.",
+    "seconds" : 8.42
+  },
+  {
+    "frame" : 204,
+    "timestamp" : "00:08.45",
+    "text" : "No wind.",
+    "seconds" : 8.46
+  },
+  {
+    "frame" : 205,
+    "timestamp" : "00:08.50",
+    "text" : "No wind.",
+    "seconds" : 8.5
+  },
+  {
+    "frame" : 206,
+    "timestamp" : "00:08.54",
+    "text" : "No wind.",
+    "seconds" : 8.54
+  },
+  {
+    "frame" : 207,
+    "timestamp" : "00:08.58",
+    "text" : "No wind.",
+    "seconds" : 8.58
+  },
+  {
+    "frame" : 208,
+    "timestamp" : "00:08.62",
+    "text" : "No wind.",
+    "seconds" : 8.63
+  },
+  {
+    "frame" : 209,
+    "timestamp" : "00:08.66",
+    "text" : "No wind.",
+    "seconds" : 8.67
+  },
+  {
+    "frame" : 210,
+    "timestamp" : "00:08.70",
+    "text" : "No wind.",
+    "seconds" : 8.71
+  },
+  {
+    "frame" : 211,
+    "timestamp" : "00:08.75",
+    "text" : "No wind.",
+    "seconds" : 8.75
+  },
+  {
+    "seconds" : 8.79,
+    "text" : "No wind.",
+    "frame" : 212,
+    "timestamp" : "00:08.79"
+  },
+  {
+    "seconds" : 8.83,
+    "text" : "No wind.",
+    "frame" : 213,
+    "timestamp" : "00:08.83"
+  },
+  {
+    "seconds" : 8.88,
+    "text" : "No wind.",
+    "frame" : 214,
+    "timestamp" : "00:08.87"
+  },
+  {
+    "seconds" : 8.92,
+    "text" : "No wind.",
+    "frame" : 215,
+    "timestamp" : "00:08.91"
+  },
+  {
+    "seconds" : 8.96,
+    "text" : "No wind.",
+    "frame" : 216,
+    "timestamp" : "00:08.95"
+  },
+  {
+    "seconds" : 9,
+    "text" : "No wind.",
+    "frame" : 217,
+    "timestamp" : "00:09.00"
+  },
+  {
+    "seconds" : 9.04,
+    "text" : "No wind.",
+    "frame" : 218,
+    "timestamp" : "00:09.04"
+  },
+  {
+    "seconds" : 9.08,
+    "text" : "No wind.",
+    "frame" : 219,
+    "timestamp" : "00:09.08"
+  },
+  {
+    "seconds" : 9.13,
+    "text" : "No wind.",
+    "frame" : 220,
+    "timestamp" : "00:09.12"
+  },
+  {
+    "seconds" : 9.17,
+    "text" : "No wind.",
+    "frame" : 221,
+    "timestamp" : "00:09.16"
+  },
+  {
+    "seconds" : 9.21,
+    "text" : "No wind.",
+    "frame" : 222,
+    "timestamp" : "00:09.20"
+  },
+  {
+    "seconds" : 9.25,
+    "text" : "No wind.",
+    "frame" : 223,
+    "timestamp" : "00:09.25"
+  },
+  {
+    "seconds" : 9.29,
+    "text" : "No wind.",
+    "frame" : 224,
+    "timestamp" : "00:09.29"
+  },
+  {
+    "seconds" : 9.33,
+    "text" : "No wind.",
+    "frame" : 225,
+    "timestamp" : "00:09.33"
+  },
+  {
+    "seconds" : 9.38,
+    "text" : "No wind.",
+    "frame" : 226,
+    "timestamp" : "00:09.37"
+  },
+  {
+    "seconds" : 9.42,
+    "text" : "No wind.",
+    "frame" : 227,
+    "timestamp" : "00:09.41"
+  },
+  {
+    "seconds" : 9.46,
+    "text" : "No wind.",
+    "frame" : 228,
+    "timestamp" : "00:09.45"
+  },
+  {
+    "seconds" : 9.5,
+    "text" : "No wind.",
+    "frame" : 229,
+    "timestamp" : "00:09.50"
+  },
+  {
+    "seconds" : 9.54,
+    "text" : "No wind.",
+    "frame" : 230,
+    "timestamp" : "00:09.54"
+  },
+  {
+    "seconds" : 9.58,
+    "text" : "No wind.",
+    "frame" : 231,
+    "timestamp" : "00:09.58"
+  },
+  {
+    "seconds" : 9.63,
+    "text" : "No wind.",
+    "frame" : 232,
+    "timestamp" : "00:09.62"
+  },
+  {
+    "seconds" : 9.67,
+    "text" : "15-0 \n No wind.",
+    "frame" : 233,
+    "timestamp" : "00:09.66"
+  },
+  {
+    "seconds" : 9.71,
+    "text" : "No wind.",
+    "frame" : 234,
+    "timestamp" : "00:09.70"
+  },
+  {
+    "seconds" : 9.75,
+    "text" : "No wind.",
+    "frame" : 235,
+    "timestamp" : "00:09.75"
+  },
+  {
+    "seconds" : 9.79,
+    "text" : "No wind.",
+    "frame" : 236,
+    "timestamp" : "00:09.79"
+  },
+  {
+    "seconds" : 9.83,
+    "text" : "No wind.",
+    "frame" : 237,
+    "timestamp" : "00:09.83"
+  },
+  {
+    "seconds" : 9.88,
+    "text" : "No wind.",
+    "frame" : 238,
+    "timestamp" : "00:09.87"
+  },
+  {
+    "seconds" : 9.92,
+    "text" : "= \n No wind.",
+    "frame" : 239,
+    "timestamp" : "00:09.91"
+  },
+  {
+    "seconds" : 9.96,
+    "text" : "No wind.",
+    "frame" : 240,
+    "timestamp" : "00:09.95"
+  },
+  {
+    "seconds" : 10,
+    "text" : "No wind.",
+    "frame" : 241,
+    "timestamp" : "00:10.00"
+  },
+  {
+    "seconds" : 10.04,
+    "text" : "No wind.",
+    "frame" : 242,
+    "timestamp" : "00:10.04"
+  },
+  {
+    "seconds" : 10.08,
+    "text" : "No wind.",
+    "frame" : 243,
+    "timestamp" : "00:10.08"
+  },
+  {
+    "seconds" : 10.13,
+    "text" : "No wind.",
+    "frame" : 244,
+    "timestamp" : "00:10.12"
+  },
+  {
+    "seconds" : 10.17,
+    "text" : "No wind.",
+    "frame" : 245,
+    "timestamp" : "00:10.16"
+  },
+  {
+    "seconds" : 10.21,
+    "text" : "No wind.",
+    "frame" : 246,
+    "timestamp" : "00:10.20"
+  },
+  {
+    "seconds" : 10.25,
+    "text" : "= \n No wind.",
+    "frame" : 247,
+    "timestamp" : "00:10.25"
+  },
+  {
+    "frame" : 248,
+    "timestamp" : "00:10.29",
+    "seconds" : 10.29,
+    "text" : "= \n No wind."
+  },
+  {
+    "frame" : 249,
+    "timestamp" : "00:10.33",
+    "seconds" : 10.33,
+    "text" : "No wind."
+  },
+  {
+    "frame" : 250,
+    "timestamp" : "00:10.37",
+    "seconds" : 10.38,
+    "text" : "No wind."
+  },
+  {
+    "frame" : 251,
+    "timestamp" : "00:10.41",
+    "seconds" : 10.42,
+    "text" : "No wind."
+  },
+  {
+    "frame" : 252,
+    "timestamp" : "00:10.45",
+    "seconds" : 10.46,
+    "text" : "No wind."
+  },
+  {
+    "frame" : 253,
+    "timestamp" : "00:10.50",
+    "seconds" : 10.5,
+    "text" : "= \n No wind."
+  },
+  {
+    "frame" : 254,
+    "timestamp" : "00:10.54",
+    "seconds" : 10.54,
+    "text" : "No wind."
+  },
+  {
+    "frame" : 255,
+    "timestamp" : "00:10.58",
+    "seconds" : 10.58,
+    "text" : "No wind."
+  },
+  {
+    "frame" : 256,
+    "timestamp" : "00:10.62",
+    "seconds" : 10.63,
+    "text" : ""
+  },
+  {
+    "frame" : 257,
+    "timestamp" : "00:10.66",
+    "seconds" : 10.67,
+    "text" : ""
+  },
+  {
+    "frame" : 258,
+    "timestamp" : "00:10.70",
+    "seconds" : 10.71,
+    "text" : ""
+  },
+  {
+    "frame" : 259,
+    "timestamp" : "00:10.75",
+    "seconds" : 10.75,
+    "text" : ""
+  },
+  {
+    "frame" : 260,
+    "timestamp" : "00:10.79",
+    "seconds" : 10.79,
+    "text" : ""
+  },
+  {
+    "frame" : 261,
+    "timestamp" : "00:10.83",
+    "seconds" : 10.83,
+    "text" : ""
+  },
+  {
+    "frame" : 262,
+    "timestamp" : "00:10.87",
+    "seconds" : 10.88,
+    "text" : ""
+  },
+  {
+    "frame" : 263,
+    "timestamp" : "00:10.91",
+    "seconds" : 10.92,
+    "text" : "No rain."
+  },
+  {
+    "frame" : 264,
+    "timestamp" : "00:10.95",
+    "seconds" : 10.96,
+    "text" : "No rain."
+  },
+  {
+    "frame" : 265,
+    "timestamp" : "00:11.00",
+    "seconds" : 11,
+    "text" : "No rain."
+  },
+  {
+    "frame" : 266,
+    "timestamp" : "00:11.04",
+    "seconds" : 11.04,
+    "text" : "No rain."
+  },
+  {
+    "frame" : 267,
+    "timestamp" : "00:11.08",
+    "seconds" : 11.08,
+    "text" : "No rain."
+  },
+  {
+    "frame" : 268,
+    "timestamp" : "00:11.12",
+    "seconds" : 11.13,
+    "text" : "No rain."
+  },
+  {
+    "frame" : 269,
+    "timestamp" : "00:11.16",
+    "seconds" : 11.17,
+    "text" : "No rain."
+  },
+  {
+    "frame" : 270,
+    "timestamp" : "00:11.20",
+    "seconds" : 11.21,
+    "text" : "No rain."
+  },
+  {
+    "frame" : 271,
+    "timestamp" : "00:11.25",
+    "seconds" : 11.25,
+    "text" : "No rain."
+  },
+  {
+    "frame" : 272,
+    "timestamp" : "00:11.29",
+    "seconds" : 11.29,
+    "text" : "No rain."
+  },
+  {
+    "frame" : 273,
+    "timestamp" : "00:11.33",
+    "seconds" : 11.33,
+    "text" : "No rain."
+  },
+  {
+    "frame" : 274,
+    "timestamp" : "00:11.37",
+    "seconds" : 11.38,
+    "text" : "No rain."
+  },
+  {
+    "frame" : 275,
+    "timestamp" : "00:11.41",
+    "seconds" : 11.42,
+    "text" : "No rain."
+  },
+  {
+    "frame" : 276,
+    "timestamp" : "00:11.45",
+    "seconds" : 11.46,
+    "text" : "No rain."
+  },
+  {
+    "frame" : 277,
+    "timestamp" : "00:11.50",
+    "seconds" : 11.5,
+    "text" : "No rain."
+  },
+  {
+    "frame" : 278,
+    "timestamp" : "00:11.54",
+    "seconds" : 11.54,
+    "text" : "No rain."
+  },
+  {
+    "frame" : 279,
+    "timestamp" : "00:11.58",
+    "seconds" : 11.58,
+    "text" : "No rain."
+  },
+  {
+    "frame" : 280,
+    "timestamp" : "00:11.62",
+    "seconds" : 11.63,
+    "text" : "No rain."
+  },
+  {
+    "frame" : 281,
+    "timestamp" : "00:11.66",
+    "seconds" : 11.67,
+    "text" : "No rain."
+  },
+  {
+    "frame" : 282,
+    "timestamp" : "00:11.70",
+    "seconds" : 11.71,
+    "text" : "No rain."
+  },
+  {
+    "frame" : 283,
+    "timestamp" : "00:11.75",
+    "seconds" : 11.75,
+    "text" : "No rain."
+  },
+  {
+    "frame" : 284,
+    "seconds" : 11.79,
+    "text" : "No rain.",
+    "timestamp" : "00:11.79"
+  },
+  {
+    "frame" : 285,
+    "seconds" : 11.83,
+    "text" : "No rain.",
+    "timestamp" : "00:11.83"
+  },
+  {
+    "frame" : 286,
+    "seconds" : 11.88,
+    "text" : "No rain.",
+    "timestamp" : "00:11.87"
+  },
+  {
+    "frame" : 287,
+    "seconds" : 11.92,
+    "text" : "No rain.",
+    "timestamp" : "00:11.91"
+  },
+  {
+    "frame" : 288,
+    "seconds" : 11.96,
+    "text" : "No rain.",
+    "timestamp" : "00:11.95"
+  },
+  {
+    "frame" : 289,
+    "seconds" : 12,
+    "text" : "No rain.",
+    "timestamp" : "00:12.00"
+  },
+  {
+    "frame" : 290,
+    "seconds" : 12.04,
+    "text" : "No rain.",
+    "timestamp" : "00:12.04"
+  },
+  {
+    "frame" : 291,
+    "seconds" : 12.08,
+    "text" : "No rain.",
+    "timestamp" : "00:12.08"
+  },
+  {
+    "frame" : 292,
+    "seconds" : 12.13,
+    "text" : "No rain.",
+    "timestamp" : "00:12.12"
+  },
+  {
+    "frame" : 293,
+    "seconds" : 12.17,
+    "text" : "No rain.",
+    "timestamp" : "00:12.16"
+  },
+  {
+    "frame" : 294,
+    "seconds" : 12.21,
+    "text" : "No rain.",
+    "timestamp" : "00:12.20"
+  },
+  {
+    "frame" : 295,
+    "seconds" : 12.25,
+    "text" : "No rain.",
+    "timestamp" : "00:12.25"
+  },
+  {
+    "frame" : 296,
+    "seconds" : 12.29,
+    "text" : "No-rain.",
+    "timestamp" : "00:12.29"
+  },
+  {
+    "frame" : 297,
+    "seconds" : 12.33,
+    "text" : "No rain.",
+    "timestamp" : "00:12.33"
+  },
+  {
+    "frame" : 298,
+    "seconds" : 12.38,
+    "text" : "No rain.",
+    "timestamp" : "00:12.37"
+  },
+  {
+    "frame" : 299,
+    "seconds" : 12.42,
+    "text" : "No rain.",
+    "timestamp" : "00:12.41"
+  },
+  {
+    "frame" : 300,
+    "seconds" : 12.46,
+    "text" : "No rain.",
+    "timestamp" : "00:12.45"
+  },
+  {
+    "frame" : 301,
+    "seconds" : 12.5,
+    "text" : "No rain. \n •..",
+    "timestamp" : "00:12.50"
+  },
+  {
+    "frame" : 302,
+    "seconds" : 12.54,
+    "text" : "No rain.",
+    "timestamp" : "00:12.54"
+  },
+  {
+    "frame" : 303,
+    "seconds" : 12.58,
+    "text" : "No rain.",
+    "timestamp" : "00:12.58"
+  },
+  {
+    "frame" : 304,
+    "seconds" : 12.63,
+    "text" : "No rain.",
+    "timestamp" : "00:12.62"
+  },
+  {
+    "frame" : 305,
+    "seconds" : 12.67,
+    "text" : "No rain.",
+    "timestamp" : "00:12.66"
+  },
+  {
+    "frame" : 306,
+    "seconds" : 12.71,
+    "text" : "No rain.",
+    "timestamp" : "00:12.70"
+  },
+  {
+    "frame" : 307,
+    "seconds" : 12.75,
+    "text" : "No rain.",
+    "timestamp" : "00:12.75"
+  },
+  {
+    "frame" : 308,
+    "seconds" : 12.79,
+    "text" : "No rain.",
+    "timestamp" : "00:12.79"
+  },
+  {
+    "frame" : 309,
+    "seconds" : 12.83,
+    "text" : "No rain.",
+    "timestamp" : "00:12.83"
+  },
+  {
+    "frame" : 310,
+    "seconds" : 12.88,
+    "text" : "No rain.",
+    "timestamp" : "00:12.87"
+  },
+  {
+    "frame" : 311,
+    "seconds" : 12.92,
+    "text" : "No rain.",
+    "timestamp" : "00:12.91"
+  },
+  {
+    "frame" : 312,
+    "seconds" : 12.96,
+    "text" : "No rain.",
+    "timestamp" : "00:12.95"
+  },
+  {
+    "frame" : 313,
+    "seconds" : 13,
+    "text" : "No rain.",
+    "timestamp" : "00:13.00"
+  },
+  {
+    "frame" : 314,
+    "seconds" : 13.04,
+    "text" : "",
+    "timestamp" : "00:13.04"
+  },
+  {
+    "frame" : 315,
+    "seconds" : 13.08,
+    "text" : "",
+    "timestamp" : "00:13.08"
+  },
+  {
+    "frame" : 316,
+    "seconds" : 13.13,
+    "text" : "",
+    "timestamp" : "00:13.12"
+  },
+  {
+    "frame" : 317,
+    "seconds" : 13.17,
+    "text" : "",
+    "timestamp" : "00:13.16"
+  },
+  {
+    "frame" : 318,
+    "seconds" : 13.21,
+    "text" : "",
+    "timestamp" : "00:13.20"
+  },
+  {
+    "frame" : 319,
+    "seconds" : 13.25,
+    "text" : "",
+    "timestamp" : "00:13.25"
+  },
+  {
+    "frame" : 320,
+    "timestamp" : "00:13.29",
+    "text" : "",
+    "seconds" : 13.29
+  },
+  {
+    "frame" : 321,
+    "timestamp" : "00:13.33",
+    "text" : "Nothing to erase it.",
+    "seconds" : 13.33
+  },
+  {
+    "frame" : 322,
+    "timestamp" : "00:13.37",
+    "text" : "Nothing to erase it.",
+    "seconds" : 13.38
+  },
+  {
+    "frame" : 323,
+    "timestamp" : "00:13.41",
+    "text" : "Nothing to erase it:",
+    "seconds" : 13.42
+  },
+  {
+    "frame" : 324,
+    "timestamp" : "00:13.45",
+    "text" : "Nothing to erase it.",
+    "seconds" : 13.46
+  },
+  {
+    "frame" : 325,
+    "timestamp" : "00:13.50",
+    "text" : "Nothing to erase it:",
+    "seconds" : 13.5
+  },
+  {
+    "frame" : 326,
+    "timestamp" : "00:13.54",
+    "text" : "Nothing to erase it.",
+    "seconds" : 13.54
+  },
+  {
+    "frame" : 327,
+    "timestamp" : "00:13.58",
+    "text" : "Nothing to erase it:",
+    "seconds" : 13.58
+  },
+  {
+    "frame" : 328,
+    "timestamp" : "00:13.62",
+    "text" : "Nothing to erase it-",
+    "seconds" : 13.63
+  },
+  {
+    "frame" : 329,
+    "timestamp" : "00:13.66",
+    "text" : "Nothing to erase it.",
+    "seconds" : 13.67
+  },
+  {
+    "frame" : 330,
+    "timestamp" : "00:13.70",
+    "text" : "Nothing to erase it.",
+    "seconds" : 13.71
+  },
+  {
+    "frame" : 331,
+    "timestamp" : "00:13.75",
+    "text" : "Nothing to erase it.",
+    "seconds" : 13.75
+  },
+  {
+    "frame" : 332,
+    "timestamp" : "00:13.79",
+    "text" : "Nothing to erase it.",
+    "seconds" : 13.79
+  },
+  {
+    "frame" : 333,
+    "timestamp" : "00:13.83",
+    "text" : "Nothing to erase it.",
+    "seconds" : 13.83
+  },
+  {
+    "frame" : 334,
+    "timestamp" : "00:13.87",
+    "text" : "Nothing to erase it.",
+    "seconds" : 13.88
+  },
+  {
+    "frame" : 335,
+    "timestamp" : "00:13.91",
+    "text" : "Nothing to erase it.",
+    "seconds" : 13.92
+  },
+  {
+    "frame" : 336,
+    "timestamp" : "00:13.95",
+    "text" : "Nothing to erase it.",
+    "seconds" : 13.96
+  },
+  {
+    "frame" : 337,
+    "timestamp" : "00:14.00",
+    "text" : "Nothing to erase it.",
+    "seconds" : 14
+  },
+  {
+    "frame" : 338,
+    "timestamp" : "00:14.04",
+    "text" : "Nothing to erase it.",
+    "seconds" : 14.04
+  },
+  {
+    "frame" : 339,
+    "timestamp" : "00:14.08",
+    "text" : "Nothing to erase it.",
+    "seconds" : 14.08
+  },
+  {
+    "frame" : 340,
+    "timestamp" : "00:14.12",
+    "text" : "Nothing to erase it.",
+    "seconds" : 14.13
+  },
+  {
+    "frame" : 341,
+    "timestamp" : "00:14.16",
+    "text" : "Nothing to erase it.",
+    "seconds" : 14.17
+  },
+  {
+    "frame" : 342,
+    "timestamp" : "00:14.20",
+    "text" : "Nothing to erase it.",
+    "seconds" : 14.21
+  },
+  {
+    "frame" : 343,
+    "timestamp" : "00:14.25",
+    "text" : "Nothing to erase it.",
+    "seconds" : 14.25
+  },
+  {
+    "frame" : 344,
+    "timestamp" : "00:14.29",
+    "text" : "Nothing to erase it.",
+    "seconds" : 14.29
+  },
+  {
+    "frame" : 345,
+    "timestamp" : "00:14.33",
+    "text" : "Nothing to erase it.",
+    "seconds" : 14.33
+  },
+  {
+    "frame" : 346,
+    "timestamp" : "00:14.37",
+    "text" : "Nothing to erase it.",
+    "seconds" : 14.38
+  },
+  {
+    "frame" : 347,
+    "timestamp" : "00:14.41",
+    "text" : "Nothing to erase it.",
+    "seconds" : 14.42
+  },
+  {
+    "frame" : 348,
+    "timestamp" : "00:14.45",
+    "text" : "Nothing to erase it.",
+    "seconds" : 14.46
+  },
+  {
+    "frame" : 349,
+    "timestamp" : "00:14.50",
+    "text" : "Nothing to erase it.",
+    "seconds" : 14.5
+  },
+  {
+    "frame" : 350,
+    "timestamp" : "00:14.54",
+    "text" : "Nothing to erase it.",
+    "seconds" : 14.54
+  },
+  {
+    "frame" : 351,
+    "timestamp" : "00:14.58",
+    "text" : "Nothing to erase it.",
+    "seconds" : 14.58
+  },
+  {
+    "frame" : 352,
+    "timestamp" : "00:14.62",
+    "text" : "Nothing to erase it.",
+    "seconds" : 14.63
+  },
+  {
+    "frame" : 353,
+    "timestamp" : "00:14.66",
+    "text" : "Nothing to erase it.",
+    "seconds" : 14.67
+  },
+  {
+    "frame" : 354,
+    "timestamp" : "00:14.70",
+    "text" : "Nothing to erase it.",
+    "seconds" : 14.71
+  },
+  {
+    "frame" : 355,
+    "timestamp" : "00:14.75",
+    "text" : "Nothing to erase it.",
+    "seconds" : 14.75
+  },
+  {
+    "frame" : 356,
+    "text" : "Nothing to erase it.",
+    "seconds" : 14.79,
+    "timestamp" : "00:14.79"
+  },
+  {
+    "frame" : 357,
+    "text" : "Nothing to erase it.",
+    "seconds" : 14.83,
+    "timestamp" : "00:14.83"
+  },
+  {
+    "frame" : 358,
+    "text" : "Nothing to erase it.",
+    "seconds" : 14.88,
+    "timestamp" : "00:14.87"
+  },
+  {
+    "frame" : 359,
+    "text" : "Nothing to erase it.",
+    "seconds" : 14.92,
+    "timestamp" : "00:14.91"
+  },
+  {
+    "frame" : 360,
+    "text" : "Nothing to erase it.",
+    "seconds" : 14.96,
+    "timestamp" : "00:14.95"
+  },
+  {
+    "frame" : 361,
+    "text" : "Nothing to erase it.",
+    "seconds" : 15,
+    "timestamp" : "00:15.00"
+  },
+  {
+    "frame" : 362,
+    "text" : "Nothing to erase it.",
+    "seconds" : 15.04,
+    "timestamp" : "00:15.04"
+  },
+  {
+    "frame" : 363,
+    "text" : "Nothing to erase it.",
+    "seconds" : 15.08,
+    "timestamp" : "00:15.08"
+  },
+  {
+    "frame" : 364,
+    "text" : "Nothing to erase it.",
+    "seconds" : 15.13,
+    "timestamp" : "00:15.12"
+  },
+  {
+    "frame" : 365,
+    "text" : "Nothing to erase it.",
+    "seconds" : 15.17,
+    "timestamp" : "00:15.16"
+  },
+  {
+    "frame" : 366,
+    "text" : "Nothing to erase it.",
+    "seconds" : 15.21,
+    "timestamp" : "00:15.20"
+  },
+  {
+    "frame" : 367,
+    "text" : "Nothing to erase it.",
+    "seconds" : 15.25,
+    "timestamp" : "00:15.25"
+  },
+  {
+    "frame" : 368,
+    "text" : "Nothing to erase it.",
+    "seconds" : 15.29,
+    "timestamp" : "00:15.29"
+  },
+  {
+    "frame" : 369,
+    "text" : "Nothing to erase it.",
+    "seconds" : 15.33,
+    "timestamp" : "00:15.33"
+  },
+  {
+    "frame" : 370,
+    "text" : "Nothing to erase it.",
+    "seconds" : 15.38,
+    "timestamp" : "00:15.37"
+  },
+  {
+    "frame" : 371,
+    "text" : "Nothing to erase it.",
+    "seconds" : 15.42,
+    "timestamp" : "00:15.41"
+  },
+  {
+    "frame" : 372,
+    "text" : "Nothing to erase it.",
+    "seconds" : 15.46,
+    "timestamp" : "00:15.45"
+  },
+  {
+    "frame" : 373,
+    "text" : "Nothing to erase it.",
+    "seconds" : 15.5,
+    "timestamp" : "00:15.50"
+  },
+  {
+    "frame" : 374,
+    "text" : "Nothing to erase it.",
+    "seconds" : 15.54,
+    "timestamp" : "00:15.54"
+  },
+  {
+    "frame" : 375,
+    "text" : "Nothing to erase it.",
+    "seconds" : 15.58,
+    "timestamp" : "00:15.58"
+  },
+  {
+    "frame" : 376,
+    "text" : "Nothing to erase it.",
+    "seconds" : 15.63,
+    "timestamp" : "00:15.62"
+  },
+  {
+    "frame" : 377,
+    "text" : "Nothing to erase it.",
+    "seconds" : 15.67,
+    "timestamp" : "00:15.66"
+  },
+  {
+    "frame" : 378,
+    "text" : "",
+    "seconds" : 15.71,
+    "timestamp" : "00:15.70"
+  },
+  {
+    "frame" : 379,
+    "text" : "",
+    "seconds" : 15.75,
+    "timestamp" : "00:15.75"
+  },
+  {
+    "frame" : 380,
+    "text" : "",
+    "seconds" : 15.79,
+    "timestamp" : "00:15.79"
+  },
+  {
+    "frame" : 381,
+    "text" : "",
+    "seconds" : 15.83,
+    "timestamp" : "00:15.83"
+  },
+  {
+    "frame" : 382,
+    "text" : "",
+    "seconds" : 15.88,
+    "timestamp" : "00:15.87"
+  },
+  {
+    "frame" : 383,
+    "text" : "",
+    "seconds" : 15.92,
+    "timestamp" : "00:15.91"
+  },
+  {
+    "frame" : 384,
+    "text" : "",
+    "seconds" : 15.96,
+    "timestamp" : "00:15.95"
+  },
+  {
+    "frame" : 385,
+    "text" : "",
+    "seconds" : 16,
+    "timestamp" : "00:16.00"
+  },
+  {
+    "frame" : 386,
+    "text" : "",
+    "seconds" : 16.04,
+    "timestamp" : "00:16.04"
+  },
+  {
+    "frame" : 387,
+    "text" : "",
+    "seconds" : 16.08,
+    "timestamp" : "00:16.08"
+  },
+  {
+    "frame" : 388,
+    "text" : "",
+    "seconds" : 16.13,
+    "timestamp" : "00:16.12"
+  },
+  {
+    "frame" : 389,
+    "text" : "",
+    "seconds" : 16.17,
+    "timestamp" : "00:16.16"
+  },
+  {
+    "frame" : 390,
+    "text" : "",
+    "seconds" : 16.21,
+    "timestamp" : "00:16.20"
+  },
+  {
+    "frame" : 391,
+    "text" : "",
+    "seconds" : 16.25,
+    "timestamp" : "00:16.25"
+  },
+  {
+    "timestamp" : "00:16.29",
+    "seconds" : 16.29,
+    "frame" : 392,
+    "text" : ""
+  },
+  {
+    "timestamp" : "00:16.33",
+    "seconds" : 16.33,
+    "frame" : 393,
+    "text" : ""
+  },
+  {
+    "timestamp" : "00:16.37",
+    "seconds" : 16.38,
+    "frame" : 394,
+    "text" : ""
+  },
+  {
+    "timestamp" : "00:16.41",
+    "seconds" : 16.42,
+    "frame" : 395,
+    "text" : "Apollo 15 parked this"
+  },
+  {
+    "timestamp" : "00:16.45",
+    "seconds" : 16.46,
+    "frame" : 396,
+    "text" : "Apollo 15 parked this"
+  },
+  {
+    "timestamp" : "00:16.50",
+    "seconds" : 16.5,
+    "frame" : 397,
+    "text" : "Apollo 15 parked this"
+  },
+  {
+    "timestamp" : "00:16.54",
+    "seconds" : 16.54,
+    "frame" : 398,
+    "text" : "Apollo 15 parked this"
+  },
+  {
+    "timestamp" : "00:16.58",
+    "seconds" : 16.58,
+    "frame" : 399,
+    "text" : "Apollo 15 parked this"
+  },
+  {
+    "timestamp" : "00:16.62",
+    "seconds" : 16.63,
+    "frame" : 400,
+    "text" : "Apollo 15 parked this"
+  },
+  {
+    "timestamp" : "00:16.66",
+    "seconds" : 16.67,
+    "frame" : 401,
+    "text" : "Apollo 15 parked this"
+  },
+  {
+    "timestamp" : "00:16.70",
+    "seconds" : 16.71,
+    "frame" : 402,
+    "text" : "Apollo 15 parked this"
+  },
+  {
+    "timestamp" : "00:16.75",
+    "seconds" : 16.75,
+    "frame" : 403,
+    "text" : "Apollo 15 parked this"
+  },
+  {
+    "timestamp" : "00:16.79",
+    "seconds" : 16.79,
+    "frame" : 404,
+    "text" : "Apollo 15 parked this"
+  },
+  {
+    "timestamp" : "00:16.83",
+    "seconds" : 16.83,
+    "frame" : 405,
+    "text" : "Apollo 15 parked this"
+  },
+  {
+    "timestamp" : "00:16.87",
+    "seconds" : 16.88,
+    "frame" : 406,
+    "text" : "Apollo 15 parked this"
+  },
+  {
+    "timestamp" : "00:16.91",
+    "seconds" : 16.92,
+    "frame" : 407,
+    "text" : "Apollo 15 parked this"
+  },
+  {
+    "timestamp" : "00:16.95",
+    "seconds" : 16.96,
+    "frame" : 408,
+    "text" : "Apollo 15 parked this"
+  },
+  {
+    "timestamp" : "00:17.00",
+    "seconds" : 17,
+    "frame" : 409,
+    "text" : "Apollo 15 parked this"
+  },
+  {
+    "timestamp" : "00:17.04",
+    "seconds" : 17.04,
+    "frame" : 410,
+    "text" : "Apollo 15 parked this"
+  },
+  {
+    "timestamp" : "00:17.08",
+    "seconds" : 17.08,
+    "frame" : 411,
+    "text" : "Apollo 15 parked this"
+  },
+  {
+    "timestamp" : "00:17.12",
+    "seconds" : 17.13,
+    "frame" : 412,
+    "text" : "Apollo 15 parked this"
+  },
+  {
+    "timestamp" : "00:17.16",
+    "seconds" : 17.17,
+    "frame" : 413,
+    "text" : "Apollo 15 parked this"
+  },
+  {
+    "timestamp" : "00:17.20",
+    "seconds" : 17.21,
+    "frame" : 414,
+    "text" : "Apollo 15 parked this"
+  },
+  {
+    "timestamp" : "00:17.25",
+    "seconds" : 17.25,
+    "frame" : 415,
+    "text" : "Apollo 15 parked this"
+  },
+  {
+    "timestamp" : "00:17.29",
+    "seconds" : 17.29,
+    "frame" : 416,
+    "text" : "Apollo 15 parked this"
+  },
+  {
+    "timestamp" : "00:17.33",
+    "seconds" : 17.33,
+    "frame" : 417,
+    "text" : "Apollo 15 parked this"
+  },
+  {
+    "timestamp" : "00:17.37",
+    "seconds" : 17.38,
+    "frame" : 418,
+    "text" : "Apollo 15 parked this"
+  },
+  {
+    "timestamp" : "00:17.41",
+    "seconds" : 17.42,
+    "frame" : 419,
+    "text" : "Apollo 15 parked this"
+  },
+  {
+    "timestamp" : "00:17.45",
+    "seconds" : 17.46,
+    "frame" : 420,
+    "text" : "Apollo 15 parked this"
+  },
+  {
+    "timestamp" : "00:17.50",
+    "seconds" : 17.5,
+    "frame" : 421,
+    "text" : "Apollo 15 parked this"
+  },
+  {
+    "timestamp" : "00:17.54",
+    "seconds" : 17.54,
+    "frame" : 422,
+    "text" : "Apollo 15 parked this"
+  },
+  {
+    "timestamp" : "00:17.58",
+    "seconds" : 17.58,
+    "frame" : 423,
+    "text" : "Apollo 15 parked this"
+  },
+  {
+    "timestamp" : "00:17.62",
+    "seconds" : 17.63,
+    "frame" : 424,
+    "text" : "Apollo 15 parked this"
+  },
+  {
+    "timestamp" : "00:17.66",
+    "seconds" : 17.67,
+    "frame" : 425,
+    "text" : "Apollo 15 parked this."
+  },
+  {
+    "timestamp" : "00:17.70",
+    "seconds" : 17.71,
+    "frame" : 426,
+    "text" : "Apollo 15 parked this."
+  },
+  {
+    "timestamp" : "00:17.75",
+    "seconds" : 17.75,
+    "frame" : 427,
+    "text" : "Apollo 15 parked this."
+  },
+  {
+    "frame" : 428,
+    "timestamp" : "00:17.79",
+    "seconds" : 17.79,
+    "text" : "Apollo 15 parked this"
+  },
+  {
+    "frame" : 429,
+    "timestamp" : "00:17.83",
+    "seconds" : 17.83,
+    "text" : "Apollo 15 parked this"
+  },
+  {
+    "frame" : 430,
+    "timestamp" : "00:17.87",
+    "seconds" : 17.88,
+    "text" : "Apollo 15 parked this"
+  },
+  {
+    "frame" : 431,
+    "timestamp" : "00:17.91",
+    "seconds" : 17.92,
+    "text" : "Apollo 15 parked this."
+  },
+  {
+    "frame" : 432,
+    "timestamp" : "00:17.95",
+    "seconds" : 17.96,
+    "text" : "Apollo 15 parked this"
+  },
+  {
+    "frame" : 433,
+    "timestamp" : "00:18.00",
+    "seconds" : 18,
+    "text" : "Apollo 15 parked this"
+  },
+  {
+    "frame" : 434,
+    "timestamp" : "00:18.04",
+    "seconds" : 18.04,
+    "text" : "Apollo 15 parked this,"
+  },
+  {
+    "frame" : 435,
+    "timestamp" : "00:18.08",
+    "seconds" : 18.08,
+    "text" : "Apollo 15 parked this."
+  },
+  {
+    "frame" : 436,
+    "timestamp" : "00:18.12",
+    "seconds" : 18.13,
+    "text" : "Apollo 15 parked this."
+  },
+  {
+    "frame" : 437,
+    "timestamp" : "00:18.16",
+    "seconds" : 18.17,
+    "text" : "Apollo 15 parked this."
+  },
+  {
+    "frame" : 438,
+    "timestamp" : "00:18.20",
+    "seconds" : 18.21,
+    "text" : "Apollo 15 parked this"
+  },
+  {
+    "frame" : 439,
+    "timestamp" : "00:18.25",
+    "seconds" : 18.25,
+    "text" : "Apollo 15 parked thiş"
+  },
+  {
+    "frame" : 440,
+    "timestamp" : "00:18.29",
+    "seconds" : 18.29,
+    "text" : "Apollo 15 parked thiş"
+  },
+  {
+    "frame" : 441,
+    "timestamp" : "00:18.33",
+    "seconds" : 18.33,
+    "text" : "Apollo 15 parked thiş"
+  },
+  {
+    "frame" : 442,
+    "timestamp" : "00:18.37",
+    "seconds" : 18.38,
+    "text" : "Apollo 15 parked this,"
+  },
+  {
+    "frame" : 443,
+    "timestamp" : "00:18.41",
+    "seconds" : 18.42,
+    "text" : "Apollo 15 parked this"
+  },
+  {
+    "frame" : 444,
+    "timestamp" : "00:18.45",
+    "seconds" : 18.46,
+    "text" : "Apollo 15 parked this,"
+  },
+  {
+    "frame" : 445,
+    "timestamp" : "00:18.50",
+    "seconds" : 18.5,
+    "text" : "Apollo 15 parked this"
+  },
+  {
+    "frame" : 446,
+    "timestamp" : "00:18.54",
+    "seconds" : 18.54,
+    "text" : "Apollo 15 parked this"
+  },
+  {
+    "frame" : 447,
+    "timestamp" : "00:18.58",
+    "seconds" : 18.58,
+    "text" : "Apollo 15 parked this"
+  },
+  {
+    "frame" : 448,
+    "timestamp" : "00:18.62",
+    "seconds" : 18.63,
+    "text" : "Apollo 15 parked this"
+  },
+  {
+    "frame" : 449,
+    "timestamp" : "00:18.66",
+    "seconds" : 18.67,
+    "text" : "Apollo 15 parked this"
+  },
+  {
+    "frame" : 450,
+    "timestamp" : "00:18.70",
+    "seconds" : 18.71,
+    "text" : "Apollo 15 parked this"
+  },
+  {
+    "frame" : 451,
+    "timestamp" : "00:18.75",
+    "seconds" : 18.75,
+    "text" : "Apollo 15 parked this"
+  },
+  {
+    "frame" : 452,
+    "timestamp" : "00:18.79",
+    "seconds" : 18.79,
+    "text" : "Apollo 15 parked this"
+  },
+  {
+    "frame" : 453,
+    "timestamp" : "00:18.83",
+    "seconds" : 18.83,
+    "text" : "Apollo 15 parked this"
+  },
+  {
+    "frame" : 454,
+    "timestamp" : "00:18.87",
+    "seconds" : 18.88,
+    "text" : "Apollo 15 parked this"
+  },
+  {
+    "frame" : 455,
+    "timestamp" : "00:18.91",
+    "seconds" : 18.92,
+    "text" : "Apollo 15 parked this"
+  },
+  {
+    "frame" : 456,
+    "timestamp" : "00:18.95",
+    "seconds" : 18.96,
+    "text" : "Apollo 15 parked this"
+  },
+  {
+    "frame" : 457,
+    "timestamp" : "00:19.00",
+    "seconds" : 19,
+    "text" : "Apollo 15 parked this"
+  },
+  {
+    "frame" : 458,
+    "timestamp" : "00:19.04",
+    "seconds" : 19.04,
+    "text" : ""
+  },
+  {
+    "frame" : 459,
+    "timestamp" : "00:19.08",
+    "seconds" : 19.08,
+    "text" : ""
+  },
+  {
+    "frame" : 460,
+    "timestamp" : "00:19.12",
+    "seconds" : 19.13,
+    "text" : ""
+  },
+  {
+    "frame" : 461,
+    "timestamp" : "00:19.16",
+    "seconds" : 19.17,
+    "text" : ""
+  },
+  {
+    "frame" : 462,
+    "timestamp" : "00:19.20",
+    "seconds" : 19.21,
+    "text" : ""
+  },
+  {
+    "frame" : 463,
+    "timestamp" : "00:19.25",
+    "seconds" : 19.25,
+    "text" : ""
+  },
+  {
+    "timestamp" : "00:19.29",
+    "frame" : 464,
+    "seconds" : 19.29,
+    "text" : ""
+  },
+  {
+    "timestamp" : "00:19.33",
+    "frame" : 465,
+    "seconds" : 19.33,
+    "text" : "rover in 1971."
+  },
+  {
+    "timestamp" : "00:19.37",
+    "frame" : 466,
+    "seconds" : 19.38,
+    "text" : "rover in 1971."
+  },
+  {
+    "timestamp" : "00:19.41",
+    "frame" : 467,
+    "seconds" : 19.42,
+    "text" : "rover in 1971."
+  },
+  {
+    "timestamp" : "00:19.45",
+    "frame" : 468,
+    "seconds" : 19.46,
+    "text" : "rover in 1971."
+  },
+  {
+    "timestamp" : "00:19.50",
+    "frame" : 469,
+    "seconds" : 19.5,
+    "text" : "rover in 1971."
+  },
+  {
+    "timestamp" : "00:19.54",
+    "frame" : 470,
+    "seconds" : 19.54,
+    "text" : "rover in 1971."
+  },
+  {
+    "timestamp" : "00:19.58",
+    "frame" : 471,
+    "seconds" : 19.58,
+    "text" : "rover in 1971."
+  },
+  {
+    "timestamp" : "00:19.62",
+    "frame" : 472,
+    "seconds" : 19.63,
+    "text" : "rover in 1971."
+  },
+  {
+    "timestamp" : "00:19.66",
+    "frame" : 473,
+    "seconds" : 19.67,
+    "text" : "rover in 1971."
+  },
+  {
+    "timestamp" : "00:19.70",
+    "frame" : 474,
+    "seconds" : 19.71,
+    "text" : "rover in 1971."
+  },
+  {
+    "timestamp" : "00:19.75",
+    "frame" : 475,
+    "seconds" : 19.75,
+    "text" : "rover in 1971."
+  },
+  {
+    "timestamp" : "00:19.79",
+    "frame" : 476,
+    "seconds" : 19.79,
+    "text" : "rover in 1971."
+  },
+  {
+    "timestamp" : "00:19.83",
+    "frame" : 477,
+    "seconds" : 19.83,
+    "text" : "rover in 1971."
+  },
+  {
+    "timestamp" : "00:19.87",
+    "frame" : 478,
+    "seconds" : 19.88,
+    "text" : "rover in 1971."
+  },
+  {
+    "timestamp" : "00:19.91",
+    "frame" : 479,
+    "seconds" : 19.92,
+    "text" : "rover in 1971."
+  },
+  {
+    "timestamp" : "00:19.95",
+    "frame" : 480,
+    "seconds" : 19.96,
+    "text" : "rover in 1971."
+  },
+  {
+    "timestamp" : "00:20.00",
+    "frame" : 481,
+    "seconds" : 20,
+    "text" : "rover in 1971."
+  },
+  {
+    "timestamp" : "00:20.04",
+    "frame" : 482,
+    "seconds" : 20.04,
+    "text" : "rover in 1971."
+  },
+  {
+    "timestamp" : "00:20.08",
+    "frame" : 483,
+    "seconds" : 20.08,
+    "text" : "rover in 1971."
+  },
+  {
+    "timestamp" : "00:20.12",
+    "frame" : 484,
+    "seconds" : 20.13,
+    "text" : "rover in 1971."
+  },
+  {
+    "timestamp" : "00:20.16",
+    "frame" : 485,
+    "seconds" : 20.17,
+    "text" : "rover in 1971."
+  },
+  {
+    "timestamp" : "00:20.20",
+    "frame" : 486,
+    "seconds" : 20.21,
+    "text" : "rover in 1971."
+  },
+  {
+    "timestamp" : "00:20.25",
+    "frame" : 487,
+    "seconds" : 20.25,
+    "text" : "rover in 1971."
+  },
+  {
+    "timestamp" : "00:20.29",
+    "frame" : 488,
+    "seconds" : 20.29,
+    "text" : "rover in 1971."
+  },
+  {
+    "timestamp" : "00:20.33",
+    "frame" : 489,
+    "seconds" : 20.33,
+    "text" : "rover in 1971."
+  },
+  {
+    "timestamp" : "00:20.37",
+    "frame" : 490,
+    "seconds" : 20.38,
+    "text" : "rover in 1971."
+  },
+  {
+    "timestamp" : "00:20.41",
+    "frame" : 491,
+    "seconds" : 20.42,
+    "text" : "rover in 1971."
+  },
+  {
+    "timestamp" : "00:20.45",
+    "frame" : 492,
+    "seconds" : 20.46,
+    "text" : "rover in 1971."
+  },
+  {
+    "timestamp" : "00:20.50",
+    "frame" : 493,
+    "seconds" : 20.5,
+    "text" : "rover in 1971."
+  },
+  {
+    "timestamp" : "00:20.54",
+    "frame" : 494,
+    "seconds" : 20.54,
+    "text" : "rover in 1971."
+  },
+  {
+    "timestamp" : "00:20.58",
+    "frame" : 495,
+    "seconds" : 20.58,
+    "text" : "rover in 1971."
+  },
+  {
+    "timestamp" : "00:20.62",
+    "frame" : 496,
+    "seconds" : 20.63,
+    "text" : "rover in 1971."
+  },
+  {
+    "timestamp" : "00:20.66",
+    "frame" : 497,
+    "seconds" : 20.67,
+    "text" : "rover in 1971."
+  },
+  {
+    "timestamp" : "00:20.70",
+    "frame" : 498,
+    "seconds" : 20.71,
+    "text" : "rover in 1971."
+  },
+  {
+    "timestamp" : "00:20.75",
+    "frame" : 499,
+    "seconds" : 20.75,
+    "text" : "rover in 1971."
+  },
+  {
+    "frame" : 500,
+    "seconds" : 20.79,
+    "text" : "rover in 1971.",
+    "timestamp" : "00:20.79"
+  },
+  {
+    "frame" : 501,
+    "seconds" : 20.83,
+    "text" : "rover in 1971.",
+    "timestamp" : "00:20.83"
+  },
+  {
+    "frame" : 502,
+    "seconds" : 20.88,
+    "text" : "rover in 1971.",
+    "timestamp" : "00:20.87"
+  },
+  {
+    "frame" : 503,
+    "seconds" : 20.92,
+    "text" : "rover in 1971.",
+    "timestamp" : "00:20.91"
+  },
+  {
+    "frame" : 504,
+    "seconds" : 20.96,
+    "text" : "rover in 1971.",
+    "timestamp" : "00:20.95"
+  },
+  {
+    "frame" : 505,
+    "seconds" : 21,
+    "text" : "rover in 1971.",
+    "timestamp" : "00:21.00"
+  },
+  {
+    "frame" : 506,
+    "seconds" : 21.04,
+    "text" : "rover in 1971.",
+    "timestamp" : "00:21.04"
+  },
+  {
+    "frame" : 507,
+    "seconds" : 21.08,
+    "text" : "rover in 1971.",
+    "timestamp" : "00:21.08"
+  },
+  {
+    "frame" : 508,
+    "seconds" : 21.13,
+    "text" : "rover in 1971.",
+    "timestamp" : "00:21.12"
+  },
+  {
+    "frame" : 509,
+    "seconds" : 21.17,
+    "text" : "rover in 1971.",
+    "timestamp" : "00:21.16"
+  },
+  {
+    "frame" : 510,
+    "seconds" : 21.21,
+    "text" : "rover in 1971.",
+    "timestamp" : "00:21.20"
+  },
+  {
+    "frame" : 511,
+    "seconds" : 21.25,
+    "text" : "rover in 1971.",
+    "timestamp" : "00:21.25"
+  },
+  {
+    "frame" : 512,
+    "seconds" : 21.29,
+    "text" : "rover in 1971.",
+    "timestamp" : "00:21.29"
+  },
+  {
+    "frame" : 513,
+    "seconds" : 21.33,
+    "text" : "rover in 1971.",
+    "timestamp" : "00:21.33"
+  },
+  {
+    "frame" : 514,
+    "seconds" : 21.38,
+    "text" : "rover in 1971.",
+    "timestamp" : "00:21.37"
+  },
+  {
+    "frame" : 515,
+    "seconds" : 21.42,
+    "text" : "rover in 1971.",
+    "timestamp" : "00:21.41"
+  },
+  {
+    "frame" : 516,
+    "seconds" : 21.46,
+    "text" : "rover in 1971.",
+    "timestamp" : "00:21.45"
+  },
+  {
+    "frame" : 517,
+    "seconds" : 21.5,
+    "text" : "rover in 1971.",
+    "timestamp" : "00:21.50"
+  },
+  {
+    "frame" : 518,
+    "seconds" : 21.54,
+    "text" : "rover in 1971.",
+    "timestamp" : "00:21.54"
+  },
+  {
+    "frame" : 519,
+    "seconds" : 21.58,
+    "text" : "rover in 1971.",
+    "timestamp" : "00:21.58"
+  },
+  {
+    "frame" : 520,
+    "seconds" : 21.63,
+    "text" : "rover in 1971.",
+    "timestamp" : "00:21.62"
+  },
+  {
+    "frame" : 521,
+    "seconds" : 21.67,
+    "text" : "rover in 1971.",
+    "timestamp" : "00:21.66"
+  },
+  {
+    "frame" : 522,
+    "seconds" : 21.71,
+    "text" : "",
+    "timestamp" : "00:21.70"
+  },
+  {
+    "frame" : 523,
+    "seconds" : 21.75,
+    "text" : "",
+    "timestamp" : "00:21.75"
+  },
+  {
+    "frame" : 524,
+    "seconds" : 21.79,
+    "text" : "",
+    "timestamp" : "00:21.79"
+  },
+  {
+    "frame" : 525,
+    "seconds" : 21.83,
+    "text" : "",
+    "timestamp" : "00:21.83"
+  },
+  {
+    "frame" : 526,
+    "seconds" : 21.88,
+    "text" : "",
+    "timestamp" : "00:21.87"
+  },
+  {
+    "frame" : 527,
+    "seconds" : 21.92,
+    "text" : "",
+    "timestamp" : "00:21.91"
+  },
+  {
+    "frame" : 528,
+    "seconds" : 21.96,
+    "text" : "",
+    "timestamp" : "00:21.95"
+  },
+  {
+    "frame" : 529,
+    "seconds" : 22,
+    "text" : "",
+    "timestamp" : "00:22.00"
+  },
+  {
+    "frame" : 530,
+    "seconds" : 22.04,
+    "text" : "",
+    "timestamp" : "00:22.04"
+  },
+  {
+    "frame" : 531,
+    "seconds" : 22.08,
+    "text" : "",
+    "timestamp" : "00:22.08"
+  },
+  {
+    "frame" : 532,
+    "seconds" : 22.13,
+    "text" : "It has not moved since.",
+    "timestamp" : "00:22.12"
+  },
+  {
+    "frame" : 533,
+    "seconds" : 22.17,
+    "text" : "It has not moved since.",
+    "timestamp" : "00:22.16"
+  },
+  {
+    "frame" : 534,
+    "seconds" : 22.21,
+    "text" : "It has not moved since.",
+    "timestamp" : "00:22.20"
+  },
+  {
+    "frame" : 535,
+    "seconds" : 22.25,
+    "text" : "It has not moved since.",
+    "timestamp" : "00:22.25"
+  },
+  {
+    "text" : "It has not moved since.",
+    "frame" : 536,
+    "timestamp" : "00:22.29",
+    "seconds" : 22.29
+  },
+  {
+    "text" : "It has not moved since.",
+    "frame" : 537,
+    "timestamp" : "00:22.33",
+    "seconds" : 22.33
+  },
+  {
+    "text" : "It has not moved since.",
+    "frame" : 538,
+    "timestamp" : "00:22.37",
+    "seconds" : 22.38
+  },
+  {
+    "text" : "It has not moved since.",
+    "frame" : 539,
+    "timestamp" : "00:22.41",
+    "seconds" : 22.42
+  },
+  {
+    "text" : "It has not moved since.",
+    "frame" : 540,
+    "timestamp" : "00:22.45",
+    "seconds" : 22.46
+  },
+  {
+    "text" : "It has not moved since.",
+    "frame" : 541,
+    "timestamp" : "00:22.50",
+    "seconds" : 22.5
+  },
+  {
+    "text" : "It has not moved since.",
+    "frame" : 542,
+    "timestamp" : "00:22.54",
+    "seconds" : 22.54
+  },
+  {
+    "text" : "It has not moved since.",
+    "frame" : 543,
+    "timestamp" : "00:22.58",
+    "seconds" : 22.58
+  },
+  {
+    "text" : "It has not moved since.",
+    "frame" : 544,
+    "timestamp" : "00:22.62",
+    "seconds" : 22.63
+  },
+  {
+    "text" : "It has not moved since.",
+    "frame" : 545,
+    "timestamp" : "00:22.66",
+    "seconds" : 22.67
+  },
+  {
+    "text" : "It has not moved since.",
+    "frame" : 546,
+    "timestamp" : "00:22.70",
+    "seconds" : 22.71
+  },
+  {
+    "text" : "It has not moved since.",
+    "frame" : 547,
+    "timestamp" : "00:22.75",
+    "seconds" : 22.75
+  },
+  {
+    "text" : "It has not moved since.",
+    "frame" : 548,
+    "timestamp" : "00:22.79",
+    "seconds" : 22.79
+  },
+  {
+    "text" : "It has not moved since.",
+    "frame" : 549,
+    "timestamp" : "00:22.83",
+    "seconds" : 22.83
+  },
+  {
+    "text" : "It' has not moved since.",
+    "frame" : 550,
+    "timestamp" : "00:22.87",
+    "seconds" : 22.88
+  },
+  {
+    "text" : "It has not moved since.",
+    "frame" : 551,
+    "timestamp" : "00:22.91",
+    "seconds" : 22.92
+  },
+  {
+    "text" : "It has not moved since.",
+    "frame" : 552,
+    "timestamp" : "00:22.95",
+    "seconds" : 22.96
+  },
+  {
+    "text" : "It has not moved since.",
+    "frame" : 553,
+    "timestamp" : "00:23.00",
+    "seconds" : 23
+  },
+  {
+    "text" : "It has not moved since.",
+    "frame" : 554,
+    "timestamp" : "00:23.04",
+    "seconds" : 23.04
+  },
+  {
+    "text" : "It has not moved since.",
+    "frame" : 555,
+    "timestamp" : "00:23.08",
+    "seconds" : 23.08
+  },
+  {
+    "text" : "It has not moved since.",
+    "frame" : 556,
+    "timestamp" : "00:23.12",
+    "seconds" : 23.13
+  },
+  {
+    "text" : "It has not moved since.",
+    "frame" : 557,
+    "timestamp" : "00:23.16",
+    "seconds" : 23.17
+  },
+  {
+    "text" : "it has not moved since.",
+    "frame" : 558,
+    "timestamp" : "00:23.20",
+    "seconds" : 23.21
+  },
+  {
+    "text" : "\/it-has not moved since.",
+    "frame" : 559,
+    "timestamp" : "00:23.25",
+    "seconds" : 23.25
+  },
+  {
+    "text" : "it.has not moved since.",
+    "frame" : 560,
+    "timestamp" : "00:23.29",
+    "seconds" : 23.29
+  },
+  {
+    "text" : "it has not moved since.",
+    "frame" : 561,
+    "timestamp" : "00:23.33",
+    "seconds" : 23.33
+  },
+  {
+    "text" : "(It-has not moved since.",
+    "frame" : 562,
+    "timestamp" : "00:23.37",
+    "seconds" : 23.38
+  },
+  {
+    "text" : "(It has not moved since.",
+    "frame" : 563,
+    "timestamp" : "00:23.41",
+    "seconds" : 23.42
+  },
+  {
+    "text" : "It has not moved since.",
+    "frame" : 564,
+    "timestamp" : "00:23.45",
+    "seconds" : 23.46
+  },
+  {
+    "text" : "It has not moved since.",
+    "frame" : 565,
+    "timestamp" : "00:23.50",
+    "seconds" : 23.5
+  },
+  {
+    "text" : "It has not moved since.",
+    "frame" : 566,
+    "timestamp" : "00:23.54",
+    "seconds" : 23.54
+  },
+  {
+    "text" : "It has not moved since.",
+    "frame" : 567,
+    "timestamp" : "00:23.58",
+    "seconds" : 23.58
+  },
+  {
+    "text" : "It has not moved since.",
+    "frame" : 568,
+    "timestamp" : "00:23.62",
+    "seconds" : 23.63
+  },
+  {
+    "text" : "It-has not moved since.",
+    "frame" : 569,
+    "timestamp" : "00:23.66",
+    "seconds" : 23.67
+  },
+  {
+    "text" : "It-has not moved since.",
+    "frame" : 570,
+    "timestamp" : "00:23.70",
+    "seconds" : 23.71
+  },
+  {
+    "text" : "It-has not moved since.",
+    "frame" : 571,
+    "timestamp" : "00:23.75",
+    "seconds" : 23.75
+  },
+  {
+    "frame" : 572,
+    "text" : "It has not moved since.",
+    "seconds" : 23.79,
+    "timestamp" : "00:23.79"
+  },
+  {
+    "frame" : 573,
+    "text" : "It has not moved since.",
+    "seconds" : 23.83,
+    "timestamp" : "00:23.83"
+  },
+  {
+    "frame" : 574,
+    "text" : "It has not moved since.",
+    "seconds" : 23.88,
+    "timestamp" : "00:23.87"
+  },
+  {
+    "frame" : 575,
+    "text" : "It has not moved since.",
+    "seconds" : 23.92,
+    "timestamp" : "00:23.91"
+  },
+  {
+    "frame" : 576,
+    "text" : "It has not moved since.",
+    "seconds" : 23.96,
+    "timestamp" : "00:23.95"
+  },
+  {
+    "frame" : 577,
+    "text" : "It has not moved since.",
+    "seconds" : 24,
+    "timestamp" : "00:24.00"
+  },
+  {
+    "frame" : 578,
+    "text" : "It has not moved since.",
+    "seconds" : 24.04,
+    "timestamp" : "00:24.04"
+  },
+  {
+    "frame" : 579,
+    "text" : "It has not moved since.",
+    "seconds" : 24.08,
+    "timestamp" : "00:24.08"
+  },
+  {
+    "frame" : 580,
+    "text" : "It has not moved since.",
+    "seconds" : 24.13,
+    "timestamp" : "00:24.12"
+  },
+  {
+    "frame" : 581,
+    "text" : "It has not moved since.",
+    "seconds" : 24.17,
+    "timestamp" : "00:24.16"
+  },
+  {
+    "frame" : 582,
+    "text" : "It has not moved since.",
+    "seconds" : 24.21,
+    "timestamp" : "00:24.20"
+  },
+  {
+    "frame" : 583,
+    "text" : "It has not moved since.",
+    "seconds" : 24.25,
+    "timestamp" : "00:24.25"
+  },
+  {
+    "frame" : 584,
+    "text" : "It has not moved since.",
+    "seconds" : 24.29,
+    "timestamp" : "00:24.29"
+  },
+  {
+    "frame" : 585,
+    "text" : "It has not moved since.",
+    "seconds" : 24.33,
+    "timestamp" : "00:24.33"
+  },
+  {
+    "frame" : 586,
+    "text" : "It has not moved since.",
+    "seconds" : 24.38,
+    "timestamp" : "00:24.37"
+  },
+  {
+    "frame" : 587,
+    "text" : "It has not moved since.",
+    "seconds" : 24.42,
+    "timestamp" : "00:24.41"
+  },
+  {
+    "frame" : 588,
+    "text" : "It has not moved since.",
+    "seconds" : 24.46,
+    "timestamp" : "00:24.45"
+  },
+  {
+    "frame" : 589,
+    "text" : "It has not moved since.",
+    "seconds" : 24.5,
+    "timestamp" : "00:24.50"
+  },
+  {
+    "frame" : 590,
+    "text" : "It has not moved since.",
+    "seconds" : 24.54,
+    "timestamp" : "00:24.54"
+  },
+  {
+    "frame" : 591,
+    "text" : "It has not moved since.",
+    "seconds" : 24.58,
+    "timestamp" : "00:24.58"
+  },
+  {
+    "frame" : 592,
+    "text" : "It has not moved since.",
+    "seconds" : 24.63,
+    "timestamp" : "00:24.62"
+  },
+  {
+    "frame" : 593,
+    "text" : "It has not moved since.",
+    "seconds" : 24.67,
+    "timestamp" : "00:24.66"
+  },
+  {
+    "frame" : 594,
+    "text" : "It has not moved since.",
+    "seconds" : 24.71,
+    "timestamp" : "00:24.70"
+  },
+  {
+    "frame" : 595,
+    "text" : "It has not moved since.",
+    "seconds" : 24.75,
+    "timestamp" : "00:24.75"
+  },
+  {
+    "frame" : 596,
+    "text" : "It has not moved since.",
+    "seconds" : 24.79,
+    "timestamp" : "00:24.79"
+  },
+  {
+    "frame" : 597,
+    "text" : "It has not moved since.",
+    "seconds" : 24.83,
+    "timestamp" : "00:24.83"
+  },
+  {
+    "frame" : 598,
+    "text" : "It has not moved since.",
+    "seconds" : 24.88,
+    "timestamp" : "00:24.87"
+  },
+  {
+    "frame" : 599,
+    "text" : "It has not moved since.",
+    "seconds" : 24.92,
+    "timestamp" : "00:24.91"
+  },
+  {
+    "frame" : 600,
+    "text" : "It has not moved since.",
+    "seconds" : 24.96,
+    "timestamp" : "00:24.95"
+  },
+  {
+    "frame" : 601,
+    "text" : "It has not moved since.",
+    "seconds" : 25,
+    "timestamp" : "00:25.00"
+  },
+  {
+    "frame" : 602,
+    "text" : "It has not moved since.",
+    "seconds" : 25.04,
+    "timestamp" : "00:25.04"
+  },
+  {
+    "frame" : 603,
+    "text" : "It has not moved since.",
+    "seconds" : 25.08,
+    "timestamp" : "00:25.08"
+  },
+  {
+    "frame" : 604,
+    "text" : "It has not moved since.",
+    "seconds" : 25.13,
+    "timestamp" : "00:25.12"
+  },
+  {
+    "frame" : 605,
+    "text" : "It has not moved since.",
+    "seconds" : 25.17,
+    "timestamp" : "00:25.16"
+  },
+  {
+    "frame" : 606,
+    "text" : "It has not moved since.",
+    "seconds" : 25.21,
+    "timestamp" : "00:25.20"
+  },
+  {
+    "frame" : 607,
+    "text" : "It has not moved since.",
+    "seconds" : 25.25,
+    "timestamp" : "00:25.25"
+  },
+  {
+    "seconds" : 25.29,
+    "frame" : 608,
+    "timestamp" : "00:25.29",
+    "text" : "It has not moved since."
+  },
+  {
+    "seconds" : 25.33,
+    "frame" : 609,
+    "timestamp" : "00:25.33",
+    "text" : "It has not moved since."
+  },
+  {
+    "seconds" : 25.38,
+    "frame" : 610,
+    "timestamp" : "00:25.37",
+    "text" : "It has not moved since."
+  },
+  {
+    "seconds" : 25.42,
+    "frame" : 611,
+    "timestamp" : "00:25.41",
+    "text" : "It has not moved since."
+  },
+  {
+    "seconds" : 25.46,
+    "frame" : 612,
+    "timestamp" : "00:25.45",
+    "text" : "It has not moved since."
+  },
+  {
+    "seconds" : 25.5,
+    "frame" : 613,
+    "timestamp" : "00:25.50",
+    "text" : "It has not moved since."
+  },
+  {
+    "seconds" : 25.54,
+    "frame" : 614,
+    "timestamp" : "00:25.54",
+    "text" : "It has not moved since."
+  },
+  {
+    "seconds" : 25.58,
+    "frame" : 615,
+    "timestamp" : "00:25.58",
+    "text" : "It has not moved since."
+  },
+  {
+    "seconds" : 25.63,
+    "frame" : 616,
+    "timestamp" : "00:25.62",
+    "text" : ""
+  },
+  {
+    "seconds" : 25.67,
+    "frame" : 617,
+    "timestamp" : "00:25.66",
+    "text" : ""
+  },
+  {
+    "seconds" : 25.71,
+    "frame" : 618,
+    "timestamp" : "00:25.70",
+    "text" : ""
+  },
+  {
+    "seconds" : 25.75,
+    "frame" : 619,
+    "timestamp" : "00:25.75",
+    "text" : ""
+  },
+  {
+    "seconds" : 25.79,
+    "frame" : 620,
+    "timestamp" : "00:25.79",
+    "text" : ""
+  },
+  {
+    "seconds" : 25.83,
+    "frame" : 621,
+    "timestamp" : "00:25.83",
+    "text" : ""
+  },
+  {
+    "seconds" : 25.88,
+    "frame" : 622,
+    "timestamp" : "00:25.87",
+    "text" : ""
+  },
+  {
+    "seconds" : 25.92,
+    "frame" : 623,
+    "timestamp" : "00:25.91",
+    "text" : ""
+  },
+  {
+    "seconds" : 25.96,
+    "frame" : 624,
+    "timestamp" : "00:25.95",
+    "text" : ""
+  },
+  {
+    "seconds" : 26,
+    "frame" : 625,
+    "timestamp" : "00:26.00",
+    "text" : ""
+  },
+  {
+    "seconds" : 26.04,
+    "frame" : 626,
+    "timestamp" : "00:26.04",
+    "text" : ""
+  },
+  {
+    "seconds" : 26.08,
+    "frame" : 627,
+    "timestamp" : "00:26.08",
+    "text" : ""
+  },
+  {
+    "seconds" : 26.13,
+    "frame" : 628,
+    "timestamp" : "00:26.12",
+    "text" : ""
+  },
+  {
+    "seconds" : 26.17,
+    "frame" : 629,
+    "timestamp" : "00:26.16",
+    "text" : ""
+  },
+  {
+    "seconds" : 26.21,
+    "frame" : 630,
+    "timestamp" : "00:26.20",
+    "text" : ""
+  },
+  {
+    "seconds" : 26.25,
+    "frame" : 631,
+    "timestamp" : "00:26.25",
+    "text" : ""
+  },
+  {
+    "seconds" : 26.29,
+    "frame" : 632,
+    "timestamp" : "00:26.29",
+    "text" : ""
+  },
+  {
+    "seconds" : 26.33,
+    "frame" : 633,
+    "timestamp" : "00:26.33",
+    "text" : ""
+  },
+  {
+    "seconds" : 26.38,
+    "frame" : 634,
+    "timestamp" : "00:26.37",
+    "text" : ""
+  },
+  {
+    "seconds" : 26.42,
+    "frame" : 635,
+    "timestamp" : "00:26.41",
+    "text" : "Mars is different."
+  },
+  {
+    "seconds" : 26.46,
+    "frame" : 636,
+    "timestamp" : "00:26.45",
+    "text" : "Mars is different."
+  },
+  {
+    "seconds" : 26.5,
+    "frame" : 637,
+    "timestamp" : "00:26.50",
+    "text" : "Mars is different."
+  },
+  {
+    "seconds" : 26.54,
+    "frame" : 638,
+    "timestamp" : "00:26.54",
+    "text" : "Mars is different."
+  },
+  {
+    "seconds" : 26.58,
+    "frame" : 639,
+    "timestamp" : "00:26.58",
+    "text" : "Mars is different."
+  },
+  {
+    "seconds" : 26.63,
+    "frame" : 640,
+    "timestamp" : "00:26.62",
+    "text" : "Mars is different."
+  },
+  {
+    "seconds" : 26.67,
+    "frame" : 641,
+    "timestamp" : "00:26.66",
+    "text" : "Mars is different."
+  },
+  {
+    "seconds" : 26.71,
+    "frame" : 642,
+    "timestamp" : "00:26.70",
+    "text" : "Mars is different."
+  },
+  {
+    "seconds" : 26.75,
+    "frame" : 643,
+    "timestamp" : "00:26.75",
+    "text" : "Mars is different."
+  },
+  {
+    "text" : "Mars is different.",
+    "frame" : 644,
+    "seconds" : 26.79,
+    "timestamp" : "00:26.79"
+  },
+  {
+    "text" : "Mars is different.",
+    "frame" : 645,
+    "seconds" : 26.83,
+    "timestamp" : "00:26.83"
+  },
+  {
+    "text" : "Mars is different.",
+    "frame" : 646,
+    "seconds" : 26.88,
+    "timestamp" : "00:26.87"
+  },
+  {
+    "text" : "Mars is different.",
+    "frame" : 647,
+    "seconds" : 26.92,
+    "timestamp" : "00:26.91"
+  },
+  {
+    "text" : "Mars is different.",
+    "frame" : 648,
+    "seconds" : 26.96,
+    "timestamp" : "00:26.95"
+  },
+  {
+    "text" : "Mars is different.",
+    "frame" : 649,
+    "seconds" : 27,
+    "timestamp" : "00:27.00"
+  },
+  {
+    "text" : "Mars is different.",
+    "frame" : 650,
+    "seconds" : 27.04,
+    "timestamp" : "00:27.04"
+  },
+  {
+    "text" : "Mars is different.",
+    "frame" : 651,
+    "seconds" : 27.08,
+    "timestamp" : "00:27.08"
+  },
+  {
+    "text" : "Mars is different.",
+    "frame" : 652,
+    "seconds" : 27.13,
+    "timestamp" : "00:27.12"
+  },
+  {
+    "text" : "Mars is different.",
+    "frame" : 653,
+    "seconds" : 27.17,
+    "timestamp" : "00:27.16"
+  },
+  {
+    "text" : "Mars is different.",
+    "frame" : 654,
+    "seconds" : 27.21,
+    "timestamp" : "00:27.20"
+  },
+  {
+    "text" : "Mars is different.",
+    "frame" : 655,
+    "seconds" : 27.25,
+    "timestamp" : "00:27.25"
+  },
+  {
+    "text" : "Mars is different.",
+    "frame" : 656,
+    "seconds" : 27.29,
+    "timestamp" : "00:27.29"
+  },
+  {
+    "text" : "Mars is different.",
+    "frame" : 657,
+    "seconds" : 27.33,
+    "timestamp" : "00:27.33"
+  },
+  {
+    "text" : "Mars is different.",
+    "frame" : 658,
+    "seconds" : 27.38,
+    "timestamp" : "00:27.37"
+  },
+  {
+    "text" : "Mars is different.",
+    "frame" : 659,
+    "seconds" : 27.42,
+    "timestamp" : "00:27.41"
+  },
+  {
+    "text" : "Mars is different.",
+    "frame" : 660,
+    "seconds" : 27.46,
+    "timestamp" : "00:27.45"
+  },
+  {
+    "text" : "Mars is different.",
+    "frame" : 661,
+    "seconds" : 27.5,
+    "timestamp" : "00:27.50"
+  },
+  {
+    "text" : "Mars is different.",
+    "frame" : 662,
+    "seconds" : 27.54,
+    "timestamp" : "00:27.54"
+  },
+  {
+    "text" : "Mars is different.",
+    "frame" : 663,
+    "seconds" : 27.58,
+    "timestamp" : "00:27.58"
+  },
+  {
+    "text" : "Mars is different.",
+    "frame" : 664,
+    "seconds" : 27.63,
+    "timestamp" : "00:27.62"
+  },
+  {
+    "text" : "Mars is different.",
+    "frame" : 665,
+    "seconds" : 27.67,
+    "timestamp" : "00:27.66"
+  },
+  {
+    "text" : "Mars is different.",
+    "frame" : 666,
+    "seconds" : 27.71,
+    "timestamp" : "00:27.70"
+  },
+  {
+    "text" : "Mars is different.",
+    "frame" : 667,
+    "seconds" : 27.75,
+    "timestamp" : "00:27.75"
+  },
+  {
+    "text" : "Mars is different.",
+    "frame" : 668,
+    "seconds" : 27.79,
+    "timestamp" : "00:27.79"
+  },
+  {
+    "text" : "Mars is different.",
+    "frame" : 669,
+    "seconds" : 27.83,
+    "timestamp" : "00:27.83"
+  },
+  {
+    "text" : "Mars is different.",
+    "frame" : 670,
+    "seconds" : 27.88,
+    "timestamp" : "00:27.87"
+  },
+  {
+    "text" : "Mars is different.",
+    "frame" : 671,
+    "seconds" : 27.92,
+    "timestamp" : "00:27.91"
+  },
+  {
+    "text" : "Mars is different.",
+    "frame" : 672,
+    "seconds" : 27.96,
+    "timestamp" : "00:27.95"
+  },
+  {
+    "text" : "Mars is different.",
+    "frame" : 673,
+    "seconds" : 28,
+    "timestamp" : "00:28.00"
+  },
+  {
+    "text" : "Mars is different.",
+    "frame" : 674,
+    "seconds" : 28.04,
+    "timestamp" : "00:28.04"
+  },
+  {
+    "text" : "Mars is different.",
+    "frame" : 675,
+    "seconds" : 28.08,
+    "timestamp" : "00:28.08"
+  },
+  {
+    "text" : "Mars is different.",
+    "frame" : 676,
+    "seconds" : 28.13,
+    "timestamp" : "00:28.12"
+  },
+  {
+    "text" : "Mars is different.",
+    "frame" : 677,
+    "seconds" : 28.17,
+    "timestamp" : "00:28.16"
+  },
+  {
+    "text" : "Mars is different.",
+    "frame" : 678,
+    "seconds" : 28.21,
+    "timestamp" : "00:28.20"
+  },
+  {
+    "text" : "Mars is different.",
+    "frame" : 679,
+    "seconds" : 28.25,
+    "timestamp" : "00:28.25"
+  },
+  {
+    "timestamp" : "00:28.29",
+    "seconds" : 28.29,
+    "text" : "Mars is different.",
+    "frame" : 680
+  },
+  {
+    "timestamp" : "00:28.33",
+    "seconds" : 28.33,
+    "text" : "Mars is different.",
+    "frame" : 681
+  },
+  {
+    "timestamp" : "00:28.37",
+    "seconds" : 28.38,
+    "text" : "Mars is different.",
+    "frame" : 682
+  },
+  {
+    "timestamp" : "00:28.41",
+    "seconds" : 28.42,
+    "text" : "Mars is different.",
+    "frame" : 683
+  },
+  {
+    "timestamp" : "00:28.45",
+    "seconds" : 28.46,
+    "text" : "Mars is different.",
+    "frame" : 684
+  },
+  {
+    "timestamp" : "00:28.50",
+    "seconds" : 28.5,
+    "text" : "Mars is different.",
+    "frame" : 685
+  },
+  {
+    "timestamp" : "00:28.54",
+    "seconds" : 28.54,
+    "text" : "Mars is different.",
+    "frame" : 686
+  },
+  {
+    "timestamp" : "00:28.58",
+    "seconds" : 28.58,
+    "text" : "Mars is different.",
+    "frame" : 687
+  },
+  {
+    "timestamp" : "00:28.62",
+    "seconds" : 28.63,
+    "text" : "Mars is different.",
+    "frame" : 688
+  },
+  {
+    "timestamp" : "00:28.66",
+    "seconds" : 28.67,
+    "text" : "Mars is different.",
+    "frame" : 689
+  },
+  {
+    "timestamp" : "00:28.70",
+    "seconds" : 28.71,
+    "text" : "Mars is different.",
+    "frame" : 690
+  },
+  {
+    "timestamp" : "00:28.75",
+    "seconds" : 28.75,
+    "text" : "Mars is different.",
+    "frame" : 691
+  },
+  {
+    "timestamp" : "00:28.79",
+    "seconds" : 28.79,
+    "text" : "Mars is different.",
+    "frame" : 692
+  },
+  {
+    "timestamp" : "00:28.83",
+    "seconds" : 28.83,
+    "text" : "Mars is different.",
+    "frame" : 693
+  },
+  {
+    "timestamp" : "00:28.87",
+    "seconds" : 28.88,
+    "text" : "Mars is different.",
+    "frame" : 694
+  },
+  {
+    "timestamp" : "00:28.91",
+    "seconds" : 28.92,
+    "text" : "",
+    "frame" : 695
+  },
+  {
+    "timestamp" : "00:28.95",
+    "seconds" : 28.96,
+    "text" : "",
+    "frame" : 696
+  },
+  {
+    "timestamp" : "00:29.00",
+    "seconds" : 29,
+    "text" : "",
+    "frame" : 697
+  },
+  {
+    "timestamp" : "00:29.04",
+    "seconds" : 29.04,
+    "text" : "",
+    "frame" : 698
+  },
+  {
+    "timestamp" : "00:29.08",
+    "seconds" : 29.08,
+    "text" : "",
+    "frame" : 699
+  },
+  {
+    "timestamp" : "00:29.12",
+    "seconds" : 29.13,
+    "text" : "",
+    "frame" : 700
+  },
+  {
+    "timestamp" : "00:29.16",
+    "seconds" : 29.17,
+    "text" : "",
+    "frame" : 701
+  },
+  {
+    "timestamp" : "00:29.20",
+    "seconds" : 29.21,
+    "text" : "Mars has weather.",
+    "frame" : 702
+  },
+  {
+    "timestamp" : "00:29.25",
+    "seconds" : 29.25,
+    "text" : "Mars has weather.",
+    "frame" : 703
+  },
+  {
+    "timestamp" : "00:29.29",
+    "seconds" : 29.29,
+    "text" : "Mars has weather.",
+    "frame" : 704
+  },
+  {
+    "timestamp" : "00:29.33",
+    "seconds" : 29.33,
+    "text" : "Mars has weather.",
+    "frame" : 705
+  },
+  {
+    "timestamp" : "00:29.37",
+    "seconds" : 29.38,
+    "text" : "Mars has weather.",
+    "frame" : 706
+  },
+  {
+    "timestamp" : "00:29.41",
+    "seconds" : 29.42,
+    "text" : "Mars has weather.",
+    "frame" : 707
+  },
+  {
+    "timestamp" : "00:29.45",
+    "seconds" : 29.46,
+    "text" : "Mars has weather.",
+    "frame" : 708
+  },
+  {
+    "timestamp" : "00:29.50",
+    "seconds" : 29.5,
+    "text" : "Mars has weather.",
+    "frame" : 709
+  },
+  {
+    "timestamp" : "00:29.54",
+    "seconds" : 29.54,
+    "text" : "Mars has weather.",
+    "frame" : 710
+  },
+  {
+    "timestamp" : "00:29.58",
+    "seconds" : 29.58,
+    "text" : "Mars has weather.",
+    "frame" : 711
+  },
+  {
+    "timestamp" : "00:29.62",
+    "seconds" : 29.63,
+    "text" : "Mars has weather.",
+    "frame" : 712
+  },
+  {
+    "timestamp" : "00:29.66",
+    "seconds" : 29.67,
+    "text" : "Mars has weather.",
+    "frame" : 713
+  },
+  {
+    "timestamp" : "00:29.70",
+    "seconds" : 29.71,
+    "text" : "Mars has weather.",
+    "frame" : 714
+  },
+  {
+    "timestamp" : "00:29.75",
+    "seconds" : 29.75,
+    "text" : "Mars has weather.",
+    "frame" : 715
+  },
+  {
+    "timestamp" : "00:29.79",
+    "seconds" : 29.79,
+    "frame" : 716,
+    "text" : "Mars has weather."
+  },
+  {
+    "timestamp" : "00:29.83",
+    "seconds" : 29.83,
+    "frame" : 717,
+    "text" : "Mars has weather."
+  },
+  {
+    "timestamp" : "00:29.87",
+    "seconds" : 29.88,
+    "frame" : 718,
+    "text" : "Mars has weather."
+  },
+  {
+    "timestamp" : "00:29.91",
+    "seconds" : 29.92,
+    "frame" : 719,
+    "text" : "Mars has weather."
+  },
+  {
+    "timestamp" : "00:29.95",
+    "seconds" : 29.96,
+    "frame" : 720,
+    "text" : "Mars has weather."
+  },
+  {
+    "timestamp" : "00:30.00",
+    "seconds" : 30,
+    "frame" : 721,
+    "text" : "Mars has weather."
+  },
+  {
+    "timestamp" : "00:30.04",
+    "seconds" : 30.04,
+    "frame" : 722,
+    "text" : "Mars has weather."
+  },
+  {
+    "timestamp" : "00:30.08",
+    "seconds" : 30.08,
+    "frame" : 723,
+    "text" : "Mars has weather."
+  },
+  {
+    "timestamp" : "00:30.12",
+    "seconds" : 30.13,
+    "frame" : 724,
+    "text" : "Mars has weather."
+  },
+  {
+    "timestamp" : "00:30.16",
+    "seconds" : 30.17,
+    "frame" : 725,
+    "text" : "Mars has weather."
+  },
+  {
+    "timestamp" : "00:30.20",
+    "seconds" : 30.21,
+    "frame" : 726,
+    "text" : "Mars has weather."
+  },
+  {
+    "timestamp" : "00:30.25",
+    "seconds" : 30.25,
+    "frame" : 727,
+    "text" : "Mars has weather."
+  },
+  {
+    "timestamp" : "00:30.29",
+    "seconds" : 30.29,
+    "frame" : 728,
+    "text" : "Mars has weather."
+  },
+  {
+    "timestamp" : "00:30.33",
+    "seconds" : 30.33,
+    "frame" : 729,
+    "text" : "Mars has weather."
+  },
+  {
+    "timestamp" : "00:30.37",
+    "seconds" : 30.38,
+    "frame" : 730,
+    "text" : "Mars has weather."
+  },
+  {
+    "timestamp" : "00:30.41",
+    "seconds" : 30.42,
+    "frame" : 731,
+    "text" : "Mars has weather."
+  },
+  {
+    "timestamp" : "00:30.45",
+    "seconds" : 30.46,
+    "frame" : 732,
+    "text" : "Mars has weather."
+  },
+  {
+    "timestamp" : "00:30.50",
+    "seconds" : 30.5,
+    "frame" : 733,
+    "text" : "Mars has weather."
+  },
+  {
+    "timestamp" : "00:30.54",
+    "seconds" : 30.54,
+    "frame" : 734,
+    "text" : "Mars has weather."
+  },
+  {
+    "timestamp" : "00:30.58",
+    "seconds" : 30.58,
+    "frame" : 735,
+    "text" : "Mars has weather."
+  },
+  {
+    "timestamp" : "00:30.62",
+    "seconds" : 30.63,
+    "frame" : 736,
+    "text" : "Mars has weather."
+  },
+  {
+    "timestamp" : "00:30.66",
+    "seconds" : 30.67,
+    "frame" : 737,
+    "text" : "Mars has weather."
+  },
+  {
+    "timestamp" : "00:30.70",
+    "seconds" : 30.71,
+    "frame" : 738,
+    "text" : "Mars has weather."
+  },
+  {
+    "timestamp" : "00:30.75",
+    "seconds" : 30.75,
+    "frame" : 739,
+    "text" : "Mars has weather."
+  },
+  {
+    "timestamp" : "00:30.79",
+    "seconds" : 30.79,
+    "frame" : 740,
+    "text" : "Mars has weather."
+  },
+  {
+    "timestamp" : "00:30.83",
+    "seconds" : 30.83,
+    "frame" : 741,
+    "text" : "Mars has weather."
+  },
+  {
+    "timestamp" : "00:30.87",
+    "seconds" : 30.88,
+    "frame" : 742,
+    "text" : "Mars has weather."
+  },
+  {
+    "timestamp" : "00:30.91",
+    "seconds" : 30.92,
+    "frame" : 743,
+    "text" : "Mars has weather."
+  },
+  {
+    "timestamp" : "00:30.95",
+    "seconds" : 30.96,
+    "frame" : 744,
+    "text" : "Mars has weather."
+  },
+  {
+    "timestamp" : "00:31.00",
+    "seconds" : 31,
+    "frame" : 745,
+    "text" : "Mars has weather."
+  },
+  {
+    "timestamp" : "00:31.04",
+    "seconds" : 31.04,
+    "frame" : 746,
+    "text" : "Mars has weather."
+  },
+  {
+    "timestamp" : "00:31.08",
+    "seconds" : 31.08,
+    "frame" : 747,
+    "text" : "Mars has weather."
+  },
+  {
+    "timestamp" : "00:31.12",
+    "seconds" : 31.13,
+    "frame" : 748,
+    "text" : "Mars has weather."
+  },
+  {
+    "timestamp" : "00:31.16",
+    "seconds" : 31.17,
+    "frame" : 749,
+    "text" : "Mars has weather."
+  },
+  {
+    "timestamp" : "00:31.20",
+    "seconds" : 31.21,
+    "frame" : 750,
+    "text" : "Mars has weather."
+  },
+  {
+    "timestamp" : "00:31.25",
+    "seconds" : 31.25,
+    "frame" : 751,
+    "text" : "Mars has weather."
+  },
+  {
+    "timestamp" : "00:31.29",
+    "text" : "Mars has weather.",
+    "seconds" : 31.29,
+    "frame" : 752
+  },
+  {
+    "timestamp" : "00:31.33",
+    "text" : "Mars has weather.",
+    "seconds" : 31.33,
+    "frame" : 753
+  },
+  {
+    "timestamp" : "00:31.37",
+    "text" : "Mars has weather.",
+    "seconds" : 31.38,
+    "frame" : 754
+  },
+  {
+    "timestamp" : "00:31.41",
+    "text" : "Mars has weather.",
+    "seconds" : 31.42,
+    "frame" : 755
+  },
+  {
+    "timestamp" : "00:31.45",
+    "text" : "Mars has weather.",
+    "seconds" : 31.46,
+    "frame" : 756
+  },
+  {
+    "timestamp" : "00:31.50",
+    "text" : "Mars has weather.",
+    "seconds" : 31.5,
+    "frame" : 757
+  },
+  {
+    "timestamp" : "00:31.54",
+    "text" : "Mars has weather.",
+    "seconds" : 31.54,
+    "frame" : 758
+  },
+  {
+    "timestamp" : "00:31.58",
+    "text" : "Mars has weather.",
+    "seconds" : 31.58,
+    "frame" : 759
+  },
+  {
+    "timestamp" : "00:31.62",
+    "text" : "Mars has weather.",
+    "seconds" : 31.63,
+    "frame" : 760
+  },
+  {
+    "timestamp" : "00:31.66",
+    "text" : "Mars has weather.",
+    "seconds" : 31.67,
+    "frame" : 761
+  },
+  {
+    "timestamp" : "00:31.70",
+    "text" : "",
+    "seconds" : 31.71,
+    "frame" : 762
+  },
+  {
+    "timestamp" : "00:31.75",
+    "text" : "",
+    "seconds" : 31.75,
+    "frame" : 763
+  },
+  {
+    "timestamp" : "00:31.79",
+    "text" : "",
+    "seconds" : 31.79,
+    "frame" : 764
+  },
+  {
+    "timestamp" : "00:31.83",
+    "text" : "",
+    "seconds" : 31.83,
+    "frame" : 765
+  },
+  {
+    "timestamp" : "00:31.87",
+    "text" : "",
+    "seconds" : 31.88,
+    "frame" : 766
+  },
+  {
+    "timestamp" : "00:31.91",
+    "text" : "",
+    "seconds" : 31.92,
+    "frame" : 767
+  },
+  {
+    "timestamp" : "00:31.95",
+    "text" : "",
+    "seconds" : 31.96,
+    "frame" : 768
+  },
+  {
+    "timestamp" : "00:32.00",
+    "text" : "",
+    "seconds" : 32,
+    "frame" : 769
+  },
+  {
+    "timestamp" : "00:32.04",
+    "text" : "",
+    "seconds" : 32.04,
+    "frame" : 770
+  },
+  {
+    "timestamp" : "00:32.08",
+    "text" : "",
+    "seconds" : 32.08,
+    "frame" : 771
+  },
+  {
+    "timestamp" : "00:32.12",
+    "text" : "A dust storm took",
+    "seconds" : 32.13,
+    "frame" : 772
+  },
+  {
+    "timestamp" : "00:32.16",
+    "text" : "A dust storm took",
+    "seconds" : 32.17,
+    "frame" : 773
+  },
+  {
+    "timestamp" : "00:32.20",
+    "text" : "A dust storm took",
+    "seconds" : 32.21,
+    "frame" : 774
+  },
+  {
+    "timestamp" : "00:32.25",
+    "text" : "A dust storm took",
+    "seconds" : 32.25,
+    "frame" : 775
+  },
+  {
+    "timestamp" : "00:32.29",
+    "text" : "A dust storm took",
+    "seconds" : 32.29,
+    "frame" : 776
+  },
+  {
+    "timestamp" : "00:32.33",
+    "text" : "A dust storm took",
+    "seconds" : 32.33,
+    "frame" : 777
+  },
+  {
+    "timestamp" : "00:32.37",
+    "text" : "A dust storm took",
+    "seconds" : 32.38,
+    "frame" : 778
+  },
+  {
+    "timestamp" : "00:32.41",
+    "text" : "A dust storm took",
+    "seconds" : 32.42,
+    "frame" : 779
+  },
+  {
+    "timestamp" : "00:32.45",
+    "text" : "A dust storm took",
+    "seconds" : 32.46,
+    "frame" : 780
+  },
+  {
+    "timestamp" : "00:32.50",
+    "text" : "A dust storm took",
+    "seconds" : 32.5,
+    "frame" : 781
+  },
+  {
+    "timestamp" : "00:32.54",
+    "text" : "A dust storm took",
+    "seconds" : 32.54,
+    "frame" : 782
+  },
+  {
+    "timestamp" : "00:32.58",
+    "text" : "A dust storm took",
+    "seconds" : 32.58,
+    "frame" : 783
+  },
+  {
+    "timestamp" : "00:32.62",
+    "text" : "A dust storm took",
+    "seconds" : 32.63,
+    "frame" : 784
+  },
+  {
+    "timestamp" : "00:32.66",
+    "text" : "A dust storm took",
+    "seconds" : 32.67,
+    "frame" : 785
+  },
+  {
+    "timestamp" : "00:32.70",
+    "text" : "A dust storm took",
+    "seconds" : 32.71,
+    "frame" : 786
+  },
+  {
+    "timestamp" : "00:32.75",
+    "text" : "A dust storm took",
+    "seconds" : 32.75,
+    "frame" : 787
+  },
+  {
+    "frame" : 788,
+    "seconds" : 32.79,
+    "timestamp" : "00:32.79",
+    "text" : "A dust storm took"
+  },
+  {
+    "frame" : 789,
+    "seconds" : 32.83,
+    "timestamp" : "00:32.83",
+    "text" : "A dust storm took"
+  },
+  {
+    "frame" : 790,
+    "seconds" : 32.88,
+    "timestamp" : "00:32.87",
+    "text" : "A dust storm took"
+  },
+  {
+    "frame" : 791,
+    "seconds" : 32.92,
+    "timestamp" : "00:32.91",
+    "text" : "A dust storm took"
+  },
+  {
+    "frame" : 792,
+    "seconds" : 32.96,
+    "timestamp" : "00:32.95",
+    "text" : "A dust storm took"
+  },
+  {
+    "frame" : 793,
+    "seconds" : 33,
+    "timestamp" : "00:33.00",
+    "text" : "A dust storm took"
+  },
+  {
+    "frame" : 794,
+    "seconds" : 33.04,
+    "timestamp" : "00:33.04",
+    "text" : "A dust storm took"
+  },
+  {
+    "frame" : 795,
+    "seconds" : 33.08,
+    "timestamp" : "00:33.08",
+    "text" : "A dust storm took"
+  },
+  {
+    "frame" : 796,
+    "seconds" : 33.13,
+    "timestamp" : "00:33.12",
+    "text" : "A dust storm took"
+  },
+  {
+    "frame" : 797,
+    "seconds" : 33.17,
+    "timestamp" : "00:33.16",
+    "text" : "A dust storm took"
+  },
+  {
+    "frame" : 798,
+    "seconds" : 33.21,
+    "timestamp" : "00:33.20",
+    "text" : "A dust storm took"
+  },
+  {
+    "frame" : 799,
+    "seconds" : 33.25,
+    "timestamp" : "00:33.25",
+    "text" : "A dust storm took"
+  },
+  {
+    "frame" : 800,
+    "seconds" : 33.29,
+    "timestamp" : "00:33.29",
+    "text" : "A dust storm took"
+  },
+  {
+    "frame" : 801,
+    "seconds" : 33.33,
+    "timestamp" : "00:33.33",
+    "text" : "A dust storm took"
+  },
+  {
+    "frame" : 802,
+    "seconds" : 33.38,
+    "timestamp" : "00:33.37",
+    "text" : "A dust storm took"
+  },
+  {
+    "frame" : 803,
+    "seconds" : 33.42,
+    "timestamp" : "00:33.41",
+    "text" : "A dust storm took"
+  },
+  {
+    "frame" : 804,
+    "seconds" : 33.46,
+    "timestamp" : "00:33.45",
+    "text" : "A dust storm took"
+  },
+  {
+    "frame" : 805,
+    "seconds" : 33.5,
+    "timestamp" : "00:33.50",
+    "text" : "A dust storm took"
+  },
+  {
+    "frame" : 806,
+    "seconds" : 33.54,
+    "timestamp" : "00:33.54",
+    "text" : "A dust storm took"
+  },
+  {
+    "frame" : 807,
+    "seconds" : 33.58,
+    "timestamp" : "00:33.58",
+    "text" : "A dust storm took"
+  },
+  {
+    "frame" : 808,
+    "seconds" : 33.63,
+    "timestamp" : "00:33.62",
+    "text" : "A dust storm took"
+  },
+  {
+    "frame" : 809,
+    "seconds" : 33.67,
+    "timestamp" : "00:33.66",
+    "text" : "A dust storm took"
+  },
+  {
+    "frame" : 810,
+    "seconds" : 33.71,
+    "timestamp" : "00:33.70",
+    "text" : "A dust storm took"
+  },
+  {
+    "frame" : 811,
+    "seconds" : 33.75,
+    "timestamp" : "00:33.75",
+    "text" : "A dust storm took"
+  },
+  {
+    "frame" : 812,
+    "seconds" : 33.79,
+    "timestamp" : "00:33.79",
+    "text" : "A dust storm took"
+  },
+  {
+    "frame" : 813,
+    "seconds" : 33.83,
+    "timestamp" : "00:33.83",
+    "text" : "A dust storm took"
+  },
+  {
+    "frame" : 814,
+    "seconds" : 33.88,
+    "timestamp" : "00:33.87",
+    "text" : "A dust storm took"
+  },
+  {
+    "frame" : 815,
+    "seconds" : 33.92,
+    "timestamp" : "00:33.91",
+    "text" : "A dust storm took"
+  },
+  {
+    "frame" : 816,
+    "seconds" : 33.96,
+    "timestamp" : "00:33.95",
+    "text" : "A dust storm took"
+  },
+  {
+    "frame" : 817,
+    "seconds" : 34,
+    "timestamp" : "00:34.00",
+    "text" : "A dust storm took"
+  },
+  {
+    "frame" : 818,
+    "seconds" : 34.04,
+    "timestamp" : "00:34.04",
+    "text" : "A dust storm took"
+  },
+  {
+    "frame" : 819,
+    "seconds" : 34.08,
+    "timestamp" : "00:34.08",
+    "text" : "A dust storm took"
+  },
+  {
+    "frame" : 820,
+    "seconds" : 34.13,
+    "timestamp" : "00:34.12",
+    "text" : "A dust storm took"
+  },
+  {
+    "frame" : 821,
+    "seconds" : 34.17,
+    "timestamp" : "00:34.16",
+    "text" : "A dust storm took"
+  },
+  {
+    "frame" : 822,
+    "seconds" : 34.21,
+    "timestamp" : "00:34.20",
+    "text" : "A dust storm took"
+  },
+  {
+    "frame" : 823,
+    "seconds" : 34.25,
+    "timestamp" : "00:34.25",
+    "text" : "A dust storm took"
+  },
+  {
+    "frame" : 824,
+    "timestamp" : "00:34.29",
+    "seconds" : 34.29,
+    "text" : "A dust storm took"
+  },
+  {
+    "frame" : 825,
+    "timestamp" : "00:34.33",
+    "seconds" : 34.33,
+    "text" : "A dust storm took"
+  },
+  {
+    "frame" : 826,
+    "timestamp" : "00:34.37",
+    "seconds" : 34.38,
+    "text" : "A dust storm took"
+  },
+  {
+    "frame" : 827,
+    "timestamp" : "00:34.41",
+    "seconds" : 34.42,
+    "text" : "A dust storm took"
+  },
+  {
+    "frame" : 828,
+    "timestamp" : "00:34.45",
+    "seconds" : 34.46,
+    "text" : "A dust storm took"
+  },
+  {
+    "frame" : 829,
+    "timestamp" : "00:34.50",
+    "seconds" : 34.5,
+    "text" : "A dust storm took"
+  },
+  {
+    "frame" : 830,
+    "timestamp" : "00:34.54",
+    "seconds" : 34.54,
+    "text" : "A dust storm took"
+  },
+  {
+    "frame" : 831,
+    "timestamp" : "00:34.58",
+    "seconds" : 34.58,
+    "text" : "A dust storm took"
+  },
+  {
+    "frame" : 832,
+    "timestamp" : "00:34.62",
+    "seconds" : 34.63,
+    "text" : "A dust storm took"
+  },
+  {
+    "frame" : 833,
+    "timestamp" : "00:34.66",
+    "seconds" : 34.67,
+    "text" : "A dust storm took"
+  },
+  {
+    "frame" : 834,
+    "timestamp" : "00:34.70",
+    "seconds" : 34.71,
+    "text" : "A dust storm took"
+  },
+  {
+    "frame" : 835,
+    "timestamp" : "00:34.75",
+    "seconds" : 34.75,
+    "text" : "A dust storm took"
+  },
+  {
+    "frame" : 836,
+    "timestamp" : "00:34.79",
+    "seconds" : 34.79,
+    "text" : "A dust storm took"
+  },
+  {
+    "frame" : 837,
+    "timestamp" : "00:34.83",
+    "seconds" : 34.83,
+    "text" : "A dust storm took"
+  },
+  {
+    "frame" : 838,
+    "timestamp" : "00:34.87",
+    "seconds" : 34.88,
+    "text" : "A dust storm took"
+  },
+  {
+    "frame" : 839,
+    "timestamp" : "00:34.91",
+    "seconds" : 34.92,
+    "text" : "A dust storm took"
+  },
+  {
+    "frame" : 840,
+    "timestamp" : "00:34.95",
+    "seconds" : 34.96,
+    "text" : "A dust storm took"
+  },
+  {
+    "frame" : 841,
+    "timestamp" : "00:35.00",
+    "seconds" : 35,
+    "text" : "A dust storm took"
+  },
+  {
+    "frame" : 842,
+    "timestamp" : "00:35.04",
+    "seconds" : 35.04,
+    "text" : ""
+  },
+  {
+    "frame" : 843,
+    "timestamp" : "00:35.08",
+    "seconds" : 35.08,
+    "text" : ""
+  },
+  {
+    "frame" : 844,
+    "timestamp" : "00:35.12",
+    "seconds" : 35.13,
+    "text" : ""
+  },
+  {
+    "frame" : 845,
+    "timestamp" : "00:35.16",
+    "seconds" : 35.17,
+    "text" : ""
+  },
+  {
+    "frame" : 846,
+    "timestamp" : "00:35.20",
+    "seconds" : 35.21,
+    "text" : ""
+  },
+  {
+    "frame" : 847,
+    "timestamp" : "00:35.25",
+    "seconds" : 35.25,
+    "text" : ""
+  },
+  {
+    "frame" : 848,
+    "timestamp" : "00:35.29",
+    "seconds" : 35.29,
+    "text" : ""
+  },
+  {
+    "frame" : 849,
+    "timestamp" : "00:35.33",
+    "seconds" : 35.33,
+    "text" : "Opportunity in 2018."
+  },
+  {
+    "frame" : 850,
+    "timestamp" : "00:35.37",
+    "seconds" : 35.38,
+    "text" : "Opportunity in 2018."
+  },
+  {
+    "frame" : 851,
+    "timestamp" : "00:35.41",
+    "seconds" : 35.42,
+    "text" : "Opportunity in 2018."
+  },
+  {
+    "frame" : 852,
+    "timestamp" : "00:35.45",
+    "seconds" : 35.46,
+    "text" : "Opportunity in 2018."
+  },
+  {
+    "frame" : 853,
+    "timestamp" : "00:35.50",
+    "seconds" : 35.5,
+    "text" : "Opportunity in 2018."
+  },
+  {
+    "frame" : 854,
+    "timestamp" : "00:35.54",
+    "seconds" : 35.54,
+    "text" : "Opportunity in 2018."
+  },
+  {
+    "frame" : 855,
+    "timestamp" : "00:35.58",
+    "seconds" : 35.58,
+    "text" : "Opportunity in 2018."
+  },
+  {
+    "frame" : 856,
+    "timestamp" : "00:35.62",
+    "seconds" : 35.63,
+    "text" : "Opportunity in 2018."
+  },
+  {
+    "frame" : 857,
+    "timestamp" : "00:35.66",
+    "seconds" : 35.67,
+    "text" : "Opportunity in 2018."
+  },
+  {
+    "frame" : 858,
+    "timestamp" : "00:35.70",
+    "seconds" : 35.71,
+    "text" : "Opportunity in 2018."
+  },
+  {
+    "frame" : 859,
+    "timestamp" : "00:35.75",
+    "seconds" : 35.75,
+    "text" : "Opportunity in 2018."
+  },
+  {
+    "timestamp" : "00:35.79",
+    "frame" : 860,
+    "text" : "Opportunity in 2018.",
+    "seconds" : 35.79
+  },
+  {
+    "timestamp" : "00:35.83",
+    "frame" : 861,
+    "text" : "Opportunity in 2018.",
+    "seconds" : 35.83
+  },
+  {
+    "timestamp" : "00:35.87",
+    "frame" : 862,
+    "text" : "Opportunity in 2018.",
+    "seconds" : 35.88
+  },
+  {
+    "timestamp" : "00:35.91",
+    "frame" : 863,
+    "text" : "Opportunity in 2018.",
+    "seconds" : 35.92
+  },
+  {
+    "timestamp" : "00:35.95",
+    "frame" : 864,
+    "text" : "Opportunity in 2018.",
+    "seconds" : 35.96
+  },
+  {
+    "timestamp" : "00:36.00",
+    "frame" : 865,
+    "text" : "Opportunity in 2018.",
+    "seconds" : 36
+  },
+  {
+    "timestamp" : "00:36.04",
+    "frame" : 866,
+    "text" : "Opportunity in 2018.",
+    "seconds" : 36.04
+  },
+  {
+    "timestamp" : "00:36.08",
+    "frame" : 867,
+    "text" : "Opportunity in 2018.",
+    "seconds" : 36.08
+  },
+  {
+    "timestamp" : "00:36.12",
+    "frame" : 868,
+    "text" : "Opportunity in 2018.",
+    "seconds" : 36.13
+  },
+  {
+    "timestamp" : "00:36.16",
+    "frame" : 869,
+    "text" : "Opportunity in 2018.",
+    "seconds" : 36.17
+  },
+  {
+    "timestamp" : "00:36.20",
+    "frame" : 870,
+    "text" : "Opportunity in 2018.",
+    "seconds" : 36.21
+  },
+  {
+    "timestamp" : "00:36.25",
+    "frame" : 871,
+    "text" : "Opportunity in 2018.",
+    "seconds" : 36.25
+  },
+  {
+    "timestamp" : "00:36.29",
+    "frame" : 872,
+    "text" : "Opportunity in 2018.",
+    "seconds" : 36.29
+  },
+  {
+    "timestamp" : "00:36.33",
+    "frame" : 873,
+    "text" : "Opportunity in 2018.",
+    "seconds" : 36.33
+  },
+  {
+    "timestamp" : "00:36.37",
+    "frame" : 874,
+    "text" : "Opportunity in 2018.",
+    "seconds" : 36.38
+  },
+  {
+    "timestamp" : "00:36.41",
+    "frame" : 875,
+    "text" : "Opportunity in 2018.",
+    "seconds" : 36.42
+  },
+  {
+    "timestamp" : "00:36.45",
+    "frame" : 876,
+    "text" : "Opportunity in 2018.",
+    "seconds" : 36.46
+  },
+  {
+    "timestamp" : "00:36.50",
+    "frame" : 877,
+    "text" : "Opportunity in 2018.",
+    "seconds" : 36.5
+  },
+  {
+    "timestamp" : "00:36.54",
+    "frame" : 878,
+    "text" : "Opportunity in 2018.",
+    "seconds" : 36.54
+  },
+  {
+    "timestamp" : "00:36.58",
+    "frame" : 879,
+    "text" : "Opportunity in 2018.",
+    "seconds" : 36.58
+  },
+  {
+    "timestamp" : "00:36.62",
+    "frame" : 880,
+    "text" : "Opportunity in 2018.",
+    "seconds" : 36.63
+  },
+  {
+    "timestamp" : "00:36.66",
+    "frame" : 881,
+    "text" : "Opportunity in 2018.",
+    "seconds" : 36.67
+  },
+  {
+    "timestamp" : "00:36.70",
+    "frame" : 882,
+    "text" : "Opportunity in 2018.",
+    "seconds" : 36.71
+  },
+  {
+    "timestamp" : "00:36.75",
+    "frame" : 883,
+    "text" : "Opportunity in 2018.",
+    "seconds" : 36.75
+  },
+  {
+    "timestamp" : "00:36.79",
+    "frame" : 884,
+    "text" : "Opportunity in 2018.",
+    "seconds" : 36.79
+  },
+  {
+    "timestamp" : "00:36.83",
+    "frame" : 885,
+    "text" : "Opportunity in 2018.",
+    "seconds" : 36.83
+  },
+  {
+    "timestamp" : "00:36.87",
+    "frame" : 886,
+    "text" : "Opportunity in 2018.",
+    "seconds" : 36.88
+  },
+  {
+    "timestamp" : "00:36.91",
+    "frame" : 887,
+    "text" : "Opportunity in 2018.",
+    "seconds" : 36.92
+  },
+  {
+    "timestamp" : "00:36.95",
+    "frame" : 888,
+    "text" : "Opportunity in 2018.",
+    "seconds" : 36.96
+  },
+  {
+    "timestamp" : "00:37.00",
+    "frame" : 889,
+    "text" : "Opportunity in 2018.",
+    "seconds" : 37
+  },
+  {
+    "timestamp" : "00:37.04",
+    "frame" : 890,
+    "text" : "Opportunity in 2018.",
+    "seconds" : 37.04
+  },
+  {
+    "timestamp" : "00:37.08",
+    "frame" : 891,
+    "text" : "Opportunity in 2018.",
+    "seconds" : 37.08
+  },
+  {
+    "timestamp" : "00:37.12",
+    "frame" : 892,
+    "text" : "Opportunity in 2018.",
+    "seconds" : 37.13
+  },
+  {
+    "timestamp" : "00:37.16",
+    "frame" : 893,
+    "text" : "Opportunity in 2018.",
+    "seconds" : 37.17
+  },
+  {
+    "timestamp" : "00:37.20",
+    "frame" : 894,
+    "text" : "Opportunity in 2018.",
+    "seconds" : 37.21
+  },
+  {
+    "timestamp" : "00:37.25",
+    "frame" : 895,
+    "text" : "Opportunity in 2018.",
+    "seconds" : 37.25
+  },
+  {
+    "frame" : 896,
+    "timestamp" : "00:37.29",
+    "seconds" : 37.29,
+    "text" : "Opportunity in 2018."
+  },
+  {
+    "frame" : 897,
+    "timestamp" : "00:37.33",
+    "seconds" : 37.33,
+    "text" : "Opportunity in 2018."
+  },
+  {
+    "frame" : 898,
+    "timestamp" : "00:37.37",
+    "seconds" : 37.38,
+    "text" : "Opportunity in 2018."
+  },
+  {
+    "frame" : 899,
+    "timestamp" : "00:37.41",
+    "seconds" : 37.42,
+    "text" : "Opportunity in 2018."
+  },
+  {
+    "frame" : 900,
+    "timestamp" : "00:37.45",
+    "seconds" : 37.46,
+    "text" : "Opportunity in 2018."
+  },
+  {
+    "frame" : 901,
+    "timestamp" : "00:37.50",
+    "seconds" : 37.5,
+    "text" : "Opportunity in 2018."
+  },
+  {
+    "frame" : 902,
+    "timestamp" : "00:37.54",
+    "seconds" : 37.54,
+    "text" : "Opportunity in 2018."
+  },
+  {
+    "frame" : 903,
+    "timestamp" : "00:37.58",
+    "seconds" : 37.58,
+    "text" : "Opportunity in 2018."
+  },
+  {
+    "frame" : 904,
+    "timestamp" : "00:37.62",
+    "seconds" : 37.63,
+    "text" : "Opportunity in 2018."
+  },
+  {
+    "frame" : 905,
+    "timestamp" : "00:37.66",
+    "seconds" : 37.67,
+    "text" : "Opportunity in 2018."
+  },
+  {
+    "frame" : 906,
+    "timestamp" : "00:37.70",
+    "seconds" : 37.71,
+    "text" : ""
+  },
+  {
+    "frame" : 907,
+    "timestamp" : "00:37.75",
+    "seconds" : 37.75,
+    "text" : ""
+  },
+  {
+    "frame" : 908,
+    "timestamp" : "00:37.79",
+    "seconds" : 37.79,
+    "text" : ""
+  },
+  {
+    "frame" : 909,
+    "timestamp" : "00:37.83",
+    "seconds" : 37.83,
+    "text" : ""
+  },
+  {
+    "frame" : 910,
+    "timestamp" : "00:37.87",
+    "seconds" : 37.88,
+    "text" : ""
+  },
+  {
+    "frame" : 911,
+    "timestamp" : "00:37.91",
+    "seconds" : 37.92,
+    "text" : ""
+  },
+  {
+    "frame" : 912,
+    "timestamp" : "00:37.95",
+    "seconds" : 37.96,
+    "text" : ""
+  },
+  {
+    "frame" : 913,
+    "timestamp" : "00:38.00",
+    "seconds" : 38,
+    "text" : ""
+  },
+  {
+    "frame" : 914,
+    "timestamp" : "00:38.04",
+    "seconds" : 38.04,
+    "text" : ""
+  },
+  {
+    "frame" : 915,
+    "timestamp" : "00:38.08",
+    "seconds" : 38.08,
+    "text" : ""
+  },
+  {
+    "frame" : 916,
+    "timestamp" : "00:38.12",
+    "seconds" : 38.13,
+    "text" : ""
+  },
+  {
+    "frame" : 917,
+    "timestamp" : "00:38.16",
+    "seconds" : 38.17,
+    "text" : ""
+  },
+  {
+    "frame" : 918,
+    "timestamp" : "00:38.20",
+    "seconds" : 38.21,
+    "text" : ""
+  },
+  {
+    "frame" : 919,
+    "timestamp" : "00:38.25",
+    "seconds" : 38.25,
+    "text" : ""
+  },
+  {
+    "frame" : 920,
+    "timestamp" : "00:38.29",
+    "seconds" : 38.29,
+    "text" : ""
+  },
+  {
+    "frame" : 921,
+    "timestamp" : "00:38.33",
+    "seconds" : 38.33,
+    "text" : ""
+  },
+  {
+    "frame" : 922,
+    "timestamp" : "00:38.37",
+    "seconds" : 38.38,
+    "text" : ""
+  },
+  {
+    "frame" : 923,
+    "timestamp" : "00:38.41",
+    "seconds" : 38.42,
+    "text" : ""
+  },
+  {
+    "frame" : 924,
+    "timestamp" : "00:38.45",
+    "seconds" : 38.46,
+    "text" : ""
+  },
+  {
+    "frame" : 925,
+    "timestamp" : "00:38.50",
+    "seconds" : 38.5,
+    "text" : "Voyager 1 left in 1977."
+  },
+  {
+    "frame" : 926,
+    "timestamp" : "00:38.54",
+    "seconds" : 38.54,
+    "text" : "Voyager 1 left-fin 1977."
+  },
+  {
+    "frame" : 927,
+    "timestamp" : "00:38.58",
+    "seconds" : 38.58,
+    "text" : "Voyager 1 left in 1977."
+  },
+  {
+    "frame" : 928,
+    "timestamp" : "00:38.62",
+    "seconds" : 38.63,
+    "text" : "Voyager 1 left in 1977."
+  },
+  {
+    "frame" : 929,
+    "timestamp" : "00:38.66",
+    "seconds" : 38.67,
+    "text" : "Voyager 1 left in 1977."
+  },
+  {
+    "frame" : 930,
+    "timestamp" : "00:38.70",
+    "seconds" : 38.71,
+    "text" : "Voyager 1 left in 1977."
+  },
+  {
+    "frame" : 931,
+    "timestamp" : "00:38.75",
+    "seconds" : 38.75,
+    "text" : "Voyager 1 left in 1977."
+  },
+  {
+    "frame" : 932,
+    "text" : "Voyager 1 left in 1977.",
+    "timestamp" : "00:38.79",
+    "seconds" : 38.79
+  },
+  {
+    "frame" : 933,
+    "text" : "Voyager 1. eft in 1977.",
+    "timestamp" : "00:38.83",
+    "seconds" : 38.83
+  },
+  {
+    "frame" : 934,
+    "text" : "Voyager 1. eft in 1977.",
+    "timestamp" : "00:38.87",
+    "seconds" : 38.88
+  },
+  {
+    "frame" : 935,
+    "text" : "Voyager 1. eft in 1977.",
+    "timestamp" : "00:38.91",
+    "seconds" : 38.92
+  },
+  {
+    "frame" : 936,
+    "text" : "Voyager 1. eft in 1977.",
+    "timestamp" : "00:38.95",
+    "seconds" : 38.96
+  },
+  {
+    "frame" : 937,
+    "text" : "Voyager 1, left in 1977.",
+    "timestamp" : "00:39.00",
+    "seconds" : 39
+  },
+  {
+    "frame" : 938,
+    "text" : "Voyager 1, left in 1977.",
+    "timestamp" : "00:39.04",
+    "seconds" : 39.04
+  },
+  {
+    "frame" : 939,
+    "text" : "Voyager 1, left in 1977.",
+    "timestamp" : "00:39.08",
+    "seconds" : 39.08
+  },
+  {
+    "frame" : 940,
+    "text" : "Voyager 1, left in 1977.",
+    "timestamp" : "00:39.12",
+    "seconds" : 39.13
+  },
+  {
+    "frame" : 941,
+    "text" : "Voyager 1, left in 1977.",
+    "timestamp" : "00:39.16",
+    "seconds" : 39.17
+  },
+  {
+    "frame" : 942,
+    "text" : "Voyager 1, left in 1977.",
+    "timestamp" : "00:39.20",
+    "seconds" : 39.21
+  },
+  {
+    "frame" : 943,
+    "text" : "Voyager 1, left in 1977.",
+    "timestamp" : "00:39.25",
+    "seconds" : 39.25
+  },
+  {
+    "frame" : 944,
+    "text" : "Voyager 1, left in 1977.",
+    "timestamp" : "00:39.29",
+    "seconds" : 39.29
+  },
+  {
+    "frame" : 945,
+    "text" : "Voyager 1 left in 1977.",
+    "timestamp" : "00:39.33",
+    "seconds" : 39.33
+  },
+  {
+    "frame" : 946,
+    "text" : "Voyager 1 left in 1977.",
+    "timestamp" : "00:39.37",
+    "seconds" : 39.38
+  },
+  {
+    "frame" : 947,
+    "text" : "Voyager 1 left in 1977.",
+    "timestamp" : "00:39.41",
+    "seconds" : 39.42
+  },
+  {
+    "frame" : 948,
+    "text" : "Voyager 1, left in 1977.",
+    "timestamp" : "00:39.45",
+    "seconds" : 39.46
+  },
+  {
+    "frame" : 949,
+    "text" : "Voyager 1, left in 1977.",
+    "timestamp" : "00:39.50",
+    "seconds" : 39.5
+  },
+  {
+    "frame" : 950,
+    "text" : "Voyager 1 left in 1977.",
+    "timestamp" : "00:39.54",
+    "seconds" : 39.54
+  },
+  {
+    "frame" : 951,
+    "text" : "Voyager 1, left in 1977.",
+    "timestamp" : "00:39.58",
+    "seconds" : 39.58
+  },
+  {
+    "frame" : 952,
+    "text" : "Voyager 1 left in 1977.",
+    "timestamp" : "00:39.62",
+    "seconds" : 39.63
+  },
+  {
+    "frame" : 953,
+    "text" : "Voyager 1, left in 1977.",
+    "timestamp" : "00:39.66",
+    "seconds" : 39.67
+  },
+  {
+    "frame" : 954,
+    "text" : "Voyager 1, left in 1977.",
+    "timestamp" : "00:39.70",
+    "seconds" : 39.71
+  },
+  {
+    "frame" : 955,
+    "text" : "Voyager 1, left in \n 1977.",
+    "timestamp" : "00:39.75",
+    "seconds" : 39.75
+  },
+  {
+    "frame" : 956,
+    "text" : "Voyager 1, left in 1977.",
+    "timestamp" : "00:39.79",
+    "seconds" : 39.79
+  },
+  {
+    "frame" : 957,
+    "text" : "Voyager 1, left in \n 1977.",
+    "timestamp" : "00:39.83",
+    "seconds" : 39.83
+  },
+  {
+    "frame" : 958,
+    "text" : "Voyager 1 left in \n 1977.",
+    "timestamp" : "00:39.87",
+    "seconds" : 39.88
+  },
+  {
+    "frame" : 959,
+    "text" : "Voyager 1, left in \n 1977.",
+    "timestamp" : "00:39.91",
+    "seconds" : 39.92
+  },
+  {
+    "frame" : 960,
+    "text" : "Voyager 1 left in 1977.",
+    "timestamp" : "00:39.95",
+    "seconds" : 39.96
+  },
+  {
+    "frame" : 961,
+    "text" : "Voyager 1 left in 1977.",
+    "timestamp" : "00:40.00",
+    "seconds" : 40
+  },
+  {
+    "frame" : 962,
+    "text" : "Voyager 1, left in 1977.",
+    "timestamp" : "00:40.04",
+    "seconds" : 40.04
+  },
+  {
+    "frame" : 963,
+    "text" : "Voyager 1 left in 1977.",
+    "timestamp" : "00:40.08",
+    "seconds" : 40.08
+  },
+  {
+    "frame" : 964,
+    "text" : "Voyager 1 left in 1977.",
+    "timestamp" : "00:40.12",
+    "seconds" : 40.13
+  },
+  {
+    "frame" : 965,
+    "text" : "Voyager 1 left in 1977.",
+    "timestamp" : "00:40.16",
+    "seconds" : 40.17
+  },
+  {
+    "frame" : 966,
+    "text" : "Voyager 1 left in \n 1977.",
+    "timestamp" : "00:40.20",
+    "seconds" : 40.21
+  },
+  {
+    "frame" : 967,
+    "text" : "Voyager 1 left in 1977.",
+    "timestamp" : "00:40.25",
+    "seconds" : 40.25
+  },
+  {
+    "frame" : 968,
+    "text" : "Voyager 1 left in 1977.",
+    "timestamp" : "00:40.29",
+    "seconds" : 40.29
+  },
+  {
+    "frame" : 969,
+    "text" : "Voyager 1 left in 1977.",
+    "timestamp" : "00:40.33",
+    "seconds" : 40.33
+  },
+  {
+    "frame" : 970,
+    "text" : "Voyager 1 left in 1977.",
+    "timestamp" : "00:40.37",
+    "seconds" : 40.38
+  },
+  {
+    "frame" : 971,
+    "text" : "Voyager 1 left in 1977.",
+    "timestamp" : "00:40.41",
+    "seconds" : 40.42
+  },
+  {
+    "frame" : 972,
+    "text" : "Voyager 1 left in 1977.",
+    "timestamp" : "00:40.45",
+    "seconds" : 40.46
+  },
+  {
+    "frame" : 973,
+    "text" : "Voyager 1 left in 1977.",
+    "timestamp" : "00:40.50",
+    "seconds" : 40.5
+  },
+  {
+    "frame" : 974,
+    "text" : "Voyager 1 left in 1977.",
+    "timestamp" : "00:40.54",
+    "seconds" : 40.54
+  },
+  {
+    "frame" : 975,
+    "text" : "Voyager 1 left in 1977.",
+    "timestamp" : "00:40.58",
+    "seconds" : 40.58
+  },
+  {
+    "frame" : 976,
+    "text" : "Voyager 1 left in 1977.",
+    "timestamp" : "00:40.62",
+    "seconds" : 40.63
+  },
+  {
+    "frame" : 977,
+    "text" : "Voyager 1 left in 1977.",
+    "timestamp" : "00:40.66",
+    "seconds" : 40.67
+  },
+  {
+    "frame" : 978,
+    "text" : "Voyager 1 left in 1977.",
+    "timestamp" : "00:40.70",
+    "seconds" : 40.71
+  },
+  {
+    "frame" : 979,
+    "text" : "Voyager 1 left in 1977.",
+    "timestamp" : "00:40.75",
+    "seconds" : 40.75
+  },
+  {
+    "frame" : 980,
+    "text" : "Voyager 1 left in 1977.",
+    "timestamp" : "00:40.79",
+    "seconds" : 40.79
+  },
+  {
+    "frame" : 981,
+    "text" : "Voyager 1 left in 1977.",
+    "timestamp" : "00:40.83",
+    "seconds" : 40.83
+  },
+  {
+    "frame" : 982,
+    "text" : "Voyager 1 left in 1977.",
+    "timestamp" : "00:40.87",
+    "seconds" : 40.88
+  },
+  {
+    "frame" : 983,
+    "text" : "Voyager 1 left in 1977.",
+    "timestamp" : "00:40.91",
+    "seconds" : 40.92
+  },
+  {
+    "frame" : 984,
+    "text" : "Voyager 1 left in 1977.",
+    "timestamp" : "00:40.95",
+    "seconds" : 40.96
+  },
+  {
+    "frame" : 985,
+    "text" : "Voyager 1 left in 1977.",
+    "timestamp" : "00:41.00",
+    "seconds" : 41
+  },
+  {
+    "frame" : 986,
+    "text" : "Voyager 1 left in 1977.",
+    "timestamp" : "00:41.04",
+    "seconds" : 41.04
+  },
+  {
+    "frame" : 987,
+    "text" : "Voyager 1 left in 1977.",
+    "timestamp" : "00:41.08",
+    "seconds" : 41.08
+  },
+  {
+    "frame" : 988,
+    "text" : "Voyager 1 left in 1977.",
+    "timestamp" : "00:41.12",
+    "seconds" : 41.13
+  },
+  {
+    "frame" : 989,
+    "text" : "Voyager 1 left in 1977.",
+    "timestamp" : "00:41.16",
+    "seconds" : 41.17
+  },
+  {
+    "frame" : 990,
+    "text" : "",
+    "timestamp" : "00:41.20",
+    "seconds" : 41.21
+  },
+  {
+    "frame" : 991,
+    "text" : "",
+    "timestamp" : "00:41.25",
+    "seconds" : 41.25
+  },
+  {
+    "frame" : 992,
+    "text" : "",
+    "timestamp" : "00:41.29",
+    "seconds" : 41.29
+  },
+  {
+    "frame" : 993,
+    "text" : "",
+    "timestamp" : "00:41.33",
+    "seconds" : 41.33
+  },
+  {
+    "frame" : 994,
+    "text" : "",
+    "timestamp" : "00:41.37",
+    "seconds" : 41.38
+  },
+  {
+    "frame" : 995,
+    "text" : "",
+    "timestamp" : "00:41.41",
+    "seconds" : 41.42
+  },
+  {
+    "frame" : 996,
+    "text" : "",
+    "timestamp" : "00:41.45",
+    "seconds" : 41.46
+  },
+  {
+    "frame" : 997,
+    "text" : "",
+    "timestamp" : "00:41.50",
+    "seconds" : 41.5
+  },
+  {
+    "frame" : 998,
+    "text" : "",
+    "timestamp" : "00:41.54",
+    "seconds" : 41.54
+  },
+  {
+    "frame" : 999,
+    "text" : "",
+    "timestamp" : "00:41.58",
+    "seconds" : 41.58
+  },
+  {
+    "frame" : 1000,
+    "text" : "It is still going.",
+    "timestamp" : "00:41.62",
+    "seconds" : 41.63
+  },
+  {
+    "frame" : 1001,
+    "text" : "It is still going.",
+    "timestamp" : "00:41.66",
+    "seconds" : 41.67
+  },
+  {
+    "frame" : 1002,
+    "text" : "It is still going.",
+    "timestamp" : "00:41.70",
+    "seconds" : 41.71
+  },
+  {
+    "frame" : 1003,
+    "text" : "It is still going.",
+    "timestamp" : "00:41.75",
+    "seconds" : 41.75
+  },
+  {
+    "frame" : 1004,
+    "seconds" : 41.79,
+    "text" : "It is still going.",
+    "timestamp" : "00:41.79"
+  },
+  {
+    "frame" : 1005,
+    "seconds" : 41.83,
+    "text" : "It is still going.",
+    "timestamp" : "00:41.83"
+  },
+  {
+    "frame" : 1006,
+    "seconds" : 41.88,
+    "text" : "It is still going.",
+    "timestamp" : "00:41.87"
+  },
+  {
+    "frame" : 1007,
+    "seconds" : 41.92,
+    "text" : "It is still going.",
+    "timestamp" : "00:41.91"
+  },
+  {
+    "frame" : 1008,
+    "seconds" : 41.96,
+    "text" : "It is still going.",
+    "timestamp" : "00:41.95"
+  },
+  {
+    "frame" : 1009,
+    "seconds" : 42,
+    "text" : "It is still going.",
+    "timestamp" : "00:42.00"
+  },
+  {
+    "frame" : 1010,
+    "seconds" : 42.04,
+    "text" : "It is still going.",
+    "timestamp" : "00:42.04"
+  },
+  {
+    "frame" : 1011,
+    "seconds" : 42.08,
+    "text" : "It is still going.",
+    "timestamp" : "00:42.08"
+  },
+  {
+    "frame" : 1012,
+    "seconds" : 42.13,
+    "text" : "It is still going.",
+    "timestamp" : "00:42.12"
+  },
+  {
+    "frame" : 1013,
+    "seconds" : 42.17,
+    "text" : "It is still going.",
+    "timestamp" : "00:42.16"
+  },
+  {
+    "frame" : 1014,
+    "seconds" : 42.21,
+    "text" : "It is still going.",
+    "timestamp" : "00:42.20"
+  },
+  {
+    "frame" : 1015,
+    "seconds" : 42.25,
+    "text" : "It is still going.",
+    "timestamp" : "00:42.25"
+  },
+  {
+    "frame" : 1016,
+    "seconds" : 42.29,
+    "text" : "It is still going.",
+    "timestamp" : "00:42.29"
+  },
+  {
+    "frame" : 1017,
+    "seconds" : 42.33,
+    "text" : "It is still going.",
+    "timestamp" : "00:42.33"
+  },
+  {
+    "frame" : 1018,
+    "seconds" : 42.38,
+    "text" : "It is still going.",
+    "timestamp" : "00:42.37"
+  },
+  {
+    "frame" : 1019,
+    "seconds" : 42.42,
+    "text" : "It is still going.",
+    "timestamp" : "00:42.41"
+  },
+  {
+    "frame" : 1020,
+    "seconds" : 42.46,
+    "text" : "It is still going.",
+    "timestamp" : "00:42.45"
+  },
+  {
+    "frame" : 1021,
+    "seconds" : 42.5,
+    "text" : "Kis still going.",
+    "timestamp" : "00:42.50"
+  },
+  {
+    "frame" : 1022,
+    "seconds" : 42.54,
+    "text" : "It is still going.",
+    "timestamp" : "00:42.54"
+  },
+  {
+    "frame" : 1023,
+    "seconds" : 42.58,
+    "text" : "n is sill going.",
+    "timestamp" : "00:42.58"
+  },
+  {
+    "frame" : 1024,
+    "seconds" : 42.63,
+    "text" : "his still going.",
+    "timestamp" : "00:42.62"
+  },
+  {
+    "frame" : 1025,
+    "seconds" : 42.67,
+    "text" : "",
+    "timestamp" : "00:42.66"
+  },
+  {
+    "frame" : 1026,
+    "seconds" : 42.71,
+    "text" : "it is sill going.",
+    "timestamp" : "00:42.70"
+  },
+  {
+    "frame" : 1027,
+    "seconds" : 42.75,
+    "text" : "it is stlll going.",
+    "timestamp" : "00:42.75"
+  },
+  {
+    "frame" : 1028,
+    "seconds" : 42.79,
+    "text" : "It is still going.",
+    "timestamp" : "00:42.79"
+  },
+  {
+    "frame" : 1029,
+    "seconds" : 42.83,
+    "text" : "nils sill going",
+    "timestamp" : "00:42.83"
+  },
+  {
+    "frame" : 1030,
+    "seconds" : 42.88,
+    "text" : "it is still going.",
+    "timestamp" : "00:42.87"
+  },
+  {
+    "frame" : 1031,
+    "seconds" : 42.92,
+    "text" : "It is still going.",
+    "timestamp" : "00:42.91"
+  },
+  {
+    "frame" : 1032,
+    "seconds" : 42.96,
+    "text" : "It is still going.",
+    "timestamp" : "00:42.95"
+  },
+  {
+    "frame" : 1033,
+    "seconds" : 43,
+    "text" : "It is still going.",
+    "timestamp" : "00:43.00"
+  },
+  {
+    "frame" : 1034,
+    "seconds" : 43.04,
+    "text" : "It is still going.",
+    "timestamp" : "00:43.04"
+  },
+  {
+    "frame" : 1035,
+    "seconds" : 43.08,
+    "text" : "It is still going.",
+    "timestamp" : "00:43.08"
+  },
+  {
+    "frame" : 1036,
+    "seconds" : 43.13,
+    "text" : "It is still going.",
+    "timestamp" : "00:43.12"
+  },
+  {
+    "frame" : 1037,
+    "seconds" : 43.17,
+    "text" : "It is still going.",
+    "timestamp" : "00:43.16"
+  },
+  {
+    "frame" : 1038,
+    "seconds" : 43.21,
+    "text" : "It is still going.",
+    "timestamp" : "00:43.20"
+  },
+  {
+    "frame" : 1039,
+    "seconds" : 43.25,
+    "text" : "It is still going.",
+    "timestamp" : "00:43.25"
+  },
+  {
+    "timestamp" : "00:43.29",
+    "seconds" : 43.29,
+    "text" : "It is still going.",
+    "frame" : 1040
+  },
+  {
+    "timestamp" : "00:43.33",
+    "seconds" : 43.33,
+    "text" : "It is still going.",
+    "frame" : 1041
+  },
+  {
+    "timestamp" : "00:43.37",
+    "seconds" : 43.38,
+    "text" : "It is still going.",
+    "frame" : 1042
+  },
+  {
+    "timestamp" : "00:43.41",
+    "seconds" : 43.42,
+    "text" : "It is still going.",
+    "frame" : 1043
+  },
+  {
+    "timestamp" : "00:43.45",
+    "seconds" : 43.46,
+    "text" : "It is still going.",
+    "frame" : 1044
+  },
+  {
+    "timestamp" : "00:43.50",
+    "seconds" : 43.5,
+    "text" : "It is still going.",
+    "frame" : 1045
+  },
+  {
+    "timestamp" : "00:43.54",
+    "seconds" : 43.54,
+    "text" : "It is still going.",
+    "frame" : 1046
+  },
+  {
+    "timestamp" : "00:43.58",
+    "seconds" : 43.58,
+    "text" : "It is still going.",
+    "frame" : 1047
+  },
+  {
+    "timestamp" : "00:43.62",
+    "seconds" : 43.63,
+    "text" : "It is still going.",
+    "frame" : 1048
+  },
+  {
+    "timestamp" : "00:43.66",
+    "seconds" : 43.67,
+    "text" : "It is still going.",
+    "frame" : 1049
+  },
+  {
+    "timestamp" : "00:43.70",
+    "seconds" : 43.71,
+    "text" : "It is still going.",
+    "frame" : 1050
+  },
+  {
+    "timestamp" : "00:43.75",
+    "seconds" : 43.75,
+    "text" : "It is still going.",
+    "frame" : 1051
+  },
+  {
+    "timestamp" : "00:43.79",
+    "seconds" : 43.79,
+    "text" : "It is still going.",
+    "frame" : 1052
+  },
+  {
+    "timestamp" : "00:43.83",
+    "seconds" : 43.83,
+    "text" : "It is still going.",
+    "frame" : 1053
+  },
+  {
+    "timestamp" : "00:43.87",
+    "seconds" : 43.88,
+    "text" : "It is still going.",
+    "frame" : 1054
+  },
+  {
+    "timestamp" : "00:43.91",
+    "seconds" : 43.92,
+    "text" : "It is still going.",
+    "frame" : 1055
+  },
+  {
+    "timestamp" : "00:43.95",
+    "seconds" : 43.96,
+    "text" : "It is still going.",
+    "frame" : 1056
+  },
+  {
+    "timestamp" : "00:44.00",
+    "seconds" : 44,
+    "text" : "It is still going.",
+    "frame" : 1057
+  },
+  {
+    "timestamp" : "00:44.04",
+    "seconds" : 44.04,
+    "text" : "It is still going.",
+    "frame" : 1058
+  },
+  {
+    "timestamp" : "00:44.08",
+    "seconds" : 44.08,
+    "text" : "It is still going.",
+    "frame" : 1059
+  },
+  {
+    "timestamp" : "00:44.12",
+    "seconds" : 44.13,
+    "text" : "It is still going.",
+    "frame" : 1060
+  },
+  {
+    "timestamp" : "00:44.16",
+    "seconds" : 44.17,
+    "text" : "It is still going.",
+    "frame" : 1061
+  },
+  {
+    "timestamp" : "00:44.20",
+    "seconds" : 44.21,
+    "text" : "",
+    "frame" : 1062
+  },
+  {
+    "timestamp" : "00:44.25",
+    "seconds" : 44.25,
+    "text" : "",
+    "frame" : 1063
+  },
+  {
+    "timestamp" : "00:44.29",
+    "seconds" : 44.29,
+    "text" : "",
+    "frame" : 1064
+  },
+  {
+    "timestamp" : "00:44.33",
+    "seconds" : 44.33,
+    "text" : "",
+    "frame" : 1065
+  },
+  {
+    "timestamp" : "00:44.37",
+    "seconds" : 44.38,
+    "text" : "",
+    "frame" : 1066
+  },
+  {
+    "timestamp" : "00:44.41",
+    "seconds" : 44.42,
+    "text" : "",
+    "frame" : 1067
+  },
+  {
+    "timestamp" : "00:44.45",
+    "seconds" : 44.46,
+    "text" : "",
+    "frame" : 1068
+  },
+  {
+    "timestamp" : "00:44.50",
+    "seconds" : 44.5,
+    "text" : "",
+    "frame" : 1069
+  },
+  {
+    "timestamp" : "00:44.54",
+    "seconds" : 44.54,
+    "text" : "",
+    "frame" : 1070
+  },
+  {
+    "timestamp" : "00:44.58",
+    "seconds" : 44.58,
+    "text" : "",
+    "frame" : 1071
+  },
+  {
+    "timestamp" : "00:44.62",
+    "seconds" : 44.63,
+    "text" : "Still sending data.",
+    "frame" : 1072
+  },
+  {
+    "timestamp" : "00:44.66",
+    "seconds" : 44.67,
+    "text" : "Still sending data.",
+    "frame" : 1073
+  },
+  {
+    "timestamp" : "00:44.70",
+    "seconds" : 44.71,
+    "text" : "Still sending data.",
+    "frame" : 1074
+  },
+  {
+    "timestamp" : "00:44.75",
+    "seconds" : 44.75,
+    "text" : "Still sending data.",
+    "frame" : 1075
+  },
+  {
+    "timestamp" : "00:44.79",
+    "seconds" : 44.79,
+    "text" : "Still sending data.",
+    "frame" : 1076
+  },
+  {
+    "timestamp" : "00:44.83",
+    "seconds" : 44.83,
+    "text" : "Still sending data.",
+    "frame" : 1077
+  },
+  {
+    "timestamp" : "00:44.87",
+    "seconds" : 44.88,
+    "text" : "Still sending data.",
+    "frame" : 1078
+  },
+  {
+    "timestamp" : "00:44.91",
+    "seconds" : 44.92,
+    "text" : "Still sending data.",
+    "frame" : 1079
+  },
+  {
+    "timestamp" : "00:44.95",
+    "seconds" : 44.96,
+    "text" : "Still sending data.",
+    "frame" : 1080
+  },
+  {
+    "timestamp" : "00:45.00",
+    "seconds" : 45,
+    "text" : "Still sending data.",
+    "frame" : 1081
+  },
+  {
+    "timestamp" : "00:45.04",
+    "seconds" : 45.04,
+    "text" : "Still sending data.",
+    "frame" : 1082
+  },
+  {
+    "timestamp" : "00:45.08",
+    "seconds" : 45.08,
+    "text" : "Still sending data.",
+    "frame" : 1083
+  },
+  {
+    "timestamp" : "00:45.12",
+    "seconds" : 45.13,
+    "text" : "Still sending data.",
+    "frame" : 1084
+  },
+  {
+    "timestamp" : "00:45.16",
+    "seconds" : 45.17,
+    "text" : "Still sending data.",
+    "frame" : 1085
+  },
+  {
+    "timestamp" : "00:45.20",
+    "seconds" : 45.21,
+    "text" : "Still sending data.",
+    "frame" : 1086
+  },
+  {
+    "timestamp" : "00:45.25",
+    "seconds" : 45.25,
+    "text" : "Still sending data.",
+    "frame" : 1087
+  },
+  {
+    "timestamp" : "00:45.29",
+    "seconds" : 45.29,
+    "text" : "Still sending data.",
+    "frame" : 1088
+  },
+  {
+    "timestamp" : "00:45.33",
+    "seconds" : 45.33,
+    "text" : "Still sending data!",
+    "frame" : 1089
+  },
+  {
+    "timestamp" : "00:45.37",
+    "seconds" : 45.38,
+    "text" : "Still sending data!",
+    "frame" : 1090
+  },
+  {
+    "timestamp" : "00:45.41",
+    "seconds" : 45.42,
+    "text" : "Still sending data!",
+    "frame" : 1091
+  },
+  {
+    "timestamp" : "00:45.45",
+    "seconds" : 45.46,
+    "text" : "Still sending data!",
+    "frame" : 1092
+  },
+  {
+    "timestamp" : "00:45.50",
+    "seconds" : 45.5,
+    "text" : "Still sending data!",
+    "frame" : 1093
+  },
+  {
+    "timestamp" : "00:45.54",
+    "seconds" : 45.54,
+    "text" : "Still sending data!",
+    "frame" : 1094
+  },
+  {
+    "timestamp" : "00:45.58",
+    "seconds" : 45.58,
+    "text" : "Still sending data.",
+    "frame" : 1095
+  },
+  {
+    "timestamp" : "00:45.62",
+    "seconds" : 45.63,
+    "text" : "Still sending data.",
+    "frame" : 1096
+  },
+  {
+    "timestamp" : "00:45.66",
+    "seconds" : 45.67,
+    "text" : "Still sending data.",
+    "frame" : 1097
+  },
+  {
+    "timestamp" : "00:45.70",
+    "seconds" : 45.71,
+    "text" : "Still sending data.",
+    "frame" : 1098
+  },
+  {
+    "timestamp" : "00:45.75",
+    "seconds" : 45.75,
+    "text" : "Still sending data.",
+    "frame" : 1099
+  },
+  {
+    "timestamp" : "00:45.79",
+    "seconds" : 45.79,
+    "text" : "Still sending data.",
+    "frame" : 1100
+  },
+  {
+    "timestamp" : "00:45.83",
+    "seconds" : 45.83,
+    "text" : "Still sending data.",
+    "frame" : 1101
+  },
+  {
+    "timestamp" : "00:45.87",
+    "seconds" : 45.88,
+    "text" : "Still sending data.",
+    "frame" : 1102
+  },
+  {
+    "timestamp" : "00:45.91",
+    "seconds" : 45.92,
+    "text" : "Still sending data.",
+    "frame" : 1103
+  },
+  {
+    "timestamp" : "00:45.95",
+    "seconds" : 45.96,
+    "text" : "Still sending data.",
+    "frame" : 1104
+  },
+  {
+    "timestamp" : "00:46.00",
+    "seconds" : 46,
+    "text" : "Still sending data.",
+    "frame" : 1105
+  },
+  {
+    "timestamp" : "00:46.04",
+    "seconds" : 46.04,
+    "text" : "Still sending data.",
+    "frame" : 1106
+  },
+  {
+    "timestamp" : "00:46.08",
+    "seconds" : 46.08,
+    "text" : "Still sending data.",
+    "frame" : 1107
+  },
+  {
+    "timestamp" : "00:46.12",
+    "seconds" : 46.13,
+    "text" : "Still sending data.",
+    "frame" : 1108
+  },
+  {
+    "timestamp" : "00:46.16",
+    "seconds" : 46.17,
+    "text" : "Still sending data.",
+    "frame" : 1109
+  },
+  {
+    "timestamp" : "00:46.20",
+    "seconds" : 46.21,
+    "text" : "Still sending data.",
+    "frame" : 1110
+  },
+  {
+    "timestamp" : "00:46.25",
+    "seconds" : 46.25,
+    "text" : "Still sending data.",
+    "frame" : 1111
+  },
+  {
+    "seconds" : 46.29,
+    "timestamp" : "00:46.29",
+    "frame" : 1112,
+    "text" : "Still sending data."
+  },
+  {
+    "seconds" : 46.33,
+    "timestamp" : "00:46.33",
+    "frame" : 1113,
+    "text" : "Still sending data."
+  },
+  {
+    "seconds" : 46.38,
+    "timestamp" : "00:46.37",
+    "frame" : 1114,
+    "text" : "Still sending data."
+  },
+  {
+    "seconds" : 46.42,
+    "timestamp" : "00:46.41",
+    "frame" : 1115,
+    "text" : "Still sending data."
+  },
+  {
+    "seconds" : 46.46,
+    "timestamp" : "00:46.45",
+    "frame" : 1116,
+    "text" : "Still sending data."
+  },
+  {
+    "seconds" : 46.5,
+    "timestamp" : "00:46.50",
+    "frame" : 1117,
+    "text" : "Still sending data."
+  },
+  {
+    "seconds" : 46.54,
+    "timestamp" : "00:46.54",
+    "frame" : 1118,
+    "text" : "Still sending data."
+  },
+  {
+    "seconds" : 46.58,
+    "timestamp" : "00:46.58",
+    "frame" : 1119,
+    "text" : "Still sending data."
+  },
+  {
+    "seconds" : 46.63,
+    "timestamp" : "00:46.62",
+    "frame" : 1120,
+    "text" : "Still sending data."
+  },
+  {
+    "seconds" : 46.67,
+    "timestamp" : "00:46.66",
+    "frame" : 1121,
+    "text" : "Still sending data."
+  },
+  {
+    "seconds" : 46.71,
+    "timestamp" : "00:46.70",
+    "frame" : 1122,
+    "text" : "Still sending data."
+  },
+  {
+    "seconds" : 46.75,
+    "timestamp" : "00:46.75",
+    "frame" : 1123,
+    "text" : "Still sending data."
+  },
+  {
+    "seconds" : 46.79,
+    "timestamp" : "00:46.79",
+    "frame" : 1124,
+    "text" : "Still sending data."
+  },
+  {
+    "seconds" : 46.83,
+    "timestamp" : "00:46.83",
+    "frame" : 1125,
+    "text" : "Still sending data."
+  },
+  {
+    "seconds" : 46.88,
+    "timestamp" : "00:46.87",
+    "frame" : 1126,
+    "text" : "Still sending data."
+  },
+  {
+    "seconds" : 46.92,
+    "timestamp" : "00:46.91",
+    "frame" : 1127,
+    "text" : "Still sending data."
+  },
+  {
+    "seconds" : 46.96,
+    "timestamp" : "00:46.95",
+    "frame" : 1128,
+    "text" : "Still sending data."
+  },
+  {
+    "seconds" : 47,
+    "timestamp" : "00:47.00",
+    "frame" : 1129,
+    "text" : "Still sending data."
+  },
+  {
+    "seconds" : 47.04,
+    "timestamp" : "00:47.04",
+    "frame" : 1130,
+    "text" : "Still sending data."
+  },
+  {
+    "seconds" : 47.08,
+    "timestamp" : "00:47.08",
+    "frame" : 1131,
+    "text" : "Still sending data."
+  },
+  {
+    "seconds" : 47.13,
+    "timestamp" : "00:47.12",
+    "frame" : 1132,
+    "text" : "Still sending data."
+  },
+  {
+    "seconds" : 47.17,
+    "timestamp" : "00:47.16",
+    "frame" : 1133,
+    "text" : "Still sending data."
+  },
+  {
+    "seconds" : 47.21,
+    "timestamp" : "00:47.20",
+    "frame" : 1134,
+    "text" : "Still sending data."
+  },
+  {
+    "seconds" : 47.25,
+    "timestamp" : "00:47.25",
+    "frame" : 1135,
+    "text" : "Still sending data."
+  },
+  {
+    "seconds" : 47.29,
+    "timestamp" : "00:47.29",
+    "frame" : 1136,
+    "text" : "Still sending data."
+  },
+  {
+    "seconds" : 47.33,
+    "timestamp" : "00:47.33",
+    "frame" : 1137,
+    "text" : "Still sending data."
+  },
+  {
+    "seconds" : 47.38,
+    "timestamp" : "00:47.37",
+    "frame" : 1138,
+    "text" : "Still sending data."
+  },
+  {
+    "seconds" : 47.42,
+    "timestamp" : "00:47.41",
+    "frame" : 1139,
+    "text" : "Still sending data."
+  },
+  {
+    "seconds" : 47.46,
+    "timestamp" : "00:47.45",
+    "frame" : 1140,
+    "text" : "Still sending data."
+  },
+  {
+    "seconds" : 47.5,
+    "timestamp" : "00:47.50",
+    "frame" : 1141,
+    "text" : "Still sending data."
+  },
+  {
+    "seconds" : 47.54,
+    "timestamp" : "00:47.54",
+    "frame" : 1142,
+    "text" : "Still sending data."
+  },
+  {
+    "seconds" : 47.58,
+    "timestamp" : "00:47.58",
+    "frame" : 1143,
+    "text" : "Still sending data."
+  },
+  {
+    "seconds" : 47.63,
+    "timestamp" : "00:47.62",
+    "frame" : 1144,
+    "text" : ""
+  },
+  {
+    "seconds" : 47.67,
+    "timestamp" : "00:47.66",
+    "frame" : 1145,
+    "text" : ""
+  },
+  {
+    "seconds" : 47.71,
+    "timestamp" : "00:47.70",
+    "frame" : 1146,
+    "text" : ""
+  },
+  {
+    "seconds" : 47.75,
+    "timestamp" : "00:47.75",
+    "frame" : 1147,
+    "text" : ""
+  },
+  {
+    "seconds" : 47.79,
+    "timestamp" : "00:47.79",
+    "text" : "",
+    "frame" : 1148
+  },
+  {
+    "seconds" : 47.83,
+    "timestamp" : "00:47.83",
+    "text" : "",
+    "frame" : 1149
+  },
+  {
+    "seconds" : 47.88,
+    "timestamp" : "00:47.87",
+    "text" : "",
+    "frame" : 1150
+  },
+  {
+    "seconds" : 47.92,
+    "timestamp" : "00:47.91",
+    "text" : "",
+    "frame" : 1151
+  },
+  {
+    "seconds" : 47.96,
+    "timestamp" : "00:47.95",
+    "text" : "",
+    "frame" : 1152
+  },
+  {
+    "seconds" : 48,
+    "timestamp" : "00:48.00",
+    "text" : "",
+    "frame" : 1153
+  },
+  {
+    "seconds" : 48.04,
+    "timestamp" : "00:48.04",
+    "text" : "",
+    "frame" : 1154
+  },
+  {
+    "seconds" : 48.08,
+    "timestamp" : "00:48.08",
+    "text" : "",
+    "frame" : 1155
+  },
+  {
+    "seconds" : 48.13,
+    "timestamp" : "00:48.12",
+    "text" : "",
+    "frame" : 1156
+  },
+  {
+    "seconds" : 48.17,
+    "timestamp" : "00:48.16",
+    "text" : "",
+    "frame" : 1157
+  },
+  {
+    "seconds" : 48.21,
+    "timestamp" : "00:48.20",
+    "text" : "",
+    "frame" : 1158
+  },
+  {
+    "seconds" : 48.25,
+    "timestamp" : "00:48.25",
+    "text" : "",
+    "frame" : 1159
+  },
+  {
+    "seconds" : 48.29,
+    "timestamp" : "00:48.29",
+    "text" : "",
+    "frame" : 1160
+  },
+  {
+    "seconds" : 48.33,
+    "timestamp" : "00:48.33",
+    "text" : "",
+    "frame" : 1161
+  },
+  {
+    "seconds" : 48.38,
+    "timestamp" : "00:48.37",
+    "text" : "",
+    "frame" : 1162
+  },
+  {
+    "seconds" : 48.42,
+    "timestamp" : "00:48.41",
+    "text" : "",
+    "frame" : 1163
+  },
+  {
+    "seconds" : 48.46,
+    "timestamp" : "00:48.45",
+    "text" : "",
+    "frame" : 1164
+  },
+  {
+    "seconds" : 48.5,
+    "timestamp" : "00:48.50",
+    "text" : "And on the Moon,",
+    "frame" : 1165
+  },
+  {
+    "seconds" : 48.54,
+    "timestamp" : "00:48.54",
+    "text" : "And on the Moon,",
+    "frame" : 1166
+  },
+  {
+    "seconds" : 48.58,
+    "timestamp" : "00:48.58",
+    "text" : "And on the Moon,",
+    "frame" : 1167
+  },
+  {
+    "seconds" : 48.63,
+    "timestamp" : "00:48.62",
+    "text" : "And on the Moon,",
+    "frame" : 1168
+  },
+  {
+    "seconds" : 48.67,
+    "timestamp" : "00:48.66",
+    "text" : "And on the Moon,",
+    "frame" : 1169
+  },
+  {
+    "seconds" : 48.71,
+    "timestamp" : "00:48.70",
+    "text" : "And on the Moon,",
+    "frame" : 1170
+  },
+  {
+    "seconds" : 48.75,
+    "timestamp" : "00:48.75",
+    "text" : "And on the Moon,",
+    "frame" : 1171
+  },
+  {
+    "seconds" : 48.79,
+    "timestamp" : "00:48.79",
+    "text" : "And on the Moon,",
+    "frame" : 1172
+  },
+  {
+    "seconds" : 48.83,
+    "timestamp" : "00:48.83",
+    "text" : "And on the Moon,",
+    "frame" : 1173
+  },
+  {
+    "seconds" : 48.88,
+    "timestamp" : "00:48.87",
+    "text" : "And on the Moon,",
+    "frame" : 1174
+  },
+  {
+    "seconds" : 48.92,
+    "timestamp" : "00:48.91",
+    "text" : "And on the Moon,",
+    "frame" : 1175
+  },
+  {
+    "seconds" : 48.96,
+    "timestamp" : "00:48.95",
+    "text" : "And on the Moon,",
+    "frame" : 1176
+  },
+  {
+    "seconds" : 49,
+    "timestamp" : "00:49.00",
+    "text" : "And on the Moon,",
+    "frame" : 1177
+  },
+  {
+    "seconds" : 49.04,
+    "timestamp" : "00:49.04",
+    "text" : "And on the Moon,",
+    "frame" : 1178
+  },
+  {
+    "seconds" : 49.08,
+    "timestamp" : "00:49.08",
+    "text" : "And on the Moon,",
+    "frame" : 1179
+  },
+  {
+    "seconds" : 49.13,
+    "timestamp" : "00:49.12",
+    "text" : "And on the Moon,",
+    "frame" : 1180
+  },
+  {
+    "seconds" : 49.17,
+    "timestamp" : "00:49.16",
+    "text" : "And on the Moon,",
+    "frame" : 1181
+  },
+  {
+    "seconds" : 49.21,
+    "timestamp" : "00:49.20",
+    "text" : "And on the Moon,",
+    "frame" : 1182
+  },
+  {
+    "seconds" : 49.25,
+    "timestamp" : "00:49.25",
+    "text" : "And on the Moon,",
+    "frame" : 1183
+  },
+  {
+    "text" : "And on the Moon,",
+    "frame" : 1184,
+    "timestamp" : "00:49.29",
+    "seconds" : 49.29
+  },
+  {
+    "text" : "And on the Moon,",
+    "frame" : 1185,
+    "timestamp" : "00:49.33",
+    "seconds" : 49.33
+  },
+  {
+    "text" : "And on the Moon,",
+    "frame" : 1186,
+    "timestamp" : "00:49.37",
+    "seconds" : 49.38
+  },
+  {
+    "text" : "And on the Moon,",
+    "frame" : 1187,
+    "timestamp" : "00:49.41",
+    "seconds" : 49.42
+  },
+  {
+    "text" : "And on the Moon,",
+    "frame" : 1188,
+    "timestamp" : "00:49.45",
+    "seconds" : 49.46
+  },
+  {
+    "text" : "And on the Moon,",
+    "frame" : 1189,
+    "timestamp" : "00:49.50",
+    "seconds" : 49.5
+  },
+  {
+    "text" : "And on the Moon,",
+    "frame" : 1190,
+    "timestamp" : "00:49.54",
+    "seconds" : 49.54
+  },
+  {
+    "text" : "And on the Moon,",
+    "frame" : 1191,
+    "timestamp" : "00:49.58",
+    "seconds" : 49.58
+  },
+  {
+    "text" : "And on the Moon,",
+    "frame" : 1192,
+    "timestamp" : "00:49.62",
+    "seconds" : 49.63
+  },
+  {
+    "text" : "And on the Moon,",
+    "frame" : 1193,
+    "timestamp" : "00:49.66",
+    "seconds" : 49.67
+  },
+  {
+    "text" : "And on the Moon,",
+    "frame" : 1194,
+    "timestamp" : "00:49.70",
+    "seconds" : 49.71
+  },
+  {
+    "text" : "And on the Moon,",
+    "frame" : 1195,
+    "timestamp" : "00:49.75",
+    "seconds" : 49.75
+  },
+  {
+    "text" : "And on the Moon,",
+    "frame" : 1196,
+    "timestamp" : "00:49.79",
+    "seconds" : 49.79
+  },
+  {
+    "text" : "And on the Moon,",
+    "frame" : 1197,
+    "timestamp" : "00:49.83",
+    "seconds" : 49.83
+  },
+  {
+    "text" : "And on the Moon,",
+    "frame" : 1198,
+    "timestamp" : "00:49.87",
+    "seconds" : 49.88
+  },
+  {
+    "text" : "And on the Moon,",
+    "frame" : 1199,
+    "timestamp" : "00:49.91",
+    "seconds" : 49.92
+  },
+  {
+    "text" : "And on the Moon,",
+    "frame" : 1200,
+    "timestamp" : "00:49.95",
+    "seconds" : 49.96
+  },
+  {
+    "text" : "And on the Moon,",
+    "frame" : 1201,
+    "timestamp" : "00:50.00",
+    "seconds" : 50
+  },
+  {
+    "text" : "And on the Moon,",
+    "frame" : 1202,
+    "timestamp" : "00:50.04",
+    "seconds" : 50.04
+  },
+  {
+    "text" : "And on the Moon,",
+    "frame" : 1203,
+    "timestamp" : "00:50.08",
+    "seconds" : 50.08
+  },
+  {
+    "text" : "And on the Moon,",
+    "frame" : 1204,
+    "timestamp" : "00:50.12",
+    "seconds" : 50.13
+  },
+  {
+    "text" : "And on the Moon,",
+    "frame" : 1205,
+    "timestamp" : "00:50.16",
+    "seconds" : 50.17
+  },
+  {
+    "text" : "And on the Moon,",
+    "frame" : 1206,
+    "timestamp" : "00:50.20",
+    "seconds" : 50.21
+  },
+  {
+    "text" : "And on the Moon,",
+    "frame" : 1207,
+    "timestamp" : "00:50.25",
+    "seconds" : 50.25
+  },
+  {
+    "text" : "And on the Moon,",
+    "frame" : 1208,
+    "timestamp" : "00:50.29",
+    "seconds" : 50.29
+  },
+  {
+    "text" : "And on the Moon,",
+    "frame" : 1209,
+    "timestamp" : "00:50.33",
+    "seconds" : 50.33
+  },
+  {
+    "text" : "And on the Moon,",
+    "frame" : 1210,
+    "timestamp" : "00:50.37",
+    "seconds" : 50.38
+  },
+  {
+    "text" : "And on the Moon,",
+    "frame" : 1211,
+    "timestamp" : "00:50.41",
+    "seconds" : 50.42
+  },
+  {
+    "text" : "And on the Moon,",
+    "frame" : 1212,
+    "timestamp" : "00:50.45",
+    "seconds" : 50.46
+  },
+  {
+    "text" : "And on the Moon,",
+    "frame" : 1213,
+    "timestamp" : "00:50.50",
+    "seconds" : 50.5
+  },
+  {
+    "text" : "And on the Moon,",
+    "frame" : 1214,
+    "timestamp" : "00:50.54",
+    "seconds" : 50.54
+  },
+  {
+    "text" : "And on the Moon,",
+    "frame" : 1215,
+    "timestamp" : "00:50.58",
+    "seconds" : 50.58
+  },
+  {
+    "text" : "And on the Moon,",
+    "frame" : 1216,
+    "timestamp" : "00:50.62",
+    "seconds" : 50.63
+  },
+  {
+    "text" : "And on the Moon,",
+    "frame" : 1217,
+    "timestamp" : "00:50.66",
+    "seconds" : 50.67
+  },
+  {
+    "text" : "And on the Moon,",
+    "frame" : 1218,
+    "timestamp" : "00:50.70",
+    "seconds" : 50.71
+  },
+  {
+    "text" : "And on the Moon,",
+    "frame" : 1219,
+    "timestamp" : "00:50.75",
+    "seconds" : 50.75
+  },
+  {
+    "seconds" : 50.79,
+    "frame" : 1220,
+    "timestamp" : "00:50.79",
+    "text" : "And on the Moon,"
+  },
+  {
+    "seconds" : 50.83,
+    "frame" : 1221,
+    "timestamp" : "00:50.83",
+    "text" : "And on the Moon,"
+  },
+  {
+    "seconds" : 50.88,
+    "frame" : 1222,
+    "timestamp" : "00:50.87",
+    "text" : "And on the Moon,"
+  },
+  {
+    "seconds" : 50.92,
+    "frame" : 1223,
+    "timestamp" : "00:50.91",
+    "text" : ""
+  },
+  {
+    "seconds" : 50.96,
+    "frame" : 1224,
+    "timestamp" : "00:50.95",
+    "text" : ""
+  },
+  {
+    "seconds" : 51,
+    "frame" : 1225,
+    "timestamp" : "00:51.00",
+    "text" : ""
+  },
+  {
+    "seconds" : 51.04,
+    "frame" : 1226,
+    "timestamp" : "00:51.04",
+    "text" : ""
+  },
+  {
+    "seconds" : 51.08,
+    "frame" : 1227,
+    "timestamp" : "00:51.08",
+    "text" : ""
+  },
+  {
+    "seconds" : 51.13,
+    "frame" : 1228,
+    "timestamp" : "00:51.12",
+    "text" : ""
+  },
+  {
+    "seconds" : 51.17,
+    "frame" : 1229,
+    "timestamp" : "00:51.16",
+    "text" : ""
+  },
+  {
+    "seconds" : 51.21,
+    "frame" : 1230,
+    "timestamp" : "00:51.20",
+    "text" : "one thing still answers."
+  },
+  {
+    "seconds" : 51.25,
+    "frame" : 1231,
+    "timestamp" : "00:51.25",
+    "text" : "one thing still answers."
+  },
+  {
+    "seconds" : 51.29,
+    "frame" : 1232,
+    "timestamp" : "00:51.29",
+    "text" : "one thing still answers."
+  },
+  {
+    "seconds" : 51.33,
+    "frame" : 1233,
+    "timestamp" : "00:51.33",
+    "text" : "one thing still answers."
+  },
+  {
+    "seconds" : 51.38,
+    "frame" : 1234,
+    "timestamp" : "00:51.37",
+    "text" : "one thing still answers."
+  },
+  {
+    "seconds" : 51.42,
+    "frame" : 1235,
+    "timestamp" : "00:51.41",
+    "text" : "one thing still answers."
+  },
+  {
+    "seconds" : 51.46,
+    "frame" : 1236,
+    "timestamp" : "00:51.45",
+    "text" : "one thing still answers."
+  },
+  {
+    "seconds" : 51.5,
+    "frame" : 1237,
+    "timestamp" : "00:51.50",
+    "text" : "one thing still answers."
+  },
+  {
+    "seconds" : 51.54,
+    "frame" : 1238,
+    "timestamp" : "00:51.54",
+    "text" : "one thing still answers."
+  },
+  {
+    "seconds" : 51.58,
+    "frame" : 1239,
+    "timestamp" : "00:51.58",
+    "text" : "one thing still answers."
+  },
+  {
+    "seconds" : 51.63,
+    "frame" : 1240,
+    "timestamp" : "00:51.62",
+    "text" : "one thing still answers."
+  },
+  {
+    "seconds" : 51.67,
+    "frame" : 1241,
+    "timestamp" : "00:51.66",
+    "text" : "one thing still answers."
+  },
+  {
+    "seconds" : 51.71,
+    "frame" : 1242,
+    "timestamp" : "00:51.70",
+    "text" : "one thing still answers."
+  },
+  {
+    "seconds" : 51.75,
+    "frame" : 1243,
+    "timestamp" : "00:51.75",
+    "text" : "one thing still answers."
+  },
+  {
+    "seconds" : 51.79,
+    "frame" : 1244,
+    "timestamp" : "00:51.79",
+    "text" : "one thing still answers."
+  },
+  {
+    "seconds" : 51.83,
+    "frame" : 1245,
+    "timestamp" : "00:51.83",
+    "text" : "one thing still answers."
+  },
+  {
+    "seconds" : 51.88,
+    "frame" : 1246,
+    "timestamp" : "00:51.87",
+    "text" : "one thing still answers."
+  },
+  {
+    "seconds" : 51.92,
+    "frame" : 1247,
+    "timestamp" : "00:51.91",
+    "text" : "one thing still answers."
+  },
+  {
+    "seconds" : 51.96,
+    "frame" : 1248,
+    "timestamp" : "00:51.95",
+    "text" : "one thing still answers."
+  },
+  {
+    "seconds" : 52,
+    "frame" : 1249,
+    "timestamp" : "00:52.00",
+    "text" : "one thing still answers."
+  },
+  {
+    "seconds" : 52.04,
+    "frame" : 1250,
+    "timestamp" : "00:52.04",
+    "text" : "one thing still answers."
+  },
+  {
+    "seconds" : 52.08,
+    "frame" : 1251,
+    "timestamp" : "00:52.08",
+    "text" : "one thing still answers."
+  },
+  {
+    "seconds" : 52.13,
+    "frame" : 1252,
+    "timestamp" : "00:52.12",
+    "text" : "one thing still answers."
+  },
+  {
+    "seconds" : 52.17,
+    "frame" : 1253,
+    "timestamp" : "00:52.16",
+    "text" : "one thing still answers."
+  },
+  {
+    "seconds" : 52.21,
+    "frame" : 1254,
+    "timestamp" : "00:52.20",
+    "text" : "one thing still answers."
+  },
+  {
+    "seconds" : 52.25,
+    "frame" : 1255,
+    "timestamp" : "00:52.25",
+    "text" : "one thing still answers."
+  },
+  {
+    "timestamp" : "00:52.29",
+    "frame" : 1256,
+    "seconds" : 52.29,
+    "text" : "one thing still answers."
+  },
+  {
+    "timestamp" : "00:52.33",
+    "frame" : 1257,
+    "seconds" : 52.33,
+    "text" : "one thing still answers."
+  },
+  {
+    "timestamp" : "00:52.37",
+    "frame" : 1258,
+    "seconds" : 52.38,
+    "text" : "one thing still answers."
+  },
+  {
+    "timestamp" : "00:52.41",
+    "frame" : 1259,
+    "seconds" : 52.42,
+    "text" : "one thing still answers."
+  },
+  {
+    "timestamp" : "00:52.45",
+    "frame" : 1260,
+    "seconds" : 52.46,
+    "text" : "one thing still answers."
+  },
+  {
+    "timestamp" : "00:52.50",
+    "frame" : 1261,
+    "seconds" : 52.5,
+    "text" : "one thing still answers."
+  },
+  {
+    "timestamp" : "00:52.54",
+    "frame" : 1262,
+    "seconds" : 52.54,
+    "text" : "one thing still answers."
+  },
+  {
+    "timestamp" : "00:52.58",
+    "frame" : 1263,
+    "seconds" : 52.58,
+    "text" : "one thing still answers."
+  },
+  {
+    "timestamp" : "00:52.62",
+    "frame" : 1264,
+    "seconds" : 52.63,
+    "text" : "one thing still answers."
+  },
+  {
+    "timestamp" : "00:52.66",
+    "frame" : 1265,
+    "seconds" : 52.67,
+    "text" : "one thing still answers."
+  },
+  {
+    "timestamp" : "00:52.70",
+    "frame" : 1266,
+    "seconds" : 52.71,
+    "text" : "one thing still answers."
+  },
+  {
+    "timestamp" : "00:52.75",
+    "frame" : 1267,
+    "seconds" : 52.75,
+    "text" : "one thing still answers."
+  },
+  {
+    "timestamp" : "00:52.79",
+    "frame" : 1268,
+    "seconds" : 52.79,
+    "text" : "one thing still answers."
+  },
+  {
+    "timestamp" : "00:52.83",
+    "frame" : 1269,
+    "seconds" : 52.83,
+    "text" : "one thing still answers."
+  },
+  {
+    "timestamp" : "00:52.87",
+    "frame" : 1270,
+    "seconds" : 52.88,
+    "text" : "one thing still answers."
+  },
+  {
+    "timestamp" : "00:52.91",
+    "frame" : 1271,
+    "seconds" : 52.92,
+    "text" : "one thing still answers."
+  },
+  {
+    "timestamp" : "00:52.95",
+    "frame" : 1272,
+    "seconds" : 52.96,
+    "text" : "one thing still answers."
+  },
+  {
+    "timestamp" : "00:53.00",
+    "frame" : 1273,
+    "seconds" : 53,
+    "text" : "one thing still answers."
+  },
+  {
+    "timestamp" : "00:53.04",
+    "frame" : 1274,
+    "seconds" : 53.04,
+    "text" : "one thing still answers."
+  },
+  {
+    "timestamp" : "00:53.08",
+    "frame" : 1275,
+    "seconds" : 53.08,
+    "text" : "one thing still answers."
+  },
+  {
+    "timestamp" : "00:53.12",
+    "frame" : 1276,
+    "seconds" : 53.13,
+    "text" : "one thing still answers."
+  },
+  {
+    "timestamp" : "00:53.16",
+    "frame" : 1277,
+    "seconds" : 53.17,
+    "text" : "one thing still answers."
+  },
+  {
+    "timestamp" : "00:53.20",
+    "frame" : 1278,
+    "seconds" : 53.21,
+    "text" : "one thing still answers."
+  },
+  {
+    "timestamp" : "00:53.25",
+    "frame" : 1279,
+    "seconds" : 53.25,
+    "text" : "one thing still answers."
+  },
+  {
+    "timestamp" : "00:53.29",
+    "frame" : 1280,
+    "seconds" : 53.29,
+    "text" : "one thing still answers."
+  },
+  {
+    "timestamp" : "00:53.33",
+    "frame" : 1281,
+    "seconds" : 53.33,
+    "text" : "one thing still answers."
+  },
+  {
+    "timestamp" : "00:53.37",
+    "frame" : 1282,
+    "seconds" : 53.38,
+    "text" : "one thing still answers."
+  },
+  {
+    "timestamp" : "00:53.41",
+    "frame" : 1283,
+    "seconds" : 53.42,
+    "text" : "one thing still answers."
+  },
+  {
+    "timestamp" : "00:53.45",
+    "frame" : 1284,
+    "seconds" : 53.46,
+    "text" : "one thing still answers."
+  },
+  {
+    "timestamp" : "00:53.50",
+    "frame" : 1285,
+    "seconds" : 53.5,
+    "text" : "one thing still answers."
+  },
+  {
+    "timestamp" : "00:53.54",
+    "frame" : 1286,
+    "seconds" : 53.54,
+    "text" : "one thing still answers."
+  },
+  {
+    "timestamp" : "00:53.58",
+    "frame" : 1287,
+    "seconds" : 53.58,
+    "text" : "one thing still answers."
+  },
+  {
+    "timestamp" : "00:53.62",
+    "frame" : 1288,
+    "seconds" : 53.63,
+    "text" : "one thing still answers."
+  },
+  {
+    "timestamp" : "00:53.66",
+    "frame" : 1289,
+    "seconds" : 53.67,
+    "text" : "one thing still answers."
+  },
+  {
+    "timestamp" : "00:53.70",
+    "frame" : 1290,
+    "seconds" : 53.71,
+    "text" : ""
+  },
+  {
+    "timestamp" : "00:53.75",
+    "frame" : 1291,
+    "seconds" : 53.75,
+    "text" : ""
+  },
+  {
+    "text" : "",
+    "frame" : 1292,
+    "timestamp" : "00:53.79",
+    "seconds" : 53.79
+  },
+  {
+    "text" : "",
+    "frame" : 1293,
+    "timestamp" : "00:53.83",
+    "seconds" : 53.83
+  },
+  {
+    "text" : "",
+    "frame" : 1294,
+    "timestamp" : "00:53.87",
+    "seconds" : 53.88
+  },
+  {
+    "text" : "",
+    "frame" : 1295,
+    "timestamp" : "00:53.91",
+    "seconds" : 53.92
+  },
+  {
+    "text" : "",
+    "frame" : 1296,
+    "timestamp" : "00:53.95",
+    "seconds" : 53.96
+  },
+  {
+    "text" : "",
+    "frame" : 1297,
+    "timestamp" : "00:54.00",
+    "seconds" : 54
+  },
+  {
+    "text" : "",
+    "frame" : 1298,
+    "timestamp" : "00:54.04",
+    "seconds" : 54.04
+  },
+  {
+    "text" : "",
+    "frame" : 1299,
+    "timestamp" : "00:54.08",
+    "seconds" : 54.08
+  },
+  {
+    "text" : "We still bounce lasers",
+    "frame" : 1300,
+    "timestamp" : "00:54.12",
+    "seconds" : 54.13
+  },
+  {
+    "text" : "We still bounce lasers",
+    "frame" : 1301,
+    "timestamp" : "00:54.16",
+    "seconds" : 54.17
+  },
+  {
+    "text" : "We still bounce lasers",
+    "frame" : 1302,
+    "timestamp" : "00:54.20",
+    "seconds" : 54.21
+  },
+  {
+    "text" : "We still bounce lasers",
+    "frame" : 1303,
+    "timestamp" : "00:54.25",
+    "seconds" : 54.25
+  },
+  {
+    "text" : "We still bounce lasers",
+    "frame" : 1304,
+    "timestamp" : "00:54.29",
+    "seconds" : 54.29
+  },
+  {
+    "text" : "We still bounce lasers",
+    "frame" : 1305,
+    "timestamp" : "00:54.33",
+    "seconds" : 54.33
+  },
+  {
+    "text" : "We still bounce lasers",
+    "frame" : 1306,
+    "timestamp" : "00:54.37",
+    "seconds" : 54.38
+  },
+  {
+    "text" : "We still bounce lasers",
+    "frame" : 1307,
+    "timestamp" : "00:54.41",
+    "seconds" : 54.42
+  },
+  {
+    "text" : "We still bounce lasers",
+    "frame" : 1308,
+    "timestamp" : "00:54.45",
+    "seconds" : 54.46
+  },
+  {
+    "text" : "We still bounce lasers",
+    "frame" : 1309,
+    "timestamp" : "00:54.50",
+    "seconds" : 54.5
+  },
+  {
+    "text" : "We still bounce lasers",
+    "frame" : 1310,
+    "timestamp" : "00:54.54",
+    "seconds" : 54.54
+  },
+  {
+    "text" : "We still bounce lasers",
+    "frame" : 1311,
+    "timestamp" : "00:54.58",
+    "seconds" : 54.58
+  },
+  {
+    "text" : "We still bounce lasers",
+    "frame" : 1312,
+    "timestamp" : "00:54.62",
+    "seconds" : 54.63
+  },
+  {
+    "text" : "We still bounce lasers",
+    "frame" : 1313,
+    "timestamp" : "00:54.66",
+    "seconds" : 54.67
+  },
+  {
+    "text" : "We still bounce lasers",
+    "frame" : 1314,
+    "timestamp" : "00:54.70",
+    "seconds" : 54.71
+  },
+  {
+    "text" : "We still bounce lasers",
+    "frame" : 1315,
+    "timestamp" : "00:54.75",
+    "seconds" : 54.75
+  },
+  {
+    "text" : "We still bounce lasers",
+    "frame" : 1316,
+    "timestamp" : "00:54.79",
+    "seconds" : 54.79
+  },
+  {
+    "text" : "We still bounce lasers",
+    "frame" : 1317,
+    "timestamp" : "00:54.83",
+    "seconds" : 54.83
+  },
+  {
+    "text" : "We still bounce lasers",
+    "frame" : 1318,
+    "timestamp" : "00:54.87",
+    "seconds" : 54.88
+  },
+  {
+    "text" : "We still bounce lasers",
+    "frame" : 1319,
+    "timestamp" : "00:54.91",
+    "seconds" : 54.92
+  },
+  {
+    "text" : "We still bounce lasers",
+    "frame" : 1320,
+    "timestamp" : "00:54.95",
+    "seconds" : 54.96
+  },
+  {
+    "text" : "We still bounce lasers",
+    "frame" : 1321,
+    "timestamp" : "00:55.00",
+    "seconds" : 55
+  },
+  {
+    "text" : "We still bounce lasers",
+    "frame" : 1322,
+    "timestamp" : "00:55.04",
+    "seconds" : 55.04
+  },
+  {
+    "text" : "We still bounce lasers",
+    "frame" : 1323,
+    "timestamp" : "00:55.08",
+    "seconds" : 55.08
+  },
+  {
+    "text" : "We still bounce lasers",
+    "frame" : 1324,
+    "timestamp" : "00:55.12",
+    "seconds" : 55.13
+  },
+  {
+    "text" : "We still bounce lasers",
+    "frame" : 1325,
+    "timestamp" : "00:55.16",
+    "seconds" : 55.17
+  },
+  {
+    "text" : "We still bounce lasers",
+    "frame" : 1326,
+    "timestamp" : "00:55.20",
+    "seconds" : 55.21
+  },
+  {
+    "text" : "We still bounce lasers",
+    "frame" : 1327,
+    "timestamp" : "00:55.25",
+    "seconds" : 55.25
+  },
+  {
+    "seconds" : 55.29,
+    "text" : "We still bounce lasers",
+    "frame" : 1328,
+    "timestamp" : "00:55.29"
+  },
+  {
+    "seconds" : 55.33,
+    "text" : "We still bounce lasers",
+    "frame" : 1329,
+    "timestamp" : "00:55.33"
+  },
+  {
+    "seconds" : 55.38,
+    "text" : "We still bounce lasers",
+    "frame" : 1330,
+    "timestamp" : "00:55.37"
+  },
+  {
+    "seconds" : 55.42,
+    "text" : "We still bounce lasers",
+    "frame" : 1331,
+    "timestamp" : "00:55.41"
+  },
+  {
+    "seconds" : 55.46,
+    "text" : "We still bounce lasers",
+    "frame" : 1332,
+    "timestamp" : "00:55.45"
+  },
+  {
+    "seconds" : 55.5,
+    "text" : "We still bounce lasers",
+    "frame" : 1333,
+    "timestamp" : "00:55.50"
+  },
+  {
+    "seconds" : 55.54,
+    "text" : "We still bounce lasers",
+    "frame" : 1334,
+    "timestamp" : "00:55.54"
+  },
+  {
+    "seconds" : 55.58,
+    "text" : "We still bounce lasers",
+    "frame" : 1335,
+    "timestamp" : "00:55.58"
+  },
+  {
+    "seconds" : 55.63,
+    "text" : "We still bounce lasers",
+    "frame" : 1336,
+    "timestamp" : "00:55.62"
+  },
+  {
+    "seconds" : 55.67,
+    "text" : "We still bounce lasers",
+    "frame" : 1337,
+    "timestamp" : "00:55.66"
+  },
+  {
+    "seconds" : 55.71,
+    "text" : "We still bounce lasers",
+    "frame" : 1338,
+    "timestamp" : "00:55.70"
+  },
+  {
+    "seconds" : 55.75,
+    "text" : "We still bounce lasers",
+    "frame" : 1339,
+    "timestamp" : "00:55.75"
+  },
+  {
+    "seconds" : 55.79,
+    "text" : "We still bounce lasers",
+    "frame" : 1340,
+    "timestamp" : "00:55.79"
+  },
+  {
+    "seconds" : 55.83,
+    "text" : "We still bounce lasers",
+    "frame" : 1341,
+    "timestamp" : "00:55.83"
+  },
+  {
+    "seconds" : 55.88,
+    "text" : "We still bounce lasers",
+    "frame" : 1342,
+    "timestamp" : "00:55.87"
+  },
+  {
+    "seconds" : 55.92,
+    "text" : "We still bounce lasers",
+    "frame" : 1343,
+    "timestamp" : "00:55.91"
+  },
+  {
+    "seconds" : 55.96,
+    "text" : "We still bounce lasers",
+    "frame" : 1344,
+    "timestamp" : "00:55.95"
+  },
+  {
+    "seconds" : 56,
+    "text" : "We still bounce lasers",
+    "frame" : 1345,
+    "timestamp" : "00:56.00"
+  },
+  {
+    "seconds" : 56.04,
+    "text" : "We still bounce lasers",
+    "frame" : 1346,
+    "timestamp" : "00:56.04"
+  },
+  {
+    "seconds" : 56.08,
+    "text" : "We still bounce lasers",
+    "frame" : 1347,
+    "timestamp" : "00:56.08"
+  },
+  {
+    "seconds" : 56.13,
+    "text" : "We still bounce lasers",
+    "frame" : 1348,
+    "timestamp" : "00:56.12"
+  },
+  {
+    "seconds" : 56.17,
+    "text" : "We still bounce lasers",
+    "frame" : 1349,
+    "timestamp" : "00:56.16"
+  },
+  {
+    "seconds" : 56.21,
+    "text" : "We still bounce lasers",
+    "frame" : 1350,
+    "timestamp" : "00:56.20"
+  },
+  {
+    "seconds" : 56.25,
+    "text" : "We still bounce lasers",
+    "frame" : 1351,
+    "timestamp" : "00:56.25"
+  },
+  {
+    "seconds" : 56.29,
+    "text" : "We still bounce lasers",
+    "frame" : 1352,
+    "timestamp" : "00:56.29"
+  },
+  {
+    "seconds" : 56.33,
+    "text" : "We still bounce lasers",
+    "frame" : 1353,
+    "timestamp" : "00:56.33"
+  },
+  {
+    "seconds" : 56.38,
+    "text" : "We still bounce lasers",
+    "frame" : 1354,
+    "timestamp" : "00:56.37"
+  },
+  {
+    "seconds" : 56.42,
+    "text" : "We still bounce lasers",
+    "frame" : 1355,
+    "timestamp" : "00:56.41"
+  },
+  {
+    "seconds" : 56.46,
+    "text" : "We still bounce lasers",
+    "frame" : 1356,
+    "timestamp" : "00:56.45"
+  },
+  {
+    "seconds" : 56.5,
+    "text" : "We still bounce lasers",
+    "frame" : 1357,
+    "timestamp" : "00:56.50"
+  },
+  {
+    "seconds" : 56.54,
+    "text" : "We still bounce lasers",
+    "frame" : 1358,
+    "timestamp" : "00:56.54"
+  },
+  {
+    "seconds" : 56.58,
+    "text" : "We still bounce lasers",
+    "frame" : 1359,
+    "timestamp" : "00:56.58"
+  },
+  {
+    "seconds" : 56.63,
+    "text" : "We still bounce lasers",
+    "frame" : 1360,
+    "timestamp" : "00:56.62"
+  },
+  {
+    "seconds" : 56.67,
+    "text" : "We still bounce lasers",
+    "frame" : 1361,
+    "timestamp" : "00:56.66"
+  },
+  {
+    "seconds" : 56.71,
+    "text" : "",
+    "frame" : 1362,
+    "timestamp" : "00:56.70"
+  },
+  {
+    "seconds" : 56.75,
+    "text" : "",
+    "frame" : 1363,
+    "timestamp" : "00:56.75"
+  },
+  {
+    "frame" : 1364,
+    "seconds" : 56.79,
+    "timestamp" : "00:56.79",
+    "text" : ""
+  },
+  {
+    "frame" : 1365,
+    "seconds" : 56.83,
+    "timestamp" : "00:56.83",
+    "text" : ""
+  },
+  {
+    "frame" : 1366,
+    "seconds" : 56.88,
+    "timestamp" : "00:56.87",
+    "text" : ""
+  },
+  {
+    "frame" : 1367,
+    "seconds" : 56.92,
+    "timestamp" : "00:56.91",
+    "text" : ""
+  },
+  {
+    "frame" : 1368,
+    "seconds" : 56.96,
+    "timestamp" : "00:56.95",
+    "text" : ""
+  },
+  {
+    "frame" : 1369,
+    "seconds" : 57,
+    "timestamp" : "00:57.00",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "frame" : 1370,
+    "seconds" : 57.04,
+    "timestamp" : "00:57.04",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "frame" : 1371,
+    "seconds" : 57.08,
+    "timestamp" : "00:57.08",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "frame" : 1372,
+    "seconds" : 57.13,
+    "timestamp" : "00:57.12",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "frame" : 1373,
+    "seconds" : 57.17,
+    "timestamp" : "00:57.16",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "frame" : 1374,
+    "seconds" : 57.21,
+    "timestamp" : "00:57.20",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "frame" : 1375,
+    "seconds" : 57.25,
+    "timestamp" : "00:57.25",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "frame" : 1376,
+    "seconds" : 57.29,
+    "timestamp" : "00:57.29",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "frame" : 1377,
+    "seconds" : 57.33,
+    "timestamp" : "00:57.33",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "frame" : 1378,
+    "seconds" : 57.38,
+    "timestamp" : "00:57.37",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "frame" : 1379,
+    "seconds" : 57.42,
+    "timestamp" : "00:57.41",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "frame" : 1380,
+    "seconds" : 57.46,
+    "timestamp" : "00:57.45",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "frame" : 1381,
+    "seconds" : 57.5,
+    "timestamp" : "00:57.50",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "frame" : 1382,
+    "seconds" : 57.54,
+    "timestamp" : "00:57.54",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "frame" : 1383,
+    "seconds" : 57.58,
+    "timestamp" : "00:57.58",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "frame" : 1384,
+    "seconds" : 57.63,
+    "timestamp" : "00:57.62",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "frame" : 1385,
+    "seconds" : 57.67,
+    "timestamp" : "00:57.66",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "frame" : 1386,
+    "seconds" : 57.71,
+    "timestamp" : "00:57.70",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "frame" : 1387,
+    "seconds" : 57.75,
+    "timestamp" : "00:57.75",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "frame" : 1388,
+    "seconds" : 57.79,
+    "timestamp" : "00:57.79",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "frame" : 1389,
+    "seconds" : 57.83,
+    "timestamp" : "00:57.83",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "frame" : 1390,
+    "seconds" : 57.88,
+    "timestamp" : "00:57.87",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "frame" : 1391,
+    "seconds" : 57.92,
+    "timestamp" : "00:57.91",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "frame" : 1392,
+    "seconds" : 57.96,
+    "timestamp" : "00:57.95",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "frame" : 1393,
+    "seconds" : 58,
+    "timestamp" : "00:58.00",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "frame" : 1394,
+    "seconds" : 58.04,
+    "timestamp" : "00:58.04",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "frame" : 1395,
+    "seconds" : 58.08,
+    "timestamp" : "00:58.08",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "frame" : 1396,
+    "seconds" : 58.13,
+    "timestamp" : "00:58.12",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "frame" : 1397,
+    "seconds" : 58.17,
+    "timestamp" : "00:58.16",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "frame" : 1398,
+    "seconds" : 58.21,
+    "timestamp" : "00:58.20",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "frame" : 1399,
+    "seconds" : 58.25,
+    "timestamp" : "00:58.25",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "seconds" : 58.29,
+    "frame" : 1400,
+    "timestamp" : "00:58.29",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "seconds" : 58.33,
+    "frame" : 1401,
+    "timestamp" : "00:58.33",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "seconds" : 58.38,
+    "frame" : 1402,
+    "timestamp" : "00:58.37",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "seconds" : 58.42,
+    "frame" : 1403,
+    "timestamp" : "00:58.41",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "seconds" : 58.46,
+    "frame" : 1404,
+    "timestamp" : "00:58.45",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "seconds" : 58.5,
+    "frame" : 1405,
+    "timestamp" : "00:58.50",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "seconds" : 58.54,
+    "frame" : 1406,
+    "timestamp" : "00:58.54",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "seconds" : 58.58,
+    "frame" : 1407,
+    "timestamp" : "00:58.58",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "seconds" : 58.63,
+    "frame" : 1408,
+    "timestamp" : "00:58.62",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "seconds" : 58.67,
+    "frame" : 1409,
+    "timestamp" : "00:58.66",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "seconds" : 58.71,
+    "frame" : 1410,
+    "timestamp" : "00:58.70",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "seconds" : 58.75,
+    "frame" : 1411,
+    "timestamp" : "00:58.75",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "seconds" : 58.79,
+    "frame" : 1412,
+    "timestamp" : "00:58.79",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "seconds" : 58.83,
+    "frame" : 1413,
+    "timestamp" : "00:58.83",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "seconds" : 58.88,
+    "frame" : 1414,
+    "timestamp" : "00:58.87",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "seconds" : 58.92,
+    "frame" : 1415,
+    "timestamp" : "00:58.91",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "seconds" : 58.96,
+    "frame" : 1416,
+    "timestamp" : "00:58.95",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "seconds" : 59,
+    "frame" : 1417,
+    "timestamp" : "00:59.00",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "seconds" : 59.04,
+    "frame" : 1418,
+    "timestamp" : "00:59.04",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "seconds" : 59.08,
+    "frame" : 1419,
+    "timestamp" : "00:59.08",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "seconds" : 59.13,
+    "frame" : 1420,
+    "timestamp" : "00:59.12",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "seconds" : 59.17,
+    "frame" : 1421,
+    "timestamp" : "00:59.16",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "seconds" : 59.21,
+    "frame" : 1422,
+    "timestamp" : "00:59.20",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "seconds" : 59.25,
+    "frame" : 1423,
+    "timestamp" : "00:59.25",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "seconds" : 59.29,
+    "frame" : 1424,
+    "timestamp" : "00:59.29",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "seconds" : 59.33,
+    "frame" : 1425,
+    "timestamp" : "00:59.33",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "seconds" : 59.38,
+    "frame" : 1426,
+    "timestamp" : "00:59.37",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "seconds" : 59.42,
+    "frame" : 1427,
+    "timestamp" : "00:59.41",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "seconds" : 59.46,
+    "frame" : 1428,
+    "timestamp" : "00:59.45",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "seconds" : 59.5,
+    "frame" : 1429,
+    "timestamp" : "00:59.50",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "seconds" : 59.54,
+    "frame" : 1430,
+    "timestamp" : "00:59.54",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "seconds" : 59.58,
+    "frame" : 1431,
+    "timestamp" : "00:59.58",
+    "text" : "off Apollo's mirrors."
+  },
+  {
+    "seconds" : 59.63,
+    "frame" : 1432,
+    "timestamp" : "00:59.62",
+    "text" : ""
+  },
+  {
+    "seconds" : 59.67,
+    "frame" : 1433,
+    "timestamp" : "00:59.66",
+    "text" : ""
+  },
+  {
+    "seconds" : 59.71,
+    "frame" : 1434,
+    "timestamp" : "00:59.70",
+    "text" : ""
+  },
+  {
+    "seconds" : 59.75,
+    "frame" : 1435,
+    "timestamp" : "00:59.75",
+    "text" : ""
+  },
+  {
+    "seconds" : 59.79,
+    "text" : "",
+    "frame" : 1436,
+    "timestamp" : "00:59.79"
+  },
+  {
+    "seconds" : 59.83,
+    "text" : "",
+    "frame" : 1437,
+    "timestamp" : "00:59.83"
+  },
+  {
+    "seconds" : 59.88,
+    "text" : "",
+    "frame" : 1438,
+    "timestamp" : "00:59.87"
+  },
+  {
+    "seconds" : 59.92,
+    "text" : "",
+    "frame" : 1439,
+    "timestamp" : "00:59.91"
+  },
+  {
+    "seconds" : 59.96,
+    "text" : "",
+    "frame" : 1440,
+    "timestamp" : "00:59.95"
+  }
+]

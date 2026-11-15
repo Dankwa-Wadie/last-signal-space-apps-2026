@@ -1,0 +1,229 @@
+[
+ {
+  "name": "long_s01_flag",
+  "setup": "long_s01_flag.lua",
+  "frames": 314,
+  "mode": "lerp",
+  "camA": [
+   -8.0,
+   4.8,
+   14.0
+  ],
+  "camB": [
+   -3.5,
+   3.6,
+   8.5
+  ],
+  "tgtA": [
+   1.5,
+   5.5,
+   0
+  ],
+  "tgtB": [
+   1.2,
+   5.0,
+   0
+  ]
+ },
+ {
+  "name": "long_s02_liftoff",
+  "setup": "long_s02_liftoff.lua",
+  "frame_code": "long_s02_frame.lua",
+  "frames": 212,
+  "mode": "lerp",
+  "camA": [
+   -24.0,
+   6.5,
+   32.0
+  ],
+  "camB": [
+   -18.0,
+   8.5,
+   26.0
+  ],
+  "tgtA": [
+   0,
+   8.0,
+   0
+  ],
+  "tgtB": [
+   0,
+   22.0,
+   0
+  ]
+ },
+ {
+  "name": "long_s03_lm",
+  "setup": "long_s03_lm.lua",
+  "frames": 195,
+  "mode": "lerp",
+  "camA": [
+   -22.0,
+   7.5,
+   26.0
+  ],
+  "camB": [
+   -12.0,
+   4.8,
+   14.5
+  ],
+  "tgtA": [
+   0,
+   6.5,
+   0
+  ],
+  "tgtB": [
+   0,
+   6.8,
+   0
+  ]
+ },
+ {
+  "name": "long_s04_seis",
+  "setup": "long_s04_seis.lua",
+  "frame_code": "long_s04_frame.lua",
+  "frames": 556,
+  "mode": "lerp",
+  "camA": [
+   8.5,
+   3.2,
+   10.5
+  ],
+  "camB": [
+   4.8,
+   2.0,
+   6.2
+  ],
+  "tgtA": [
+   0,
+   1.2,
+   0
+  ],
+  "tgtB": [
+   0,
+   1.0,
+   0
+  ]
+ },
+ {
+  "name": "long_s05_lrv",
+  "setup": "long_s05_lrv.lua",
+  "frames": 371,
+  "mode": "orbit",
+  "radius": 13,
+  "height": 4.4,
+  "a0": -40,
+  "a1": 55,
+  "tgt": [
+   0,
+   3.0,
+   0
+  ]
+ },
+ {
+  "name": "long_s06_mars",
+  "setup": "long_s06_mars.lua",
+  "frames": 675,
+  "mode": "lerp",
+  "camA": [
+   -18.0,
+   6.0,
+   22.0
+  ],
+  "camB": [
+   -8.5,
+   3.2,
+   9.8
+  ],
+  "tgtA": [
+   0,
+   3.0,
+   0
+  ],
+  "tgtB": [
+   0,
+   3.2,
+   0
+  ]
+ },
+ {
+  "name": "long_s07_voyager",
+  "setup": "long_s07_voyager.lua",
+  "frame_code": "long_s07_frame.lua",
+  "frames": 596,
+  "mode": "lerp",
+  "camA": [
+   18.0,
+   9.5,
+   21.0
+  ],
+  "camB": [
+   9.5,
+   6.2,
+   11.0
+  ],
+  "tgtA": [
+   0,
+   6.0,
+   0
+  ],
+  "tgtB": [
+   0,
+   6.0,
+   0
+  ]
+ },
+ {
+  "name": "long_s08_retro",
+  "setup": "long_s08_retro.lua",
+  "frame_code": "long_s08_frame.lua",
+  "frames": 965,
+  "mode": "lerp",
+  "camA": [
+   -16.0,
+   5.5,
+   18.0
+  ],
+  "camB": [
+   -7.5,
+   3.2,
+   8.8
+  ],
+  "tgtA": [
+   0,
+   2.6,
+   0
+  ],
+  "tgtB": [
+   0,
+   2.7,
+   0
+  ]
+ },
+ {
+  "name": "long_s09_astronaut",
+  "setup": "long_s09_astronaut.lua",
+  "frames": 222,
+  "mode": "lerp",
+  "camA": [
+   4.5,
+   3.8,
+   -7.5
+  ],
+  "camB": [
+   2.8,
+   3.4,
+   -4.8
+  ],
+  "tgtA": [
+   0,
+   3.5,
+   0
+  ],
+  "tgtB": [
+   0,
+   3.6,
+   0
+  ]
+ }
+]
