@@ -143,7 +143,10 @@
         @media (pointer: coarse) { .g-view { bottom: 92px; } }
         /* Roblox ProximityPrompt */
         .g-prompt { position: absolute; transform: translate(-50%, -50%); display: flex; align-items: center; gap: 10px; padding: 8px 16px 8px 8px; border-radius: 12px; background: rgba(0,0,0,.55); pointer-events: auto; cursor: pointer; white-space: nowrap; }
-        .g-prompt .key { width: 40px; height: 40px; border-radius: 50%; border: 2px solid rgba(255,255,255,.92); display: grid; place-items: center; color: #fff; font-weight: 700; font-size: 17px; background: rgba(25,25,28,.65); flex: none; }
+        .g-prompt .key { position: relative; isolation: isolate; width: 40px; height: 40px; border-radius: 50%; border: 2px solid rgba(255,255,255,.92); display: grid; place-items: center; color: #fff; font-weight: 700; font-size: 17px; background: rgba(25,25,28,.65); flex: none; }
+        .g-prompt .key::after { content: ''; position: absolute; z-index: -1; inset: -7px; border-radius: 50%; background: conic-gradient(var(--g-yel) calc(var(--hold-progress, 0) * 1%), rgba(255,255,255,.2) 0); -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 3px), #000 0); mask: radial-gradient(farthest-side, transparent calc(100% - 3px), #000 0); opacity: 0; }
+        .g-prompt.is-holding .key::after { opacity: 1; }
+        .g-prompt.is-holding .act::after { content: ' · HOLD'; color: var(--g-yel); font-size: 11px; }
         .g-prompt .obj { color: rgba(255,255,255,.78); font-size: 12px; font-weight: 500; line-height: 1.25; }
         .g-prompt .act { color: #fff; font-size: 17px; font-weight: 600; line-height: 1.25; }
         /* storm banner */
@@ -2832,7 +2835,7 @@
                 // studs (60 m) south of it, outside the heritage boundary, and you arrive on its
                 // pad facing Eagle. The only boards are the station's own, as in the game.
                 const ST=0.4, st=new THREE.Group(); st.scale.setScalar(ST); surfaceWorldGroup.add(st);
-                signPanels.length=0;
+                signPanels.length=0; signPanelMeshes.length=0;
                 const gy=(x,z)=>getSurfaceHeight(x*ST,z*ST,site)/ST;
                 const M=(x,y,z,w,h,d,color,opts)=>box(st,x,y,z,w,h,d,color,opts);
                 const WALL='#e2e2dc', NEON=(c,i=1.5)=>({emissive:c,emissiveIntensity:i});
@@ -3310,14 +3313,16 @@
         const _tpLook = new THREE.Vector3(), _pv = new THREE.Vector3();
 
         // ---------- canvas boards (the game's SurfaceGuis) ----------
-        const signPanels = [];
+        const signPanels = [], signPanelMeshes = [];
         function textPanel(w, h, cw, ch, draw) {
             const canvas = document.createElement('canvas'); canvas.width = cw; canvas.height = ch;
             const ctx = canvas.getContext('2d');
             const tex = new THREE.CanvasTexture(canvas); tex.colorSpace = THREE.SRGBColorSpace; tex.anisotropy = 4;
             const redraw = () => { ctx.clearRect(0, 0, cw, ch); draw(ctx, cw, ch); tex.needsUpdate = true; };
             redraw(); signPanels.push(redraw);
-            return new THREE.Mesh(new THREE.PlaneGeometry(w, h), new THREE.MeshBasicMaterial({ map: tex, toneMapped: false }));
+            const panel=new THREE.Mesh(new THREE.PlaneGeometry(w, h), new THREE.MeshBasicMaterial({ map: tex, toneMapped: false }));
+            signPanelMeshes.push(panel);
+            return panel;
         }
         // TextScaled, as Roblox does it: each line fills its height unless the width runs out first
         function signText(ctx, cw, lines) {
@@ -3354,54 +3359,87 @@
         // A suited astronaut: Suit.server.lua on an R6 body, 0.4 m per stud. `stripe` is the red
         // commander's band the game puts on your right arm.
         function makeSuitFigure(stripe = true) {
-            const g = new THREE.Group();
-            const white = new THREE.MeshStandardMaterial({ color: '#ececE8', emissive: '#6c6c6a', roughness: .55, metalness: .02 });
-            const mk = (w, h, d, mat) => { const m = new THREE.Mesh(new THREE.BoxGeometry(w, h, d), mat); m.castShadow = true; m.receiveShadow = true; return m; };
-            const torso = mk(.8, .8, .4, white); torso.position.y = 1.2; g.add(torso);
-            const plss = mk(.76, .8, .34, new THREE.MeshStandardMaterial({ color: '#dededa', emissive: '#626260', roughness: .6 })); plss.position.set(0, 1.24, .312); g.add(plss);
-            const limb = (x, y) => { const p = new THREE.Group(); p.position.set(x, y, 0); const m = mk(.4, .8, .4, white); m.position.y = -.4; p.add(m); g.add(p); return p; };
-            const armL = limb(-.6, 1.6), armR = limb(.6, 1.6), legL = limb(-.2, .8), legR = limb(.2, .8);
-            if (stripe) { const band = mk(.424, .072, .424, new THREE.MeshStandardMaterial({ color: '#be3e30', roughness: .6 })); band.position.y = -.3; armR.add(band); }
-            const head = new THREE.Mesh(new THREE.CylinderGeometry(.25, .25, .5, 24), white); head.position.y = 1.85; head.castShadow = true; g.add(head);
-            const helm = new THREE.Mesh(new THREE.SphereGeometry(.4, 32, 20), new THREE.MeshStandardMaterial({ color: '#f0f0f0', transparent: true, opacity: .55, roughness: .06, metalness: .3 }));
-            helm.position.y = 1.85; helm.castShadow = true; g.add(helm);
-            const visor = mk(.58, .4, .22, new THREE.MeshStandardMaterial({ color: '#d6a836', metalness: .85, roughness: .16, transparent: true, opacity: .82 }));
-            visor.position.set(0, 1.858, -.288); g.add(visor);
-            return { g, armL, armR, legL, legR, phase: 0, facing: 0 };
+            const g=new THREE.Group();
+            const white=new THREE.MeshStandardMaterial({color:'#ecece8',emissive:'#555552',roughness:.58,metalness:.02});
+            const shell=new THREE.MeshStandardMaterial({color:'#dededa',emissive:'#424240',roughness:.62,metalness:.04});
+            const mk=(w,h,d,mat=white)=>{const m=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),mat);m.castShadow=true;m.receiveShadow=true;return m;};
+            const capsule=(radius,length,mat=white)=>{const m=new THREE.Mesh(new THREE.CapsuleGeometry(radius,length,4,10),mat);m.castShadow=true;m.receiveShadow=true;return m;};
+            const roundHand=()=>{const m=new THREE.Mesh(new THREE.SphereGeometry(1,14,10),white);m.scale.set(.151,.178,.155);m.castShadow=true;m.receiveShadow=true;return m;};
+
+            // R15 proportions in the game, scaled from studs to metres (0.4 m/stud).
+            const torso=new THREE.Group();torso.position.y=1.04;g.add(torso);
+            const lower=mk(.67,.27,.415,shell);lower.position.y=.02;torso.add(lower);
+            const upper=mk(.736,.76,.43,white);upper.position.y=.43;torso.add(upper);
+            const plss=mk(.76,.8,.34,shell);plss.position.set(0,.43,.405);torso.add(plss);
+
+            const head=new THREE.Group();head.position.set(0,1.94,0);g.add(head);
+            const headCore=new THREE.Mesh(new THREE.CylinderGeometry(.24,.24,.48,20),white);headCore.castShadow=true;head.add(headCore);
+            const helmet=new THREE.Mesh(new THREE.SphereGeometry(.4,24,16),new THREE.MeshStandardMaterial({color:'#f0f0f0',transparent:true,opacity:.48,roughness:.08,metalness:.25}));helmet.castShadow=true;head.add(helmet);
+            const visor=mk(.58,.4,.22,new THREE.MeshStandardMaterial({color:'#d6a836',metalness:.82,roughness:.18,transparent:true,opacity:.84}));visor.position.set(0,0,-.28);head.add(visor);
+
+            function makeArm(side){
+                const shoulder=new THREE.Group();shoulder.position.set(side*.49,1.64,0);g.add(shoulder);
+                const upperArm=capsule(.15,.18);upperArm.position.y=-.235;shoulder.add(upperArm);
+                const elbow=new THREE.Group();elbow.position.y=-.47;shoulder.add(elbow);
+                const lowerArm=capsule(.145,.17);lowerArm.position.y=-.225;elbow.add(lowerArm);
+                const wrist=new THREE.Group();wrist.position.y=-.45;elbow.add(wrist);
+                const palm=roundHand();palm.position.y=-.16;wrist.add(palm);
+                const thumb=new THREE.Mesh(new THREE.SphereGeometry(1,10,8),white);thumb.scale.set(.075,.11,.085);thumb.position.set(-side*.105,-.105,-.015);wrist.add(thumb);
+                if(stripe&&side>0){const band=new THREE.Mesh(new THREE.CylinderGeometry(.154,.154,.075,14),new THREE.MeshStandardMaterial({color:'#be3e30',roughness:.6}));band.position.y=-.29;shoulder.add(band);}
+                return {shoulder,elbow,wrist};
+            }
+            const armL=makeArm(-1),armR=makeArm(1);
+            function makeLeg(side){
+                const hip=new THREE.Group();hip.position.set(side*.205,.84,0);g.add(hip);
+                const thigh=capsule(.17,.35);thigh.position.y=-.25;hip.add(thigh);
+                const knee=new THREE.Group();knee.position.y=-.49;hip.add(knee);
+                const shin=capsule(.155,.20);shin.position.y=-.23;knee.add(shin);
+                const ankle=new THREE.Group();ankle.position.y=-.35;knee.add(ankle);
+                const foot=mk(.29,.19,.43,white);foot.position.set(0,.08,-.095);ankle.add(foot);
+                return {hip,knee,ankle};
+            }
+            const legL=makeLeg(-1),legR=makeLeg(1);
+            return {g,torso,head,armL:armL.shoulder,armR:armR.shoulder,elbowL:armL.elbow,elbowR:armR.elbow,wristL:armL.wrist,wristR:armR.wrist,legL:legL.hip,legR:legR.hip,kneeL:legL.knee,kneeR:legR.knee,ankleL:legL.ankle,ankleR:legR.ankle,phase:0,idle:0,facing:0};
         }
-        const astronaut = (() => { const a = makeSuitFigure(true); a.g.visible = false; scene.add(a.g); return a; })();
-        // The stock Roblox R6 animation, as the game's character moves:
-        //   idle  -- arms hang straight, with a slow, small sway
-        //   walk  -- arms swing opposite the legs, about a radian each way, in step with speed
-        //   jump  -- both arms thrown straight up while rising
-        //   fall  -- arms held up and a little apart until the feet touch down
-        // Joints ease towards each pose quickly, the way Motor6D joints do.
-        function updateAstronaut(dt, speed) {
-            const A = astronaut;
-            if (speed > 0.25) {
-                const target = Math.atan2(-player.vel.x, -player.vel.z);
-                let d = target - A.facing; d = Math.atan2(Math.sin(d), Math.cos(d));
-                A.facing += d * Math.min(1, dt * 12);
+        const astronaut=(()=>{const a=makeSuitFigure(true);a.g.visible=false;scene.add(a.g);return a;})();
+        // R15 suit motion follows Roblox's stock Animate states: idle, walk/run, jump and fall.
+        function updateAstronaut(dt,speed,bobY=0,bobX=0){
+            const A=astronaut;
+            if(speed>0.08){const target=Math.atan2(-player.vel.x,-player.vel.z);let d=target-A.facing;d=Math.atan2(Math.sin(d),Math.cos(d));A.facing+=d*Math.min(1,dt*18);}
+            if(firstPerson)A.facing=player.yaw;
+            A.g.position.set(player.pos.x+bobX,player.pos.y-EYE_HEIGHT+bobY,player.pos.z);
+            A.g.rotation.y=A.facing;
+            let shoulderL=0,shoulderR=0,elbowL=0,elbowR=0,hipL=0,hipR=0,kneeL=0,kneeR=0,wristL=0,wristR=0,lean=0;
+            if(!player.grounded){
+                const rising=player.vel.y>0;
+                shoulderL=shoulderR=rising?2.12:2.02;
+                elbowL=elbowR=rising?.46:.58;
+                wristL=wristR=rising?-.12:.1;
+                hipL=rising?-.24:.08;hipR=hipL;kneeL=rising?.42:.28;kneeR=kneeL;lean=.04;
+            }else if(speed>.08){
+                A.phase+=dt*(speed/GAME_WALK)*6.8;
+                const stride=Math.sin(A.phase)*Math.min(1,speed/GAME_WALK);
+                shoulderR=stride*.82;shoulderL=-stride*.82;
+                hipR=-stride*.78;hipL=stride*.78;
+                kneeR=Math.max(0,stride)*.3;kneeL=Math.max(0,-stride)*.3;
+                elbowR=.18+Math.max(0,stride)*.2;elbowL=.18+Math.max(0,-stride)*.2;
+                wristR=-shoulderR*.12;wristL=-shoulderL*.12;
+                lean=.035;
+            }else{
+                A.idle+=dt;
+                const sway=Math.sin(A.idle*.8)*.035;
+                shoulderL=.045+sway;shoulderR=-.045-sway;
+                elbowL=.10;elbowR=.10;wristL=Math.sin(A.idle*.65)*.025;wristR=-wristL;
+                hipL=.008;hipR=-.008;lean=Math.sin(A.idle*.45)*.006;
             }
-            if (firstPerson) A.facing = player.yaw;
-            A.g.position.set(player.pos.x, player.pos.y - EYE_HEIGHT, player.pos.z);
-            A.g.rotation.y = A.facing;
-            let aL = 0, aR = 0, lL = 0, lR = 0, zL = 0, zR = 0;
-            if (!player.grounded) {
-                if (player.vel.y > 0) { aL = aR = Math.PI; }
-                else { aL = aR = Math.PI * 0.92; zL = -0.28; zR = 0.28; }
-            } else if (speed > 0.25) {
-                A.phase += dt * (speed / 0.4) * 0.62;
-                const a = Math.sin(A.phase) * Math.min(1, speed / GAME_WALK) * 0.95;
-                aR = a; aL = -a; lR = -a; lL = a;
-            } else {
-                A.idle = (A.idle || 0) + dt;
-                const a = Math.sin(A.idle) * 0.1; aR = a; aL = -a;
+            const k=1-Math.exp(-dt*18);
+            const ease=(part,axis,target)=>{part.rotation[axis]+=(target-part.rotation[axis])*k;};
+            for(const [arm,elbow,wrist,shoulderTarget,elbowTarget,wristTarget,side] of [[A.armL,A.elbowL,A.wristL,shoulderL,elbowL,wristL,-1],[A.armR,A.elbowR,A.wristR,shoulderR,elbowR,wristR,1]]){
+                ease(arm,'x',shoulderTarget);ease(elbow,'x',elbowTarget);ease(wrist,'x',wristTarget);
+                ease(arm,'z',player.grounded?0:(side<0?-.12:.12));
             }
-            const k = 1 - Math.exp(-dt * 14);
-            A.armL.rotation.x += (aL - A.armL.rotation.x) * k; A.armR.rotation.x += (aR - A.armR.rotation.x) * k;
-            A.legL.rotation.x += (lL - A.legL.rotation.x) * k; A.legR.rotation.x += (lR - A.legR.rotation.x) * k;
-            A.armL.rotation.z += (zL - A.armL.rotation.z) * k; A.armR.rotation.z += (zR - A.armR.rotation.z) * k;
+            for(const [hip,kneeJoint,ankle,hipTarget,kneeTarget] of [[A.legL,A.kneeL,A.ankleL,hipL,kneeL],[A.legR,A.kneeR,A.ankleR,hipR,kneeR]]){ease(hip,'x',hipTarget);ease(kneeJoint,'x',kneeTarget);ease(ankle,'x',-kneeTarget*.25);}
+            ease(A.torso,'x',lean);
         }
 
 
@@ -3977,6 +4015,8 @@
             window.addEventListener('pointerdown', onSkip, true);
             document.body.classList.add('in-opening');
             root.classList.remove('hidden'); black.style.transition = 'none'; black.style.opacity = '1';
+            const openingPanelVisibility=signPanelMeshes.map(panel=>[panel,panel.visible]);
+            for(const [panel] of openingPanelVisibility) panel.visible=false;
             const g0 = getSurfaceHeight(0, 60);
             const lying = new THREE.Vector3(0, g0 + 0.36, 60);          // eyes a hand's width above the plate
             const standing = new THREE.Vector3(0, g0 + EYE_HEIGHT, 60);
@@ -4017,6 +4057,7 @@
                 await say(LAST, 2.4);
             })();
             // hand back control, skipped or not, facing the Eagle
+            for(const [panel,wasVisible] of openingPanelVisibility) panel.visible=wasVisible;
             opening.active = false;
             window.removeEventListener('keydown', onSkip, true);
             window.removeEventListener('pointerdown', onSkip, true);
