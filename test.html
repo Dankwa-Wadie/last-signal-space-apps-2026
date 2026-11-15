@@ -2261,7 +2261,7 @@
             siteSelect.value = SITES.some((s) => s.id === site.id) ? site.id : SITES[0].id;
             document.getElementById('drawer-site-title').textContent = site.name;
             document.getElementById('drawer-site-coords').textContent = formatLatLon(site.lat, site.lon);
-            document.getElementById('drawer-site-desc').textContent = site.description;
+            refreshSiteCard();
             document.getElementById('visor-terrain-tag').textContent = `${site.body.toUpperCase()} · ${site.regolithLabel}`;
             document.getElementById('gravity-readout').textContent = site.body === 'Eros' ? '~1.2 m/s²*' : `${site.gravity.toFixed(2)} m/s²`;
             document.getElementById('pressure-readout').textContent = site.body === 'Mars' ? `THIN CO₂ ATMOSPHERE · ~${site.pressure} Pa` : 'VACUUM · 0.000 Pa';
@@ -2802,6 +2802,7 @@
             } catch { /* private browsing can disable local storage */ }
         }
         function updateProgressCounts() {
+            if (typeof refreshSiteCard === 'function' && currentSite) refreshSiteCard();
             $('field-log-count').textContent = `${foundItems.size}/20`;
             $('astrolog-count')?.replaceChildren(document.createTextNode(`${foundItems.size}/20`));
         }
@@ -3178,7 +3179,7 @@
             const html=groups.map((siteId)=>{
                 const site=SITE_BY_ID[siteId], rows=FIELD_ITEMS.filter((it)=>it.site===siteId);
                 if (!rows.length) return '';
-                return `<section class="mb-5"><h3 class="mb-2 border-b border-slate-700 pb-1 text-xs font-mono-tech uppercase tracking-wider text-sky-200">${escapeHtml(site.name)} · ${rows.filter((it)=>foundItems.has(it.id)).length}/${rows.length}</h3><div class="grid gap-2 sm:grid-cols-2">${rows.map((it)=>`<article class="rounded-lg border ${foundItems.has(it.id)?'border-emerald-400/40':'border-slate-700'} bg-slate-900/70 p-3">${illustration(it.id)}<h4 class="mt-2 text-sm font-semibold">${foundItems.has(it.id)?'✓ ':''}${escapeHtml(it.title)}</h4><p class="mt-1 text-[11px] text-slate-400">${escapeHtml(it.year)}</p><button data-visit-site="${it.site}" class="mt-2 rounded-md border border-slate-600 px-2.5 py-1 text-xs text-slate-200">${currentSite.id===it.site?'YOU ARE HERE':'PLOT COURSE'}</button></article>`).join('')}</div></section>`;
+                return `<section class="mb-5"><h3 class="mb-2 border-b border-slate-700 pb-1 text-xs font-mono-tech uppercase tracking-wider text-sky-200">${escapeHtml(site.name)} · ${rows.filter((it)=>foundItems.has(it.id)).length}/${rows.length}</h3><div class="grid gap-2 sm:grid-cols-2">${rows.map((it)=>foundItems.has(it.id)?`<article class="rounded-lg border border-emerald-400/40 bg-slate-900/70 p-3">${illustration(it.id)}<h4 class="mt-2 text-sm font-semibold">✓ ${escapeHtml(it.title)}</h4><p class="mt-1 text-[11px] text-slate-400">${escapeHtml(it.year)}</p></article>`:`<article class="rounded-lg border border-slate-700 bg-slate-900/70 p-3"><div class="grid h-[72px] place-items-center text-3xl font-black text-slate-600">?</div><h4 class="mt-2 text-sm font-semibold text-slate-400">unidentified object</h4><p class="mt-1 text-[11px] text-slate-500">Spotted from orbit. Find it and scan it to know what it is.</p></article>`).join('')}</div></section>`;
             }).join('');
             const marker=foundItems.size===FIELD_ITEMS.length?`<section class="mb-5 rounded-xl border border-amber-300/30 bg-amber-300/10 p-4"><h3 class="font-semibold text-amber-100">THE HANDOVER · 20/20</h3><p class="mt-2 text-sm text-slate-300">Leave a survey marker beside the Eagle to complete the field guide.</p><button id="leave-marker" class="mt-3 rounded-lg bg-amber-300 px-3 py-2 text-xs font-bold text-slate-950">${markerPlaced?'MARKER LEFT':'TRAVEL TO TRANQUILITY & PLACE MARKER'}</button></section>`:'';
             openModal(`FIELD LOG · ${foundItems.size}/20 SURVEYED · ${cataloguedItems.size}/18 ARCHIVED`,'ASTROLOG',`${marker}<div class="max-h-[60vh] overflow-y-auto pr-1">${html}</div>`,'Close');
@@ -3220,7 +3221,7 @@
             const siteProgress=site=>{const rows=FIELD_ITEMS.filter(item=>item.site===site.id),count=rows.filter(item=>foundItems.has(item.id)).length;return {rows,count,complete:rows.length>0&&count===rows.length};};
             const dots=bodySites.map(site=>{const {rows,count,complete}=siteProgress(site),x=((site.lon+180)/360*100).toFixed(2),y=((90-site.lat)/180*100).toFixed(2),state=complete?'#4ade80':count?'#facc15':'#38bdf8';return `<button data-survey-pin="${site.id}" title="${escapeHtml(site.shortName)} · ${count}/${rows.length} field objects${site.estimated?' · position estimated from trajectory':''}" style="left:${x}%;top:${y}%;--pin:${state}" class="absolute z-10 grid h-7 w-7 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full ${site.estimated?'border-2 border-dashed':'border-2'} border-slate-950 bg-[var(--pin)] text-[11px] font-black text-slate-950 shadow-[0_0_12px_var(--pin)]">${rows.length?(complete?'✓':count||'?'):'•'}</button>`;}).join('');
             const picked=SITE_BY_ID[selectedSurveySite]&&SITE_BY_ID[selectedSurveySite].body===surveyBody?SITE_BY_ID[selectedSurveySite]:bodySites[0];
-            const detail=site=>{if(!site)return '<p>No landing sites.</p>';const {rows,count}=siteProgress(site);return `<div class="text-[10px] font-mono-tech tracking-widest text-sky-200">${escapeHtml(site.body.toUpperCase())} · ${formatLatLon(site.lat,site.lon)}</div><h3 class="mt-2 text-xl font-bold text-white">${escapeHtml(site.shortName)}</h3><p class="mt-3 text-xs leading-relaxed text-slate-300">${escapeHtml(site.description)}</p><p class="mt-3 text-xs text-amber-200">${count}/${rows.length} field objects confirmed</p><button data-survey-travel="${site.id}" class="mt-4 w-full rounded-lg bg-yellow-300 px-3 py-2 text-xs font-bold text-slate-950">${currentSite.id===site.id?'YOU ARE HERE':'PLOT COURSE'}</button>`;};
+            const detail=site=>{if(!site)return '<p>No landing sites.</p>';const {rows,count}=siteProgress(site);return `<div class="text-[10px] font-mono-tech tracking-widest text-sky-200">${escapeHtml(site.body.toUpperCase())} · ${formatLatLon(site.lat,site.lon)}</div><h3 class="mt-2 text-xl font-bold text-white">${escapeHtml(site.shortName)}</h3>${(()=>{const k=siteKnowledge(site),c=site.body===currentSite.body?traverseCost(currentSite,site):null;return `<p class="mt-3 text-[10px] font-mono-tech tracking-widest ${k.truth?'text-emerald-300':'text-sky-200'}">${escapeHtml(k.tier)}</p><p class="mt-2 text-xs leading-relaxed text-slate-300">${escapeHtml(k.text)}</p><ul class="mt-3 space-y-1 text-xs ${k.truth?'text-emerald-200':'text-slate-300'}">${k.lines.map(l=>`<li>${escapeHtml(l)}</li>`).join('')}</ul><button data-survey-travel="${site.id}" class="mt-4 w-full rounded-lg bg-yellow-300 px-3 py-2 text-xs font-bold text-slate-950">${currentSite.id===site.id?'YOU ARE HERE':c?`WALK THERE · ${fmtTime(c.secs)} · ${c.air}% AIR`:'TRANSIT'}</button>`;})()}`;};
             const tally=FIELD_ITEMS.filter(item=>{const site=SITE_BY_ID[item.site];return site.body===surveyBody&&foundItems.has(item.id);}).length,bodyTotal=FIELD_ITEMS.filter(item=>SITE_BY_ID[item.site].body===surveyBody).length;
             const html=`<div class="mb-3 flex items-center justify-between"><div class="flex gap-2">${['Moon','Mars','Eros'].map(b=>`<button data-survey-body="${b}" class="rounded-lg border px-3 py-1.5 text-xs ${surveyBody===b?'border-yellow-300 bg-yellow-300 text-slate-950':'border-slate-600 bg-slate-900 text-slate-200'}">${b.toUpperCase()}</button>`).join('')}</div><span class="text-xs font-mono-tech text-amber-200">${tally}/${bodyTotal} FIELD OBJECTS</span></div><div class="grid gap-3 lg:grid-cols-[1fr_290px]"><div class="relative h-[min(54vh,390px)] min-h-[260px] overflow-hidden rounded-xl border border-slate-600 bg-[#32363b]" style="background-image:linear-gradient(#ffffff13 1px,transparent 1px),linear-gradient(90deg,#ffffff13 1px,transparent 1px),radial-gradient(ellipse at center,#696a65 0%,#383a3d 70%,#191c20 100%);background-size:16.666% 16.666%,16.666% 16.666%,100% 100%">${surveyBody==='Moon'?'<div class="pointer-events-none absolute inset-y-0 left-0 w-[14%] bg-slate-950/60"></div><div class="pointer-events-none absolute inset-y-0 right-0 w-[14%] bg-slate-950/60"></div><span class="absolute left-1 top-1/2 -rotate-90 text-[9px] text-slate-400">FAR SIDE</span><span class="absolute right-1 top-1/2 rotate-90 text-[9px] text-slate-400">FAR SIDE</span>':''}<span class="absolute left-2 top-2 text-[9px] font-mono-tech text-slate-300">90°N</span><span class="absolute bottom-2 left-2 text-[9px] font-mono-tech text-slate-300">90°S</span>${dots}<div class="absolute bottom-2 right-2 rounded bg-slate-950/75 px-2 py-1 text-[9px] text-slate-300">LAT / LONG · SITE MARKERS</div></div><aside id="survey-detail" class="min-h-[230px] rounded-xl border border-slate-700 bg-slate-900/80 p-4">${detail(picked)}</aside></div><div class="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-[10px] text-slate-400"><span><b class="text-sky-300">?</b> not yet surveyed</span><span><b class="text-yellow-300">#</b> partly found</span><span><b class="text-emerald-300">✓</b> all field objects</span><span class="ml-auto">Orbital survey · spotted from orbit · ground truth</span></div>`;
             openModal('SURVEY MAP · 13 SITES · 3 BODIES','Survey Map',html,'Close');
@@ -3243,10 +3244,73 @@
         const DESTINATION_HOME={Moon:'tranquility',Mars:'meridiani',Eros:'eros'};
         const ROUTES={Moon:{time:'3 days',steps:['Launch','Day 1','Day 2','Lunar approach']},Mars:{time:'7 months',steps:['Launch','1 month','2 months','3 months','4 months','5 months','6 months','Mars approach']},Eros:{time:'4 years',steps:['Launch','Year 1','Year 2','Year 3','Rendezvous']}};
         let transitBusy=false;
+        // THE SURVEY TIERS (Map.client.lua): "Orbit found it; the ground confirms it." Orbit sees hardware
+        // as a few pixels and a shadow -- that something is there, not what it is. Only standing next to it
+        // turns an unidentified object into a named one, and a site into ground truth.
+        function siteKnowledge(site) {
+            const rows = FIELD_ITEMS.filter((i) => i.site === site.id), found = rows.filter((i) => foundItems.has(i.id));
+            const truth = rows.length > 0 && found.length === rows.length;
+            return { rows, found, truth,
+                tier: truth ? 'GROUND TRUTH · every object confirmed in person' : `SPOTTED FROM ORBIT · ${rows.length - found.length} unidentified`,
+                text: truth ? site.description
+                    : 'Orbital imagery shows hardware here: a few pixels and a shadow. What it is, and what state it is in, takes someone standing next to it.',
+                lines: rows.map((i) => foundItems.has(i.id) ? '✓ ' + i.title : '?  unidentified object') };
+        }
+        function refreshSiteCard() {
+            const k = siteKnowledge(currentSite);
+            $('drawer-site-desc').textContent = `${k.tier}. ${k.text}`;
+        }
         function navigateToSite(site) {
             if (!site) return;
             if (site.body!==currentSite.body) { beginTransit(site); return; }
-            closeModal(); warpToSite(site);
+            if (site.id===currentSite.id) { closeModal(); return; }
+            openTraverse(site);
+        }
+        // THE TRAVERSE. In the game every world is one continuous ring and you walk from site to site
+        // (WorldLayout: sites stand at their real latitude and longitude on rings 8,192 / 4,096 / 1,024
+        // studs round). Here each site is its own scene, so the walk is fast-forwarded -- but it costs
+        // exactly what the walk would cost in the game: its length at the game's walk speed of 11 studs a
+        // second, and one point of air every four seconds of it. Without the air, you cannot set out.
+        const RING = { Moon: { W: 8192, D: 4096 }, Mars: { W: 4096, D: 2048 }, Eros: { W: 1024, D: 512 } };
+        function walkStuds(a, b) {
+            const r = RING[a.body]; if (!r || a.body !== b.body) return 0;
+            const dl = ((b.lon - a.lon + 540) % 360) - 180;          // round the ring whichever way is shorter
+            return Math.hypot(dl / 360 * r.W, (b.lat - a.lat) / 180 * r.D);
+        }
+        function traverseCost(a, b) {
+            const studs = walkStuds(a, b), secs = studs / 11;
+            return { metres: studs * GS, secs, air: Math.ceil(secs * 0.25) };
+        }
+        const fmtTime = (s) => s >= 60 ? `${Math.floor(s / 60)} min ${String(Math.round(s % 60)).padStart(2, '0')} s` : `${Math.round(s)} s`;
+        let traverseBusy = false;
+        function openTraverse(dest) {
+            const c = traverseCost(currentSite, dest), enough = oxygen - c.air >= 5;
+            const html = `<p class="mb-3 text-xs text-slate-400">${escapeHtml(currentSite.shortName)} to ${escapeHtml(dest.shortName)} on foot, across the ${dest.body === 'Moon' ? 'lunar' : dest.body === 'Mars' ? 'Martian' : 'asteroid'} surface. The walk is fast-forwarded; the air it costs is not.</p>`
+                + `<div class="grid grid-cols-3 gap-2 text-center"><div class="rounded-lg border border-slate-700 bg-slate-900/80 p-2"><div class="text-[10px] font-mono-tech text-slate-400">DISTANCE</div><div class="mt-1 font-bold text-white">${c.metres >= 1000 ? (c.metres / 1000).toFixed(1) + ' km' : Math.round(c.metres) + ' m'}</div></div>`
+                + `<div class="rounded-lg border border-slate-700 bg-slate-900/80 p-2"><div class="text-[10px] font-mono-tech text-slate-400">WALK</div><div class="mt-1 font-bold text-white">${fmtTime(c.secs)}</div></div>`
+                + `<div class="rounded-lg border ${enough ? 'border-slate-700' : 'border-rose-400/60'} bg-slate-900/80 p-2"><div class="text-[10px] font-mono-tech text-slate-400">AIR</div><div class="mt-1 font-bold ${enough ? 'text-white' : 'text-rose-300'}">${c.air}% <span class="text-[10px] font-normal text-slate-400">of ${Math.floor(oxygen)}%</span></div></div></div>`
+                + (enough ? `<button id="traverse-go" type="button" class="mt-4 w-full rounded-xl bg-amber-400 py-2.5 text-sm font-semibold text-slate-950 hover:bg-amber-300">Set out</button><div class="mt-3 h-2 overflow-hidden rounded-full bg-slate-800"><div id="traverse-bar" class="h-full w-0 bg-yellow-300 transition-[width] duration-200"></div></div><p id="traverse-progress" class="mt-2 min-h-4 text-[11px] font-mono-tech text-slate-400"></p>`
+                          : `<p class="mt-3 text-sm text-rose-200">Not enough air for this walk. Refill at a habitat first.</p>`);
+            openModal('TRAVERSE · ON FOOT', `To ${dest.shortName}`, html, enough ? 'Cancel' : 'Close', null);
+            $('traverse-go')?.addEventListener('click', (e) => { e.currentTarget.disabled = true; e.currentTarget.textContent = 'Walking…'; runTraverse(dest, c); });
+        }
+        function runTraverse(dest, c) {
+            if (traverseBusy) return; traverseBusy = true;
+            const steps = 12, from = currentSite.shortName; let i = 0;
+            const step = () => {
+                if (!isModalOpen()) { traverseBusy = false; return; }
+                if (i >= steps) {
+                    traverseBusy = false;
+                    oxygen = Math.max(0, oxygen - c.air); closeModal(); warpToSite(dest); renderSuitStatus(); persistProgress();
+                    arriveBeat({ title: dest.shortName.toUpperCase(), sub: `${dest.name} · walked ${c.metres >= 1000 ? (c.metres / 1000).toFixed(1) + ' km' : Math.round(c.metres) + ' m'} in ${fmtTime(c.secs)} · ${c.air}% air` });
+                    return;
+                }
+                i++;
+                $('traverse-bar').style.width = `${Math.round(i / steps * 100)}%`;
+                $('traverse-progress').textContent = `${from.toUpperCase()} → ${dest.shortName.toUpperCase()} · ${fmtTime(c.secs * i / steps)} walked`;
+                setTimeout(step, 260);
+            };
+            step();
         }
         function openTransit(requestedSite=null) {
             const html=`<p class="mb-3 text-xs text-slate-400">The transit display compresses mission-scale travel into a few seconds. Choose a destination body.</p><div class="grid gap-3 sm:grid-cols-3">${Object.entries(ROUTES).map(([body,route])=>`<button data-transit-body="${body}" class="rounded-xl border ${currentSite.body===body?'border-slate-700 opacity-50':'border-amber-300/30 hover:border-amber-200'} bg-slate-900 p-4 text-left"><span class="block font-mono-tech text-xs text-sky-200">${body.toUpperCase()}</span><b class="mt-2 block text-lg text-white">${route.time}</b><span class="mt-1 block text-xs text-slate-400">${body==='Moon'?'Tranquility Heritage Station':body==='Mars'?'Meridiani Outpost':'NEAR Shoemaker · Eros Habitat'}</span></button>`).join('')}</div><div id="transit-progress" class="mt-4 text-center text-sm text-amber-200"></div><div class="mt-4 h-2 rounded-full bg-slate-800"><div id="transit-bar" class="h-2 w-0 rounded-full bg-amber-300 transition-[width]"></div></div>`;
