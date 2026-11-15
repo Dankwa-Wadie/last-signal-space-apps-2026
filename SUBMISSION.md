@@ -49,6 +49,11 @@ OpenAI Codex / ChatGPT assisted with research summaries, code review, debugging,
 
 Original code is MIT-licensed and original project text/graphics are CC BY 4.0, as documented in this repository. Third-party Roblox assets and NASA/partner materials retain their own terms and are listed in `REFERENCES.md`. The project must not be submitted until the team has verified rights and attribution for all asset IDs and media actually included in the published experience.
 
+## Team and contributors
+
+- **Nana Dankwa Oduro-Wadie** — Team Lead (Film pipeline, game code and research)
+- **Nicholas Dock Tindan** — Assistant Lead (Scene build, play-testing and fact-checking)
+
 ## Items to confirm in the official form
 
 - Confirm the exact required fields and maximum lengths in the 2026 Project tab.

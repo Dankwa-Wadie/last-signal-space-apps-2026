@@ -73,6 +73,11 @@ See [`game/README.md`](game/README.md) for the Roblox export/recovery notes and 
 
 Historical mission and artifact details are intended to follow the cited NASA/NSSDC sources. Distances, time compression, playable layouts, and future heritage bases are simplified for gameplay. In-game labels identify fictional stations and other additions so they are not mistaken for real mission hardware.
 
+## Team Astrolog
+
+- **Nana Dankwa Oduro-Wadie** — Team Lead (Film pipeline, game code and research)
+- **Nicholas Dock Tindan** — Assistant Lead (Scene build, play-testing and fact-checking)
+
 ## License
 
 Original code in this repository is licensed under the MIT License; see [`LICENSE`](LICENSE). Original project text and graphics are licensed under CC BY 4.0; see [`LICENSE-MEDIA.md`](LICENSE-MEDIA.md). Third-party Roblox assets, NASA material, and other credited material remain under their own terms; consult [`REFERENCES.md`](REFERENCES.md) before reuse. This repository license does not relicense third-party material.
