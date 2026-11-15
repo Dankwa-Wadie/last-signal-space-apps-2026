@@ -139,6 +139,8 @@
         .g-gauge span { color: var(--g-cyan); font-weight: 700; font-size: 13px; width: 58px; white-space: nowrap; }
         .g-gauge .track { flex: 1; height: 14px; border-radius: 7px; background: #282a30; overflow: hidden; }
         .g-gauge .fill { height: 100%; border-radius: 7px; background: var(--g-grn); width: 100%; transition: width .3s, background-color .3s; }
+        .g-imagined { position: absolute; left: max(16px, env(safe-area-inset-left)); bottom: max(20px, env(safe-area-inset-bottom)); padding: 8px 14px; border-radius: 18px; background: var(--g-ink); border: 1.5px solid var(--g-yel); color: var(--g-yel); font-weight: 700; font-size: 11px; letter-spacing: .06em; }
+        @media (pointer: coarse) { .g-imagined { bottom: 92px; } }
         .g-view { position: absolute; right: max(20px, env(safe-area-inset-right)); bottom: max(20px, env(safe-area-inset-bottom)); width: 150px; height: 36px; border-radius: 8px; background: rgba(8,8,10,.75); color: var(--g-yel); font-weight: 700; font-size: 13px; border: 0; }
         @media (pointer: coarse) { .g-view { bottom: 92px; } }
         /* Roblox ProximityPrompt */
@@ -171,6 +173,7 @@
         #g-arrive-veil { position: absolute; inset: 0; background: #000; }
         #g-arrive .txt { position: absolute; left: max(40px, env(safe-area-inset-left)); right: 40px; top: 42%; }
         #g-arrive .t { color: #fff; font-weight: 700; font-size: clamp(24px, 4.6vw, 34px); line-height: 1.25; }
+        #g-arrive .n { color: #e6e8ec; font-weight: 600; font-size: 15px; margin-top: 14px; max-width: 640px; line-height: 1.4; }
         #g-arrive .s { color: var(--g-yel); font-weight: 500; font-size: 16px; margin-top: 8px; }
         /* REMEMBER: a memory of the past, graded warm and grainy, with the date stamped on it */
         #g-memory { position: fixed; inset: 0; z-index: 12; pointer-events: none; }
@@ -449,8 +452,9 @@
         <div id="g-banner" class="g-banner hidden" role="status"><div id="g-banner-t" class="t"></div><div id="g-banner-s" class="s"></div></div>
         <button id="g-prompt" class="g-prompt hidden" type="button"><span class="key">E</span><span><span id="g-prompt-obj" class="obj" style="display:block"></span><span id="g-prompt-act" class="act" style="display:block"></span></span></button>
         <button id="g-view" class="g-view" type="button">[V] 3RD PERSON</button>
+        <div id="g-imagined" class="g-imagined hidden" role="note">IMAGINED &middot; NO HUMAN HAS EVER BEEN TO EROS</div>
     </div>
-    <div id="g-arrive" class="hidden"><div id="g-arrive-veil"></div><div class="txt"><div id="g-arrive-t" class="t"></div><div id="g-arrive-s" class="s"></div></div></div>
+    <div id="g-arrive" class="hidden"><div id="g-arrive-veil"></div><div class="txt"><div id="g-arrive-t" class="t"></div><div id="g-arrive-s" class="s"></div><div id="g-arrive-n" class="n"></div></div></div>
     <div id="g-memory" class="hidden" aria-hidden="true"><div class="vig"></div><div class="grain"></div><div id="g-memory-stamp" class="stamp"></div></div>
     <div id="g-caption" class="g-font" role="status" aria-live="polite"></div>
     <div id="g-whiteout"></div>
@@ -519,7 +523,7 @@
             { id:'vastitas_borealis', name:'Mars · Vastitas Borealis (Phoenix)', shortName:'Vastitas', body:'Mars', lat:68.15, lon:-125.9, terrainType:'vastitas_borealis', regolithLabel:'MARTIAN POLAR PLAINS', gravity:3.71, pressure:610, sunAz:-20, sunEl:18, description:'Mission destination: Phoenix landing region in the northern plains, where the lander sampled water ice beneath the soil.' },
             { id:'elysium', name:'Mars · Elysium Planitia (InSight)', shortName:'Elysium', body:'Mars', lat:4.5, lon:135.62, terrainType:'elysium', regolithLabel:'MARTIAN VOLCANIC PLAINS', gravity:3.71, pressure:610, sunAz:60, sunEl:30, description:'Mission destination: the Elysium region, home to InSight’s study of the Martian interior and marsquakes.' },
             { id:'jezero', name:'Mars · Jezero Crater (Perseverance)', shortName:'Jezero', body:'Mars', lat:18.45, lon:77.45, terrainType:'jezero', regolithLabel:'CRATER & ANCIENT DELTA', gravity:3.71, pressure:610, sunAz:10, sunEl:25, description:'Mission destination: Jezero Crater, where Perseverance is exploring an ancient lake basin and delta. Ingenuity’s flights began here.' },
-            { id:'eros', name:'433 Eros · NEAR Shoemaker', shortName:'Eros', body:'Eros', lat:-41.626, lon:80.421, terrainType:'eros', regolithLabel:'EROS REGOLITH & BOULDERS', gravity:0.006, pressure:0, sunAz:40, sunEl:20, description:'Mission destination: the saddle region of asteroid 433 Eros, where NEAR Shoemaker became the first spacecraft to land on an asteroid in 2001. Preview gravity is exaggerated for playable movement.' }
+            { id:'eros', name:'433 Eros · NEAR Shoemaker', shortName:'Eros', body:'Eros', lat:-41.626, lon:80.421, terrainType:'eros', regolithLabel:'EROS REGOLITH & BOULDERS', gravity:0.006, pressure:0, sunAz:40, sunEl:20, description:'Mission destination: the saddle region of asteroid 433 Eros, where NEAR Shoemaker became the first spacecraft to land on an asteroid in 2001. No astronaut has ever been to Eros, or to any asteroid: being here is imagined. Gravity is exaggerated so you can move.' }
         ];
 
         // Exported from the running Roblox place (export_sites.py): every part at each Mars and Eros
@@ -1841,6 +1845,7 @@
             buildSiteEnhancements(site);
             if (!GAME_SITES[site.id]) addHardwareColliders(hardwareGroup);
             curveAll(surfaceWorldGroup);
+            collectPoppers();
         }
 
         // =========================================================================
@@ -2250,6 +2255,7 @@
             sunElSlider.value = site.sunEl;
             updateSolarLighting(site.sunAz, site.sunEl);
             applyWorldLook(site);
+            if (site.body === 'Eros' && gameStarted) setTimeout(() => { if (currentSite.body === 'Eros') radioMessage(EROS_RADIO); }, 3500);
 
             // Update UI metadata
             siteSelect.value = SITES.some((s) => s.id === site.id) ? site.id : SITES[0].id;
@@ -2506,13 +2512,29 @@
             if (firstPerson) {
                 camera.position.set(player.pos.x, player.pos.y, player.pos.z);   // Roblox's first person does not bob
             } else {
-                // Roblox's classic follow camera: 8 studs (3.2 m) behind the head, never into the ground
+                // Roblox's classic follow camera, as measured in the game: 8 studs (3.2 m) from its aim point,
+                // which is the head centre, 1.5 studs above the root -- never into the ground
                 const look = _tpLook.set(0, 0, -1).applyQuaternion(camera.quaternion);
-                camera.position.set(player.pos.x, player.pos.y + 0.12, player.pos.z).addScaledVector(look, -3.2);
+                camera.position.set(player.pos.x, player.pos.y, player.pos.z).addScaledVector(look, -3.2);
+                // Roblox's Poppercam: anything solid between your head and the camera pulls the camera in
+                // in front of it, so a wall or a boulder never hides you
+                _popRay.set(player.pos, _popDir.copy(look).negate()); _popRay.far = 3.2;
+                const hit = _popRay.intersectObjects(poppers, false)[0];
+                if (hit) camera.position.copy(player.pos).addScaledVector(_popDir, Math.max(0.35, hit.distance - 0.2));
                 const floor = getSurfaceHeight(camera.position.x, camera.position.z, currentSite) + 0.35;
                 if (camera.position.y < floor) camera.position.y = floor;
             }
             updateAstronaut(dt, horizSpeed);
+            if (firstPerson) {
+                // Helmet.client.lua steers the first-person eye to the helmet centre: 35% of the way each
+                // frame, never more than 2.5 studs off. So the view moves with the head, gently, as you walk.
+                astronaut.g.updateMatrixWorld(true);
+                astronaut.nodes.Head.getWorldPosition(_fpHead);
+                _fpHead.sub(player.pos);
+                _fpOff.lerp(_fpHead, 1 - Math.pow(0.65, dt * 60));
+                if (_fpOff.length() > 1.0) _fpOff.setLength(1.0);
+                camera.position.copy(player.pos).add(_fpOff);
+            }
 
             // Keep shadow frustum & sky sun centered on astronaut
             sunLight.position.copy(camera.position).addScaledVector(sharedSunDirUniform.value, 140);
@@ -3397,7 +3419,23 @@
         // =====================================================================
         // THE GAME'S OPENING, VIEW AND HUD
         // =====================================================================
-        const _tpLook = new THREE.Vector3(), _pv = new THREE.Vector3();
+        const _tpLook = new THREE.Vector3(), _pv = new THREE.Vector3(), _fpHead = new THREE.Vector3(), _fpOff = new THREE.Vector3();
+        const _popRay = new THREE.Raycaster(), _popDir = new THREE.Vector3(), poppers = [];
+        // what the camera cannot pass through: solid, visible things, not the ground (the floor check keeps the
+        // camera above that) and not glass or anything see-through
+        function collectPoppers() {
+            poppers.length = 0;
+            surfaceWorldGroup.updateMatrixWorld(true);
+            surfaceWorldGroup.traverse((o) => {
+                if (!o.isMesh || !o.geometry || o === rope.mesh) return;
+                const m = Array.isArray(o.material) ? o.material[0] : o.material;
+                if (!m || m.transparent || m.isMeshBasicMaterial) return;
+                if (!o.geometry.boundingSphere) o.geometry.computeBoundingSphere();
+                if (!o.isInstancedMesh && o.geometry.boundingSphere.radius * o.matrixWorld.getMaxScaleOnAxis() > 60) return;   // the terrain
+                if (o.isInstancedMesh && o.count > 1200) return;
+                poppers.push(o);
+            });
+        }
 
         // ---------- canvas boards (the game's SurfaceGuis) ----------
         const signPanels = [], signPanelMeshes = [];
@@ -3493,8 +3531,9 @@
             for (const [name, a] of Object.entries(R15.acc)) {
                 if (name === 'Band' && !stripe) continue;
                 const glass = a.mat === 'Glass';
-                const mat = new THREE.MeshStandardMaterial({ color: '#' + a.color, roughness: glass ? .06 : .55, metalness: name === 'Visor' ? .85 : glass ? .3 : .02,
-                    transparent: a.t > 0, opacity: 1 - a.t, emissive: glass ? '#000000' : new THREE.Color('#' + a.color).multiplyScalar(.35) });
+                // the gold visor reads bright gold in the game; a mirror finish with nothing to reflect would turn it grey
+                const mat = new THREE.MeshStandardMaterial({ color: '#' + a.color, roughness: name === 'Visor' ? .3 : glass ? .06 : .55, metalness: name === 'Visor' ? .35 : glass ? .3 : .02,
+                    transparent: a.t > 0, opacity: 1 - a.t, emissive: name === 'Visor' ? new THREE.Color('#' + a.color).multiplyScalar(.45) : glass ? '#000000' : new THREE.Color('#' + a.color).multiplyScalar(.35) });
                 const geo = a.shape === 'Ball' ? new THREE.SphereGeometry(Math.min(...a.size) / 2, 32, 20) : new RoundedBoxGeometry(...a.size, 2, Math.min(...a.size) * .15);
                 const m = new THREE.Mesh(geo, mat); m.castShadow = true; m.receiveShadow = !glass;
                 m.position.set(a.cf[0], a.cf[1], a.cf[2]); m.quaternion.set(a.cf[3], a.cf[4], a.cf[5], a.cf[6]);
@@ -3586,6 +3625,7 @@
             earthshineHemi.intensity = mars ? 1.6 : site.body === 'Eros' ? 0.12 : 0.07;
             sunLight.intensity = mars ? 3.4 * 0.75 : 3.4;
             CURVE.R.value = RING_R[site.body] || RING_R.Moon;
+            $('g-imagined').classList.toggle('hidden', site.body !== 'Eros');
         }
         // the sky is never in the air: stars, Sun and Earth ignore the Martian fog
         for (const o of [skyStars, sunDiscGroup, skyEarth]) o.traverse((c) => { if (c.material) [].concat(c.material).forEach((m) => { m.fog = false; m.needsUpdate = true; }); });
@@ -3811,22 +3851,72 @@
             return floor;
         }
 
-        // ---------- Eros: the safety line (Worlds.client.lua, a 72-stud rope from NEAR's stake) ----------
-        let tetherLine = null;
-        const TETHER_LEN = 72 * GS, STAKE = new THREE.Vector3(0, 4.4 * GS, 0);
+        // ---------- Eros: the safety line ----------
+        // Worlds.client.lua clips you to NEAR's stake with a 72-stud (28.8 m) rope, 0.12 studs thick,
+        // New Yeller. Here it is a real rope: 32 links, simulated every frame. In Eros's weak gravity a
+        // slack line hangs in a lazy curve and settles slowly onto the regolith -- there is no air to damp
+        // it, only the rope's own stiffness and the ground. Pulled tight it runs straight and holds you.
+        const TETHER_LEN = 72 * GS, STAKE = new THREE.Vector3(0, 4.4 * GS, 0), ROPE_N = 32, ROPE_SEG = TETHER_LEN / (ROPE_N - 1);
+        const rope = { p: [], q: [], mesh: null, clipA: null, clipB: null, last: 0 };
+        let _ropeTex = null;
+        function ropeTexture() {   // a braided line: a twist of light and dark strands
+            if (_ropeTex) return _ropeTex;
+            const c = document.createElement('canvas'); c.width = 64; c.height = 32; const x = c.getContext('2d');
+            x.fillStyle = '#f2d230'; x.fillRect(0, 0, 64, 32);
+            x.strokeStyle = '#a8861c'; x.lineWidth = 5;
+            for (let i = -2; i < 6; i++) { x.beginPath(); x.moveTo(i * 16, 0); x.lineTo(i * 16 + 32, 32); x.stroke(); }
+            x.strokeStyle = 'rgba(255,255,255,.35)'; x.lineWidth = 2;
+            for (let i = -2; i < 6; i++) { x.beginPath(); x.moveTo(i * 16 + 6, 0); x.lineTo(i * 16 + 38, 32); x.stroke(); }
+            _ropeTex = new THREE.CanvasTexture(c); _ropeTex.colorSpace = THREE.SRGBColorSpace;
+            _ropeTex.wrapS = _ropeTex.wrapT = THREE.RepeatWrapping; _ropeTex.repeat.set(TETHER_LEN / 0.05, 1);
+            return _ropeTex;
+        }
         function buildTether() {
-            const g = new THREE.BufferGeometry().setFromPoints([STAKE.clone(), STAKE.clone()]);
-            tetherLine = new THREE.Line(g, new THREE.LineBasicMaterial({ color: '#ffff00', fog: false }));
-            tetherLine.frustumCulled = false; surfaceWorldGroup.add(tetherLine);
+            rope.p.length = rope.q.length = 0; rope.last = 0;
+            rope.mesh = new THREE.Mesh(new THREE.BufferGeometry(), new THREE.MeshStandardMaterial({ map: ropeTexture(), roughness: .8, metalness: 0, emissive: '#ffffff', emissiveMap: ropeTexture(), emissiveIntensity: .45 }) /* Roblox draws its ropes bright: it reads yellow even in shadow */);
+            rope.mesh.castShadow = true; rope.mesh.frustumCulled = false; surfaceWorldGroup.add(rope.mesh);
+            const ring = () => { const m = new THREE.Mesh(new THREE.TorusGeometry(.05, .013, 8, 18), new THREE.MeshStandardMaterial({ color: '#c9ccd1', metalness: .85, roughness: .3 })); m.castShadow = true; surfaceWorldGroup.add(m); return m; };
+            rope.clipA = ring(); rope.clipB = ring(); rope.clipA.position.copy(STAKE);
         }
         function holdTether() {
             const dx = player.pos.x - STAKE.x, dz = player.pos.z - STAKE.z, d = Math.hypot(dx, dz);
             if (d > TETHER_LEN) { player.pos.x = STAKE.x + dx / d * TETHER_LEN; player.pos.z = STAKE.z + dz / d * TETHER_LEN; player.vel.x *= .3; player.vel.z *= .3; }
         }
+        // the clip on the back of the suit, at the hip: the game's harness attachment (0, 0.4, 0.6) studs from the root
+        const _hp = new THREE.Vector3();
+        function harnessPoint() {
+            const a = astronaut.facing, back = .6 * GS;
+            return _hp.set(player.pos.x + Math.sin(a) * back, player.pos.y - EYE_HEIGHT + (R15.hip + R15.hrp[1] / 2 + .4) * GS, player.pos.z + Math.cos(a) * back);
+        }
         function updateTether() {
-            if (!tetherLine || !tetherLine.parent || currentSite.id !== 'eros') return;
-            const a = tetherLine.geometry.attributes.position;
-            a.setXYZ(1, player.pos.x, player.pos.y - EYE_HEIGHT + 1.15, player.pos.z); a.needsUpdate = true;
+            if (!rope.mesh || !rope.mesh.parent || currentSite.id !== 'eros') return;
+            const now = performance.now(), dt = Math.min(1 / 30, rope.last ? (now - rope.last) / 1000 : 1 / 60); rope.last = now;
+            const B = harnessPoint(), P = rope.p, Q = rope.q;
+            if (!P.length) for (let i = 0; i < ROPE_N; i++) { const v = new THREE.Vector3().lerpVectors(STAKE, B, i / (ROPE_N - 1)); P.push(v); Q.push(v.clone()); }
+            // move: each link keeps its momentum, a little lost to the rope's own stiffness, and falls slowly
+            const fall = (GAME_G.Eros || .72) * dt * dt;
+            for (let i = 1; i < ROPE_N - 1; i++) {
+                const p = P[i], q = Q[i], vx = (p.x - q.x) * .985, vy = (p.y - q.y) * .985, vz = (p.z - q.z) * .985;
+                q.copy(p); p.x += vx; p.y += vy - fall; p.z += vz;
+            }
+            P[0].copy(STAKE); P[ROPE_N - 1].copy(B);
+            // hold: no link may stretch past its length; the ends are fixed to the stake and to you
+            for (let it = 0; it < 24; it++) {
+                for (let i = 0; i < ROPE_N - 1; i++) {
+                    const a = P[i], b = P[i + 1], dx = b.x - a.x, dy = b.y - a.y, dz = b.z - a.z, d = Math.hypot(dx, dy, dz);
+                    if (d <= ROPE_SEG || d === 0) continue;
+                    const k = (d - ROPE_SEG) / d, wa = i === 0 ? 0 : (i + 1 === ROPE_N - 1 ? 1 : .5), wb = i + 1 === ROPE_N - 1 ? 0 : (i === 0 ? 1 : .5);
+                    a.x += dx * k * wa; a.y += dy * k * wa; a.z += dz * k * wa;
+                    b.x -= dx * k * wb; b.y -= dy * k * wb; b.z -= dz * k * wb;
+                }
+                for (let i = 1; i < ROPE_N - 1; i++) {   // and it lies on the ground, dragging rather than sliding
+                    const p = P[i], gy = getSurfaceHeight(p.x, p.z) + .03;
+                    if (p.y < gy) { p.y = gy; const q = Q[i]; q.x += (p.x - q.x) * .6; q.z += (p.z - q.z) * .6; q.y = p.y; }
+                }
+            }
+            const geo = new THREE.TubeGeometry(new THREE.CatmullRomCurve3(P), 120, .024, 7, false);
+            rope.mesh.geometry.dispose(); rope.mesh.geometry = geo;
+            rope.clipB.position.copy(B); rope.clipB.lookAt(P[ROPE_N - 2]); rope.clipA.lookAt(P[1]);
         }
 
         // ---------- arrival (ConsoleServer PADS + the ARRIVE beat) ----------
@@ -3834,11 +3924,33 @@
         const ARRIVAL_PADS = {
             Moon: { x: 0, z: 150 * GS, title: 'TRANQUILITY STATION', sub: 'The Moon · Mare Tranquillitatis · outside the heritage boundary' },
             Mars: { x: 18 * GS, z: 46 * GS, title: 'MERIDIANI PLANUM', sub: 'Mars · 1.95 S, 5.53 W · Meridiani Outpost' },
-            Eros: { x: 10 * GS, z: 12 * GS, title: '433 EROS', sub: 'Asteroid · 41.626 S, 80.421 E · NEAR Shoemaker landing site' } };
+            Eros: { x: 10 * GS, z: 12 * GS, title: '433 EROS', sub: 'Asteroid · 41.626 S, 80.421 E · NEAR Shoemaker landing site',
+                    note: 'No human has ever been here. Only one spacecraft has: NEAR Shoemaker, in 2001.' } };
+        // the station radio, mid-game: the same panel and Quindar tone as the opening
+        let radioToken = 0;
+        async function radioMessage(lines) {
+            const my = ++radioToken, root = $('g-opening'), radio = $('g-radio'), line = $('g-radio-line');
+            if (opening.active) return;
+            $('g-black').style.transition = 'none'; $('g-black').style.opacity = '0'; $('g-skip').classList.add('hidden');
+            root.classList.remove('hidden'); radio.classList.remove('hidden'); radio.style.transition = 'none'; radio.style.opacity = '1';
+            for (const [text, hold] of lines) {
+                if (my !== radioToken) return;
+                suitAudio.quindar(); line.textContent = '';
+                for (let i = 1; i <= text.length; i++) { if (my !== radioToken) return; line.textContent = text.slice(0, i); if (i % 2 === 0) await new Promise((r) => requestAnimationFrame(r)); }
+                await sleep(hold);
+            }
+            if (my !== radioToken) return;
+            radio.style.transition = 'opacity .8s'; radio.style.opacity = '0'; await sleep(.9);
+            if (my === radioToken) root.classList.add('hidden');
+        }
+        const EROS_RADIO = [
+            ["Surveyor, before you step out: no astronaut has ever been here. Nobody has ever walked on an asteroid.", 4.5],
+            ["One machine has. NEAR Shoemaker landed here in February 2001. Everything you do on Eros is imagined.", 4.5],
+            ["You're clipped to NEAR's stake. A hard jump here comes close to escape speed, so stay on the line.", 4.5]];
         async function arriveBeat(pad) {
             if (!pad) return;
             const root = $('g-arrive'), veil = $('g-arrive-veil'), txt = root.querySelector('.txt');
-            $('g-arrive-t').textContent = pad.title; $('g-arrive-s').textContent = pad.sub;
+            $('g-arrive-t').textContent = pad.title; $('g-arrive-s').textContent = pad.sub; $('g-arrive-n').textContent = pad.note || '';
             veil.style.transition = txt.style.transition = 'none'; veil.style.opacity = '1'; txt.style.opacity = '1';
             root.classList.remove('hidden');
             await new Promise((r) => setTimeout(r, 1600));
@@ -4193,6 +4305,16 @@
             set(o) { if ('oxygen' in o) oxygen = o.oxygen; if ('dose' in o) dose = o.dose; renderSuitStatus(); drawCracks(); },
             storm(phase) { setHazard(phase, currentSite.body === 'Mars' ? 'dust' : 'solar'); stormEnds = performance.now() + 45000; },
             face(x, z) { player.yaw = Math.atan2(-(x - player.pos.x), -(z - player.pos.z)); },
+            pitch(deg) { player.pitch = THREE.MathUtils.degToRad(deg); },
+            measure() {   // the same numbers the game was measured with: where each part lands on screen
+                const out = { camAboveFeet: +(camera.position.y - (player.pos.y - EYE_HEIGHT)).toFixed(3), fov: camera.fov, aspect: +camera.aspect.toFixed(3) };
+                const v = new THREE.Vector3();
+                for (const n of ['LeftHand', 'RightHand', 'LeftLowerArm', 'RightLowerArm', 'Head']) {
+                    astronaut.nodes[n].getWorldPosition(v); const d = v.clone().sub(camera.position); v.project(camera);
+                    out[n] = [+((v.x + 1) / 2).toFixed(3), +((1 - v.y) / 2).toFixed(3), +d.length().toFixed(3)];
+                }
+                return out;
+            },
             colliders() { return colliders.length; },
             state() { return { oxygen, dose, site: currentSite.id, x: +player.pos.x.toFixed(1), z: +player.pos.z.toFixed(1), checkpoint, gameStarted, downed, deaths: saveStats.deaths, rescues: saveStats.rescues, lookingUp: opening.active && opening.followEarth, boardVisible: openingHide.map((o) => o.visible), crackPaths: document.querySelectorAll('#g-cracks path').length }; } };
 
