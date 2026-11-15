@@ -67,44 +67,4 @@ for _,w in ipairs(WORLDS) do
   edge(w.x0,w.z0,w.x1,w.z0,0,-1); edge(w.x0,w.z1,w.x1,w.z1,0,1)
   edge(w.x0,w.z0,w.x0,w.z1,-1,0); edge(w.x1,w.z0,w.x1,w.z1,1,0)
 end
--- Hadley–Apennine relief: the Apennines rise above the landing plain and Hadley Rille
--- cuts across the opposite side. Keep the central corridor around the Apollo 15 artifacts
--- open; the relief is deliberately exaggerated in height for Roblox's compressed world scale.
-local moon=F:FindFirstChild("Moon")
-local relief=Instance.new("Folder"); relief.Name="HadleyRelief"; relief.Parent=moon
-local function ridge(name,center,axis,length,width,height,material,color)
-  local count=math.ceil(length/58)
-  for n=0,count do
-    local t=n/count-0.5
-    local taper=0.62+0.38*math.sin(math.pi*n/count)
-    local offset=math.sin(n*1.7)*width*0.12
-    local ball=Instance.new("Part"); ball.Name=name; ball.Shape=Enum.PartType.Ball
-    ball.Anchored=true; ball.CanCollide=true; ball.Material=material; ball.Color=color
-    ball.Size=Vector3.new(width*taper*2,height*taper*2,width*taper*2)
-    ball.Position=center+axis*(t*length)+Vector3.new(0,height*taper*0.35,offset)
-    ball.TopSurface=Enum.SurfaceType.Smooth; ball.BottomSurface=Enum.SurfaceType.Smooth
-    ball.Parent=relief
-  end
-end
-local highlandColor=Color3.fromRGB(132,130,126)
-ridge("ApennineHighland",Vector3.new(430,0,-420),Vector3.new(1,0,0),650,78,56,Enum.Material.Slate,highlandColor)
--- Secondary, lower shoulders create rolling foothills without blocking the broad approach.
-ridge("ApennineFoothill",Vector3.new(430,0,-320),Vector3.new(1,0,0),560,58,26,Enum.Material.Sand,Color3.fromRGB(119,117,113))
--- A dark, recessed valley with raised shoulders, oriented toward the Hadley landing region.
-local rilleCenter=Vector3.new(475,0,-70)
-for n=0,18 do
-  local t=n/18-0.5
-  local x=rilleCenter.X+t*390
-  local z=rilleCenter.Z+math.sin(n*0.55)*16
-  local basin=Instance.new("Part"); basin.Name="HadleyRille"; basin.Anchored=true
-  basin.Size=Vector3.new(38,14,62); basin.Position=Vector3.new(x,-5.5,z)
-  basin.Color=Color3.fromRGB(65,64,62); basin.Material=Enum.Material.Slate
-  basin.CanCollide=false; basin.Parent=relief
-  for side=-1,1,2 do
-    local lip=Instance.new("Part"); lip.Name="RilleShoulder"; lip.Shape=Enum.PartType.Ball
-    lip.Anchored=true; lip.Size=Vector3.new(54,30,56)
-    lip.Position=Vector3.new(x,-7,z+side*38); lip.Material=Enum.Material.Slate
-    lip.Color=Color3.fromRGB(104,102,98); lip.CanCollide=true; lip.Parent=relief
-  end
-end
-return "bounds: "..i.." site plates stepped, 3 worlds ringed"
+return "bounds: "..i.." site plates stepped, 3 worlds ringed; Hadley terrain comes from the Blender mesh"

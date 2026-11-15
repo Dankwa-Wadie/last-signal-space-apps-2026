@@ -18,6 +18,9 @@ local game_=workspace:WaitForChild("Game")
 
 local TILE,N=64,18
 local FLAT=150
+-- Bounds of the imported Blender terrain around the relocated Apollo 15 site.
+-- Cells inside this footprint must defer to the mesh, including where it dips below y=0.
+local HADLEY_TERRAIN={minX=-664,maxX=-239,minZ=-741,maxZ=-418}
 local folder=Instance.new("Folder"); folder.Name="LocalGround"; folder.Parent=workspace
 local groundTiles={}
 local footprints=Instance.new("Folder"); footprints.Name="LocalFootprints"; footprints.Parent=workspace
@@ -73,7 +76,14 @@ local function rebuild(world,px,pz)
     local s=slabs[k]
     local cf,drop,d=curve(cfg,cx,cz,px,pz,4)
     s.CFrame=cf; s.Color=cfg.colour; s.Material=cfg.material
-    s.CanCollide=d<FLAT+TILE*1.5
+    -- Let the imported Hadley mesh provide both the visible floor and collision surface.
+    -- Hide only cells whose centres lie within its footprint; the mesh meets the normal
+    -- curved tile ground at its perimeter.
+    local underLunarTerrain=world=="moon" and cx>=HADLEY_TERRAIN.minX and cx<=HADLEY_TERRAIN.maxX
+      and cz>=HADLEY_TERRAIN.minZ and cz<=HADLEY_TERRAIN.maxZ
+    s.LocalTransparencyModifier=underLunarTerrain and 1 or 0
+    s.CanCollide=d<FLAT+TILE*1.5 and not underLunarTerrain
+    s.CanQuery=not underLunarTerrain
     -- rocks: recipe keyed on the WRAPPED tile index, so the far side matches on return
     if d<330 then
       local wx=math.floor(((cx-cfg.xmin)%cfg.W)/TILE); local wz=math.floor(((cz-cfg.zmin)%cfg.D)/TILE)
@@ -139,7 +149,8 @@ local function leaveFootprint(character,hrp,world,position,forward)
   -- The ray begins above the character. Ignore it once the floor is far enough
   -- below the boots that this would be an airborne print.
   if not hit or hit.Distance>5.5 then return end
-  if not groundTiles[hit.Instance] then return end
+  local hadleyTerrain=game_:FindFirstChild("HadleyApennineTerrain")
+  if not groundTiles[hit.Instance] and not (hadleyTerrain and hit.Instance:IsDescendantOf(hadleyTerrain)) then return end
   local normal=hit.Normal
   local up=normal.Magnitude>0 and normal or Vector3.yAxis
   local facing=CFrame.lookAt(hit.Position,hit.Position+forward,up)
