@@ -28,6 +28,12 @@ https://github.com/user-attachments/assets/e0249a10-30ce-4fd0-b899-73c474396500
 
 These are direct recordings from Roblox Studio's live Play session. The same MP4 files are committed to [`game/videos/`](game/videos), so they remain available even if an embedded player fails. A [dedicated demo page](https://github.com/Dankwa-Wadie/last-signal-space-apps-2026/issues/1) collects all three clips in one place.
 
+## Scene previews
+
+| Moon · Apollo 11 site | Transit · Moon to Mars | Mars · Opportunity |
+|:---:|:---:|:---:|
+| ![Astronaut exploring the Apollo 11 lunar module](game/videos/moon-artifact-scan.gif) | ![Transit console showing Moon, Mars, and Eros destinations](game/videos/mars-transit.gif) | ![Astronaut exploring near the Opportunity rover on Mars](game/videos/mars-opportunity.gif) |
+
 ## Project contents
 
 - `game/scripts/` — exported Roblox scripts (recovery copy)
