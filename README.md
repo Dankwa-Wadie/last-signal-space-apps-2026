@@ -20,7 +20,7 @@ Players explore the Moon, Mars, and 433 Eros, find historical spacecraft and ins
 
 ![](https://github.com/user-attachments/assets/e0249a10-30ce-4fd0-b899-73c474396500)
 
-These are direct recordings from Roblox Studio's live Play session. The video attachments above are embedded players; the MP4 files are also preserved in `game/videos/`.
+These are direct recordings from Roblox Studio's live Play session. The video attachments above are embedded players; the MP4 files are also preserved in `game/videos/`. If a repository preview does not initialize playback, open the [dedicated GitHub demo page](https://github.com/Dankwa-Wadie/last-signal-space-apps-2026/issues/1).
 
 ## Project contents
 
@@ -41,7 +41,7 @@ The playable source of truth is the live Roblox place, not the exported files in
 
 ## Rebuilding and development
 
-See [`game/README.md`](game/README.md) for the Roblox export/recovery notes and [`pipeline/README.md`](pipeline/README.md) for the film pipeline. Roblox Studio and the project’s Studio MCP integration are needed to apply or run the exported scripts. Render caches, intermediate frames, and prior cinematic exports are excluded; the two gameplay videos above are retained.
+See [`game/README.md`](game/README.md) for the Roblox export/recovery notes and [`pipeline/README.md`](pipeline/README.md) for the film pipeline. Roblox Studio and the project’s Studio MCP integration are needed to apply or run the exported scripts. Render caches, intermediate frames, and prior cinematic exports are excluded; the live gameplay MP4 files are retained.
 
 ## Accuracy and fiction
 
