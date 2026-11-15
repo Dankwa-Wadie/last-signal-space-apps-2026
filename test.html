@@ -2524,7 +2524,12 @@
                 }
                 sign(base,mars?'MERIDIANI FIELD OUTPOST':'EROS RESEARCH HABITAT',0,mars?14:11,6.7,18,2.2);
                 for(const [lx,lz] of [[-3,0],[3,0],[0,-3]])light(base,lx,mars?9:7,lz,'#ffdfa9',1.6,20);
-                const life=new THREE.Group();life.position.set(x,gy,z+1);surfaceWorldGroup.add(life);worldInteractables.push({kind:'life-support',siteId:site.id,group:life,position:new THREE.Vector3(x,gy,z+1),radius:14});
+                // Make the recharge point visible beside each habitat airlock.
+                box(base,-3,1.35,5.8,1.35,2.7,.65,'#303b44',{metalness:.58});
+                box(base,-3,2.05,5.43,.95,.78,.08,'#3bd8d1',{emissive:'#10bcca',emissiveIntensity:1.1});
+                box(base,-3,2.85,5.43,1.08,.12,.08,'#f2d84d',{emissive:'#f2d84d',emissiveIntensity:1});
+                light(base,-3,3,5.2,'#63e4ef',1.4,9);
+                const life=new THREE.Group();life.position.set(x-3,gy,z+5.8);surfaceWorldGroup.add(life);worldInteractables.push({kind:'life-support',siteId:site.id,group:life,position:new THREE.Vector3(x-3,gy,z+5.8),radius:3.8});
                 worldInteractables.push({kind:'shelter',siteId:site.id,group:base,position:new THREE.Vector3(x,gy,z),radius:18});
                 if(mars){const transit=new THREE.Group();transit.position.set(-12,gy,8);box(transit,0,1.4,0,2.6,2.8,1.4,metal);box(transit,0,2.8,-.42,2.2,1.25,.08,'#16303d',{emissive:'#26bfe5',emissiveIntensity:.9});surfaceWorldGroup.add(transit);worldInteractables.push({kind:'transit',siteId:site.id,group:transit,position:new THREE.Vector3(-12,gy,8),radius:5,title:'TRANSIT CONSOLE'});}
             } else {
