@@ -6,6 +6,14 @@ Made by **Astrolog** for NASA Space Apps Challenge 2026, challenge [Abandoned bu
 
 Players explore the Moon, Mars, and 433 Eros, find historical spacecraft and instruments, scan them, and learn what they were designed to do and what their missions taught us. The experience includes a guided opening, an artifact log, environmental suit gauges, transit between bodies, archive puzzles, and clearly marked fictional heritage stations used to support exploration.
 
+## Browser field preview
+
+The project also has a small, playable browser companion with procedural surface scenes for the 13 Moon, Mars, and Eros destinations. It is an independent preview, not a Roblox client or a one-to-one export of the game world; the artifact scans, puzzles, and full story are in Roblox. The preview links directly to the [playable Roblox experience](https://www.roblox.com/games/104157966303180).
+
+**Play the browser preview:** [Last Signal on GitHub Pages](https://dankwa-wadie.github.io/last-signal-space-apps-2026/)
+
+The Pages site is built from [`test.html`](test.html) and published by [`.github/workflows/pages.yml`](.github/workflows/pages.yml).
+
 ## Live gameplay videos
 
 ### Combined demo · 26 seconds
