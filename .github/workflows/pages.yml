@@ -1,10 +1,13 @@
-name: Publish browser field preview
+name: Publish Last Signal project website
 
 on:
   push:
     branches: [main]
     paths:
       - 'test.html'
+      - 'index.html'
+      - 'field_artifacts.json'
+      - 'game/archive_catalog.json'
       - 'game/videos/**'
       - '.github/workflows/pages.yml'
   workflow_dispatch:
@@ -34,7 +37,12 @@ jobs:
       - name: Prepare site
         run: |
           mkdir -p _site
-          cp test.html _site/index.html
+          cp index.html _site/index.html
+          cp test.html _site/field.html
+          cp field_artifacts.json _site/field_artifacts.json
+          cp README.md REFERENCES.md AI_DISCLOSURE.md LICENSE LICENSE-MEDIA.md _site/
+          mkdir -p _site/game
+          cp game/archive_catalog.json _site/game/archive_catalog.json
           if [ -d game/videos ]; then cp -R game/videos _site/videos; fi
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3

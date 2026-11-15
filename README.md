@@ -1,18 +1,18 @@
 # Last Signal
 
-**A Roblox exploration game about the spacecraft and instruments humanity left behind.**
+**A public interactive field guide to the spacecraft and instruments humanity left behind.**
 
 Made by **Astrolog** for NASA Space Apps Challenge 2026, challenge [Abandoned but not Forgotten: Storytelling about NASA's Discarded Equipment on the Moon and Mars](https://www.spaceappschallenge.org/2026/challenges/nasas-discarded-equipment-storytelling/?tab=details).
 
-Players explore the Moon, Mars, and 433 Eros, find historical spacecraft and instruments, scan them, and learn what they were designed to do and what their missions taught us. The experience includes a guided opening, an artifact log, environmental suit gauges, transit between bodies, archive puzzles, and clearly marked fictional heritage stations used to support exploration.
+Last Signal is a website-first educational project for NASA Space Apps Challenge 2026. Anyone can open the project site, read the mission stories and sources, watch the demonstration, and launch the playable expedition in the browser without a password, account, or registration. Visitors explore the Moon, Mars, and 433 Eros, find historical spacecraft and instruments, scan them, and learn what they were designed to do and what their missions taught us.
 
-## Browser field preview
+## Public project website
 
-The project also has a playable browser version with procedural surface scenes for all 13 Moon, Mars, and Eros destinations. It includes the 20 field artifact scans, six reactivation challenges, the 18-record NSSDCA archive, transit timelines, life-support refills, shelters and timed hazards, a survey map, a saved field log, and the final marker handover. Its models and multiplayer progress differ from Roblox; browser progress is saved locally on the player’s device. The site links directly to the [playable Roblox experience](https://www.roblox.com/games/104157966303180).
+**The submitted project is the public website:** [Last Signal — open project](https://dankwa-wadie.github.io/last-signal-space-apps-2026/). Its main page presents the challenge, complete field-object catalog, a playable embedded expedition, live gameplay evidence, source links, and disclosures. The expedition includes 13 destinations, 20 field artifact scans, six reactivation challenges, an 18-record NSSDCA archive, transit timelines, life-support refills, shelters and timed hazards, a survey map, a saved field log, and the final marker handover. Browser progress is saved locally on the player’s device.
 
-**Play the browser preview:** [Last Signal on GitHub Pages](https://dankwa-wadie.github.io/last-signal-space-apps-2026/)
+The [interactive expedition](https://dankwa-wadie.github.io/last-signal-space-apps-2026/field.html) also has a direct URL. It uses WebGL and procedural models; the project’s core story and sources remain available on the main page.
 
-The Pages site is built from [`test.html`](test.html) and published by [`.github/workflows/pages.yml`](.github/workflows/pages.yml).
+The Pages site is built from [`index.html`](index.html) and published by [`.github/workflows/pages.yml`](.github/workflows/pages.yml). The 3D expedition is built from [`test.html`](test.html) and published at `field.html`.
 
 ## Live gameplay videos
 
@@ -55,9 +55,9 @@ These are direct recordings from Roblox Studio's live Play session. The same MP4
 - `REFERENCES.md` — source and material attribution register
 - `AI_DISCLOSURE.md` — tools used in creating the project
 
-## Roblox experience
+## Development build and project files
 
-The playable source of truth is the live Roblox place, not the exported files in this repository. The repository contains the script and world-manifest export as a recovery backup; it does not contain a complete `.rbxl` place file, and some models are referenced by Roblox asset IDs. The experience link is https://www.roblox.com/games/104157966303180; confirm that it opens for logged-out visitors before relying on it for judging.
+The team prototyped the experience in Roblox Studio. The public website is the final project and does not require Roblox; the Studio recordings are supplementary evidence from development. The repository contains exported scripts and a world-manifest recovery backup, but not a complete `.rbxl` place file. Some development models are referenced by Roblox asset IDs and are not required to use the public web project.
 
 ## Rebuilding and development
 

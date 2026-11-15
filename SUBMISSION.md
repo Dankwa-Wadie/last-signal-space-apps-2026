@@ -10,29 +10,30 @@ Last Signal
 
 ## One-line summary
 
-A Roblox exploration game that turns the spacecraft and instruments left on the Moon, Mars, and beyond into an interactive story about what they were built to do and the science they still teach us.
+A public, browser-playable field guide that turns spacecraft and instruments left on the Moon, Mars and asteroid 433 Eros into interactive stories about what they were built to do and the science they made possible.
 
 ## Project description
 
-Last Signal is an educational exploration game created by Astrolog for NASA Space Apps Challenge 2026. Players arrive as suited explorers, travel between the Moon, Mars, and 433 Eros, locate real mission hardware, scan artifacts, and add discoveries to the ASTROLOG archive. The experience connects objects to their purpose and scientific legacy through short in-game explanations and interactive puzzles.
+Last Signal is a public educational website created by Astrolog for NASA Space Apps Challenge 2026. It opens without a password, account or registration. Visitors can read the project story, search a 20-object field catalog, follow NASA and NSSDC sources, watch gameplay evidence, and launch the playable browser expedition from the same page.
 
-The game features Apollo-era equipment and lunar experiments, Mars rovers and landers, and deep-space missions including Voyager. Players can also use the transit console, track suit and air status, and explore fictional heritage stations that are clearly marked as game-created locations. The stations and travel times support gameplay and are not claims about current real-world bases or direct travel durations.
+The expedition features Apollo-era equipment and lunar experiments, Mars rovers and landers, and a catalog of additional deep-space missions. Players travel among 13 regions on the Moon, Mars and Eros, scan field objects, solve six instrument challenges, track suit oxygen and power, seek shelter from hazards, and read an 18-record NASA archive. Browser progress is saved locally. Procedural terrain and mission-scale distances are simplified for interactive storytelling. Any fictional heritage station is identified as game-created, not a current or historical NASA facility.
 
 The project uses storytelling and exploration to make discarded equipment feel present and understandable: a silent object is a clue to the mission that left it there, the engineering that kept it working, and the measurements it returned.
 
 ## Demo / gameplay links
 
-- Moon live gameplay: [moon-live-gameplay.mp4](https://github.com/Dankwa-Wadie/last-signal-space-apps-2026/blob/main/game/videos/moon-live-gameplay.mp4)
-- Mars live gameplay: [mars-live-gameplay.mp4](https://github.com/Dankwa-Wadie/last-signal-space-apps-2026/blob/main/game/videos/mars-live-gameplay.mp4)
+- **Public project website:** https://dankwa-wadie.github.io/last-signal-space-apps-2026/ — project overview, searchable field catalog, embedded playable expedition, video evidence, references and disclosures.
+- Direct playable expedition: https://dankwa-wadie.github.io/last-signal-space-apps-2026/field.html
+- Supplementary Moon live gameplay: [moon-live-gameplay.mp4](https://github.com/Dankwa-Wadie/last-signal-space-apps-2026/blob/main/game/videos/moon-live-gameplay.mp4)
+- Supplementary Mars live gameplay: [mars-live-gameplay.mp4](https://github.com/Dankwa-Wadie/last-signal-space-apps-2026/blob/main/game/videos/mars-live-gameplay.mp4)
 - Combined 26-second gameplay demo: [competition-demo-live-gameplay.mp4](https://github.com/Dankwa-Wadie/last-signal-space-apps-2026/blob/main/game/videos/competition-demo-live-gameplay.mp4)
 - Repository and project files: https://github.com/Dankwa-Wadie/last-signal-space-apps-2026
-- Roblox experience: https://www.roblox.com/games/104157966303180 — confirm public access from a logged-out browser before submitting.
 
-These clips were captured from a running Roblox Studio Play session. The Moon clip shows the lunar site and an artifact scan. The Mars clip shows the transit interface, arrival on Mars, and exploration near the Opportunity rover.
+These supplementary clips were captured from a running Studio development build. The submitted project itself is the browser-accessible website and expedition linked above; visitors do not need Studio or Roblox to access it.
 
 ## How we built it
 
-The interactive experience was built in Roblox Studio using Luau scripts and 3D models. The game uses client/server scripts for scanning and archive progress, suit and environmental indicators, transit between world regions, and mission interactions. The repository contains an exported script and manifest recovery backup; the live Roblox place is the authoritative build. A separate Blender/FFmpeg pipeline was used for cinematic renders and is documented in `pipeline/`.
+The project website and playable field guide use HTML, CSS, JavaScript, Three.js and WebGL. Mission records are served as project data, while browser storage keeps each visitor’s expedition progress on their device. The team also prototyped the experience in Roblox Studio; those development recordings are included as supplementary media. A separate Blender/FFmpeg pipeline is documented in `pipeline/`.
 
 ## NASA data and other sources
 
@@ -49,7 +50,7 @@ Original code is MIT-licensed and original project text/graphics are CC BY 4.0, 
 ## Items to confirm in the official form
 
 - Confirm the exact required fields and maximum lengths in the 2026 Project tab.
-- Confirm the Roblox experience link opens for judges without sign-in or group access.
-- Confirm the experience and its third-party assets are public and reusable under the competition terms.
+- Confirm the public GitHub Pages link and embedded expedition load from a logged-out browser, including video and source links.
+- Confirm permissions and credits for third-party assets, images, audio and other media actually included on the public website.
 - Check the team’s complete AI/SI-tool use and citations.
 - Confirm all team contributors and any additional media/data sources.
