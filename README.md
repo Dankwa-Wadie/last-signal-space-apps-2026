@@ -10,17 +10,17 @@ Players explore the Moon, Mars, and 433 Eros, find historical spacecraft and ins
 
 ### Combined demo · 26 seconds
 
-https://github.com/Dankwa-Wadie/last-signal-space-apps-2026/blob/main/game/videos/competition-demo-live-gameplay.mp4
+![](https://github.com/user-attachments/assets/5a5b403f-88c3-4c91-a7e8-494c66ca8a1d)
 
 ### Moon · Apollo 11 artifact scan
 
-https://github.com/Dankwa-Wadie/last-signal-space-apps-2026/blob/main/game/videos/moon-live-gameplay.mp4
+![](https://github.com/user-attachments/assets/647b436b-9217-49f9-8a40-588c612a1db0)
 
 ### Mars · transit and Opportunity
 
-https://github.com/Dankwa-Wadie/last-signal-space-apps-2026/blob/main/game/videos/mars-live-gameplay.mp4
+![](https://github.com/user-attachments/assets/e0249a10-30ce-4fd0-b899-73c474396500)
 
-These are direct recordings from Roblox Studio's live Play session. GitHub renders the committed MP4 links above as playable video previews.
+These are direct recordings from Roblox Studio's live Play session. The video attachments above are embedded players; the MP4 files are also preserved in `game/videos/`.
 
 ## Project contents
 
