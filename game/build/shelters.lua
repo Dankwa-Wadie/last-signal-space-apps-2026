@@ -40,15 +40,8 @@ for i,s in ipairs(SPOTS) do
     local floor=Instance.new("Part"); floor.Name="Floor"; floor.Shape=Enum.PartType.Cylinder; floor.Anchored=true
     floor.Size=Vector3.new(0.4,r*2-1,r*2-1); floor.CFrame=CFrame.new(x,y+0.2,z)*CFrame.Angles(0,0,math.rad(90))
     floor.Material=Enum.Material.DiamondPlate; floor.Color=Color3.fromRGB(70,74,80); floor.Parent=m
-    local ring=floor:Clone(); ring.Name="Ring"; ring.Size=Vector3.new(0.5,r*2+0.6,r*2+0.6); ring.CFrame=floor.CFrame*CFrame.new(-0.05,0,0)
-    ring.Color=Color3.fromRGB(245,231,60); ring.Material=Enum.Material.Neon; ring.Transparency=0.3; ring.Parent=m
     local l=Instance.new("PointLight"); l.Range=r*1.6; l.Brightness=1.4; l.Color=Color3.fromRGB(200,230,255); l.Parent=c
   end
-  local bb=Instance.new("BillboardGui"); bb.Name="Tag"; bb.Size=UDim2.fromScale(10,3); bb.StudsOffset=Vector3.new(0,r*0.9+3,0)
-  bb.LightInfluence=0; bb.MaxDistance=450; bb.AlwaysOnTop=false; bb.Parent=c
-  local t=Instance.new("TextLabel"); t.Size=UDim2.fromScale(1,1); t.BackgroundColor3=Color3.fromRGB(10,11,14)
-  t.BackgroundTransparency=0.15; t.Text="SHELTER"; t.TextScaled=true; t.Font=Enum.Font.GothamBold
-  t.TextColor3=Color3.fromRGB(245,231,60); t.Parent=bb
-  Instance.new("UICorner",t).CornerRadius=UDim.new(0.5,0)
+  -- No floating labels: shelters should be identified by their shape and light.
 end
 return "shelters "..#SPOTS

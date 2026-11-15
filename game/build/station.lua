@@ -33,16 +33,16 @@ for _,x in ipairs({-19,19}) do
   end
 end
 -- A larger pressure shell with a clear walkable interior and a framed front airlock.
-P(S,"HabFloor",Vector3.new(32,0.5,18),CFrame.new(0,0.45,184),Color3.fromRGB(120,122,124),Enum.Material.Metal)
+P(S,"HabFloor",Vector3.new(36,0.5,22),CFrame.new(0,0.25,184),Color3.fromRGB(120,122,124),Enum.Material.Metal)
 P(S,"HabRoof",Vector3.new(32,0.5,18),CFrame.new(0,16.2,184),Color3.fromRGB(198,200,198),Enum.Material.Metal)
-P(S,"HabSideL",Vector3.new(0.6,15.5,18),CFrame.new(-15.7,8.4,184),Color3.fromRGB(226,226,220),Enum.Material.SmoothPlastic)
-P(S,"HabSideR",Vector3.new(0.6,15.5,18),CFrame.new(15.7,8.4,184),Color3.fromRGB(226,226,220),Enum.Material.SmoothPlastic)
-P(S,"HabBack",Vector3.new(32,15.5,0.6),CFrame.new(0,8.4,192.7),Color3.fromRGB(226,226,220),Enum.Material.SmoothPlastic)
+P(S,"HabSideL",Vector3.new(0.6,15.45,18),CFrame.new(-15.7,8.225,184),Color3.fromRGB(226,226,220),Enum.Material.SmoothPlastic)
+P(S,"HabSideR",Vector3.new(0.6,15.45,18),CFrame.new(15.7,8.225,184),Color3.fromRGB(226,226,220),Enum.Material.SmoothPlastic)
+P(S,"HabBack",Vector3.new(32,15.45,0.6),CFrame.new(0,8.225,192.7),Color3.fromRGB(226,226,220),Enum.Material.SmoothPlastic)
 -- front wall segments frame a 7-stud airlock opening
-P(S,"HabFrontL",Vector3.new(12.5,15.5,0.6),CFrame.new(-9.75,8.4,175.3),Color3.fromRGB(226,226,220),Enum.Material.SmoothPlastic)
-P(S,"HabFrontR",Vector3.new(12.5,15.5,0.6),CFrame.new(9.75,8.4,175.3),Color3.fromRGB(226,226,220),Enum.Material.SmoothPlastic)
+P(S,"HabFrontL",Vector3.new(12.5,15.45,0.6),CFrame.new(-9.75,8.225,175.3),Color3.fromRGB(226,226,220),Enum.Material.SmoothPlastic)
+P(S,"HabFrontR",Vector3.new(12.5,15.45,0.6),CFrame.new(9.75,8.225,175.3),Color3.fromRGB(226,226,220),Enum.Material.SmoothPlastic)
 P(S,"HabLintel",Vector3.new(7,5,0.6),CFrame.new(0,13.65,175.3),Color3.fromRGB(226,226,220),Enum.Material.SmoothPlastic)
-P(S,"HabSkirt",Vector3.new(36,1,22),CFrame.new(0,0.5,184),Color3.fromRGB(140,140,138))
+local oldSkirt=S:FindFirstChild("HabSkirt"); if oldSkirt then oldSkirt:Destroy() end
 local Airlock=P(S,"Airlock",Vector3.new(7,9,2),CFrame.new(0,4.6,174.2),Color3.fromRGB(52,54,60))
 Airlock.CanCollide=false; Airlock.Transparency=0.35
 local win=P(S,"Window",Vector3.new(11,2.8,0.3),CFrame.new(-9.5,11.7,175.2),Color3.fromRGB(255,214,140),Enum.Material.Neon)
