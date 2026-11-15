@@ -8,7 +8,7 @@ Players explore the Moon, Mars, and 433 Eros, find historical spacecraft and ins
 
 ## Browser field preview
 
-The project also has a small, playable browser companion with procedural surface scenes for the 13 Moon, Mars, and Eros destinations. It is an independent preview, not a Roblox client or a one-to-one export of the game world; the artifact scans, puzzles, and full story are in Roblox. The preview links directly to the [playable Roblox experience](https://www.roblox.com/games/104157966303180).
+The project also has a playable browser version with procedural surface scenes for all 13 Moon, Mars, and Eros destinations. It includes the 20 field artifact scans, six reactivation challenges, the 18-record NSSDCA archive, transit timelines, life-support refills, shelters and timed hazards, a survey map, a saved field log, and the final marker handover. Its models and multiplayer progress differ from Roblox; browser progress is saved locally on the player’s device. The site links directly to the [playable Roblox experience](https://www.roblox.com/games/104157966303180).
 
 **Play the browser preview:** [Last Signal on GitHub Pages](https://dankwa-wadie.github.io/last-signal-space-apps-2026/)
 

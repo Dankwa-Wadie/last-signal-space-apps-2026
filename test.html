@@ -136,7 +136,8 @@
                     <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
                     <span>EMU SUIT · NOMINAL</span>
                 </div>
-                <div class="text-slate-300/80">O₂ <span class="text-emerald-300">98.4%</span> · 4.3 PSI</div>
+                <div class="text-slate-300/80">O₂ <span id="oxygen-value" class="text-emerald-300">100%</span> · 4.3 PSI</div>
+                <div class="text-slate-300/80">SUIT POWER <span id="power-value" class="text-emerald-300">100%</span></div>
             </div>
 
             <div
@@ -201,6 +202,14 @@
     <!-- Top-Right Collapsible Controls Drawer (Collapsed by default for clean FPV) -->
     <aside id="hud-drawer"
         class="hidden fixed top-16 right-3 sm:top-16 sm:right-4 z-30 w-[calc(100vw-1.5rem)] max-w-[330px] max-h-[calc(100vh-8.5rem)] overflow-y-auto space-scroll rounded-2xl bg-slate-950/88 border border-slate-800/90 backdrop-blur-xl shadow-2xl p-4 flex flex-col gap-3.5">
+        <div class="grid grid-cols-2 gap-2">
+            <button id="field-log-open" class="rounded-lg border border-slate-700 bg-slate-900 px-2 py-2 text-xs text-slate-100 hover:bg-slate-800">FIELD LOG <span id="field-log-count" class="text-amber-300">0/20</span></button>
+            <button id="archive-open" class="rounded-lg border border-slate-700 bg-slate-900 px-2 py-2 text-xs text-slate-100 hover:bg-slate-800">NSSDCA ARCHIVE</button>
+            <button id="transit-open" class="rounded-lg border border-slate-700 bg-slate-900 px-2 py-2 text-xs text-slate-100 hover:bg-slate-800">TRANSIT CONSOLE</button>
+            <button id="guide-open" class="rounded-lg border border-slate-700 bg-slate-900 px-2 py-2 text-xs text-slate-100 hover:bg-slate-800">MISSION GUIDE</button>
+            <button id="map-open" class="rounded-lg border border-slate-700 bg-slate-900 px-2 py-2 text-xs text-slate-100 hover:bg-slate-800">SURVEY MAP</button>
+            <button id="evidence-open" class="rounded-lg border border-slate-700 bg-slate-900 px-2 py-2 text-xs text-slate-100 hover:bg-slate-800">GAMEPLAY CLIPS</button>
+        </div>
         <!-- View Mode Switch: First-Person EVA vs Orbital Globe -->
         <div class="flex flex-col gap-1.5">
             <div class="flex items-center justify-between">
@@ -286,6 +295,7 @@
             class="pointer-events-auto px-3.5 py-1.5 rounded-full bg-slate-950/85 border border-slate-700/80 backdrop-blur-md text-[11px] font-mono-tech text-slate-200 shadow-lg text-center transition-opacity duration-300">
             Click surface to lock mouse look (or drag) · WASD move · Shift bound · Space hop
         </div>
+        <div id="interaction-prompt" class="hidden pointer-events-auto px-4 py-2 rounded-full border border-amber-300/40 bg-slate-950/90 text-sm font-semibold text-amber-100 shadow-xl"></div>
 
         <!-- Site reference and heading -->
         <div
@@ -331,6 +341,18 @@
         </div>
     </div>
 
+    <div class="fixed bottom-24 left-3 sm:left-4 z-20 w-48 rounded-xl border border-slate-700/70 bg-slate-950/75 p-3 font-mono-tech text-[10px] text-slate-300 shadow-xl backdrop-blur-md">
+        <div class="mb-2 flex items-center justify-between"><span>OXYGEN</span><span id="oxygen-hud">100%</span></div>
+        <div class="mb-3 h-1.5 overflow-hidden rounded-full bg-slate-700"><div id="oxygen-bar" class="h-full rounded-full bg-emerald-400 transition-[width]" style="width:100%"></div></div>
+        <div class="mb-2 flex items-center justify-between"><span>SUIT POWER</span><span id="power-hud">100%</span></div>
+        <div class="h-1.5 overflow-hidden rounded-full bg-slate-700"><div id="power-bar" class="h-full rounded-full bg-sky-400 transition-[width]" style="width:100%"></div></div>
+        <div id="support-hint" class="mt-2 leading-relaxed text-slate-400">Use a habitat console to refill.</div>
+    </div>
+    <div id="hazard-banner" class="hidden fixed top-24 left-1/2 z-40 -translate-x-1/2 rounded-xl border border-amber-300/40 bg-slate-950/90 px-4 py-3 text-center shadow-2xl">
+        <div id="hazard-title" class="font-mono-tech text-xs font-bold tracking-wider text-amber-200"></div>
+        <div id="hazard-copy" class="mt-1 text-xs text-slate-300"></div>
+    </div>
+
     <script type="module">
         import * as THREE from 'three';
         import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
@@ -355,6 +377,9 @@
             { id:'jezero', name:'Mars · Jezero Crater (Perseverance)', shortName:'Jezero', body:'Mars', lat:18.45, lon:77.45, terrainType:'jezero', regolithLabel:'CRATER & ANCIENT DELTA', gravity:3.71, pressure:610, sunAz:10, sunEl:25, description:'Roblox destination: Jezero Crater, where Perseverance is exploring an ancient lake basin and delta. Ingenuity’s flights began here.' },
             { id:'eros', name:'433 Eros · NEAR Shoemaker', shortName:'Eros', body:'Eros', lat:-41.626, lon:80.421, terrainType:'eros', regolithLabel:'EROS REGOLITH & BOULDERS', gravity:0.006, pressure:0, sunAz:40, sunEl:20, description:'Roblox destination: the saddle region of asteroid 433 Eros, where NEAR Shoemaker became the first spacecraft to land on an asteroid in 2001. Preview gravity is exaggerated for playable movement.' }
         ];
+
+        const FIELD_ITEMS = [{"id":"lm","site":"tranquility","siteName":"Tranquility Base","x":-4.5,"z":-9.5,"title":"Apollo 11 Lunar Module — Descent Stage \"Eagle\"","year":"Landed 20 July 1969","what":"The lower half of the lander. It carried the descent engine, fuel, landing gear and the science packages down to the surface.","why":"It was never meant to come home. The descent stage stayed behind as the launch platform for the ascent stage that carried Armstrong and Aldrin back to orbit.","science":"Its landing proved a crewed vehicle could touch down and lift off from another world. It is still standing at Tranquility Base."},{"id":"seis","site":"tranquility","siteName":"Tranquility Base","x":8,"z":-13,"title":"Passive Seismic Experiment (EASEP)","year":"Deployed 21 July 1969","what":"A solar-powered seismometer, levelled by hand on the regolith and shielded from the Sun.","why":"To listen for moonquakes and meteorite strikes, and use them to read the Moon’s interior.","science":"It found the Moon rings for a long time after an impact — evidence of a dry, fractured crust. It ran for three weeks before overheating."},{"id":"retro","site":"tranquility","siteName":"Tranquility Base","x":7,"z":-10,"title":"Laser Ranging Retroreflector (LRRR)","year":"Deployed 21 July 1969","what":"An array of corner-cube prisms that sends incoming laser light back toward its source.","why":"So observatories on Earth could fire a laser at the Moon and time how long light takes to return.","science":"Still in use today. It showed the Moon is drifting away from Earth by about 3.8 centimetres a year — the only Apollo experiment still returning data."},{"id":"surv3","site":"procellarum","siteName":"Oceanus Procellarum","x":-4,"z":-9,"title":"Surveyor 3","year":"Landed 20 April 1967","what":"A three-legged robotic lander with a scoop on an arm, sent before anyone knew whether a spacecraft would sink into the lunar surface.","why":"To prove a soft landing was possible, and to find out whether the ground could hold a crewed lander. Its engine cut out late, so it bounced twice before settling.","science":"It showed the regolith was firm enough to land on and walk on. Two and a half years later Apollo 12 touched down about 180 m away — the only time anyone has gone back to visit something we had left behind. Conrad and Bean cut pieces off it and carried them home; its TV camera is in the Smithsonian."},{"id":"a12alsep","site":"procellarum","siteName":"Oceanus Procellarum","x":7,"z":-9,"title":"Apollo 12 ALSEP","year":"Deployed 19 November 1969","what":"The first full Apollo science station: a central transmitter, a seismometer, and a SNAP-27 nuclear generator standing off to one side on its own cable.","why":"Apollo 11's seismometer ran on sunlight and died within weeks. This one had a radioisotope generator, so it could keep working through the two-week lunar night.","science":"Days after the crew left, their ascent stage was deliberately crashed into the Moon 73 km away. This seismometer heard the Moon ring for about 55 minutes — dry, deeply fractured rock with no water in it to damp the shaking. It kept listening until every ALSEP station was switched off on 30 September 1977."},{"id":"falcon","site":"hadley","siteName":"Hadley–Apennine","x":-11,"z":-16,"title":"Apollo 15 Lunar Module — Descent Stage \"Falcon\"","year":"Landed 30 July 1971","what":"The lower half of the lander: engine, tanks, landing gear, and the bays that carried the rover and the science packages down.","why":"Like Eagle at Tranquility, it was the launch platform the ascent stage pushed off from. It was never coming back.","science":"Apollo 15 was the first of the long stays — three days on the surface and nearly 19 hours outside, against Apollo 11's two and a half. It still stands here, and orbiting cameras still use it as a fixed point."},{"id":"lrv","site":"hadley","siteName":"Hadley–Apennine","x":4,"z":-7.5,"title":"Lunar Roving Vehicle (LRV-1)","year":"Driven 31 July – 2 Aug 1971","what":"A folding, battery-electric car that rode down strapped to the side of the lander. Four wheels of woven piano wire, a top speed of about 13 km/h, and two antennas: a low-gain antenna oriented during traverses and a high-gain dish for television when stopped.","why":"To get the crew out to the mountain front and the edge of Hadley Rille and back, carrying tools and rock boxes, within walking distance of safety if it ever failed.","science":"It turned a landing site into a field area: Apollo 15 covered about 28 km of ground in three drives. The dish is the reason anyone on Earth saw it happen — but it had to be stopped and re-aimed at Earth before the pictures could come."},{"id":"lrrr15","site":"hadley","siteName":"Hadley–Apennine","x":-4,"z":22,"title":"Laser Ranging Retroreflector (Apollo 15)","year":"Deployed 31 July 1971","what":"Three hundred corner-cube prisms in two panels — three times the array Apollo 11 left, and still the largest on the Moon.","why":"More cubes means more photons come home, so observatories can range on it in worse conditions and get a cleaner measurement.","science":"You have seen one of these before, at Tranquility. With 300 corner cubes, this is the largest Apollo reflector array; Apollo 11 and 14 each left 100. The arrays remain part of lunar laser-ranging research, the Apollo surface experiment still returning data more than fifty years on."},{"id":"oppy","site":"meridiani","siteName":"Meridiani Planum, Mars","x":-4,"z":-9,"title":"Opportunity (MER-B)","year":"Landed 25 January 2004 · last signal 10 June 2018","what":"A solar-powered field geologist the size of a golf cart: six wheels, a camera mast at about eye height, and an arm carrying a microscope and a rock grinder.","why":"To find out whether Mars ever had liquid water on its surface, by reading the rocks directly instead of guessing from orbit.","science":"In its first weeks, it found layered rocks and hematite spherules that supported a watery past. Built for 90 sols, Opportunity worked for more than 5,000 and drove 45.16 km. It held the off-Earth driving-distance record until Perseverance passed it on 11 October 2026, reaching 45.22 km."},{"id":"heatshield","site":"meridiani","siteName":"Meridiani Planum, Mars","x":8,"z":-9,"title":"Opportunity's Heat Shield","year":"Jettisoned during descent, 25 January 2004","what":"The shield that took the heat of entry, thrown away a few kilometres up and left where it hit. It struck hard enough to turn itself inside out.","why":"It was never meant to be visited. It is here because something had to be discarded for the rover to arrive at all.","science":"Opportunity drove back to photograph its own discarded shield — and found an iron meteorite lying beside it, the first meteorite ever identified on another planet. It was named Heat Shield Rock."},{"id":"pathfinder","site":"ares_vallis","siteName":"Ares Vallis, Mars","x":-4,"z":-9,"title":"Mars Pathfinder — Carl Sagan Memorial Station","year":"Landed 4 July 1997 · last contact 27 September 1997","what":"A lander that arrived wrapped in airbags, bounced across the plain at least fifteen times — the first rebounds about fifteen metres high — then rolled to a stop and opened three petals like a flower.","why":"To prove a cheap, fast way of landing on Mars: no retro-rockets all the way down, just a parachute, an airbag cocoon, and a bounce. And to deliver the first rover.","science":"It sent back the first colour panoramas of an Ares Vallis flood plain and measured the weather for 83 sols. The airbag method it proved was used again to put Spirit and Opportunity on Mars. It was renamed the Carl Sagan Memorial Station after it landed."},{"id":"sojourner","site":"ares_vallis","siteName":"Ares Vallis, Mars","x":7,"z":-7,"title":"Sojourner","year":"First drove 5 July 1997 · 83 sols","what":"A rover the size of a microwave oven: 10.6 kg, six wheels on a rocker-bogie suspension, one solar panel, and a spectrometer it pressed against rocks to read their chemistry.","why":"To prove that a wheeled robot could be driven on another planet at all. Nobody had done it before.","science":"It drove about 100 metres in 83 sols and never went more than a few metres from the lander — but it measured the rocks around it and showed they were varied, which meant Ares Vallis really was a flood plain. Its rocker-bogie suspension is still the design every Mars rover uses, Perseverance included."},{"id":"viking1","site":"chryse","siteName":"Chryse Planitia, Mars","x":-4,"z":-9,"title":"Viking 1 Lander","year":"Landed 20 July 1976 · last contact 13 November 1982","what":"A three-legged lander the size of a small car, powered by two plutonium generators rather than sunlight, with a scoop on an arm and a weather mast.","why":"To take the first pictures from the surface of Mars, and to run the first experiments looking for life in the soil.","science":"It returned the first clear photographs ever taken from the Martian surface, and worked for more than six years — far beyond its 90-day design. Its biology experiments gave results nobody could agree on, which is part of why we are still sending landers."},{"id":"viking2","site":"utopia","siteName":"Utopia Planitia, Mars","x":-4,"z":-9,"title":"Viking 2 Lander","year":"Landed 3 September 1976 · switched off 11 April 1980","what":"Viking 1's identical twin, set down on the other side of the planet.","why":"Two landers in two very different places, so the results could be compared rather than guessed at. That is how you tell a local oddity from something true of the whole planet.","science":"It photographed thin water frost forming on the ground in winter — the first time anyone saw weather happen on another planet's surface. Its batteries failed after three and a half years."},{"id":"spirit","site":"gusev","siteName":"Gusev Crater, Mars","x":-4,"z":-9,"title":"Spirit (MER-A)","year":"Landed 4 January 2004 · last transmission 22 March 2010","what":"Opportunity's identical twin, landed on the other side of Mars three weeks earlier.","why":"Gusev Crater has a dry river valley running into it, so it looked like a crater lake that had drained. The idea was to read the bottom of it.","science":"It found what it was sent for in the hills above the crater floor: rocks altered by water, and almost pure silica of the kind that forms around hot springs. In 2009 it broke through a crust into soft sand and could not get out, and with one wheel already dead it could not be angled toward the winter Sun. It kept working where it stood until the cold took it."},{"id":"phoenix","site":"vastitas_borealis","siteName":"Northern Polar Plains, Mars","x":-4,"z":-9,"title":"Phoenix Mars Lander","year":"Landed 25 May 2008 · last signal 2 November 2008","what":"A solar-powered lander with a digging arm, set down far enough north to reach ice a few centimetres below the surface.","why":"To touch Martian water directly instead of inferring it from orbit, and to find out whether the soil could support life.","science":"It dug down, found bright material, and watched it vanish over a few days — ice turning straight to vapour. Then it melted ice in an onboard oven and confirmed it was water. The icy soil was so sticky it clung inside the upside-down scoop and the team had to shake it loose. When the arctic winter came the sunlight ran out, exactly as planned."},{"id":"insight","site":"elysium","siteName":"Elysium Planitia, Mars","x":-4,"z":-9,"title":"InSight","year":"Landed 26 November 2018 · last transmission 15 December 2022","what":"A lander that never moved: two wide solar wings, and a seismometer it lifted off its own deck and set down on the ground under a wind shield.","why":"To listen to the inside of Mars. A seismometer reads a planet's interior the way the Apollo instruments read the Moon's.","science":"It recorded well over a thousand marsquakes and used them to measure the crust, mantle and core — the first time anyone has sounded the inside of another planet. Dust built up on its panels year after year until there was not enough power left to answer. The site was deliberately chosen to be boring: flat, safe and quiet, because the science was underground."},{"id":"ingenuity","site":"jezero","siteName":"Jezero Crater, Mars","x":-4,"z":-9,"title":"Ingenuity","year":"First flight 19 April 2021 · last flight 18 January 2024","what":"A helicopter weighing under two kilograms, with two rotors turning in opposite directions at over 2,000 rpm because the air here is about one percent as thick as Earth's.","why":"To find out whether powered flight on another planet was possible at all. It carried no science instruments: it was there to prove the idea.","science":"Its first hop lasted 39 seconds and was the first powered, controlled flight anywhere but Earth. It was meant to fly five times. It flew 72, scouting routes for Perseverance, until a rotor blade was damaged on landing and it could not fly safely again. It is still standing where it came down."},{"id":"ranger4","site":"farside","siteName":"The Far Side","x":-4,"z":-9,"title":"Ranger 4","year":"Impacted 26 April 1962","what":"A early lunar probe carrying cameras and a balsa-wood capsule with a seismometer inside, meant to survive a rough landing. Its onboard computer failed hours after launch, so the solar panels never opened and nothing ever switched on.","why":"To get the first close-up pictures of the Moon, and to put the first seismometer on another world — seven years before Apollo 11 managed it.","science":"It returned no data at all. It drifted, dead, until the Moon got in the way, and hit the far side at about 9,600 km/h. It was still the first US spacecraft to reach another celestial body, and the first object of any nation to reach the far-side surface. Everything else you have found out here worked first. This one never did — and we came anyway."},{"id":"near","site":"eros","siteName":"Eros","x":-4,"z":-9,"title":"NEAR Shoemaker","year":"Landed 12 February 2001 · final contact 28 February 2001","what":"A spacecraft built to orbit an asteroid, not to land on one. It has no landing legs: four solar panels, a dish antenna, and a camera on the end of a body the size of a small car.","why":"To spend a year circling Eros, mapping it up close — the first spacecraft ever to orbit an asteroid.","science":"When the year was up, the team brought it down anyway, though it was never designed to land. It came down at about walking pace, survived, and kept transmitting from the surface for more than two weeks — the first spacecraft ever to land on an asteroid. It is still lying here, just south of the saddle-shaped valley called Himeros."}];
+        const ARCHIVE_ITEMS = [{"id":"surveyor3","name":"Surveyor 3","cospar":"1967-035A","body":"Moon","launched":"1967-04-17","rest":"Oceanus Procellarum, 3.0162 S, 336.582 E","ended":"Last contact 4 May 1967","story":"A robot lander sent to prove a soft landing was possible. Two and a half years later Apollo 12 landed 180 m away; Conrad and Bean walked over and brought back about 10 kg of it, including the TV camera, now in the Smithsonian.","inFilm":false,"inGame":false},{"id":"apollo11_lm","name":"Apollo 11 Lunar Module Eagle (descent stage) + EASEP","cospar":"1969-059C","body":"Moon","launched":"1969-07-16","rest":"Mare Tranquillitatis, 0.67416 N, 23.47314 E","ended":"EASEP stopped accepting commands 27 Aug 1969; retroreflector still in use","story":"The landing stage became the launch pad and stayed. The seismometer listened for moonquakes; the retroreflector still bounces lasers back to Earth.","inFilm":true,"inGame":true},{"id":"apollo12_alsep","name":"Apollo 12 ALSEP","cospar":"1969-099C","body":"Moon","launched":"1969-11-14","rest":"Oceanus Procellarum, within ~180 m of Surveyor 3","ended":"Shut down with all ALSEP stations, 30 Sep 1977","story":"A nuclear-powered (SNAP-27 RTG) science station. Its seismometer recorded the first artificial moonquake when the ascent stage was crashed into the Moon.","inFilm":true,"inGame":false},{"id":"apollo15_lrv","name":"Apollo 15 Lunar Module Falcon, LRV + ALSEP","cospar":"1971-063C","body":"Moon","launched":"1971-07-26","rest":"Hadley–Apennine, 26.13239 N, 3.63330 E","ended":"ALSEP shut down 30 Sep 1977; the rover is parked where it stopped","story":"The first car on the Moon, used to explore within about 5 km of the lander. After the last EVA Scott dropped a hammer and a feather; they fell together.","inFilm":true,"inGame":false},{"id":"viking1","name":"Viking 1 Lander","cospar":"1975-075C","body":"Mars","launched":"1975-08-20","rest":"Chryse Planitia, 22.27 N, 312.05 E","ended":"Contact lost 13 Nov 1982","story":"The first U.S. lander to work on Mars, powered by two plutonium RTGs; it ran for more than six years.","inFilm":false,"inGame":false},{"id":"viking2","name":"Viking 2 Lander","cospar":"1975-083C","body":"Mars","launched":"1975-09-09","rest":"Utopia Planitia, 47.6673 N, 134.2809 E","ended":"Turned off 11 Apr 1980 when its batteries failed","story":"Viking 1's twin, landed on the opposite side of the planet.","inFilm":false,"inGame":false},{"id":"pathfinder","name":"Mars Pathfinder + Sojourner","cospar":"1996-068A","body":"Mars","launched":"1996-12-04","rest":"Ares Vallis, 19.33 N, 33.55 W (Sagan Memorial Station)","ended":"Communications lost 27 Sep 1997","story":"Bounced to a landing on airbags and released Sojourner, the first rover on Mars.","inFilm":false,"inGame":false},{"id":"spirit","name":"Spirit (MER-A)","cospar":"2003-027A","body":"Mars","launched":"2003-06-10","rest":"Gusev Crater","ended":"Last transmission 22 Mar 2010","story":"Opportunity's twin. With one dead wheel it got stuck in soft soil and could not tilt its panels toward the Sun for winter.","inFilm":false,"inGame":false},{"id":"opportunity","name":"Opportunity (MER-B)","cospar":"2003-032A","body":"Mars","launched":"2003-07-08","rest":"Meridiani Planum","ended":"Final communication 10 Jun 2018","story":"Built for 90 sols, Opportunity worked for more than 5,000. Its final signal followed a planet-wide dust storm.","inFilm":true,"inGame":false},{"id":"phoenix","name":"Phoenix Mars Lander","cospar":"2007-034A","body":"Mars","launched":"2007-08-04","rest":"North polar plains, 68.15 N, 125.9 W","ended":"Last signal 2 Nov 2008","story":"Dug into polar ground rich in water ice. As the Arctic summer ended it ran out of sunlight.","inFilm":false,"inGame":false},{"id":"insight","name":"InSight","cospar":"2018-042A","body":"Mars","launched":"2018-05-05","rest":"Western Elysium Planitia","ended":"Last transmission 15 Dec 2022; declared over 21 Dec 2022","story":"A seismometer on Mars: it listened for marsquakes to map the planet's interior, until dust starved its solar panels.","inFilm":false,"inGame":false},{"id":"ingenuity","name":"Ingenuity helicopter (Mars 2020)","cospar":"2020-052A","body":"Mars","launched":"2020-07-30","rest":"Jezero Crater","ended":"Rotors damaged on its flight of 18 Jan 2024; no longer able to fly","story":"The first powered, controlled flight on another planet (19 Apr 2021, 39.1 s). Now a stationary monument.","inFilm":false,"inGame":false},{"id":"near","name":"NEAR Shoemaker","cospar":"1996-008A","body":"Asteroid 433 Eros","launched":"1996-02-17","rest":"The 'saddle' region of Eros","ended":"Final contact 28 Feb 2001; still lying on Eros","story":"The first spacecraft to orbit an asteroid, and then the first to land on one. It was never designed to land at all: after a year circling Eros the team brought it down anyway on 12 Feb 2001, and it survived the touchdown and kept transmitting from the surface for over two weeks.","inFilm":false,"inGame":false},{"id":"dawn","name":"Dawn","cospar":"2007-043A","body":"Dwarf planet Ceres","launched":"2007-09-27","rest":"Unpowered orbit around Ceres; expected to stay up about 50 years","ended":"Out of hydrazine; last contact 31 Oct 2018","story":"The first spacecraft to orbit two worlds beyond Earth: the giant asteroid Vesta for 14 months from 2011, then the dwarf planet Ceres from 2015. When its hydrazine ran out it was deliberately left in a high, stable orbit rather than allowed to fall — NASA will not risk contaminating Ceres with anything from Earth. The team put it better than 99% certain it will still be circling in about fifty years.","inFilm":false,"inGame":false},{"id":"kepler","name":"Kepler Space Telescope","cospar":"2009-011A","body":"Sun (Earth-trailing orbit)","launched":"2009-03-07","rest":"Earth-trailing heliocentric orbit, period ~372 days","ended":"Retired after running out of fuel (2018), left in its safe orbit away from Earth","story":"Stared at one patch of sky to catch planets crossing their stars.","inFilm":false,"inGame":false},{"id":"pioneer10","name":"Pioneer 10","cospar":"1972-012A","body":"Leaving the solar system","launched":"1972-03-03","rest":"Outbound, toward the heliotail","ended":"Last signal detected 23 Jan 2003","story":"First to cross the asteroid belt and fly past Jupiter. Heading the opposite way to the Voyagers.","inFilm":false,"inGame":false},{"id":"pioneer11","name":"Pioneer 11","cospar":"1973-019A","body":"Leaving the solar system","launched":"1973-04-06","rest":"Outbound","ended":"Science operations and daily telemetry ceased 30 Sep 1995","story":"Flew past Jupiter and became the first spacecraft to visit Saturn.","inFilm":false,"inGame":false},{"id":"voyager1","name":"Voyager 1","cospar":"1977-084A","body":"Interstellar space","launched":"1977-09-05","rest":"Interstellar space, still operating","ended":"Still transmitting (2 of 10 instruments on)","story":"A deep-space counterpoint: Voyager 1 was never abandoned and is still answering from interstellar space.","inFilm":true,"inGame":false}];
 
         // =========================================================================
         // 2. DETERMINISTIC NOISE & SPHERICAL COORDINATE HELPERS
@@ -1586,7 +1611,7 @@
             // 4. Site-specific Apollo / Artemis Hardware
             hardwareGroup = buildSiteHardware(site);
             surfaceWorldGroup.add(hardwareGroup);
-            // Artifact scans and story interactions live in the linked Roblox game.
+            buildSiteEnhancements(site);
         }
 
         // =========================================================================
@@ -1904,7 +1929,12 @@
                     triggerLunarHop();
                 }
             }
-            if (e.code === 'KeyF') toggleFlashlight();
+            if (e.code === 'KeyF') {
+                if (nearestWorldInteractable?.kind === 'artifact' && PUZZLE_FOR[nearestWorldInteractable.item.id]) {
+                    openPuzzle(nearestWorldInteractable.item);
+                } else toggleFlashlight();
+            }
+            if (e.code === 'KeyR' && nearestWorldInteractable?.kind === 'artifact') showMemory(nearestWorldInteractable.item);
             if (e.code === 'KeyV') toggleVisorOverlay();
         });
 
@@ -1943,7 +1973,7 @@
                 pill.textContent = site.shortName;
                 pill.className =
                     'site-pill px-2.5 py-1.5 rounded-xl bg-slate-950/75 hover:bg-slate-900 border border-slate-800/85 backdrop-blur-md text-xs text-slate-300 transition cursor-pointer';
-                pill.addEventListener('click', () => warpToSite(site));
+                pill.addEventListener('click', () => navigateToSite(site));
                 quickPillsContainer.appendChild(pill);
 
                 // Drawer destination item
@@ -1956,18 +1986,19 @@
           <span class="truncate font-medium">${site.name}</span>
           <span class="text-[10px] font-mono-tech text-slate-400 shrink-0 ml-2">${site.lat.toFixed(1)}°</span>
         `;
-                item.addEventListener('click', () => warpToSite(site));
+                item.addEventListener('click', () => navigateToSite(site));
                 drawerSiteList.appendChild(item);
             });
         }
 
         siteSelect.addEventListener('change', (e) => {
             const found = SITES.find((s) => s.id === e.target.value);
-            if (found) warpToSite(found);
+            if (found) navigateToSite(found);
         });
 
         function warpToSite(site) {
             buildLunarSurfaceSite(site);
+            setHazard('clear', null);
 
             // Reset astronaut position on clear landing pad facing site landmark
             const spawnY = getSurfaceHeight(0, 6.0, site) + EYE_HEIGHT;
@@ -2270,10 +2301,9 @@
             const dt = Math.min(clock.getDelta(), 0.05);
 
             if (viewMode === 'fpv') {
-                updatePlayerEVA(dt);
-                updateVacuumDust(dt);
+                if (!isModalOpen()) { updatePlayerEVA(dt); updateVacuumDust(dt); }
             } else {
-                orbitControls.update();
+                if (!isModalOpen()) orbitControls.update();
             }
 
             if (skyEarth.userData.sphere) {
@@ -2319,14 +2349,441 @@
             }
         }, true);
 
+        // ---------------------------------------------------------------------
+        // Browser versions of the Roblox field loop: scan, remember, reactivate,
+        // archive, transit, life support, storms, map, and the crew handover.
+        // ---------------------------------------------------------------------
+        const PUZZLE_FOR = { seis:'seis', retro:'retro', lrv:'lrv', oppy:'oppy', sojourner:'sojourner', ranger4:'relay' };
+        const SITE_BY_ID = Object.fromEntries(SITES.map((site) => [site.id, site]));
+        const STORAGE_KEY = 'last-signal-browser-progress-v1';
+        function loadProgress() {
+            try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}'); }
+            catch { return {}; }
+        }
+        const savedProgress = loadProgress();
+        const foundItems = new Set(savedProgress.found || []);
+        const cataloguedItems = new Set(savedProgress.catalogued || []);
+        const onlineItems = new Set(savedProgress.online || []);
+        let markerPlaced = Boolean(savedProgress.markerPlaced);
+        let lastArtifact = null;
+        let nearestWorldInteractable = null;
+        let worldInteractables = [];
+        let oxygen = Number.isFinite(savedProgress.oxygen) ? savedProgress.oxygen : 100;
+        let suitPower = Number.isFinite(savedProgress.power) ? savedProgress.power : 100;
+        let stormPhase = 'clear';
+        let stormKind = null;
+        let shelterRadius = 13;
+        let isInHabitat = false;
+
+        const escapeHtml = (value) => String(value ?? '').replace(/[&<>"']/g, (ch) => ({
+            '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'
+        })[ch]);
+        function persistProgress() {
+            try {
+                localStorage.setItem(STORAGE_KEY, JSON.stringify({
+                    found:[...foundItems], catalogued:[...cataloguedItems], online:[...onlineItems],
+                    markerPlaced, oxygen, power:suitPower
+                }));
+            } catch { /* private browsing can disable local storage */ }
+        }
+        function updateProgressCounts() {
+            $('field-log-count').textContent = `${foundItems.size}/20`;
+            $('astrolog-count')?.replaceChildren(document.createTextNode(`${foundItems.size}/20`));
+        }
+        function setFound(id) {
+            if (foundItems.has(id)) return;
+            foundItems.add(id);
+            persistProgress(); updateProgressCounts(); refreshBeaconColours();
+            if (foundItems.size === FIELD_ITEMS.length) setTimeout(showEnding, 700);
+        }
+        function setOnline(id) {
+            onlineItems.add(id); persistProgress();
+            openModal('EXPERIMENT BACK ONLINE', FIELD_ITEMS.find((item) => item.id === id)?.title || id,
+                '<p>The instrument is reporting again. Its status has been added to your field log.</p>', 'Continue');
+        }
+
+        function illustration(id) {
+            const stroke = '#d8dce4', gold = '#f2c94c', blue = '#61a6d8';
+            const wheels = '<circle cx="34" cy="71" r="8"/><circle cx="57" cy="71" r="8"/><circle cx="80" cy="71" r="8"/><circle cx="103" cy="71" r="8"/><circle cx="126" cy="71" r="8"/><circle cx="149" cy="71" r="8"/>';
+            let shape = '';
+            if (['opportunity','spirit','pathfinder','sojourner'].includes(id)) {
+                shape = `<g fill="none" stroke="${stroke}" stroke-width="4"><path d="M34 60h116M48 55V40h84v15M65 40V24h42v16"/>${wheels}</g><path fill="${blue}" d="M54 27h72v8H54z"/><path fill="${gold}" d="M65 43h45v12H65z"/>`;
+            } else if (id === 'ingenuity') {
+                shape = `<g fill="none" stroke="${stroke}" stroke-width="4"><path d="M90 28v38M55 30h70M63 27l-15-9m15 9 15-9m32 9 15-9m-15 9-15-9M66 67h50l-10 14H76z"/></g><circle cx="91" cy="48" r="8" fill="${gold}"/>`;
+            } else if (id === 'voyager1' || id === 'pioneer10' || id === 'pioneer11' || id === 'near' || id === 'dawn') {
+                const panel = id === 'voyager1'
+                    ? `<circle cx="87" cy="43" r="30" fill="${gold}" stroke="${stroke}" stroke-width="4"/><path d="M65 44h44M87 22v42" stroke="#7d6740" stroke-width="3"/><path d="M114 48l30 21M114 38l37-17" stroke="${stroke}" stroke-width="4"/><rect x="43" y="38" width="22" height="20" rx="3" fill="${blue}"/>`
+                    : `<rect x="78" y="34" width="32" height="30" rx="4" fill="${gold}"/><path d="M79 42 41 28v39l38-11m31-14 39-14v39l-39-11" fill="${blue}" stroke="${stroke}" stroke-width="3"/><path d="M94 34 119 12m-25 52 24 18" stroke="${stroke}" stroke-width="4"/>`;
+                shape = `<g>${panel}<path d="M90 64v20m0 0-22 12m22-12 24 12" stroke="${stroke}" stroke-width="4"/></g>`;
+            } else if (id === 'kepler') {
+                shape = `<g fill="none" stroke="${stroke}" stroke-width="5"><path d="M44 38h82l20 12-20 12H44zM76 38 64 23m12 39-12 15"/><path d="M31 30v40" stroke="${blue}" stroke-width="8"/></g><circle cx="145" cy="50" r="7" fill="${gold}"/>`;
+            } else if (id === 'survey or3' || id === 'surveyor3' || id === 'viking1' || id === 'viking2' || id === 'phoenix' || id === 'insight') {
+                shape = `<g fill="none" stroke="${stroke}" stroke-width="4"><path d="M67 46h54l-8 20H75zM75 66 54 88m53-22 21 22m-41-22v22M93 46V25m0 0 25 8m-25-8-18 8"/></g><circle cx="93" cy="45" r="6" fill="${gold}"/><path d="M62 88h62" stroke="${stroke}" stroke-width="4"/>`;
+            } else if (id === 'ranger4') {
+                shape = `<path d="M47 28h86l-8 45H55z" fill="${gold}" stroke="${stroke}" stroke-width="4"/><path d="M90 73v20m-20 0h40" stroke="${stroke}" stroke-width="4"/><circle cx="90" cy="49" r="10" fill="${blue}"/>`;
+            } else if (id === 'apollo11_lm' || id === 'apollo15_lrv' || id === 'lm' || id === 'falcon' || id === 'lrv' || id === 'lrrr15' || id === 'retro' || id === 'apollo12_alsep' || id === 'surveyor3') {
+                shape = `<g fill="${gold}" stroke="${stroke}" stroke-width="3"><path d="M73 34h35l9 28-26 15-27-15z"/><path d="M90 77v19M70 62 53 82m53-20 18 20" fill="none"/><circle cx="90" cy="48" r="5" fill="${blue}"/></g>`;
+            } else {
+                shape = `<rect x="62" y="35" width="56" height="35" rx="5" fill="${gold}" stroke="${stroke}" stroke-width="4"/><path d="M90 35V15m0 55v21m-28-39H42m76 0h30" stroke="${stroke}" stroke-width="4"/><circle cx="90" cy="52" r="8" fill="${blue}"/>`;
+            }
+            return `<svg viewBox="0 0 180 110" role="img" aria-label="Illustration of ${escapeHtml(id)}" class="h-24 w-full rounded-lg bg-slate-950/80">${shape}</svg>`;
+        }
+
+        function refreshBeaconColours() {
+            for (const obj of worldInteractables) {
+                if (obj.kind !== 'artifact') continue;
+                const done = foundItems.has(obj.item.id);
+                obj.core.material.color.set(done ? '#38bdf8' : '#facc15');
+                obj.ring.material.color.set(done ? '#38bdf8' : '#facc15');
+                obj.label.material.opacity = done ? 0.62 : 0.95;
+            }
+        }
+
+        function makeNameSprite(label) {
+            const canvas = document.createElement('canvas'); canvas.width=512; canvas.height=96;
+            const ctx=canvas.getContext('2d');
+            ctx.fillStyle='rgba(2,6,14,0.82)'; ctx.beginPath(); ctx.roundRect(4,4,504,88,18); ctx.fill();
+            ctx.font='bold 30px Arial'; ctx.textAlign='center'; ctx.textBaseline='middle'; ctx.fillStyle='#f8fafc';
+            ctx.fillText(label.slice(0,28),256,48);
+            const tex=new THREE.CanvasTexture(canvas); tex.colorSpace=THREE.SRGBColorSpace;
+            const sprite=new THREE.Sprite(new THREE.SpriteMaterial({map:tex,transparent:true,depthWrite:false}));
+            sprite.scale.set(7.2,1.35,1); return sprite;
+        }
+
+        function buildSiteEnhancements(site) {
+            worldInteractables=[];
+            for (const item of FIELD_ITEMS.filter((entry) => entry.site === site.id)) {
+                const group=new THREE.Group();
+                const ground=getSurfaceHeight(item.x,item.z,site);
+                group.position.set(item.x,ground,item.z);
+                const core=new THREE.Mesh(new THREE.OctahedronGeometry(0.35,0),new THREE.MeshBasicMaterial({color:foundItems.has(item.id)?'#38bdf8':'#facc15'}));
+                core.position.y=1.45;
+                const beam=new THREE.Mesh(new THREE.CylinderGeometry(0.04,0.16,2.35,10,1,true),new THREE.MeshBasicMaterial({color:'#facc15',transparent:true,opacity:0.22,depthWrite:false}));
+                beam.position.y=1.2;
+                const ring=new THREE.Mesh(new THREE.RingGeometry(0.78,0.94,32),new THREE.MeshBasicMaterial({color:foundItems.has(item.id)?'#38bdf8':'#facc15',side:THREE.DoubleSide,transparent:true,opacity:0.85}));
+                ring.rotation.x=-Math.PI/2; ring.position.y=0.06;
+                const label=makeNameSprite(item.title);
+                label.position.y=3.1;
+                group.add(core,beam,ring,label); surfaceWorldGroup.add(group);
+                worldInteractables.push({kind:'artifact',item,group,core,ring,label});
+            }
+
+            const hasHabitat=['tranquility','meridiani','eros'].includes(site.id);
+            const shelter=new THREE.Group();
+            const sx=hasHabitat?24:30, sz=hasHabitat?15:24, gy=getSurfaceHeight(sx,sz,site);
+            shelter.position.set(sx,gy,sz);
+            const baseMat=new THREE.MeshStandardMaterial({color:site.body==='Mars'?'#885138':'#5c626b',roughness:0.86,metalness:0.12});
+            const shellMat=new THREE.MeshStandardMaterial({color:site.body==='Mars'?'#c58b61':'#a7a39a',roughness:0.62,metalness:0.08});
+            const base=new THREE.Mesh(new THREE.CylinderGeometry(hasHabitat?10:6.2,hasHabitat?10:6.2,0.6,24),baseMat); base.position.y=0.3; shelter.add(base);
+            const dome=new THREE.Mesh(new THREE.SphereGeometry(hasHabitat?8.5:5.4,24,14,0,Math.PI*2,0,Math.PI/2),shellMat); dome.position.y=0.56; shelter.add(dome);
+            const door=new THREE.Mesh(new THREE.BoxGeometry(2.4,3.2,0.22),new THREE.MeshStandardMaterial({color:'#28313b',metalness:0.55,roughness:0.4}));
+            door.position.set(0,1.65,hasHabitat?8.25:5.2); shelter.add(door);
+            for (let i=-1;i<=1;i++) {
+                const lamp=new THREE.Mesh(new THREE.BoxGeometry(0.28,0.28,0.24),new THREE.MeshBasicMaterial({color:'#facc15'}));
+                lamp.position.set(i*1.1,3.4,hasHabitat?8.36:5.32); shelter.add(lamp);
+            }
+            surfaceWorldGroup.add(shelter);
+            worldInteractables.push({kind:'shelter',siteId:site.id,group:shelter,position:new THREE.Vector3(sx,gy,sz),radius:hasHabitat?22: shelterRadius});
+
+            if (hasHabitat) {
+                const kiosk=new THREE.Group();
+                const kx=sx-5.5,kz=sz+4.4,ky=getSurfaceHeight(kx,kz,site);
+                kiosk.position.set(kx,ky,kz);
+                const pedestal=new THREE.Mesh(new THREE.BoxGeometry(1.45,2.4,1.1),new THREE.MeshStandardMaterial({color:'#424951',metalness:0.52,roughness:0.42}));
+                pedestal.position.y=1.2;
+                const screen=new THREE.Mesh(new THREE.BoxGeometry(1.15,0.74,0.08),new THREE.MeshBasicMaterial({color:'#43d9be'}));
+                screen.position.set(0,1.62,-0.57);
+                const header=new THREE.Mesh(new THREE.BoxGeometry(1.3,0.14,0.08),new THREE.MeshBasicMaterial({color:'#facc15'}));
+                header.position.set(0,2.08,-0.57);
+                kiosk.add(pedestal,screen,header); surfaceWorldGroup.add(kiosk);
+                worldInteractables.push({kind:'life-support',siteId:site.id,group:kiosk,position:new THREE.Vector3(kx,ky,kz),radius:9});
+            }
+            if (site.id==='tranquility' && markerPlaced) buildSurveyMarker(site);
+            refreshBeaconColours();
+        }
+
+        function buildSurveyMarker(site) {
+            const group=new THREE.Group();
+            const post=new THREE.Mesh(new THREE.CylinderGeometry(0.12,0.12,2.2,8),new THREE.MeshStandardMaterial({color:'#cbd5e1',metalness:0.7}));
+            post.position.y=1.1;
+            const plate=new THREE.Mesh(new THREE.BoxGeometry(1.4,0.72,0.08),new THREE.MeshStandardMaterial({color:'#e5e7eb',roughness:0.7}));
+            plate.position.set(0,2.05,0);
+            const light=new THREE.Mesh(new THREE.SphereGeometry(0.15,10,10),new THREE.MeshBasicMaterial({color:'#facc15'})); light.position.y=2.55;
+            group.add(post,plate,light); group.position.set(16,getSurfaceHeight(16,8,site),8); surfaceWorldGroup.add(group);
+        }
+
+        function updateInteractablePrompt() {
+            nearestWorldInteractable=null;
+            if (viewMode!=='fpv' || isModalOpen()) { $('interaction-prompt').classList.add('hidden'); return; }
+            let best=Infinity;
+            let bestPriority=Infinity;
+            for (const obj of worldInteractables) {
+                const p=obj.group.position;
+                const d=Math.hypot(player.pos.x-p.x,player.pos.z-p.z);
+                const radius=obj.kind==='artifact'?9:obj.radius;
+                const priority=obj.kind==='artifact'?0:obj.kind==='life-support'?1:2;
+                if (d<=radius && (priority<bestPriority || (priority===bestPriority && d<best))) {
+                    nearestWorldInteractable=obj; best=d; bestPriority=priority;
+                }
+            }
+            const prompt=$('interaction-prompt');
+            if (!nearestWorldInteractable) { prompt.classList.add('hidden'); return; }
+            prompt.classList.remove('hidden');
+            if (nearestWorldInteractable.kind==='artifact') {
+                prompt.textContent=`[E] ${foundItems.has(nearestWorldInteractable.item.id)?'REVIEW':'SCAN'} · ${nearestWorldInteractable.item.title}`;
+            } else if (nearestWorldInteractable.kind==='life-support') prompt.textContent='[E] LIFE SUPPORT CONSOLE · REFILL O₂ + POWER';
+            else prompt.textContent='SHELTER · protected during solar events';
+        }
+
+        function openArtifact(item) {
+            setFound(item.id); lastArtifact=item;
+            const hasPuzzle=Boolean(PUZZLE_FOR[item.id]);
+            openModal(`FIELD SCAN · ${escapeHtml(item.siteName)}`,escapeHtml(item.title),
+                `${illustration(item.id)}<p class="mt-3 text-xs font-mono-tech text-amber-200">${escapeHtml(item.year)}</p><p><b>What it is:</b> ${escapeHtml(item.what)}</p><p><b>Why it was sent:</b> ${escapeHtml(item.why)}</p><p class="text-sky-200"><b>What it taught us:</b> ${escapeHtml(item.science)}</p><div class="mt-4 flex flex-wrap gap-2"><button id="remember-item" class="rounded-lg border border-sky-400/40 bg-slate-900 px-3 py-2 text-xs text-sky-100">REMEMBER · R</button>${hasPuzzle?'<button id="reactivate-item" class="rounded-lg border border-amber-300/50 bg-amber-300 px-3 py-2 text-xs font-bold text-slate-950">REACTIVATE · F</button>':''}</div>`,
+                'Close');
+            $('remember-item').addEventListener('click',()=>showMemory(item));
+            $('reactivate-item')?.addEventListener('click',()=>openPuzzle(item));
+        }
+
+        function showMemory(item) {
+            openModal(`REMEMBER · ${escapeHtml(item.year)}`,escapeHtml(item.title),
+                `<div class="rounded-xl border border-amber-300/30 bg-amber-300/10 p-4 text-slate-100"><p>${escapeHtml(item.why)}</p><p class="mt-3 text-amber-100">${escapeHtml(item.science)}</p></div><p class="mt-3 text-xs text-slate-400">Mission memory from the project's sourced artifact record.</p>`, 'Back to artifact',()=>openArtifact(item));
+        }
+
+        function openPuzzle(item) {
+            const key=PUZZLE_FOR[item.id]; if (!key) return;
+            const defs={
+                seis:['SEISMOMETER · LEVEL + GAIN','Level the EASEP instrument and bring the gain into the marked band.','<label class="block">BUBBLE LEVEL <input id="puzzle-a" type="range" min="0" max="100" value="28" class="space-slider mt-2"></label><label class="mt-4 block">GAIN <input id="puzzle-b" type="range" min="0" max="100" value="30" class="space-slider mt-2"></label><p class="mt-2 text-xs text-slate-400">Target level: 48–52 · target gain: 62–72</p>'],
+                retro:['LASER RANGING · ROUND TRIP','Gate the detector for the Earth–Moon laser pulse. The return takes about 2.5 seconds.','<p id="pulse-readout" class="text-2xl font-mono-tech text-amber-200">READY</p><button id="pulse-button" class="mt-3 rounded-lg bg-slate-700 px-4 py-2 text-sm text-white">START PULSE</button><p class="mt-2 text-xs text-slate-400">Start the timer, then stop it at 2.50 s (±0.22 s).</p>'],
+                lrv:['LUNAR ROVER · AIM THE HIGH-GAIN DISH','Aim the stopped rover’s dish at Earth before sending the TV signal.','<label class="block">DISH AZIMUTH · EARTH AT +18° <input id="puzzle-a" type="range" min="-90" max="90" value="-40" class="space-slider mt-3"></label><p class="mt-2 text-xs text-slate-400">Bring the pointer within ±4° of the Earth bearing.</p>'],
+                oppy:['OPPORTUNITY · SOLAR POWER BUDGET','Balance the rover’s science load against a dust-dimmed solar array. Keep the battery in its safe band for five seconds.','<label class="block">POWER DRAW <input id="puzzle-a" type="range" min="0" max="100" value="55" class="space-slider mt-3"></label><div class="mt-3 h-2 rounded-full bg-slate-700"><div id="puzzle-progress" class="h-2 rounded-full bg-emerald-400" style="width:0%"></div></div><p id="puzzle-readout" class="mt-2 text-xs text-slate-300">Safe band: 40–68% · 5 seconds</p><button id="puzzle-start" class="mt-3 rounded-lg bg-slate-700 px-4 py-2 text-sm text-white">RUN POWER CHECK</button>'],
+                sojourner:['SOJOURNER · PLAN A DRIVE','Plan a short command from Earth. The rover executes it after a communications delay.','<label class="block">HEADING · target +15° <input id="puzzle-a" type="range" min="-90" max="90" value="-30" class="space-slider mt-3"></label><label class="mt-4 block">DISTANCE · target 18 m <input id="puzzle-b" type="range" min="1" max="40" value="7" class="space-slider mt-3"></label>'],
+                relay:['RANGER 4 · FAR-SIDE RELAY','Place a relay beyond the Moon and slightly off the Earth–Moon line so it can see Earth and the far side.','<label class="block">ALONG THE EARTH–MOON LINE · target 80% <input id="puzzle-a" type="range" min="0" max="100" value="30" class="space-slider mt-3"></label><label class="mt-4 block">OFF THE LINE · target 67% <input id="puzzle-b" type="range" min="0" max="100" value="25" class="space-slider mt-3"></label>']
+            };
+            const [title,sub,body]=defs[key];
+            openModal('REACTIVATE · INTERACTIVE PUZZLE',title,`<p class="mb-4 text-sm text-slate-300">${sub}</p>${body}<p id="puzzle-result" class="mt-4 min-h-5 text-sm font-semibold text-amber-200"></p><button id="puzzle-check" class="mt-3 rounded-lg bg-amber-300 px-4 py-2 text-sm font-bold text-slate-950">CHECK / SEND</button>`,'Close');
+            const result=$('puzzle-result');
+            let pulseStart=0, powerTimer=null;
+            $('pulse-button')?.addEventListener('click',(e)=>{
+                const button=e.currentTarget;
+                if (!pulseStart) { pulseStart=performance.now(); button.textContent='STOP AT 2.50 s'; button.classList.replace('bg-slate-700','bg-amber-300'); result.textContent='Pulse sent…'; return; }
+                const elapsed=(performance.now()-pulseStart)/1000; pulseStart=0;
+                $('pulse-readout').textContent=`${elapsed.toFixed(2)} s`;
+                if (Math.abs(elapsed-2.5)<=0.22) { result.textContent='Return pulse acquired.'; result.dataset.solved='true'; }
+                else { result.textContent=`${elapsed.toFixed(2)} s — outside the detector gate. Try again.`; button.textContent='START PULSE'; }
+            });
+            $('puzzle-start')?.addEventListener('click',()=>{
+                clearInterval(powerTimer); let elapsed=0; $('puzzle-readout').textContent='Sampling array output…';
+                powerTimer=setInterval(()=>{
+                    const value=Number($('puzzle-a').value);
+                    if (value<40 || value>68) { clearInterval(powerTimer); $('puzzle-readout').textContent='Power fell outside the safe band. Adjust the load and retry.'; $('puzzle-progress').style.width='0%'; elapsed=0; return; }
+                    elapsed+=0.1; $('puzzle-progress').style.width=`${Math.min(100,elapsed/5*100)}%`;
+                    if (elapsed>=5) { clearInterval(powerTimer); $('puzzle-readout').textContent='Stable output held through the check.'; result.dataset.solved='true'; }
+                },100);
+            });
+            $('puzzle-check').addEventListener('click',()=>{
+                let solved=result.dataset.solved==='true';
+                if (key==='seis') solved=Number($('puzzle-a').value)>=48&&Number($('puzzle-a').value)<=52&&Number($('puzzle-b').value)>=62&&Number($('puzzle-b').value)<=72;
+                if (key==='lrv') solved=Math.abs(Number($('puzzle-a').value)-18)<=4;
+                if (key==='sojourner') solved=Math.abs(Number($('puzzle-a').value)-15)<=5&&Math.abs(Number($('puzzle-b').value)-18)<=3;
+                if (key==='relay') solved=Math.abs(Number($('puzzle-a').value)-80)<=5&&Math.abs(Number($('puzzle-b').value)-67)<=6;
+                if (key==='retro' && pulseStart) { result.textContent='Stop the return timer first.'; return; }
+                if (key==='oppy' && powerTimer) { result.textContent='Let the five-second power check finish.'; return; }
+                if (!solved) { result.textContent='Not yet. Adjust the controls to the indicated target and try again.'; return; }
+                clearInterval(powerTimer); setOnline(item.id);
+            });
+        }
+
+        function interact() {
+            if (!nearestWorldInteractable) { showPrompt('No artifact or station console is in range. Follow the floating gold beacons.'); return; }
+            const obj=nearestWorldInteractable;
+            if (obj.kind==='artifact') { openArtifact(obj.item); return; }
+            if (obj.kind==='life-support') {
+                openModal('HABITAT LIFE SUPPORT',obj.siteId==='tranquility'?'Tranquility Heritage Station':obj.siteId==='meridiani'?'Meridiani Outpost':'Eros Research Habitat',
+                    `<p>Recharge your suit’s oxygen and power reserves before the next EVA.</p><p class="mt-3 font-mono-tech text-emerald-200">O₂ ${oxygen.toFixed(0)}% · POWER ${suitPower.toFixed(0)}%</p><button id="refill-suit" class="mt-4 rounded-lg bg-emerald-300 px-4 py-2 text-sm font-bold text-slate-950">REFILL OXYGEN + POWER</button>`, 'Close');
+                $('refill-suit').addEventListener('click',()=>{ oxygen=100;suitPower=100;renderSuitStatus();persistProgress();showPrompt('Life support restored. Oxygen and suit power are full.');closeModal(); });
+                return;
+            }
+            showPrompt('Shelter reached. You are protected while a solar event passes.');
+        }
+
+        function renderFieldLog() {
+            const groups=['tranquility','procellarum','hadley','farside','meridiani','ares_vallis','chryse','utopia','gusev','vastitas_borealis','elysium','jezero','eros'];
+            const html=groups.map((siteId)=>{
+                const site=SITE_BY_ID[siteId], rows=FIELD_ITEMS.filter((it)=>it.site===siteId);
+                if (!rows.length) return '';
+                return `<section class="mb-5"><h3 class="mb-2 border-b border-slate-700 pb-1 text-xs font-mono-tech uppercase tracking-wider text-sky-200">${escapeHtml(site.name)} · ${rows.filter((it)=>foundItems.has(it.id)).length}/${rows.length}</h3><div class="grid gap-2 sm:grid-cols-2">${rows.map((it)=>`<article class="rounded-lg border ${foundItems.has(it.id)?'border-emerald-400/40':'border-slate-700'} bg-slate-900/70 p-3">${illustration(it.id)}<h4 class="mt-2 text-sm font-semibold">${foundItems.has(it.id)?'✓ ':''}${escapeHtml(it.title)}</h4><p class="mt-1 text-[11px] text-slate-400">${escapeHtml(it.year)}</p><button data-visit-site="${it.site}" class="mt-2 rounded-md border border-slate-600 px-2.5 py-1 text-xs text-slate-200">${currentSite.id===it.site?'YOU ARE HERE':'PLOT COURSE'}</button></article>`).join('')}</div></section>`;
+            }).join('');
+            const marker=foundItems.size===FIELD_ITEMS.length?`<section class="mb-5 rounded-xl border border-amber-300/30 bg-amber-300/10 p-4"><h3 class="font-semibold text-amber-100">THE HANDOVER · 20/20</h3><p class="mt-2 text-sm text-slate-300">Leave a survey marker beside the Eagle, as the crew does in the Roblox finale.</p><button id="leave-marker" class="mt-3 rounded-lg bg-amber-300 px-3 py-2 text-xs font-bold text-slate-950">${markerPlaced?'MARKER LEFT':'TRAVEL TO TRANQUILITY & PLACE MARKER'}</button></section>`:'';
+            openModal(`FIELD LOG · ${foundItems.size}/20 SURVEYED · ${cataloguedItems.size}/18 ARCHIVED`,'ASTROLOG',`${marker}<div class="max-h-[60vh] overflow-y-auto pr-1">${html}</div>`,'Close');
+            document.querySelectorAll('[data-visit-site]').forEach((button)=>button.addEventListener('click',()=>navigateToSite(SITE_BY_ID[button.dataset.visitSite])));
+            $('leave-marker')?.addEventListener('click',()=>{
+                if (currentSite.id!=='tranquility') { closeModal(); navigateToSite(SITE_BY_ID.tranquility); return; }
+                markerPlaced=true; persistProgress(); buildSurveyMarker(currentSite); closeModal();
+                openModal('THE HANDOVER','Your field marker is in place','<p>You left a marker beside Eagle. Someone returning to Tranquility will know your crew was here.</p>','Continue');
+            });
+        }
+
+        function openArchiveRecord(entry) {
+            cataloguedItems.add(entry.id); persistProgress();
+            const inField=FIELD_ITEMS.some((it)=>{
+                if (entry.id==='apollo11_lm') return ['lm','seis','retro'].some((id)=>foundItems.has(id));
+                if (entry.id==='apollo12_alsep') return foundItems.has('a12alsep');
+                if (entry.id==='apollo15_lrv') return ['falcon','lrv','lrrr15'].some((id)=>foundItems.has(id));
+                return foundItems.has(it.id)&&it.title.toLowerCase().includes(entry.name.split(' ')[0].toLowerCase());
+            });
+            openModal(`NSSDCA ARCHIVE · ${escapeHtml(entry.cospar||entry.body)}`,escapeHtml(entry.name),
+                `${illustration(entry.id)}<p class="mt-3 text-xs font-mono-tech text-sky-200">LAUNCHED ${escapeHtml(entry.launched)} · ${escapeHtml(entry.body)}</p><p><b>Where it is:</b> ${escapeHtml(entry.rest)}</p><p><b>Mission status:</b> ${escapeHtml(entry.ended)}</p><p class="text-slate-200">${escapeHtml(entry.story)}</p><p class="text-xs text-slate-400">${inField?'A related field object has been scanned.':'This archive record is catalogued; it may not be a walk-up object in the field.'}</p>`, 'Back to archive',()=>openArchive());
+        }
+
+        let archiveFilter='Moon', archiveQuery='';
+        function openArchive() {
+            const tabs=['Moon','Mars','Beyond'];
+            const bodyOf=(entry)=>entry.body==='Moon'?'Moon':entry.body==='Mars'?'Mars':'Beyond';
+            const entries=ARCHIVE_ITEMS.filter((entry)=>bodyOf(entry)===archiveFilter&&(`${entry.name} ${entry.rest} ${entry.story}`).toLowerCase().includes(archiveQuery.toLowerCase()));
+            const html=`<p class="mb-3 text-xs text-slate-400">NSSDCA records · ${cataloguedItems.size}/${ARCHIVE_ITEMS.length} read in this browser. Reading a record catalogs it in your personal archive.</p><div class="mb-3 flex flex-wrap gap-2">${tabs.map((tab)=>`<button data-archive-tab="${tab}" class="rounded-lg border px-3 py-1.5 text-xs ${archiveFilter===tab?'border-amber-300 bg-amber-300 text-slate-950':'border-slate-600 bg-slate-900 text-slate-200'}">${tab.toUpperCase()}</button>`).join('')}<input id="archive-search" value="${escapeHtml(archiveQuery)}" placeholder="Search missions" class="min-w-36 flex-1 rounded-lg border border-slate-600 bg-slate-900 px-3 py-1.5 text-xs text-white"></div><div class="grid max-h-[58vh] gap-2 overflow-y-auto pr-1 sm:grid-cols-2">${entries.map((entry)=>`<button data-archive-id="${entry.id}" class="rounded-lg border border-slate-700 bg-slate-900/80 p-2 text-left hover:border-sky-300/50">${illustration(entry.id)}<span class="mt-2 block text-xs font-semibold text-white">${escapeHtml(entry.name)}</span><span class="mt-1 block text-[10px] text-slate-400">${escapeHtml(entry.rest)}</span>${cataloguedItems.has(entry.id)?'<span class="mt-1 block text-[10px] text-emerald-300">✓ READ</span>':''}</button>`).join('')||'<p class="text-sm text-slate-400">No records match this search.</p>'}</div><p class="mt-3 text-[10px] text-slate-500">Source: NASA Space Science Data Coordinated Archive (NSSDCA), see the project references.</p>`;
+            openModal('NASA SPACE SCIENCE DATA COORDINATED ARCHIVE','Everything we left out there',html,'Close');
+            document.querySelectorAll('[data-archive-tab]').forEach((button)=>button.addEventListener('click',()=>{archiveFilter=button.dataset.archiveTab;openArchive();}));
+            document.querySelectorAll('[data-archive-id]').forEach((button)=>button.addEventListener('click',()=>openArchiveRecord(ARCHIVE_ITEMS.find((item)=>item.id===button.dataset.archiveId))));
+            $('archive-search').addEventListener('input',(event)=>{archiveQuery=event.target.value;const cursor=event.target.selectionStart;openArchive();const input=$('archive-search');input.focus();input.setSelectionRange(cursor,cursor);});
+        }
+
+        function openSurveyMap() {
+            const groups=[['Moon',SITES.filter((s)=>s.body==='Moon')],['Mars',SITES.filter((s)=>s.body==='Mars')],['433 Eros',SITES.filter((s)=>s.body==='Eros')]];
+            const html=groups.map(([name,sites])=>`<section class="mb-5"><h3 class="mb-2 border-b border-slate-700 pb-1 font-mono-tech text-xs tracking-wider text-sky-200">${name.toUpperCase()}</h3><div class="grid gap-2 sm:grid-cols-2">${sites.map((site)=>`<button data-map-site="${site.id}" class="rounded-lg border border-slate-700 bg-slate-900 p-3 text-left hover:border-amber-300/60"><b class="block text-sm">${escapeHtml(site.name)}</b><span class="mt-1 block text-[10px] text-amber-200">${formatLatLon(site.lat,site.lon)}</span><span class="mt-1 block text-[11px] text-slate-400">${escapeHtml(site.description)}</span></button>`).join('')}</div></section>`).join('');
+            openModal('13 SITES · 3 BODIES','Survey map',`<p class="mb-3 text-xs text-slate-400">Select a landing site. Crossings between worlds use the transit timeline.</p><div class="max-h-[62vh] overflow-y-auto pr-1">${html}</div>`,'Close');
+            document.querySelectorAll('[data-map-site]').forEach((button)=>button.addEventListener('click',()=>navigateToSite(SITE_BY_ID[button.dataset.mapSite])));
+        }
+
+        const DESTINATION_HOME={Moon:'tranquility',Mars:'meridiani',Eros:'eros'};
+        const ROUTES={Moon:{time:'3 days',steps:['Launch','Day 1','Day 2','Lunar approach']},Mars:{time:'7 months',steps:['Launch','1 month','2 months','3 months','4 months','5 months','6 months','Mars approach']},Eros:{time:'4 years',steps:['Launch','Year 1','Year 2','Year 3','Rendezvous']}};
+        let transitBusy=false;
+        function navigateToSite(site) {
+            if (!site) return;
+            if (site.body!==currentSite.body) { beginTransit(site); return; }
+            closeModal(); warpToSite(site);
+        }
+        function openTransit(requestedSite=null) {
+            const html=`<p class="mb-3 text-xs text-slate-400">The transit display compresses mission-scale travel into a few seconds. Choose a destination body.</p><div class="grid gap-3 sm:grid-cols-3">${Object.entries(ROUTES).map(([body,route])=>`<button data-transit-body="${body}" class="rounded-xl border ${currentSite.body===body?'border-slate-700 opacity-50':'border-amber-300/30 hover:border-amber-200'} bg-slate-900 p-4 text-left"><span class="block font-mono-tech text-xs text-sky-200">${body.toUpperCase()}</span><b class="mt-2 block text-lg text-white">${route.time}</b><span class="mt-1 block text-xs text-slate-400">${body==='Moon'?'Tranquility Heritage Station':body==='Mars'?'Meridiani Outpost':'NEAR Shoemaker · Eros Habitat'}</span></button>`).join('')}</div><div id="transit-progress" class="mt-4 text-center text-sm text-amber-200"></div><div class="mt-4 h-2 rounded-full bg-slate-800"><div id="transit-bar" class="h-2 w-0 rounded-full bg-amber-300 transition-[width]"></div></div>`;
+            openModal('TRANSIT · DEPARTURES','Where to?',html,'Close');
+            document.querySelectorAll('[data-transit-body]').forEach((button)=>button.addEventListener('click',()=>{
+                const body=button.dataset.transitBody;if(body===currentSite.body||transitBusy)return;
+                const dest=requestedSite&&requestedSite.body===body?requestedSite:SITE_BY_ID[DESTINATION_HOME[body]];transitBusy=true;
+                document.querySelectorAll('[data-transit-body]').forEach((b)=>b.disabled=true);
+                const route=ROUTES[body];let i=0;
+                const step=()=>{
+                    if (!isModalOpen()) { transitBusy=false; return; }
+                    if (i>=route.steps.length) { transitBusy=false; closeModal(); warpToSite(dest); showPrompt(`Arrival · ${dest.name} · transit compressed from ${route.time}`); return; }
+                    $('transit-progress').textContent=`TO ${body.toUpperCase()} · ${route.steps[i]}`;
+                    $('transit-bar').style.width=`${Math.round((++i/route.steps.length)*100)}%`;
+                    setTimeout(step,430);
+                };step();
+            }));
+        }
+        function beginTransit(site) { openTransit(site); }
+
+        function openGuide() {
+            openModal('MISSION GUIDE · ANYTIME SKIP','Your survey, your pace',
+                '<ol class="list-decimal space-y-2 pl-5"><li>Choose a site on the map or travel through the Transit Console.</li><li>Follow gold beacons and press <b>E</b> to scan mission hardware.</li><li>Press <b>R</b> to remember its mission context.</li><li>Press <b>F</b> at instruments with a reactivation puzzle.</li><li>Return to a habitat console to recharge oxygen and suit power.</li><li>Read NSSDCA archive records, then complete the 20-object survey and leave a marker beside Eagle.</li></ol><p class="mt-4 text-xs text-slate-400">The Roblox experience has shared multiplayer progress and its authored 3D models. Browser progress is saved on this device.</p>', 'Start exploring');
+        }
+
+        function openEvidence() {
+            const clips=[['Competition demo','competition-demo-live-gameplay.mp4'],['Moon · Apollo 11 scan','moon-live-gameplay.mp4'],['Mars · Opportunity','mars-live-gameplay.mp4']];
+            const html=`<div class="grid gap-4">${clips.map(([title,file])=>`<article class="rounded-xl border border-slate-700 bg-slate-900 p-2"><h3 class="mb-2 text-sm font-semibold">${title}</h3><video controls playsinline preload="metadata" class="w-full rounded-lg bg-black"><source src="./videos/${file}" type="video/mp4">Your browser cannot play this MP4.</video></article>`).join('')}</div><div class="mt-4 grid grid-cols-3 gap-2">${['moon-artifact-scan.gif','mars-transit.gif','mars-opportunity.gif'].map((file)=>`<img src="./videos/${file}" alt="Last Signal Roblox gameplay scene" class="w-full rounded-lg border border-slate-700">`).join('')}</div>`;
+            openModal('RECORDED IN ROBLOX STUDIO','Live gameplay',html,'Close');
+        }
+
+        function showEnding() {
+            openModal('THE HANDOVER · SURVEY COMPLETE','Nothing out here is lost. It’s waiting.',
+                '<p>You catalogued all 20 field objects across the Moon, Mars, and Eros. Some hardware still answers; some is silent; each object is a record of people who reached another world.</p><p class="mt-3 text-slate-300">Return to Tranquility Base and leave your own survey marker beside Eagle.</p>', 'Open field log',renderFieldLog);
+        }
+
+        function renderSuitStatus() {
+            oxygen=Math.max(0,Math.min(100,oxygen));suitPower=Math.max(0,Math.min(100,suitPower));
+            $('oxygen-value').textContent=`${oxygen.toFixed(0)}%`;$('oxygen-hud').textContent=`${oxygen.toFixed(0)}%`;
+            $('power-value').textContent=`${suitPower.toFixed(0)}%`;$('power-hud').textContent=`${suitPower.toFixed(0)}%`;
+            $('oxygen-bar').style.width=`${oxygen}%`;$('power-bar').style.width=`${suitPower}%`;
+            $('oxygen-bar').className=`h-full rounded-full transition-[width] ${oxygen<25?'bg-rose-400':'bg-emerald-400'}`;
+            $('power-bar').className=`h-full rounded-full transition-[width] ${suitPower<25?'bg-rose-400':'bg-sky-400'}`;
+            $('support-hint').textContent=isInHabitat?'Habitat · oxygen and suit power replenishing':oxygen<25?'O₂ LOW · return to a life-support console':suitPower<25?'POWER LOW · find a shelter':'EVA · return to a habitat to recharge';
+        }
+
+        function setHazard(phase,kind) {
+            stormPhase=phase;stormKind=kind;
+            const banner=$('hazard-banner');
+            if (phase==='clear') {banner.classList.add('hidden');scene.background.set(currentSite.body==='Mars'?'#58372f':'#010204');updateSolarLighting(currentSite.sunAz,currentSite.sunEl);return;}
+            banner.classList.remove('hidden');
+            const marsDust=kind==='dust';
+            $('hazard-title').textContent=phase==='warn'?(marsDust?'MARTIAN DUST EVENT APPROACHING':'SOLAR PARTICLE EVENT WARNING'):(marsDust?'MARTIAN DUST IN THE ATMOSPHERE':'SOLAR RADIATION EVENT');
+            $('hazard-copy').textContent=phase==='warn'?'A hazard is approaching. Locate a shelter or habitat.':marsDust?'Atmospheric dust dims sunlight; the storm is compressed for gameplay.':'Radiation is invisible. Get inside a shelter until the event passes.';
+            if (phase==='active') {scene.background.set(marsDust?'#372c29':'#010204');sunLight.intensity=marsDust?1.15:3.4;}
+        }
+
+        function runStormCycle() {
+            const body=currentSite.body;
+            const kind=body==='Mars'?'dust':'solar';
+            if (body==='Eros'||body==='Moon'||body==='Mars') {
+                setHazard('warn',kind);
+                setTimeout(()=>{ if (currentSite.body===body) setHazard('active',kind); },7000);
+                setTimeout(()=>{ if (currentSite.body===body) setHazard('clear',kind); },27000);
+            }
+            setTimeout(runStormCycle,80000+Math.random()*45000);
+        }
+
+        setInterval(()=>{
+            updateInteractablePrompt();
+            const position=new THREE.Vector2(player.pos.x,player.pos.z);
+            const shelter=worldInteractables.find((obj)=>obj.kind==='shelter'&&Math.hypot(position.x-obj.position.x,position.y-obj.position.z)<obj.radius);
+            const habitat=worldInteractables.find((obj)=>obj.kind==='life-support'&&Math.hypot(position.x-obj.position.x,position.y-obj.position.z)<obj.radius);
+            isInHabitat=Boolean(habitat);
+            if (isInHabitat) {oxygen=Math.min(100,oxygen+12);suitPower=Math.min(100,suitPower+18);}
+            else {
+                oxygen=Math.max(0,oxygen-0.25);
+                if (currentSite.body==='Mars') suitPower=Math.min(100,suitPower+0.5);
+                else if (stormPhase==='active'&&stormKind==='solar'&&!shelter) suitPower=Math.max(0,suitPower-3.2);
+                else if (stormPhase==='clear') suitPower=Math.min(100,suitPower+0.5);
+            }
+            renderSuitStatus();persistProgress();
+            if (oxygen===0) showPrompt('Oxygen depleted. Return to a habitat console or use the Transit Console.');
+            if (suitPower===0&&currentSite.body!=='Mars') {
+                const safe=SITE_BY_ID[DESTINATION_HOME[currentSite.body]];
+                suitPower=35;oxygen=Math.max(oxygen,40);warpToSite(safe);
+                openModal('LIFE SUPPORT AUTOPILOT','You were returned to a habitat','<p>Suit power depleted during the solar event. The safety system brought you to the nearest habitat.</p>','Continue');
+            }
+        },1000);
+
+        $('field-log-open').addEventListener('click',renderFieldLog);
+        $('archive-open').addEventListener('click',openArchive);
+        $('transit-open').addEventListener('click',openTransit);
+        $('guide-open').addEventListener('click',openGuide);
+        $('map-open').addEventListener('click',openSurveyMap);
+        $('evidence-open').addEventListener('click',openEvidence);
+        $('interaction-prompt').addEventListener('click',interact);
+        $('astrolog-btn')?.addEventListener('click',renderFieldLog);
+        window.addEventListener('keydown',(event)=>{
+            if (isModalOpen()) return;
+            if (event.code==='KeyE') { interact(); event.preventDefault(); }
+            if (event.code==='KeyL') renderFieldLog();
+            if (event.code==='KeyM') openSurveyMap();
+            if (event.code==='Escape') openModal('PAUSED','Mission paused','<p>Take a moment, then resume your survey.</p><div class="mt-4 grid gap-2 sm:grid-cols-2"><button id="pause-resume" class="rounded-lg bg-amber-300 px-3 py-2 font-semibold text-slate-950">RESUME</button><button id="pause-log" class="rounded-lg bg-slate-800 px-3 py-2 text-white">FIELD LOG</button><button id="pause-archive" class="rounded-lg bg-slate-800 px-3 py-2 text-white">NSSDCA ARCHIVE</button><button id="pause-map" class="rounded-lg bg-slate-800 px-3 py-2 text-white">SURVEY MAP</button></div>','Resume');
+            if (isModalOpen()&&$('pause-resume')) {
+                $('pause-resume').addEventListener('click',closeModal);
+                $('pause-log').addEventListener('click',()=>{closeModal();renderFieldLog();});
+                $('pause-archive').addEventListener('click',()=>{closeModal();openArchive();});
+                $('pause-map').addEventListener('click',()=>{closeModal();openSurveyMap();});
+            }
+        });
+        updateProgressCounts();renderSuitStatus();
+        setTimeout(runStormCycle,60000);
+
         // Initialize the browser companion at the game's first mission site
         populateSiteSelectors();
         warpToSite(SITES.find((s) => s.id === 'tranquility'));
         animate();
         openModal('NASA SPACE APPS · ABANDONED BUT NOT FORGOTTEN', 'LAST SIGNAL',
-            `<p>Explore a browser companion to the Roblox game. Visit mission regions across the Moon, Mars and asteroid 433 Eros, then open the Roblox experience for the full artifact scans, puzzles and story.</p>
-             <p class="text-[12px] text-slate-400">The Roblox game also includes a clearly identified fictional Heritage Station. It is not recreated in this preview; terrain and object models here are procedural approximations.</p>
-             <p class="text-[12px] text-slate-400 font-mono-tech">WASD move · Mouse look · Space hop · Choose a destination from the site menu</p>`,
+            `<p>Explore a browser version of Last Signal. Scan mission hardware across the Moon, Mars and asteroid 433 Eros, solve instrument challenges, manage suit life support, shelter from hazards, read the NASA archive and complete the crew handover.</p>
+             <p class="text-[12px] text-slate-400">This browser version recreates the game’s main places and play systems, including a simplified Tranquility Heritage Station. Browser progress is saved on this device; Roblox retains the full authored experience and shared multiplayer.</p>
+             <p class="text-[12px] text-slate-400 font-mono-tech">WASD move · Mouse look · Space hop · E interact · R remember · F reactivate · choose a destination to travel</p>`,
             'Explore Tranquility', () => {});
 
     </script>
