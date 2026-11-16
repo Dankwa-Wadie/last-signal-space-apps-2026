@@ -188,10 +188,15 @@
         #g-memory .r-dot { width: 7px; height: 7px; border-radius: 50%; background: #e85a3c; box-shadow: 0 0 6px #e85a3c; animation: g-rdot 1s steps(2) infinite; }
         @keyframes g-rdot { 50% { opacity: .25; } }
         #g-crewvoice-lines { margin-top: 6px; font-size: clamp(12px, 1.5vw, 14px); line-height: 1.4; font-style: italic; }
+        #g-crewvoice-lines div { opacity: .3; transition: opacity .35s; }
+        #g-crewvoice-lines div.said { opacity: 1; }
         #g-crewvoice-lines b { font-style: normal; font-weight: 700; letter-spacing: .06em; color: #f6dfae; font-size: .82em; margin-right: 6px; }
         #g-memory .r-src { margin-top: 6px; font-size: 9.5px; letter-spacing: .04em; opacity: .62; }
         @media (max-height: 460px) { #g-memory .crewradio { top: calc(env(safe-area-inset-top) + 74px); } #g-crewvoice-lines { font-size: 11.5px; } }
         #g-memory .stamp { position: absolute; top: max(70px, calc(env(safe-area-inset-top) + 62px)); left: 50%; transform: translateX(-50%); font-family: 'Montserrat', system-ui, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: .22em; color: #f6dfae; text-shadow: 0 1px 6px rgba(0,0,0,.8); white-space: nowrap; }
+        /* a memory is the past: your own suit's gauges are not part of it */
+        .g-gauges { transition: opacity .4s; }
+        body.in-memory .g-gauges { opacity: 0; visibility: hidden; transition: opacity .4s, visibility 0s .4s; }
         body.in-memory #canvas-container canvas { filter: sepia(.5) saturate(.78) contrast(1.06) brightness(1.06); }
         #g-caption { position: fixed; left: 50%; top: 76%; transform: translateX(-50%); width: min(820px, calc(100vw - 32px)); z-index: 26; pointer-events: none; text-align: center; color: var(--g-yel); font-weight: 700; font-size: clamp(17px, 2.4vw, 24px); line-height: 1.3; text-shadow: 0 0 2px #000, 0 0 2px #000, 0 2px 8px rgba(0,0,0,.9); }
         /* low oxygen: the edges of sight close in and colour drains away (hypoxia) */
@@ -3524,7 +3529,8 @@
             const shelter=worldInteractables.find((obj)=>obj.kind==='shelter'&&Math.hypot(position.x-obj.position.x,position.y-obj.position.z)<obj.radius);
             const habitat=worldInteractables.find((obj)=>obj.kind==='life-support'&&Math.hypot(position.x-obj.position.x,position.y-obj.position.z)<obj.radius);
             isInHabitat=Boolean(habitat);
-            if (downed || opening.active || !gameStarted || portraitHold()) return;
+            // while you are inside a memory, time is not passing for you: no air used, no storms
+            if (downed || opening.active || !gameStarted || portraitHold() || flashback.active) return;
             saveStats.played += 1;
             // a safe place to come back to: wherever you last stood in a habitat or a shelter
             if (habitat || shelter) {
@@ -4178,70 +4184,140 @@
         // with the Apollo Lunar Surface Journal (NASA recordings, public domain). Each window is set from
         // the journal's mission-elapsed times and checked against where the speech sits in the recording.
         const ALSJ_AUDIO = 'https://apollojournals.org/alsj/';
+        // `from`/`to` are seconds into the recording; each line's first number is when it is spoken,
+        // counted from `from`. The scenes below move the crew on those same times.
         const VOICES = {
-            lm:       { src: 'a11/a11a1023114-4746.mp3', from: 884, to: 897.5, head: 'APOLLO 11 · 20 JULY 1969 · TOUCHDOWN',
-                        lines: [['ARMSTRONG', 'Houston, Tranquility Base here. The Eagle has landed.'], ['DUKE · HOUSTON', 'Roger, Twan… Tranquility. We copy you on the ground. You got a bunch of guys about to turn blue. We’re breathing again. Thanks a lot.']] },
+            lm:       { src: 'a11/a11a1234747-1243113.mp3', from: 2042, to: 2071, head: 'APOLLO 11 · 21 JULY 1969 · LIFT-OFF',
+                        lines: [[1, 'ALDRIN', '9, 8, 7, 6, 5, Abort Stage, Engine Arm, Ascent, Proceed.'], [18, 'ALDRIN', '26, 36 feet per second up.'], [25, 'ALDRIN', 'Standby for the pitchover.'], [27.2, 'ALDRIN', 'Very smooth.']] },
             seis:     { src: 'a11/a11a1105253-1113910.mp3', from: 173.5, to: 186, head: 'APOLLO 11 · 21 JULY 1969',
-                        lines: [['ALDRIN', 'Houston, the passive seismometer has been deployed manually.'], ['McCANDLESS · HOUSTON', 'Roger.']] },
-            retro:    { src: 'a11/a11a1105253-1113910.mp3', from: 668, to: 677.5, head: 'APOLLO 11 · 21 JULY 1969',
-                        lines: [['ARMSTRONG', 'The laser reflector is installed and the bubble is level and the alignment appears to be good.']] },
+                        lines: [[1, 'ALDRIN', 'Houston, the passive seismometer has been deployed manually.'], [12, 'McCANDLESS · HOUSTON', 'Roger.']] },
+            retro:    { src: 'a11/a11a1105253-1113910.mp3', from: 667.5, to: 677.5, head: 'APOLLO 11 · 21 JULY 1969',
+                        lines: [[0.5, 'ARMSTRONG', 'The laser reflector is… installed and the bubble is level and the alignment appears to be good.']] },
             surv3:    { src: 'a12/a12a.1334601.mp3', from: 1160, to: 1177, head: 'APOLLO 12 · 20 NOVEMBER 1969',
-                        lines: [['GIBSON · HOUSTON', 'Hey, Pete, do you think there’s a chance you’re at the wrong Surveyor?'], ['CONRAD', 'No, sir.'], ['BEAN', 'Boy! It sure dug in the ground, didn’t it? Oh, look at those pad marks! They’re still there.']] },
+                        lines: [[1, 'GIBSON · HOUSTON', 'Hey, Pete, do you think there’s a chance you’re at the wrong Surveyor?'], [5.2, 'CONRAD', 'No, sir.'], [6.5, 'BEAN', 'Boy! It sure dug in the ground, didn’t it? Oh, look at those pad marks! They’re still there.']] },
             a12alsep: { src: 'a12/a12a.1165401.mp3', from: 1031.5, to: 1040.5, head: 'APOLLO 12 · 19 NOVEMBER 1969',
-                        lines: [['BEAN', 'Okay. We’ve connected the RTG to the Central Station, Houston. And we’re ready to go to work deploying the experiments.']] },
+                        lines: [[0.5, 'BEAN', 'Okay. We’ve connected the RTG to the Central Station, Houston. And we’re ready to go to work deploying the experiments.']] },
             falcon:   { src: 'a15/a15a1195255.mp3', from: 166, to: 194, head: 'APOLLO 15 · 31 JULY 1971 · HADLEY',
-                        lines: [['ALLEN · HOUSTON', 'Dave, an extraordinary television picture here.'], ['SCOTT', 'Okay, Houston. As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature. Man must explore. And this is exploration at its greatest.']] },
+                        lines: [[0.2, 'ALLEN · HOUSTON', 'Dave, an extraordinary television picture here.'], [3.5, 'SCOTT', 'Okay, Houston.'], [7.6, 'SCOTT', 'As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature.'], [23.2, 'SCOTT', 'Man must explore. And this is exploration at its greatest.']] },
             lrv:      { src: 'a15/a15a1212513.mp3', from: 884, to: 904, head: 'APOLLO 15 · 31 JULY 1971 · BOARDING THE ROVER',
-                        lines: [['SCOTT', 'By the way, little arrows on the heading indicator on the LRV Nav system work good.'], ['ALLEN · HOUSTON', 'Okay, we copy.'], ['SCOTT', 'Hey. This thing’s really bouncy when you get on. Easy, easy, easy, Jim.']] },
-            lrrr15:   { src: 'a15/a15a1252202.mp3', from: 386, to: 397, head: 'APOLLO 15 · 1 AUGUST 1971',
-                        lines: [['SCOTT', 'Okay, Joe. It’s aligned; and the shadow device is right on the index. And it’s super clean!'], ['ALLEN · HOUSTON', 'You wouldn’t be proud of anything less, Dave.']] } };
-        // One shared element, unlocked by the player's first touch or key, so phones let it play later.
+                        lines: [[0.3, 'SCOTT', 'By the way, little arrows on the heading indicator on the LRV Nav system work good.'], [6, 'ALLEN · HOUSTON', 'Okay, we copy.'], [11, 'SCOTT', 'Hey. This thing’s really bouncy when you get on. Easy, easy, easy, Jim.']] },
+            lrrr15:   { src: 'a15/a15a1252202.mp3', from: 386, to: 397, head: 'APOLLO 15 · 31 JULY 1971',
+                        lines: [[0.5, 'SCOTT', 'Okay, Joe. It’s aligned; and the shadow device is right on the index. And it’s super clean!'], [8.5, 'ALLEN · HOUSTON', 'You wouldn’t be proud of anything less, Dave.']] } };
+        // The recording is the clock. A memory loads its clip while the crew walk into place; the scene
+        // starts it at its moment (clip.play), then waits on clip.at(t) so every move lands on its line.
+        // Muted, or if the recording cannot be reached quickly, the same clock runs on wall time instead.
         const crewVoice = (() => {
-            const el = new Audio(); el.preload = 'none'; el.crossOrigin = null;
-            let unlocked = false, token = 0, fadeRaf = 0;
+            const el = new Audio(); el.preload = 'none';
+            let unlocked = false, token = 0;
             const unlock = () => { if (unlocked) return; unlocked = true; try { el.muted = true; const p = el.play(); if (p) p.then(() => { el.pause(); el.muted = false; }, () => { el.muted = false; }); } catch (_) { el.muted = false; } };
             ['pointerdown', 'keydown', 'touchend'].forEach((ev) => window.addEventListener(ev, unlock, { once: true, passive: true }));
-            function stop() {
-                token++; cancelAnimationFrame(fadeRaf);
-                try { el.pause(); } catch (_) {}
-                $('g-crewvoice').classList.remove('on');
-            }
-            // play one memory's clip; resolves when it has finished (or could not be played)
-            function play(id, live) {
+            const panel = () => $('g-crewvoice');
+            function stop() { token++; try { el.pause(); } catch (_) {} el.onloadedmetadata = el.onseeked = el.onerror = null; panel().classList.remove('on'); }
+            function prepare(id, live) {
                 const v = VOICES[id]; stop();
-                if (!v || suitAudio.muted) return Promise.resolve(false);
-                const my = token;
-                $('g-crewvoice-head').textContent = 'MISSION AUDIO · ' + v.head;
-                $('g-crewvoice-lines').innerHTML = v.lines.map(([who, t]) => `<div><b>${who}</b>“${t}”</div>`).join('');
-                return new Promise((resolve) => {
-                    let started = false, done = false;
-                    const finish = (ok) => { if (done) return; done = true; clearTimeout(giveUp); el.onloadedmetadata = el.onseeked = el.onerror = null; if (token === my) { fadeOut(); } resolve(ok); };
-                    const fadeOut = () => { const v0 = el.volume, t0 = performance.now();
-                        const f = () => { if (token !== my) return; const u = Math.min(1, (performance.now() - t0) / 500); el.volume = v0 * (1 - u); if (u < 1) fadeRaf = requestAnimationFrame(f); else { el.pause(); $('g-crewvoice').classList.remove('on'); suitAudio.quindar(); } }; f(); };
-                    // the recording is long; if it cannot reach the moment soon, the memory goes on without it
-                    const giveUp = setTimeout(() => { if (!started) finish(false); }, 7000);
-                    el.onerror = () => finish(false);
+                const my = token, len = v.to - v.from, waits = [];
+                let ready = false, failed = suitAudio.muted, started = false, audioOn = false, wall0 = 0, pending0 = 0, finished = false, endRes;
+                const done = new Promise((r) => { endRes = r; });
+                if (!failed) {
+                    el.onerror = () => { failed = true; };
                     el.onloadedmetadata = () => { if (token === my) el.currentTime = v.from; };
-                    el.onseeked = () => {
-                        if (token !== my || started || !live()) return finish(false);
-                        started = true; el.volume = 0; suitAudio.quindar();
-                        const p = el.play(); if (p) p.catch(() => finish(false));
-                        $('g-crewvoice').classList.add('on');
-                        const t0 = performance.now();
-                        const tick = () => {
-                            if (token !== my || done) return;
-                            if (!live()) return finish(false);
-                            el.volume = Math.min(1, (performance.now() - t0) / 300);
-                            if (el.currentTime >= v.to || el.ended) return finish(true);
-                            fadeRaf = requestAnimationFrame(tick);
-                        };
-                        tick();
-                    };
+                    el.onseeked = () => { if (token === my) ready = true; el.onseeked = null; };
                     el.src = ALSJ_AUDIO + v.src + '#t=' + v.from; el.preload = 'auto'; el.load();
-                });
+                }
+                const time = () => audioOn ? el.currentTime - v.from : wall0 ? (performance.now() - wall0) / 1000 : 0;
+                function finish() {
+                    if (finished) return; finished = true;
+                    for (const w of waits.splice(0)) w.res();
+                    if (token === my) {
+                        if (audioOn) { const v0 = el.volume; tween(.5, (u) => { if (token === my) el.volume = v0 * (1 - u); }).then(() => { if (token === my) el.pause(); }); suitAudio.quindar(); }
+                        setTimeout(() => { if (token === my) panel().classList.remove('on'); }, 500);
+                    }
+                    endRes();
+                }
+                function tick() {
+                    if (finished) return;
+                    if (token !== my || !live()) return finish();
+                    if (!audioOn && !wall0) {
+                        if (ready && !failed) {   // the recording has reached its moment: go
+                            audioOn = true; el.volume = 0; const p = el.play(); suitAudio.quindar();
+                            if (p) p.catch(() => { audioOn = false; failed = true; wall0 = performance.now(); });
+                        } else if (failed || performance.now() - pending0 > 1500) { failed = true; wall0 = performance.now(); try { el.pause(); } catch (_) {} }
+                    }
+                    if (audioOn) el.volume = Math.min(1, el.volume + .06);
+                    const t = time();
+                    $('g-crewvoice-lines').querySelectorAll('div').forEach((d, k) => d.classList.toggle('said', t >= v.lines[k][0] - .1));
+                    for (let k = waits.length - 1; k >= 0; k--) if (t >= waits[k].t) waits.splice(k, 1)[0].res();
+                    if (t >= len || (audioOn && el.ended)) return finish();
+                    requestAnimationFrame(tick);
+                }
+                return {
+                    get started() { return started; },
+                    time, done,
+                    play() {
+                        if (started) return; started = true; pending0 = performance.now();
+                        $('g-crewvoice-head').textContent = 'MISSION AUDIO · ' + v.head;
+                        $('g-crewvoice-lines').innerHTML = v.lines.map(([, who, t]) => `<div><b>${who}</b>“${t}”</div>`).join('');
+                        $('g-crewvoice').querySelector('.r-src').textContent = audioOn || !failed ? 'Crew audio: NASA mission recording (public domain), from the Apollo Lunar Surface Journal' : 'Transcript: NASA mission recording, from the Apollo Lunar Surface Journal';
+                        panel().classList.add('on'); tick();
+                    },
+                    // resolves when the recording reaches t seconds (or the memory is left)
+                    at(t) { if (finished || time() >= t) return Promise.resolve(); return new Promise((res) => waits.push({ t, res })); }
+                };
             }
-            return { play, stop, get el() { return el; } };
+            return { prepare, stop, get el() { return el; } };
         })();
+        // these memories' captions describe what happens after the crew have spoken (the laser, the moonquake)
+        const CAPTIONS_AFTER_VOICE = new Set(['retro', 'seis']);
+        const NO_CLIP = { started: true, time: () => 99, done: Promise.resolve(), play() {}, at: () => Promise.resolve() };
+
+        // ---------- the crew's body language, timed to the words ----------
+        // a part's rotation, eased from where it is to where it is going
+        function bend(obj, x, y, z, sec = .5) {
+            if (!obj) return Promise.resolve();
+            const a = obj.rotation.clone();
+            return tween(sec, (u) => { const k = ease(u); obj.rotation.set(a.x + (x - a.x) * k, a.y + (y - a.y) * k, a.z + (z - a.z) * k); });
+        }
+        const part = (f, n) => f.nodes[n];
+        function standIdle(f) { sampleClip('idle', 0, f.pose); applyPose(f, f.pose); }
+        function turnTo(f, x, z, sec = .6) {
+            const y0 = f.g.rotation.y; let y1 = Math.atan2(-(x - f.g.position.x), -(z - f.g.position.z));
+            while (y1 - y0 > Math.PI) y1 -= Math.PI * 2; while (y1 - y0 < -Math.PI) y1 += Math.PI * 2;
+            return tween(sec, (u) => { f.g.rotation.y = y0 + (y1 - y0) * ease(u); });
+        }
+        // talking on the radio: the helmet bobs a little with the words, a hand moves now and then
+        function talk(f, clip, t1, hand = true) {
+            const h = part(f, 'Head'), arm = part(f, 'LeftUpperArm');
+            return new Promise((res) => {
+                const t0 = performance.now();
+                const step = () => {
+                    const s = (performance.now() - t0) / 1000;
+                    if (clip.time() >= t1 || !flashback.active) { h.rotation.set(0, 0, 0); if (hand) arm.rotation.set(0, 0, 0); return res(); }
+                    h.rotation.x = .07 * Math.sin(s * 5.3) * Math.max(0, Math.sin(s * 1.7) + .4);
+                    h.rotation.y = .05 * Math.sin(s * 1.1);
+                    if (hand) arm.rotation.x = .35 + .18 * Math.sin(s * 2.2);
+                    requestAnimationFrame(step);
+                };
+                step();
+            });
+        }
+        // point the right arm at a spot on the ground
+        function pointAt(f, x, z, y = 0, sec = .45) {
+            const dx = x - f.g.position.x, dz = z - f.g.position.z, d = Math.hypot(dx, dz) || 1;
+            const lift = Math.PI / 2 - Math.atan2(2.6 - y, d) * .9;   // down toward the ground near by, level for far away
+            return Promise.all([turnTo(f, x, z, sec), bend(part(f, 'RightUpperArm'), Math.max(.5, lift), 0, 0, sec), bend(part(f, 'RightLowerArm'), 0, 0, 0, sec)]);
+        }
+        const armDown = (f, sec = .5) => Promise.all([bend(part(f, 'RightUpperArm'), 0, 0, 0, sec), bend(part(f, 'RightLowerArm'), 0, 0, 0, sec), bend(part(f, 'LeftUpperArm'), 0, 0, 0, sec)]);
+        // walk backwards, still facing the thing you are leaving (as Scott did from the reflector)
+        async function backAway(f, x, z, speed = .7) {
+            const sx = f.g.position.x, sz = f.g.position.z, d = Math.hypot(x - sx, z - sz), yaw = f.g.rotation.y;
+            await tween(d / speed, (u) => { const px = sx + (x - sx) * u, pz = sz + (z - sz) * u; f.g.position.set(px, getSurfaceHeight(px, pz), pz); f.g.rotation.y = yaw;
+                sampleClip('walk', (1 - u) * d / speed * (speed / GAME_WALK) * .6, f.pose); applyPose(f, f.pose); });
+            standIdle(f);
+        }
+        // run a motion on the recording's clock: fn(u) from t0 to t1
+        function onClip(clip, t0, t1, fn) {
+            return new Promise((res) => { const step = () => { const u = Math.max(0, Math.min(1, (clip.time() - t0) / (t1 - t0))); fn(u); if (u >= 1 || !flashback.active) return res(); requestAnimationFrame(step); }; step(); });
+        }
 
         function nearestHardware(x, z, maxD = 6) {
             let best = null, bd = maxD;
@@ -4309,7 +4385,7 @@
 
         // what you see, object by object
         const SCENES = {
-            async lm(item, live) {
+            async lm(item, live, clip) {
                 const lm = nearestHardware(item.x, item.z);
                 const top = lm ? new THREE.Box3().setFromObject(lm).max.y : 3.2;
                 const asc = addProp(ascentStage()); asc.position.set(item.x, top - .15, item.z); asc.rotation.y = -0.44;
@@ -4319,20 +4395,30 @@
                 await Promise.all([walkTo(a, -1.0, 2.6), walkTo(b, .4, 3.1)]);
                 if (!live()) return;
                 for (const f of [a, b]) { const mats = []; f.g.traverse((o) => { if (o.material) { o.material = o.material.clone(); o.material.transparent = true; mats.push([o.material, o.material.opacity]); } }); await tween(1.1, (u) => { f.g.position.y += .03; for (const [m, o0] of mats) m.opacity = o0 * (1 - u); }); f.g.visible = false; }
-                await sleep(1.2); if (!live()) return;
-                // lift-off: the game's glow, the stage rising, and the flag going over in the blast
+                if (!live()) return;
+                // inside, Aldrin counts it down: "...Ascent, Proceed." and the engine lights
+                clip.play();
+                await clip.at(10.8); if (!live()) return;
                 const glow = glowBall(item.x, top, item.z);
                 tween(.5, (u) => { glow.material.opacity = .85 * u; glow.scale.setScalar(1 + 1.2 * u); });
                 tween(.6, (u) => { flag.rotation.z = -1.45 * ease(u); });
-                await tween(6.5, (u) => { asc.position.y = top - .15 + 70 * u * u; asc.rotation.y = -0.44 + .2 * u; });
-                tween(2.4, (u) => { glow.material.opacity = .85 * (1 - u); glow.scale.setScalar(2.2 + 3 * u); });
+                // straight up until he calls the pitchover, then it leans over toward orbit
+                const fade = onClip(clip, 13, 16, (u) => { glow.material.opacity = .85 * (1 - u); glow.scale.setScalar(2.2 + 3 * u); });
+                await onClip(clip, 10.8, 29, (u) => {
+                    const t = clip.time();
+                    asc.position.y = top - .15 + 75 * u * u;
+                    asc.rotation.y = -0.44 + .2 * u;
+                    asc.rotation.x = t > 25.3 ? -.55 * ease(Math.min(1, (t - 25.3) / 3)) : 0;
+                    if (t > 25.3) asc.position.z = item.z - 9 * ease(Math.min(1, (t - 25.3) / 3.7));
+                });
+                await fade;
             },
-            async seis(item, live) {
+            async seis(item, live, clip) {
                 const s = nearestHardware(item.x, item.z);
                 const lm = nearestHardware(0, 0);
                 const top = lm ? new THREE.Box3().setFromObject(lm).max.y : 3.2;
                 addProp(ascentStage()).position.set(0, top - .15, 0);
-                const [a, b] = [crewFigure(false), crewFigure(false)];
+                const [a, b] = [crewFigure(false), crewFigure(false)];   // a: Aldrin, b: Armstrong
                 place(a, -1.5, 3.5); place(b, -4, 1);
                 if (s) s.visible = false;
                 await Promise.all([walkTo(a, item.x + 1.2, item.z - .3), walkTo(b, item.x + 4, item.z - 3.5)]);
@@ -4340,60 +4426,142 @@
                 place(b, b.g.position.x, b.g.position.z, item.x, item.z);
                 await kneel(a, true);
                 if (s) s.visible = true;
-                await sleep(1.6); await kneel(a, false);
+                await sleep(1.0); if (!live()) return;
+                // up off his knee and on the radio: "Houston, the passive seismometer has been deployed manually."
+                clip.play();
+                await kneel(a, false); standIdle(a);
+                await clip.at(.9);
+                pointAt(a, item.x, item.z); await sleep(.5); bend(part(a, 'Head'), -.35, 0, 0, .4);
+                await clip.at(4); armDown(a); bend(part(a, 'Head'), 0, 0, 0, .4); turnTo(a, 0, 0, .8);
+                await talk(a, clip, 8.4);
+                // "Roger." from Houston, and he goes back to the lander
+                await clip.at(12); if (!live()) return;
+                bend(part(a, 'Head'), .18, 0, 0, .25).then(() => bend(part(a, 'Head'), 0, 0, 0, .3));
                 await walkTo(a, item.x + 3, item.z + 1.5);
                 if (!live()) return;
                 await shake(s, .07, 26, .09);
             },
-            async retro(item, live) {
+            async retro(item, live, clip) {
                 const r = nearestHardware(item.x, item.z);
                 const lm = nearestHardware(0, 0);
                 const top = lm ? new THREE.Box3().setFromObject(lm).max.y : 3.2;
                 addProp(ascentStage()).position.set(0, top - .15, 0);
-                const [a, b] = [crewFigure(false), crewFigure(false)];
+                const [a, b] = [crewFigure(false), crewFigure(false)];   // a: Armstrong
                 place(a, 2, -2.5); place(b, 3.2, -1);
                 if (r) r.visible = false;
                 await Promise.all([walkTo(a, item.x - 1.3, item.z + .4), walkTo(b, item.x - 3, item.z + 3)]);
                 place(b, b.g.position.x, b.g.position.z, item.x, item.z);
-                await kneel(a, true); if (r) r.visible = true; await sleep(1.2); await kneel(a, false);
-                await walkTo(a, item.x - 4, item.z + 2);
+                await kneel(a, true); if (r) r.visible = true;
                 if (!live()) return;
+                // still kneeling over it, head down at the bubble: "The laser reflector is... installed"
+                clip.play(); bend(part(a, 'Head'), -.4, 0, 0, .5);
+                await clip.at(3.6); await kneel(a, false); standIdle(a);
+                // "...and the bubble is level": he leans over to look again
+                await clip.at(4.8); bend(part(a, 'UpperTorso'), -.3, 0, 0, .5); bend(part(a, 'Head'), -.35, 0, 0, .5);
+                // "...and the alignment appears to be good": straight up, hand out toward it
+                await clip.at(6.8); bend(part(a, 'UpperTorso'), 0, 0, 0, .5); bend(part(a, 'Head'), 0, 0, 0, .5); pointAt(a, item.x, item.z);
+                await clip.at(9); armDown(a);
+                walkTo(a, item.x - 4, item.z + 2);
+                await clip.done; if (!live()) return;
                 // the game's laser: out, a 2.5-second wait, and back
                 const bm = beam(item.x, item.z, 168);
                 await sleep(.4); tween(.15, (u) => { bm.material.opacity = .75 * u; }); await sleep(.3); tween(.4, (u) => { bm.material.opacity = .75 * (1 - u); });
                 await sleep(2.5); tween(.12, (u) => { bm.material.opacity = .9 * u; }); await sleep(.25); tween(.9, (u) => { bm.material.opacity = .9 * (1 - u); });
             },
-            async surv3(item, live) {
-                const [a, b] = [crewFigure(false), crewFigure(false)];
+            async surv3(item, live, clip) {
+                const [a, b] = [crewFigure(false), crewFigure(false)];   // a: Conrad, b: Bean
                 place(a, item.x + 9, item.z + 7); place(b, item.x + 10.5, item.z + 5.5);
                 await Promise.all([walkTo(a, item.x + 1.4, item.z + .8), walkTo(b, item.x + 1.8, item.z - 1)]);
                 if (!live()) return;
                 place(a, a.g.position.x, a.g.position.z, item.x, item.z); place(b, b.g.position.x, b.g.position.z, item.x, item.z);
-                await kneel(a, true); await sleep(2.5); await kneel(a, false);
+                // Houston: "...do you think there's a chance you're at the wrong Surveyor?" They look at each other.
+                clip.play();
+                await clip.at(2.2); turnTo(a, b.g.position.x, b.g.position.z, .7); turnTo(b, a.g.position.x, a.g.position.z, .7);
+                // Conrad: "No, sir." with a shake of the helmet
+                await clip.at(5.0); const h = part(a, 'Head');
+                await tween(.9, (u) => { h.rotation.y = .35 * Math.sin(u * Math.PI * 3) * (1 - u); });
+                // Bean: "Boy! It sure dug in the ground, didn't it?" down on a knee at the footpad
+                await clip.at(6.4); turnTo(a, item.x, item.z, .6); await turnTo(b, item.x, item.z - .6, .5);
+                await kneel(b, true);
+                // "Oh, look at those pad marks!"
+                await clip.at(9.6); bend(part(b, 'RightUpperArm'), .7, 0, 0, .4); bend(part(a, 'Head'), -.35, 0, 0, .5);
+                // "They're still there."
+                await clip.at(13); await kneel(b, false); standIdle(b); bend(part(a, 'Head'), 0, 0, 0, .5);
+                await clip.done;
             },
-            async a12alsep(item, live) {
+            async a12alsep(item, live, clip) {
                 const s = nearestHardware(item.x, item.z);
-                const a = crewFigure(false); place(a, item.x + 6, item.z + 5);
+                const a = crewFigure(false); place(a, item.x + 6, item.z + 5);   // Bean
                 if (s) s.visible = false;
                 await walkTo(a, item.x + 1.2, item.z + .5);
-                await kneel(a, true); if (s) s.visible = true; await sleep(1.2); await kneel(a, false);
-                await walkTo(a, item.x + 4, item.z + 3);
+                await kneel(a, true); if (s) s.visible = true; await sleep(1.2);
                 if (!live()) return;
-                await sleep(3); await shake(s, .05, 30, .09);
+                // the cable is in: "Okay." He stands. "We've connected the RTG to the Central Station, Houston."
+                clip.play();
+                await clip.at(.4); await kneel(a, false); standIdle(a);
+                await clip.at(1.6); pointAt(a, item.x, item.z);
+                await clip.at(4.4); armDown(a);
+                // "And we're ready to go to work deploying the experiments." Off he goes.
+                const t = talk(a, clip, 8, false);
+                await clip.at(5.6); await turnTo(a, item.x + 6, item.z - 4, .5);
+                await walkTo(a, item.x + 4.5, item.z - 2.5); await t;
+                if (!live()) return;
+                await sleep(2); await shake(s, .05, 30, .09);
             },
-            async falcon(item) {
-                const [a, b] = [crewFigure(true), crewFigure(false)];
-                place(a, item.x + 1, item.z + 2.4); place(b, item.x - 1, item.z + 2.6);
-                await Promise.all([walkTo(a, item.x + 5, item.z + 7), walkTo(b, item.x + 2, item.z + 8)]);
+            async falcon(item, live, clip) {
+                const [a, b] = [crewFigure(true), crewFigure(false)];   // a: Scott (commander's stripes), b: Irwin
+                place(a, item.x + 1, item.z + 2.4); b.g.visible = false;
+                await walkTo(a, item.x + 4.5, item.z + 7);
+                if (!live()) return;
+                const hx = item.x + 4.5 - 30, hz = item.z + 7 + 30;   // Hadley, off across the plain
+                // Houston: "Dave, an extraordinary television picture here."
+                clip.play();
+                await turnTo(a, hx, hz, 1.2);
+                // "Okay, Houston."
+                await clip.at(3.4); talk(a, clip, 6.5, false);
+                // Irwin comes down the ladder behind him
+                await clip.at(5.5); place(b, item.x - 1, item.z + 2.6); b.g.visible = true; walkTo(b, item.x + 1.6, item.z + 8.4);
+                // "As I stand out here in the wonders of the unknown at Hadley...": the arm goes out, across the view
+                await clip.at(7.6); await bend(part(a, 'RightUpperArm'), 1.35, 0, 0, .6);
+                const y0 = a.g.rotation.y; await onClip(clip, 8.2, 13.4, (u) => { a.g.rotation.y = y0 - .9 * Math.sin(u * Math.PI) * .9 + .3 * u; });
+                await armDown(a, .7);
+                // "...a fundamental truth to our nature."
+                await clip.at(16.2); bend(part(a, 'Head'), .16, 0, 0, .6); await talk(a, clip, 22.2);
+                bend(part(a, 'Head'), 0, 0, 0, .4);
+                // "Man must explore." Up toward the mountain.
+                await clip.at(23.0); await bend(part(a, 'RightUpperArm'), 2.5, 0, .15, .5);
+                // "And this is exploration at its greatest."
+                await clip.at(24.8); await bend(part(a, 'RightUpperArm'), 1.3, 0, 0, .6);
+                await clip.at(27.2); await armDown(a, .8);
+                await clip.done;
             },
-            async lrv(item, live) {
+            async lrv(item, live, clip) {
                 const rover = nearestHardware(item.x, item.z, 12);
-                const [a, b] = [crewFigure(true), crewFigure(false)];
-                if (!rover) { place(a, item.x + 1, item.z); place(b, item.x - 1, item.z); return; }
-                // seated: half the body tucked into the rover
-                for (const [f, side] of [[a, -.45], [b, .45]]) { f.g.scale.setScalar(.9); f.legL.rotation.x = f.legR.rotation.x = -1.4; rover.add(f.g); f.g.position.set(side, .35, .2); f.g.rotation.y = 0; }
+                const [a, b] = [crewFigure(true), crewFigure(false)];   // a: Scott, driving; b: Irwin
+                if (!rover) { place(a, item.x + 1, item.z); place(b, item.x - 1, item.z); clip.play(); await clip.done; return; }
+                const seat = (f, side) => { f.g.scale.setScalar(.9); f.legL.rotation.x = f.legR.rotation.x = -1.4; rover.add(f.g); f.g.position.set(side, .35, .2); f.g.rotation.y = 0; };
+                seat(a, -.45);
+                // Irwin on foot beside the right-hand seat
+                const side = new THREE.Vector3(1.9, 0, .2).applyAxisAngle(new THREE.Vector3(0, 1, 0), rover.rotation.y).add(rover.position);
+                place(b, side.x, side.z, rover.position.x, rover.position.z);
                 const home = rover.position.clone(), yaw0 = rover.rotation.y;
-                await sleep(3.5); if (!live()) return;
+                await sleep(1.2); if (!live()) return;
+                // Scott, at the console: "...little arrows on the heading indicator... work good."
+                clip.play();
+                await clip.at(.6); bend(part(a, 'RightUpperArm'), .9, 0, 0, .5); bend(part(a, 'Head'), -.3, 0, 0, .5);
+                await clip.at(4.8); bend(part(a, 'RightUpperArm'), 0, 0, 0, .5); bend(part(a, 'Head'), 0, 0, 0, .5);
+                // Irwin climbs aboard
+                await clip.at(8.4); { const p0 = b.g.position.clone(), w = new THREE.Vector3(); rover.updateMatrixWorld(); w.set(.45, .35, .2).applyMatrix4(rover.matrixWorld);
+                    await tween(1.8, (u) => { const k = ease(u); b.g.position.lerpVectors(p0, w, k); b.g.position.y += Math.sin(u * Math.PI) * .6; b.legL.rotation.x = b.legR.rotation.x = -1.4 * k; });
+                    seat(b, .45); }
+                // "Hey. This thing's really bouncy when you get on."
+                const y = rover.position.y;
+                onClip(clip, 10.4, 14.5, (u) => { rover.position.y = y - .14 * Math.sin(u * 26) * Math.exp(-u * 3.2); });
+                // "Easy, easy, easy, Jim."
+                await clip.at(14.6); rover.position.y = y;
+                const arm = part(a, 'RightUpperArm'); await onClip(clip, 14.6, 18, (u) => { arm.rotation.x = .7 + .25 * Math.sin(u * 18); });
+                arm.rotation.set(0, 0, 0);
+                await clip.done; if (!live()) return;
                 await tween(9, (u) => {   // out and round in a loop, then back to where it was parked
                     const ang = u * Math.PI * 2, R = 9;
                     rover.position.set(home.x + Math.sin(ang) * R, getSurfaceHeight(home.x + Math.sin(ang) * R, home.z + (1 - Math.cos(ang)) * R), home.z + (1 - Math.cos(ang)) * R);
@@ -4402,10 +4570,21 @@
                 rover.position.copy(home); rover.rotation.y = yaw0;
                 for (const f of [a, b]) rover.remove(f.g);
             },
-            async lrrr15(item) {
-                const a = crewFigure(false); place(a, item.x + 6, item.z + 4);
+            async lrrr15(item, live, clip) {
+                const a = crewFigure(true); place(a, item.x + 6, item.z + 4);   // Scott
                 const r = nearestHardware(item.x, item.z); if (r) r.visible = false;
-                await walkTo(a, item.x + 1.3, item.z + .4); await kneel(a, true); if (r) r.visible = true; await sleep(1.2); await kneel(a, false);
+                await walkTo(a, item.x + 1.3, item.z + .4); await kneel(a, true); if (r) r.visible = true;
+                if (!live()) return;
+                // "Okay, Joe. It's aligned;" head down over it
+                clip.play(); bend(part(a, 'Head'), -.4, 0, 0, .5);
+                // "and the shadow device is right on the index."
+                await clip.at(2.6); bend(part(a, 'RightUpperArm'), .7, 0, 0, .4);
+                // "And it's super clean!" Up, and he backs away so as not to kick dust on it.
+                await clip.at(5.0); bend(part(a, 'Head'), 0, 0, 0, .4); await kneel(a, false); standIdle(a);
+                await clip.at(6.2); await backAway(a, item.x + 4.6, item.z + 1.6);
+                // Houston: "You wouldn't be proud of anything less, Dave." A nod.
+                await clip.at(9.4); await bend(part(a, 'Head'), .2, 0, 0, .25); await bend(part(a, 'Head'), 0, 0, 0, .3);
+                await clip.done;
             },
             async oppy(item, live) {
                 // June 2018: the sky closes over
@@ -4439,21 +4618,27 @@
               flashback.view = { pos: new THREE.Vector3(cx, getSurfaceHeight(cx, cz) + 3.4, cz), look: new THREE.Vector3(item.x, getSurfaceHeight(item.x, item.z) + 1.8, item.z) }; }
             $('g-memory-stamp').textContent = 'MEMORY · ' + (STAMP[item.id] || item.year.toUpperCase());
             $('g-memory').classList.remove('hidden');
-            const scene0 = SCENES[item.id] ? SCENES[item.id](item, live).catch(() => {}) : Promise.resolve();
+            // the crew's recording starts loading now; the scene starts it when they get to the moment
+            const clip = VOICES[item.id] ? crewVoice.prepare(item.id, live) : NO_CLIP;
+            const scene0 = SCENES[item.id] ? SCENES[item.id](item, live, clip).catch((e) => { console.warn(e); clip.play(); }) : Promise.resolve();
             white.style.opacity = '0';
-            // and the crew themselves, on the radio, a moment after the memory opens
-            const voice0 = VOICES[item.id] ? sleep(1.1).then(() => live() ? crewVoice.play(item.id, live) : false) : Promise.resolve(false);
             // the words: our short prologue for the crewed memories, then the game's own captions
-            const steps = [...(PROLOGUE[item.id] || []).flatMap(([t, d]) => [['say', t, d], ['wait', d]]), ...VIGNETTES[item.id]];
+            const steps = [...(PROLOGUE[item.id] || []).flatMap(([t, d]) => [['say', t, d], ['wait', d]]), ['voice'], ...VIGNETTES[item.id]];
             for (const st of steps) {
                 if (!live()) break;
+                // the game's own captions wait for the recording, so they come with the moment they describe
+                if (st[0] === 'voice') {
+                    if (CAPTIONS_AFTER_VOICE.has(item.id)) await Promise.race([clip.done, sleep(40)]);
+                    else if (VOICES[item.id]) await Promise.race([new Promise((r) => { const w = () => (clip.started || !live()) ? r() : setTimeout(w, 100); w(); }), sleep(14)]);
+                    continue; }
                 if (st[0] === 'flash') memoryFlash(st[1]);
                 else if (st[0] === 'say') caption(st[1], st[2]);
                 else await sleep(st[1]);
             }
-            await Promise.race([scene0, sleep(12)]);
-            // let them finish speaking (a long recording that cannot be reached is abandoned inside 7 s)
-            await Promise.race([voice0, sleep(40)]);
+            if (VOICES[item.id]) {
+                if (!clip.started) clip.play();   // a scene that never got there still gets its words
+                await Promise.race([Promise.all([scene0, clip.done]), sleep(50)]);
+            } else await Promise.race([scene0, sleep(12)]);
             crewVoice.stop();
             if (live()) await sleep(1.2);
             // and back to the present
@@ -4562,8 +4747,9 @@
                 return out;
             },
             colliders() { return colliders.length; },
+            go(id) { const st = SITES.find((x) => x.id === id); if (st) warpToSite(st); return !!st; },
             remember(id) { const it = FIELD_ITEMS.find((i) => i.id === id); if (it) runFlashback(it); return !!it; },
-            voice() { const e = crewVoice.el; return { src: e.src.split('/').pop(), t: +e.currentTime.toFixed(1), paused: e.paused, vol: +e.volume.toFixed(2), radio: $('g-crewvoice').classList.contains('on') }; },
+            voice() { const e = crewVoice.el; return { src: e.src.split('/').pop(), t: +e.currentTime.toFixed(1), paused: e.paused, vol: +e.volume.toFixed(2), radio: $('g-crewvoice').classList.contains('on'), said: $('g-crewvoice-lines').querySelectorAll('.said').length, active: flashback.active }; },
             state() { return { oxygen, dose, site: currentSite.id, x: +player.pos.x.toFixed(1), z: +player.pos.z.toFixed(1), checkpoint, gameStarted, downed, deaths: saveStats.deaths, rescues: saveStats.rescues, lookingUp: opening.active && opening.followEarth, boardVisible: openingHide.map((o) => o.visible), crackPaths: document.querySelectorAll('#g-cracks path').length }; } };
 
         // ---------- starting: continue the saved expedition, or begin a new one ----------
