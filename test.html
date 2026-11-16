@@ -2883,6 +2883,13 @@
         let saveStats = { deaths: Number(savedProgress.deaths) || 0, rescues: Number(savedProgress.rescues) || 0, played: Number(savedProgress.played) || 0 };
         let checkpoint = savedProgress.checkpoint && typeof savedProgress.checkpoint.site === 'string' ? savedProgress.checkpoint : { site: 'tranquility', x: 0, z: 60 };
         let dose = Number.isFinite(savedProgress.dose) ? savedProgress.dose : 0;
+        // A save point is a habitat, a shelter or a transit pad you have actually reached. It keeps the suit
+        // as it was there, so continuing puts you back there in that state. (Older saves made before this
+        // count only if their checkpoint is somewhere other than the start.)
+        if (checkpoint.real === undefined && savedProgress.checkpoint) checkpoint.real = !(checkpoint.site === 'tranquility' && checkpoint.x === 0 && checkpoint.z === 60);
+        function savePointHere(site, x, z) {
+            checkpoint = { site, x: +(+x).toFixed(2), z: +(+z).toFixed(2), real: true, oxygen, power: suitPower, dose, at: Date.now() };
+        }
         let gameStarted = false, lastSaveAt = 0, wiping = false;
         let downed = false, airlessFor = 0;
         const openingHide = [];
@@ -3438,7 +3445,7 @@
                 const route=routeFor(currentSite.body,body);let i=0;
                 const step=()=>{
                     if (!isModalOpen()) { transitBusy=false; return; }
-                    if (i>=route.steps.length) { transitBusy=false; closeModal(); if (dest.id===DESTINATION_HOME[body]) pendingSpawn=ARRIVAL_PADS[body]; warpToSite(dest); arriveBeat(ARRIVAL_PADS[body]); if (dest.id===DESTINATION_HOME[body]) { checkpoint={site:dest.id,x:ARRIVAL_PADS[body].x,z:ARRIVAL_PADS[body].z}; } persistProgress(); flashSaved(); return; }
+                    if (i>=route.steps.length) { transitBusy=false; closeModal(); if (dest.id===DESTINATION_HOME[body]) pendingSpawn=ARRIVAL_PADS[body]; warpToSite(dest); arriveBeat(ARRIVAL_PADS[body]); if (dest.id===DESTINATION_HOME[body]) { savePointHere(dest.id,ARRIVAL_PADS[body].x,ARRIVAL_PADS[body].z); } persistProgress(); flashSaved(); return; }
                     $('transit-progress').textContent=`TO ${body.toUpperCase()} · ${route.steps[i]}`;
                     $('transit-bar').style.width=`${Math.round((++i/route.steps.length)*100)}%`;
                     setTimeout(step,430);
@@ -3544,7 +3551,8 @@
             // a safe place to come back to: wherever you last stood in a habitat or a shelter
             if (habitat || shelter) {
                 const cp = { site: currentSite.id, x: +player.pos.x.toFixed(2), z: +player.pos.z.toFixed(2) };
-                if (cp.site !== checkpoint.site || Math.hypot(cp.x - checkpoint.x, cp.z - checkpoint.z) > 6) { checkpoint = cp; persistProgress(); flashSaved(); }
+                if (!checkpoint.real || cp.site !== checkpoint.site || Math.hypot(cp.x - checkpoint.x, cp.z - checkpoint.z) > 6) { savePointHere(cp.site, cp.x, cp.z); persistProgress(); flashSaved(); }
+                else { checkpoint.oxygen = oxygen; checkpoint.power = suitPower; checkpoint.dose = dose; }   // still here: keep it current
             }
             if (isInHabitat) {oxygen=Math.min(100,oxygen+12);suitPower=Math.min(100,suitPower+18);}
             else {
@@ -4488,16 +4496,39 @@
                 const glow = glowBall(item.x, top, item.z);
                 tween(.5, (u) => { glow.material.opacity = .85 * u; glow.scale.setScalar(1 + 1.2 * u); });
                 tween(.6, (u) => { flag.rotation.z = -1.45 * ease(u); });
-                // straight up until he calls the pitchover, then it leans over toward orbit
-                const fade = onClip(clip, 13, 16, (u) => { glow.material.opacity = .85 * (1 - u); glow.scale.setScalar(2.2 + 3 * u); });
-                await onClip(clip, 10.8, 29, (u) => {
-                    const t = clip.time();
-                    asc.position.y = top - .15 + 75 * u * u;
-                    asc.rotation.y = -0.44 + .2 * u;
-                    asc.rotation.x = t > 25.3 ? -.55 * ease(Math.min(1, (t - 25.3) / 3)) : 0;
-                    if (t > 25.3) asc.position.z = item.z - 9 * ease(Math.min(1, (t - 25.3) / 3.7));
+                const fade = tween(3.2, (u) => { if (u > .3) { const k = (u - .3) / .7; glow.material.opacity = .85 * (1 - k); glow.scale.setScalar(2.2 + 3 * k); } });
+                // The camera goes with it. Straight up first (Aldrin: "26, 36 feet per second up" about 7 s in,
+                // so a climb of roughly 1.5 m/s^2), then the pitchover about 14 s after lift-off, leaning
+                // west, the way every Apollo crew flew out to meet the command module, and on over the horizon.
+                const fly = addProp(new THREE.Group()); fly.position.set(item.x, top - .15, item.z);
+                surfaceWorldGroup.attach(asc); fly.attach(asc);
+                const glint = new THREE.Sprite(new THREE.SpriteMaterial({ color: '#fff4dc', transparent: true, opacity: 0, depthWrite: false, sizeAttenuation: false }));
+                glint.scale.setScalar(.006); asc.add(glint);
+                const view = flashback.view, cam0 = view.pos.clone(), look = view.look.clone(), want = new THREE.Vector3();
+                const T_PITCH = 14.5, T_END = 33, t0 = performance.now();
+                await new Promise((res) => {
+                    const step = () => {
+                        if (!live() || flashback.view !== view) return res();
+                        const tau = (performance.now() - t0) / 1000, tp = Math.max(0, tau - T_PITCH);
+                        const up = .75 * Math.min(tau, T_PITCH) ** 2 + 21.7 * tp + .6 * tp * tp;   // keeps climbing after the pitchover
+                        const west = 2 * tp * tp + .55 * tp * tp * tp;                            // and builds speed toward orbit
+                        fly.position.set(item.x - west, top - .15 + up, item.z);
+                        fly.rotation.z = .9 * ease(Math.min(1, tp / 3.5));   // 52 degrees off vertical
+                        asc.rotation.y = -0.44 + .004 * tau;
+                        glint.material.opacity = Math.min(1, Math.max(0, (west - 120) / 300));   // far off, only the sunlit glint is left
+                        // follow it: the eye stays on the stage, the camera lifts and trails a little behind
+                        fly.getWorldPosition(want);
+                        look.lerp(want, .12); view.look.copy(look);
+                        view.pos.set(cam0.x - Math.min(west * .18, 160), cam0.y + Math.min(up * .22, 60), cam0.z);
+                        if (tau >= T_END) return res();
+                        requestAnimationFrame(step);
+                    };
+                    step();
                 });
                 await fade;
+                if (!live()) return;
+                caption('It reached orbit seven minutes later, and less than four hours after lift-off docked with Columbia, where Michael Collins was waiting.', 6);
+                await sleep(5.5);
             },
             async seis(item, live, clip) {
                 const s = nearestHardware(item.x, item.z);
@@ -4834,13 +4865,16 @@
             },
             colliders() { return colliders.length; },
             at(x, z) { player.pos.x = x; player.pos.z = z; },
+            habitats() { return worldInteractables.filter((o) => o.kind === 'life-support').map((o) => [+o.position.x.toFixed(1), +o.position.z.toFixed(1), o.radius]); },
             go(id) { const st = SITES.find((x) => x.id === id); if (st) warpToSite(st); return !!st; },
             remember(id) { const it = FIELD_ITEMS.find((i) => i.id === id); if (it) runFlashback(it); return !!it; },
             voice() { const e = crewVoice.el; return { src: e.src.split('/').pop(), t: +e.currentTime.toFixed(1), paused: e.paused, vol: +e.volume.toFixed(2), radio: $('g-crewvoice').classList.contains('on'), said: $('g-crewvoice-lines').querySelectorAll('.said').length, active: flashback.active }; },
             state() { return { oxygen, dose, site: currentSite.id, x: +player.pos.x.toFixed(1), z: +player.pos.z.toFixed(1), checkpoint, gameStarted, downed, deaths: saveStats.deaths, rescues: saveStats.rescues, lookingUp: opening.active && opening.followEarth, boardVisible: openingHide.map((o) => o.visible), crackPaths: document.querySelectorAll('#g-cracks path').length }; } };
 
         // ---------- starting: continue the saved expedition, or begin a new one ----------
-        function hasExpedition(d) { return d && d.v === 2 && (d.found.length > 0 || (d.site && d.site !== 'tranquility') || (d.played || 0) > 20); }
+        // Continue is offered only once you have reached a save point; until then a reload starts the walk out again
+        // (anything you scanned on the way is kept).
+        function hasExpedition(d) { return !!(d && d.v === 2 && checkpoint.real); }
         function timeAgo(ms) { const m = Math.round((Date.now() - ms) / 60000); return m < 1 ? 'just now' : m < 60 ? `${m} min ago` : m < 1440 ? `${Math.round(m / 60)} h ago` : `${Math.round(m / 1440)} days ago`; }
         // phones and tablets run the game in landscape only: upright, everything waits behind the turn card
         const _portraitMQ = matchMedia('(orientation: portrait)');
@@ -4855,16 +4889,20 @@
         _portraitMQ.addEventListener('change', () => { if (portraitHold()) { for (const k in keys) keys[k] = false; touchUp({ pointerId: touchMove.id }); touchUp({ pointerId: touchLook.id }); endHold(); } });
         async function startGame() {
             await whenLandscape();   // the opening scene and the start screen begin only once the device is sideways
-            if (!hasExpedition(savedProgress)) { runOpening(); return; }
-            const d = savedProgress, site = SITE_BY_ID[d.site] || SITE_BY_ID.tranquility;
-            $('g-start-info').textContent = `${site.name} · ${d.found.length}/20 objects logged · saved ${timeAgo(d.savedAt)}`;
+            // no save point reached: you start the walk out again in a fresh suit (your scans are kept)
+            if (!hasExpedition(savedProgress)) { oxygen = 100; suitPower = 100; dose = 0; drawCracks(); runOpening(); return; }
+            const d = savedProgress, site = SITE_BY_ID[checkpoint.site] || SITE_BY_ID.tranquility;
+            $('g-start-info').textContent = `${site.name} · ${d.found.length}/20 objects logged · last save point ${timeAgo(checkpoint.at || d.savedAt)}`;
             $('g-start').classList.remove('hidden');
             $('g-continue').focus();
             $('g-continue').onclick = () => {
                 $('g-start').classList.add('hidden');
-                pendingSpawn = d.pos ? { x: d.pos.x, z: d.pos.z } : null;
+                // back at the save point, with the suit as it was there; your scans are all kept
+                pendingSpawn = { x: checkpoint.x, z: checkpoint.z };
+                if (Number.isFinite(checkpoint.oxygen)) oxygen = checkpoint.oxygen;
+                if (Number.isFinite(checkpoint.power)) suitPower = checkpoint.power;
+                if (Number.isFinite(checkpoint.dose)) dose = checkpoint.dose;
                 warpToSite(site);
-                if (Number.isFinite(d.yaw)) player.yaw = d.yaw;
                 if (d.firstPerson === false) toggleView();
                 // never load straight into a blackout: a near-empty suit comes back with a small reserve
                 if (oxygen < 20) { oxygen = 20; setTimeout(() => showPrompt('Low air. Head for a habitat to refill.'), 3500); }
