@@ -3242,7 +3242,23 @@
         }
 
         const DESTINATION_HOME={Moon:'tranquility',Mars:'meridiani',Eros:'eros'};
-        const ROUTES={Moon:{time:'3 days',steps:['Launch','Day 1','Day 2','Lunar approach']},Mars:{time:'7 months',steps:['Launch','1 month','2 months','3 months','4 months','5 months','6 months','Mars approach']},Eros:{time:'4 years',steps:['Launch','Year 1','Year 2','Year 3','Rendezvous']}};
+        // TRANSIT TIMES depend on both ends of the trip, not just where you are going:
+        //   Moon <-> Mars  about 7 months. Perseverance took 203 days (6.7 months); a minimum-energy
+        //                  transfer takes about 8.5. The trip back takes as long.
+        //   Moon <-> Eros  4 years: NEAR Shoemaker's real cruise, launched February 1996, in orbit at Eros
+        //                  in February 2000 (by way of asteroid Mathilde and an Earth fly-by).
+        //   Mars <-> Eros  about 11 months -- an estimate: the minimum-energy transfer between the two
+        //                  orbits (1.52 and 1.46 AU from the Sun). No spacecraft has ever flown it.
+        const BODY_ORDER = ['Moon', 'Mars', 'Eros'];
+        const LEGS = { 'Moon|Mars': { n: 7, unit: 'month' }, 'Moon|Eros': { n: 4, unit: 'year' }, 'Mars|Eros': { n: 11, unit: 'month', estimate: true } };
+        const ROUTES = { Moon: null, Mars: null, Eros: null };   // the destinations; times come from routeFor()
+        function routeFor(from, to) {
+            if (from === to) return null;
+            const key = [from, to].sort((a, b) => BODY_ORDER.indexOf(a) - BODY_ORDER.indexOf(b)).join('|'), leg = LEGS[key];
+            const unit = (k) => leg.unit === 'year' ? `Year ${k}` : `${k} month${k > 1 ? 's' : ''}`;
+            const steps = ['Launch', ...Array.from({ length: leg.n - 1 }, (_, i) => unit(i + 1)), to === 'Moon' ? 'Lunar approach' : to === 'Mars' ? 'Mars approach' : 'Rendezvous with Eros'];
+            return { time: `${leg.estimate ? 'about ' : ''}${leg.n} ${leg.unit}${leg.n > 1 ? 's' : ''}`, steps, estimate: !!leg.estimate };
+        }
         let transitBusy=false;
         // THE SURVEY TIERS (Map.client.lua): "Orbit found it; the ground confirms it." Orbit sees hardware
         // as a few pixels and a shadow -- that something is there, not what it is. Only standing next to it
@@ -3313,13 +3329,13 @@
             step();
         }
         function openTransit(requestedSite=null) {
-            const html=`<p class="mb-3 text-xs text-slate-400">The transit display compresses mission-scale travel into a few seconds. Choose a destination body.</p><div class="grid gap-3 sm:grid-cols-3">${Object.entries(ROUTES).map(([body,route])=>`<button data-transit-body="${body}" class="rounded-xl border ${currentSite.body===body?'border-slate-700 opacity-50':'border-amber-300/30 hover:border-amber-200'} bg-slate-900 p-4 text-left"><span class="block font-mono-tech text-xs text-sky-200">${body.toUpperCase()}</span><b class="mt-2 block text-lg text-white">${route.time}</b><span class="mt-1 block text-xs text-slate-400">${body==='Moon'?'Tranquility Heritage Station':body==='Mars'?'Meridiani Outpost':'NEAR Shoemaker · Eros Habitat'}</span></button>`).join('')}</div><div id="transit-progress" class="mt-4 text-center text-sm text-amber-200"></div><div class="mt-4 h-2 rounded-full bg-slate-800"><div id="transit-bar" class="h-2 w-0 rounded-full bg-amber-300 transition-[width]"></div></div>`;
+            const html=`<p class="mb-3 text-xs text-slate-400">The transit display compresses mission-scale travel into a few seconds. Choose a destination body.</p><div class="grid gap-3 sm:grid-cols-3">${Object.keys(ROUTES).map((body)=>{const route=routeFor(currentSite.body,body);return `<button data-transit-body="${body}" class="rounded-xl border ${currentSite.body===body?'border-slate-700 opacity-50':'border-amber-300/30 hover:border-amber-200'} bg-slate-900 p-4 text-left"><span class="block font-mono-tech text-xs text-sky-200">${body.toUpperCase()}</span><b class="mt-2 block text-lg text-white">${route?route.time:'You are here'}</b>${route&&route.estimate?'<span class="block text-[10px] font-mono-tech text-amber-200/80">ESTIMATE · NEVER FLOWN</span>':''}<span class="mt-1 block text-xs text-slate-400">${body==='Moon'?'Tranquility Heritage Station':body==='Mars'?'Meridiani Outpost':'NEAR Shoemaker · Eros Habitat'}</span></button>`;}).join('')}</div><div id="transit-progress" class="mt-4 text-center text-sm text-amber-200"></div><div class="mt-4 h-2 rounded-full bg-slate-800"><div id="transit-bar" class="h-2 w-0 rounded-full bg-amber-300 transition-[width]"></div></div>`;
             openModal('TRANSIT · DEPARTURES','Where to?',html,'Close');
             document.querySelectorAll('[data-transit-body]').forEach((button)=>button.addEventListener('click',()=>{
                 const body=button.dataset.transitBody;if(body===currentSite.body||transitBusy)return;
                 const dest=requestedSite&&requestedSite.body===body?requestedSite:SITE_BY_ID[DESTINATION_HOME[body]];transitBusy=true;
                 document.querySelectorAll('[data-transit-body]').forEach((b)=>b.disabled=true);
-                const route=ROUTES[body];let i=0;
+                const route=routeFor(currentSite.body,body);let i=0;
                 const step=()=>{
                     if (!isModalOpen()) { transitBusy=false; return; }
                     if (i>=route.steps.length) { transitBusy=false; closeModal(); if (dest.id===DESTINATION_HOME[body]) pendingSpawn=ARRIVAL_PADS[body]; warpToSite(dest); arriveBeat(ARRIVAL_PADS[body]); if (dest.id===DESTINATION_HOME[body]) { checkpoint={site:dest.id,x:ARRIVAL_PADS[body].x,z:ARRIVAL_PADS[body].z}; } persistProgress(); flashSaved(); return; }
