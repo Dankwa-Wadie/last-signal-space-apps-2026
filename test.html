@@ -1969,7 +1969,7 @@
         // =========================================================================
         // 7. BALLISTIC VACUUM BOOTSTEP DUST PARTICLES (NO AIR DRAG PARABOLAS)
         // =========================================================================
-        const MAX_DUST_PARTICLES = 240;
+        const MAX_DUST_PARTICLES = 900;
         const dustGeo = new THREE.BufferGeometry();
         const dustPositions = new Float32Array(MAX_DUST_PARTICLES * 3);
         const dustVelocities = new Float32Array(MAX_DUST_PARTICLES * 3);
@@ -2039,6 +2039,69 @@
             if (activeAny) {
                 dustGeo.attributes.position.needsUpdate = true;
             }
+        }
+
+        // ARRIVAL DUST. A transit touching down on an airless world blasts the loose top layer outward.
+        // With no air to hold it up, every grain flies on its own arc and lands again within seconds:
+        // the "cloud" clears by falling, not by drifting away. A low scour ring marks the sheet.
+        let scourRing = null, scourT = 0;
+        function spawnArrivalDust(origin, airless) {
+            if (!airless) { spawnBootDustPuff(origin, 28, 0.9); return; }   // Mars has air: a small puff
+            for (let k = 0; k < 3; k++) spawnBootDustPuff(origin, 140, 2.0 + k * 0.6);
+            for (let i = 0; i < MAX_DUST_PARTICLES; i++) if (dustLife[i] > 0) dustLife[i] = Math.max(dustLife[i], 3 + Math.random() * 2);
+            if (!scourRing) {
+                scourRing = new THREE.Mesh(new THREE.RingGeometry(.6, 1, 48),
+                    new THREE.MeshBasicMaterial({ color: '#b9b4aa', transparent: true, opacity: 0, depthWrite: false, side: THREE.DoubleSide }));
+                scourRing.rotation.x = -Math.PI / 2; scene.add(scourRing);
+            }
+            scourRing.position.set(origin.x, origin.y + .03, origin.z); scourT = 0.0001;
+        }
+        function updateScourRing(dt) {
+            if (!scourRing || scourT <= 0) return;
+            scourT += dt;
+            const u = Math.min(1, scourT / 4.5);
+            const r = 1 + 13 * (1 - Math.pow(1 - u, 3));
+            scourRing.scale.set(r, r, 1);
+            scourRing.material.opacity = .32 * (1 - u) * Math.min(1, scourT * 6);
+            if (u >= 1) { scourT = 0; scourRing.material.opacity = 0; }
+        }
+
+        // VISOR DUST. Walking kicks fine regolith up onto the helmet; the Apollo crews came back grey to the
+        // knees and wiped their visors by hand. It builds while you walk and, once you stop for a moment,
+        // a glove sweeps it off. A habitat cleans it completely.
+        let visorDust = 0, stillFor = 0, visorWipe = 0;
+        const visorDustEl = (() => {
+            const c = document.createElement('canvas'); c.width = 512; c.height = 320;
+            const g = c.getContext('2d');
+            for (let i = 0; i < 2600; i++) {
+                const x = Math.random() * 512, y = Math.random() * 320;
+                // denser towards the bottom of the visor, where the dust actually came from
+                if (Math.random() > .35 + .65 * (y / 320)) continue;
+                const r = Math.random() < .9 ? .6 + Math.random() * 1.1 : 1.6 + Math.random() * 2.4;
+                g.fillStyle = `rgba(${150 + Math.random() * 40|0},${145 + Math.random() * 35|0},${135 + Math.random() * 30|0},${.25 + Math.random() * .5})`;
+                g.beginPath(); g.arc(x, y, r, 0, Math.PI * 2); g.fill();
+            }
+            const el = document.createElement('div');
+            el.id = 'visor-dust';
+            el.style.cssText = `position:fixed;inset:0;pointer-events:none;z-index:11;opacity:0;background:url(${c.toDataURL()}) center/cover;transition:opacity .4s`;
+            document.body.appendChild(el);
+            return el;
+        })();
+        function updateVisorDust(dt, moving, sprint, airless) {
+            if (isInHabitat) visorDust = Math.max(0, visorDust - dt * .5);
+            else if (moving && airless) { visorDust = Math.min(.42, visorDust + dt * (sprint ? .02 : .009)); stillFor = 0; }
+            else stillFor += dt;
+            if (!visorWipe && visorDust > .1 && stillFor > 2.5) visorWipe = 0.0001;   // stop for a moment: wipe it
+            let mask = '';
+            if (visorWipe) {
+                visorWipe += dt;
+                const u = Math.min(1, visorWipe / 1.1), edge = (-.2 + 1.4 * u) * 100;
+                mask = `linear-gradient(100deg, transparent ${edge - 12}%, #000 ${edge + 6}%)`;   // a glove's sweep, left to right
+                if (u >= 1) { visorWipe = 0; visorDust = 0; mask = ''; }
+            }
+            visorDustEl.style.maskImage = visorDustEl.style.webkitMaskImage = mask;
+            const show = viewMode === 'fpv' && firstPerson && !document.body.classList.contains('in-memory');
+            visorDustEl.style.opacity = show ? visorDust.toFixed(3) : '0';
         }
 
         // =========================================================================
@@ -2405,7 +2468,8 @@
                 orbitControls.update();
             }
 
-            spawnBootDustPuff(new THREE.Vector3(0, spawnY - EYE_HEIGHT, 6.0), 28, 0.9);
+            visorDust = 0; visorWipe = 0;
+            spawnArrivalDust(new THREE.Vector3(player.pos.x, spawnY - EYE_HEIGHT, player.pos.z), site.body !== 'Mars');
             showPrompt(`Arrived at ${site.name} · ${formatLatLon(site.lat, site.lon)}`);
         }
 
@@ -2628,7 +2692,7 @@
                 const stepCycle = Math.floor(player.bobPhase / Math.PI);
                 if (stepCycle !== player.lastStepCycle) {
                     player.lastStepCycle = stepCycle;
-                    spawnBootDustPuff(new THREE.Vector3(player.pos.x, groundY, player.pos.z), 10, keys.sprint ? 0.75 : 0.45);
+                    spawnBootDustPuff(new THREE.Vector3(player.pos.x, groundY, player.pos.z), keys.sprint ? 16 : 12, keys.sprint ? 0.8 : 0.5);
                     suitAudio.step(keys.sprint ? 1.25 : 0.85);
                 }
             }
@@ -2706,7 +2770,8 @@
                 sunDiscGroup.position.copy(camera.position).addScaledVector(sharedSunDirUniform.value, 1100);
                 sunDiscGroup.lookAt(camera.position);
             } else if (viewMode === 'fpv') {
-                if (!isModalOpen() && !downed && !portraitHold()) { updatePlayerEVA(dt); updateVacuumDust(dt); }
+                if (!isModalOpen() && !downed && !portraitHold()) { updatePlayerEVA(dt); updateVacuumDust(dt); updateScourRing(dt);
+                    updateVisorDust(dt, player.grounded && Math.hypot(player.vel?.x || 0, player.vel?.z || 0) > .25, keys.sprint, currentSite.body !== 'Mars'); }
             } else {
                 if (!isModalOpen()) orbitControls.update();
             }
