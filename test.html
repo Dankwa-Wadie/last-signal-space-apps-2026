@@ -181,6 +181,16 @@
         #g-memory .grain { position: absolute; inset: -50%; opacity: .16; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>"); animation: g-grain .5s steps(4) infinite; }
         @keyframes g-grain { 0% { transform: translate(0,0) } 25% { transform: translate(-3%,2%) } 50% { transform: translate(2%,-3%) } 75% { transform: translate(-2%,-1%) } 100% { transform: translate(0,0) } }
         @media (prefers-reduced-motion: reduce) { #g-memory .grain { animation: none; } }
+        /* the crew's own voices, from the mission recordings: a radio transcript under the stamp */
+        #g-memory .crewradio { position: absolute; top: max(98px, calc(env(safe-area-inset-top) + 90px)); left: 50%; transform: translateX(-50%); width: min(560px, calc(100vw - 32px)); opacity: 0; transition: opacity .6s; font-family: 'Montserrat', system-ui, sans-serif; color: #f3ead8; text-shadow: 0 1px 4px rgba(0,0,0,.9); text-align: center; }
+        #g-memory .crewradio.on { opacity: 1; }
+        #g-memory .r-head { font-size: 11px; font-weight: 700; letter-spacing: .18em; color: #f6dfae; display: flex; align-items: center; justify-content: center; gap: 8px; }
+        #g-memory .r-dot { width: 7px; height: 7px; border-radius: 50%; background: #e85a3c; box-shadow: 0 0 6px #e85a3c; animation: g-rdot 1s steps(2) infinite; }
+        @keyframes g-rdot { 50% { opacity: .25; } }
+        #g-crewvoice-lines { margin-top: 6px; font-size: clamp(12px, 1.5vw, 14px); line-height: 1.4; font-style: italic; }
+        #g-crewvoice-lines b { font-style: normal; font-weight: 700; letter-spacing: .06em; color: #f6dfae; font-size: .82em; margin-right: 6px; }
+        #g-memory .r-src { margin-top: 6px; font-size: 9.5px; letter-spacing: .04em; opacity: .62; }
+        @media (max-height: 460px) { #g-memory .crewradio { top: calc(env(safe-area-inset-top) + 74px); } #g-crewvoice-lines { font-size: 11.5px; } }
         #g-memory .stamp { position: absolute; top: max(70px, calc(env(safe-area-inset-top) + 62px)); left: 50%; transform: translateX(-50%); font-family: 'Montserrat', system-ui, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: .22em; color: #f6dfae; text-shadow: 0 1px 6px rgba(0,0,0,.8); white-space: nowrap; }
         body.in-memory #canvas-container canvas { filter: sepia(.5) saturate(.78) contrast(1.06) brightness(1.06); }
         #g-caption { position: fixed; left: 50%; top: 76%; transform: translateX(-50%); width: min(820px, calc(100vw - 32px)); z-index: 26; pointer-events: none; text-align: center; color: var(--g-yel); font-weight: 700; font-size: clamp(17px, 2.4vw, 24px); line-height: 1.3; text-shadow: 0 0 2px #000, 0 0 2px #000, 0 2px 8px rgba(0,0,0,.9); }
@@ -521,7 +531,7 @@
         <button id="t-jump" type="button" aria-label="Jump"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 14l6-6 6 6"/></svg></button>
     </div>
     <div id="g-arrive" class="hidden"><div id="g-arrive-veil"></div><div class="txt"><div id="g-arrive-t" class="t"></div><div id="g-arrive-s" class="s"></div><div id="g-arrive-n" class="n"></div></div></div>
-    <div id="g-memory" class="hidden" aria-hidden="true"><div class="vig"></div><div class="grain"></div><div id="g-memory-stamp" class="stamp"></div></div>
+    <div id="g-memory" class="hidden" aria-hidden="true"><div class="vig"></div><div class="grain"></div><div id="g-memory-stamp" class="stamp"></div><div id="g-crewvoice" class="crewradio"><div class="r-head"><span class="r-dot"></span><span id="g-crewvoice-head"></span></div><div id="g-crewvoice-lines"></div><div class="r-src">Crew audio: NASA mission recording (public domain), from the Apollo Lunar Surface Journal</div></div></div>
     <div id="g-caption" class="g-font" role="status" aria-live="polite"></div>
     <div id="g-whiteout"></div>
     <div id="g-hypoxia" aria-hidden="true"></div>
@@ -2484,6 +2494,7 @@
         document.getElementById('btn-visor-toggle').addEventListener('click', () => toggleView());
         document.getElementById('btn-suit-audio').addEventListener('click', () => {
             const off = suitAudio.toggle();
+            if (off) crewVoice.stop();
             const btn = document.getElementById('btn-suit-audio');
             btn.setAttribute('aria-pressed', String(!off));
             document.getElementById('suit-audio-dot').textContent = off ? 'OFF' : 'ON';
@@ -4163,6 +4174,75 @@
             lrv: [["Scott and Irwin climb aboard.", 3]],
             lrrr15: [["The crew carries the array out and sets it down.", 4.5]] };
 
+        // The crew's own voices. Real air-to-ground recordings, played from the mission audio published
+        // with the Apollo Lunar Surface Journal (NASA recordings, public domain). Each window is set from
+        // the journal's mission-elapsed times and checked against where the speech sits in the recording.
+        const ALSJ_AUDIO = 'https://apollojournals.org/alsj/';
+        const VOICES = {
+            lm:       { src: 'a11/a11a1023114-4746.mp3', from: 884, to: 897.5, head: 'APOLLO 11 · 20 JULY 1969 · TOUCHDOWN',
+                        lines: [['ARMSTRONG', 'Houston, Tranquility Base here. The Eagle has landed.'], ['DUKE · HOUSTON', 'Roger, Twan… Tranquility. We copy you on the ground. You got a bunch of guys about to turn blue. We’re breathing again. Thanks a lot.']] },
+            seis:     { src: 'a11/a11a1105253-1113910.mp3', from: 173.5, to: 186, head: 'APOLLO 11 · 21 JULY 1969',
+                        lines: [['ALDRIN', 'Houston, the passive seismometer has been deployed manually.'], ['McCANDLESS · HOUSTON', 'Roger.']] },
+            retro:    { src: 'a11/a11a1105253-1113910.mp3', from: 668, to: 677.5, head: 'APOLLO 11 · 21 JULY 1969',
+                        lines: [['ARMSTRONG', 'The laser reflector is installed and the bubble is level and the alignment appears to be good.']] },
+            surv3:    { src: 'a12/a12a.1334601.mp3', from: 1160, to: 1177, head: 'APOLLO 12 · 20 NOVEMBER 1969',
+                        lines: [['GIBSON · HOUSTON', 'Hey, Pete, do you think there’s a chance you’re at the wrong Surveyor?'], ['CONRAD', 'No, sir.'], ['BEAN', 'Boy! It sure dug in the ground, didn’t it? Oh, look at those pad marks! They’re still there.']] },
+            a12alsep: { src: 'a12/a12a.1165401.mp3', from: 1031.5, to: 1040.5, head: 'APOLLO 12 · 19 NOVEMBER 1969',
+                        lines: [['BEAN', 'Okay. We’ve connected the RTG to the Central Station, Houston. And we’re ready to go to work deploying the experiments.']] },
+            falcon:   { src: 'a15/a15a1195255.mp3', from: 166, to: 194, head: 'APOLLO 15 · 31 JULY 1971 · HADLEY',
+                        lines: [['ALLEN · HOUSTON', 'Dave, an extraordinary television picture here.'], ['SCOTT', 'Okay, Houston. As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature. Man must explore. And this is exploration at its greatest.']] },
+            lrv:      { src: 'a15/a15a1212513.mp3', from: 884, to: 904, head: 'APOLLO 15 · 31 JULY 1971 · BOARDING THE ROVER',
+                        lines: [['SCOTT', 'By the way, little arrows on the heading indicator on the LRV Nav system work good.'], ['ALLEN · HOUSTON', 'Okay, we copy.'], ['SCOTT', 'Hey. This thing’s really bouncy when you get on. Easy, easy, easy, Jim.']] },
+            lrrr15:   { src: 'a15/a15a1252202.mp3', from: 386, to: 397, head: 'APOLLO 15 · 1 AUGUST 1971',
+                        lines: [['SCOTT', 'Okay, Joe. It’s aligned; and the shadow device is right on the index. And it’s super clean!'], ['ALLEN · HOUSTON', 'You wouldn’t be proud of anything less, Dave.']] } };
+        // One shared element, unlocked by the player's first touch or key, so phones let it play later.
+        const crewVoice = (() => {
+            const el = new Audio(); el.preload = 'none'; el.crossOrigin = null;
+            let unlocked = false, token = 0, fadeRaf = 0;
+            const unlock = () => { if (unlocked) return; unlocked = true; try { el.muted = true; const p = el.play(); if (p) p.then(() => { el.pause(); el.muted = false; }, () => { el.muted = false; }); } catch (_) { el.muted = false; } };
+            ['pointerdown', 'keydown', 'touchend'].forEach((ev) => window.addEventListener(ev, unlock, { once: true, passive: true }));
+            function stop() {
+                token++; cancelAnimationFrame(fadeRaf);
+                try { el.pause(); } catch (_) {}
+                $('g-crewvoice').classList.remove('on');
+            }
+            // play one memory's clip; resolves when it has finished (or could not be played)
+            function play(id, live) {
+                const v = VOICES[id]; stop();
+                if (!v || suitAudio.muted) return Promise.resolve(false);
+                const my = token;
+                $('g-crewvoice-head').textContent = 'MISSION AUDIO · ' + v.head;
+                $('g-crewvoice-lines').innerHTML = v.lines.map(([who, t]) => `<div><b>${who}</b>“${t}”</div>`).join('');
+                return new Promise((resolve) => {
+                    let started = false, done = false;
+                    const finish = (ok) => { if (done) return; done = true; clearTimeout(giveUp); el.onloadedmetadata = el.onseeked = el.onerror = null; if (token === my) { fadeOut(); } resolve(ok); };
+                    const fadeOut = () => { const v0 = el.volume, t0 = performance.now();
+                        const f = () => { if (token !== my) return; const u = Math.min(1, (performance.now() - t0) / 500); el.volume = v0 * (1 - u); if (u < 1) fadeRaf = requestAnimationFrame(f); else { el.pause(); $('g-crewvoice').classList.remove('on'); suitAudio.quindar(); } }; f(); };
+                    // the recording is long; if it cannot reach the moment soon, the memory goes on without it
+                    const giveUp = setTimeout(() => { if (!started) finish(false); }, 7000);
+                    el.onerror = () => finish(false);
+                    el.onloadedmetadata = () => { if (token === my) el.currentTime = v.from; };
+                    el.onseeked = () => {
+                        if (token !== my || started || !live()) return finish(false);
+                        started = true; el.volume = 0; suitAudio.quindar();
+                        const p = el.play(); if (p) p.catch(() => finish(false));
+                        $('g-crewvoice').classList.add('on');
+                        const t0 = performance.now();
+                        const tick = () => {
+                            if (token !== my || done) return;
+                            if (!live()) return finish(false);
+                            el.volume = Math.min(1, (performance.now() - t0) / 300);
+                            if (el.currentTime >= v.to || el.ended) return finish(true);
+                            fadeRaf = requestAnimationFrame(tick);
+                        };
+                        tick();
+                    };
+                    el.src = ALSJ_AUDIO + v.src + '#t=' + v.from; el.preload = 'auto'; el.load();
+                });
+            }
+            return { play, stop, get el() { return el; } };
+        })();
+
         function nearestHardware(x, z, maxD = 6) {
             let best = null, bd = maxD;
             for (const ch of hardwareGroup ? hardwareGroup.children : []) { const d = Math.hypot(ch.position.x - x, ch.position.z - z); if (d < bd) { bd = d; best = ch; } }
@@ -4361,6 +4441,8 @@
             $('g-memory').classList.remove('hidden');
             const scene0 = SCENES[item.id] ? SCENES[item.id](item, live).catch(() => {}) : Promise.resolve();
             white.style.opacity = '0';
+            // and the crew themselves, on the radio, a moment after the memory opens
+            const voice0 = VOICES[item.id] ? sleep(1.1).then(() => live() ? crewVoice.play(item.id, live) : false) : Promise.resolve(false);
             // the words: our short prologue for the crewed memories, then the game's own captions
             const steps = [...(PROLOGUE[item.id] || []).flatMap(([t, d]) => [['say', t, d], ['wait', d]]), ...VIGNETTES[item.id]];
             for (const st of steps) {
@@ -4370,6 +4452,9 @@
                 else await sleep(st[1]);
             }
             await Promise.race([scene0, sleep(12)]);
+            // let them finish speaking (a long recording that cannot be reached is abandoned inside 7 s)
+            await Promise.race([voice0, sleep(40)]);
+            crewVoice.stop();
             if (live()) await sleep(1.2);
             // and back to the present
             white.style.opacity = '1'; await sleep(.4);
@@ -4477,6 +4562,8 @@
                 return out;
             },
             colliders() { return colliders.length; },
+            remember(id) { const it = FIELD_ITEMS.find((i) => i.id === id); if (it) runFlashback(it); return !!it; },
+            voice() { const e = crewVoice.el; return { src: e.src.split('/').pop(), t: +e.currentTime.toFixed(1), paused: e.paused, vol: +e.volume.toFixed(2), radio: $('g-crewvoice').classList.contains('on') }; },
             state() { return { oxygen, dose, site: currentSite.id, x: +player.pos.x.toFixed(1), z: +player.pos.z.toFixed(1), checkpoint, gameStarted, downed, deaths: saveStats.deaths, rescues: saveStats.rescues, lookingUp: opening.active && opening.followEarth, boardVisible: openingHide.map((o) => o.visible), crackPaths: document.querySelectorAll('#g-cracks path').length }; } };
 
         // ---------- starting: continue the saved expedition, or begin a new one ----------
