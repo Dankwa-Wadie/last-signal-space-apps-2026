@@ -225,8 +225,19 @@
         .t-verbs { pointer-events: auto; position: absolute; right: max(16px, env(safe-area-inset-right)); bottom: calc(max(24px, env(safe-area-inset-bottom)) + 92px); display: grid; grid-template-columns: 74px 74px; gap: 8px; }
         .t-verbs button { height: 50px; padding: 0 2px; border-radius: 8px; border: 1px solid #464a52; background: rgba(14,15,18,.88); color: var(--g-yel); font-weight: 700; font-size: 9.5px; letter-spacing: 0; white-space: nowrap; }
         .t-verbs button:active { background: rgba(60,62,70,.95); }
-        #t-rotate { display: none; position: absolute; left: 50%; top: calc(max(12px, env(safe-area-inset-top)) + 66px); transform: translateX(-50%); padding: 8px 14px; border-radius: 16px; background: var(--g-ink); border: 1.5px solid var(--g-cyan); color: var(--g-cyan); font-weight: 700; font-size: 11px; white-space: nowrap; }
-        @media (orientation: portrait) { body.touch #t-rotate { display: block; } }
+        /* the landscape gate: phones and tablets only, and only while the device is upright */
+        #t-landscape { display: none; }
+        @media (orientation: portrait) {
+            body.touch #t-landscape { display: flex; position: fixed; inset: 0; z-index: 90; flex-direction: column; align-items: center; justify-content: center; gap: 14px; padding: 24px; text-align: center; background: radial-gradient(ellipse at 50% 40%, #121722 0%, #05070b 70%); font-family: 'Montserrat', system-ui, sans-serif; }
+        }
+        #t-landscape .t-phone { width: min(56vw, 240px); height: auto; overflow: visible; }
+        #t-landscape .t { color: #fff; font-weight: 800; font-size: clamp(20px, 6vw, 28px); letter-spacing: .01em; }
+        #t-landscape .s { color: #c8ccd2; font-weight: 500; font-size: 14px; line-height: 1.5; max-width: 320px; }
+        .t-turn { animation: t-turn 3.2s cubic-bezier(.65,0,.35,1) infinite; transform-box: fill-box; transform-origin: center; }
+        .t-arrow { animation: t-arrow 3.2s ease-in-out infinite; }
+        @keyframes t-turn { 0%, 18% { transform: rotate(0deg); } 52%, 82% { transform: rotate(-90deg); } 100% { transform: rotate(0deg); } }
+        @keyframes t-arrow { 0%, 18% { opacity: 1; } 40%, 90% { opacity: 0; } 100% { opacity: 1; } }
+        @media (prefers-reduced-motion: reduce) { .t-turn { animation: none; transform: rotate(-90deg); } .t-arrow { animation: none; opacity: 0; } }
         /* what the touch layout replaces */
         body.touch #g-view, body.touch #bottom-console { display: none !important; }
         body.touch .g-prompt { padding: 10px 18px 10px 10px; } body.touch .g-prompt .key { width: 48px; height: 48px; font-size: 19px; }
@@ -475,11 +486,39 @@
         <button id="g-view" class="g-view" type="button">[V] 3RD PERSON</button>
         <div id="g-imagined" class="g-imagined hidden" role="note">IMAGINED &middot; NO HUMAN HAS EVER BEEN TO EROS</div>
     </div>
+    <div id="t-landscape" role="alertdialog" aria-modal="true" aria-labelledby="t-landscape-t" aria-describedby="t-landscape-s">
+        <svg class="t-phone" viewBox="0 0 220 220" aria-hidden="true">
+            <defs>
+                <linearGradient id="tl-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#05070b"/><stop offset="1" stop-color="#151a22"/></linearGradient>
+                <clipPath id="tl-screen"><rect x="-52" y="-92" width="104" height="184" rx="10"/></clipPath>
+            </defs>
+            <!-- the arrow that shows which way to turn -->
+            <path class="t-arrow" d="M52 58 A82 82 0 0 0 34 128" fill="none" stroke="#f5e73c" stroke-width="5" stroke-linecap="round"/>
+            <path class="t-arrow" d="M44 120 l-10 10 l-9 -12" fill="none" stroke="#f5e73c" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+            <g transform="translate(110 110)"><g class="t-turn">
+                <rect x="-58" y="-98" width="116" height="196" rx="18" fill="#0e1016" stroke="#e6e8ec" stroke-width="5"/>
+                <g clip-path="url(#tl-screen)">
+                    <rect x="-52" y="-92" width="104" height="184" fill="url(#tl-sky)"/>
+                    <!-- the game's picture is landscape: sideways while the phone is upright, level once it turns -->
+                    <g transform="rotate(90)">
+                        <circle cx="-48" cy="-26" r="10" fill="#3d7bd9"/><path d="M-55 -30 q7 -6 13 2 q-6 8 -13 -2z" fill="#3aa35c"/>
+                        <circle cx="30" cy="-34" r="1.4" fill="#fff"/><circle cx="62" cy="-20" r="1" fill="#fff"/><circle cx="-10" cy="-40" r="1.2" fill="#fff"/>
+                        <path d="M-92 18 Q-40 6 0 14 T92 10 V52 H-92z" fill="#8f8b84"/>
+                        <rect x="18" y="16" width="34" height="6" rx="1" fill="#4a4c52"/>
+                        <rect x="30" y="2" width="9" height="14" rx="2" fill="#e6e6e2"/><circle cx="34.5" cy="-2" r="5.5" fill="#e6e6e2" stroke="#d6a836" stroke-width="2"/>
+                        <path d="M-70 14 l6 -10 l6 10z M-62 14 l10 -6 l6 6" fill="#d58a2c" opacity=".9"/>
+                    </g>
+                </g>
+                <rect x="-14" y="-90" width="28" height="5" rx="2.5" fill="#e6e8ec" opacity=".5"/>
+            </g></g>
+        </svg>
+        <div id="t-landscape-t" class="t">Turn your device sideways</div>
+        <div id="t-landscape-s" class="s">Last Signal plays in landscape, as the Roblox game does on a phone. The expedition is paused until you turn it.</div>
+    </div>
     <div id="t-controls" aria-label="Touch controls">
         <div id="t-stick" aria-hidden="true"><div id="t-knob"></div></div>
         <div class="t-verbs"><button type="button" data-verb="remember">REMEMBER</button><button type="button" data-verb="reactivate">REACTIVATE</button><button type="button" data-verb="close">CLOSE</button><button type="button" data-verb="view">VIEW</button></div>
         <button id="t-jump" type="button" aria-label="Jump"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 14l6-6 6 6"/></svg></button>
-        <div id="t-rotate">Turn your device sideways for the full view</div>
     </div>
     <div id="g-arrive" class="hidden"><div id="g-arrive-veil"></div><div class="txt"><div id="g-arrive-t" class="t"></div><div id="g-arrive-s" class="s"></div><div id="g-arrive-n" class="n"></div></div></div>
     <div id="g-memory" class="hidden" aria-hidden="true"><div class="vig"></div><div class="grain"></div><div id="g-memory-stamp" class="stamp"></div></div>
@@ -2618,7 +2657,7 @@
                 sunDiscGroup.position.copy(camera.position).addScaledVector(sharedSunDirUniform.value, 1100);
                 sunDiscGroup.lookAt(camera.position);
             } else if (viewMode === 'fpv') {
-                if (!isModalOpen() && !downed) { updatePlayerEVA(dt); updateVacuumDust(dt); }
+                if (!isModalOpen() && !downed && !portraitHold()) { updatePlayerEVA(dt); updateVacuumDust(dt); }
             } else {
                 if (!isModalOpen()) orbitControls.update();
             }
@@ -3474,7 +3513,7 @@
             const shelter=worldInteractables.find((obj)=>obj.kind==='shelter'&&Math.hypot(position.x-obj.position.x,position.y-obj.position.z)<obj.radius);
             const habitat=worldInteractables.find((obj)=>obj.kind==='life-support'&&Math.hypot(position.x-obj.position.x,position.y-obj.position.z)<obj.radius);
             isInHabitat=Boolean(habitat);
-            if (downed || opening.active || !gameStarted) return;
+            if (downed || opening.active || !gameStarted || portraitHold()) return;
             saveStats.played += 1;
             // a safe place to come back to: wherever you last stood in a habitat or a shelter
             if (habitat || shelter) {
@@ -4443,7 +4482,19 @@
         // ---------- starting: continue the saved expedition, or begin a new one ----------
         function hasExpedition(d) { return d && d.v === 2 && (d.found.length > 0 || (d.site && d.site !== 'tranquility') || (d.played || 0) > 20); }
         function timeAgo(ms) { const m = Math.round((Date.now() - ms) / 60000); return m < 1 ? 'just now' : m < 60 ? `${m} min ago` : m < 1440 ? `${Math.round(m / 60)} h ago` : `${Math.round(m / 1440)} days ago`; }
-        function startGame() {
+        // phones and tablets run the game in landscape only: upright, everything waits behind the turn card
+        const _portraitMQ = matchMedia('(orientation: portrait)');
+        function portraitHold() { return IS_TOUCH && _portraitMQ.matches; }
+        function whenLandscape() {
+            return new Promise((res) => {
+                if (!portraitHold()) return res();
+                const on = () => { if (!portraitHold()) { _portraitMQ.removeEventListener('change', on); res(); } };
+                _portraitMQ.addEventListener('change', on);
+            });
+        }
+        _portraitMQ.addEventListener('change', () => { if (portraitHold()) { for (const k in keys) keys[k] = false; touchUp({ pointerId: touchMove.id }); touchUp({ pointerId: touchLook.id }); endHold(); } });
+        async function startGame() {
+            await whenLandscape();   // the opening scene and the start screen begin only once the device is sideways
             if (!hasExpedition(savedProgress)) { runOpening(); return; }
             const d = savedProgress, site = SITE_BY_ID[d.site] || SITE_BY_ID.tranquility;
             $('g-start-info').textContent = `${site.name} · ${d.found.length}/20 objects logged · saved ${timeAgo(d.savedAt)}`;
