@@ -3061,6 +3061,8 @@
                 M(-9.5,11.7,175.2,11,2.8,.3,'#ffd68c',NEON('#ffd68c',1.4)); M(10.5,11.7,175.2,7,2.8,.3,'#ffd68c',NEON('#ffd68c',1.4));
                 // life-support kiosk on the back wall
                 M(0,3.2,188.7,4.8,4.2,1.1,'#26363f',{metalness:.15});
+                // the game lets you walk through this kiosk (CanCollide off); here it is solid like everything else
+                addPartCollider(['Bl',0,3.2,188.7,1,0,0,0,1,0,0,0,1,4.8,4.2,1.1],0);
                 const kiosk=textPanel(4.8,4.2,400,300,(c,w,h)=>{c.fillStyle='#26363f';c.fillRect(0,0,w,h);
                     signText(c,w,[{t:'LIFE SUPPORT',y:8,h:70,w:700,c:'#96e1ff'},{t:'O₂ + POWER REFILL INSIDE',y:96,h:40,w:700,c:'#f5e73c'},{t:'HOLD E FOR INSTANT REFILL',y:142,h:40,w:700,c:'#f5e73c'}]);});
                 kiosk.position.set(0,3.2,188.14); kiosk.rotation.y=Math.PI; st.add(kiosk);
@@ -4069,7 +4071,7 @@
         // New Yeller. Here it is a real rope: 32 links, simulated every frame. In Eros's weak gravity a
         // slack line hangs in a lazy curve and settles slowly onto the regolith -- there is no air to damp
         // it, only the rope's own stiffness and the ground. Pulled tight it runs straight and holds you.
-        const TETHER_LEN = 72 * GS, STAKE = new THREE.Vector3(0, 4.4 * GS, 0), ROPE_N = 32, ROPE_SEG = TETHER_LEN / (ROPE_N - 1);
+        const TETHER_LEN = 72 * GS, STAKE = new THREE.Vector3(0, 4.4 * GS, 0), ROPE_N = 48, ROPE_SEG = TETHER_LEN / (ROPE_N - 1);
         const rope = { p: [], q: [], mesh: null, clipA: null, clipB: null, last: 0 };
         let _ropeTex = null;
         function ropeTexture() {   // a braided line: a twist of light and dark strands
@@ -4101,6 +4103,29 @@
             const a = astronaut.facing, back = .6 * GS;
             return _hp.set(player.pos.x + Math.sin(a) * back, player.pos.y - EYE_HEIGHT + (R15.hip + R15.hrp[1] / 2 + .4) * GS, player.pos.z + Math.cos(a) * back);
         }
+        // push one rope link out of whatever it is inside: over the top if that is the short way, else round the side
+        const ROPE_R = .03;
+        function ropePush(p, list) {
+            let moved = false;
+            for (const c of list) {
+                if (p.y >= c.top + ROPE_R || p.y <= c.bot - ROPE_R) continue;
+                const dx = p.x - c.x, dz = p.z - c.z;
+                if (Math.abs(dx) > c.br + ROPE_R || Math.abs(dz) > c.br + ROPE_R) continue;
+                const up = c.top + ROPE_R - p.y;
+                if (c.t === 'c') {
+                    const d = Math.hypot(dx, dz), pen = c.r + ROPE_R - d; if (pen <= 0) continue;
+                    if (up < pen) p.y += up; else { const k = d > 1e-5 ? pen / d : 0; p.x += dx * k || pen; p.z += dz * k; }
+                } else {
+                    const lu = dx * c.ux + dz * c.uz, lv = -dx * c.uz + dz * c.ux;
+                    const eu = c.hu + ROPE_R - Math.abs(lu), ev = c.hv + ROPE_R - Math.abs(lv);
+                    if (eu <= 0 || ev <= 0) continue;
+                    if (up < Math.min(eu, ev)) p.y += up;
+                    else { const pu = eu < ev ? Math.sign(lu || 1) * eu : 0, pv = eu < ev ? 0 : Math.sign(lv || 1) * ev; p.x += pu * c.ux - pv * c.uz; p.z += pu * c.uz + pv * c.ux; }
+                }
+                moved = true;
+            }
+            return moved;
+        }
         function updateTether() {
             if (!rope.mesh || !rope.mesh.parent || currentSite.id !== 'eros') return;
             const now = performance.now(), dt = Math.min(1 / 30, rope.last ? (now - rope.last) / 1000 : 1 / 60); rope.last = now;
@@ -4113,6 +4138,8 @@
                 q.copy(p); p.x += vx; p.y += vy - fall; p.z += vz;
             }
             P[0].copy(STAKE); P[ROPE_N - 1].copy(B);
+            // the colliders the rope could reach this frame
+            const near = colliders.filter((c) => Math.hypot(c.x - STAKE.x, c.z - STAKE.z) < TETHER_LEN + c.br + 1);
             // hold: no link may stretch past its length; the ends are fixed to the stake and to you
             for (let it = 0; it < 24; it++) {
                 for (let i = 0; i < ROPE_N - 1; i++) {
@@ -4125,6 +4152,8 @@
                 for (let i = 1; i < ROPE_N - 1; i++) {   // and it lies on the ground, dragging rather than sliding
                     const p = P[i], gy = getSurfaceHeight(p.x, p.z) + .03;
                     if (p.y < gy) { p.y = gy; const q = Q[i]; q.x += (p.x - q.x) * .6; q.z += (p.z - q.z) * .6; q.y = p.y; }
+                    // nor does it pass through anything: boulders, the stake's rocks, NEAR, the habitat
+                    if (ropePush(p, near)) { const q = Q[i]; q.x += (p.x - q.x) * .5; q.z += (p.z - q.z) * .5; q.y += (p.y - q.y) * .5; }
                 }
             }
             const geo = new THREE.TubeGeometry(new THREE.CatmullRomCurve3(P), 120, .024, 7, false);
@@ -4810,6 +4839,11 @@
             },
             colliders() { return colliders.length; },
             at(x, z) { player.pos.x = x; player.pos.z = z; },
+            rope() {   // how many links are inside something solid, and the solid things the rope could reach
+                const inside = rope.p.filter((p) => colliders.some((c) => p.y < c.top - .05 && p.y > c.bot && (c.t === 'c' ? Math.hypot(p.x - c.x, p.z - c.z) < c.r - .05 : Math.abs((p.x - c.x) * c.ux + (p.z - c.z) * c.uz) < c.hu - .05 && Math.abs(-(p.x - c.x) * c.uz + (p.z - c.z) * c.ux) < c.hv - .05))).length;
+                const tall = colliders.filter((c) => c.top - c.bot > .8 && Math.hypot(c.x, c.z) < TETHER_LEN).map((c) => [+c.x.toFixed(1), +c.z.toFixed(1), +c.br.toFixed(1)]);
+                return { n: rope.p.length, inside, tall: tall.slice(0, 12) };
+            },
             habitats() { return worldInteractables.filter((o) => o.kind === 'life-support').map((o) => [+o.position.x.toFixed(1), +o.position.z.toFixed(1), o.radius]); },
             go(id) { const st = SITES.find((x) => x.id === id); if (st) warpToSite(st); return !!st; },
             remember(id) { const it = FIELD_ITEMS.find((i) => i.id === id); if (it) runFlashback(it); return !!it; },
