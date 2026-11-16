@@ -4933,7 +4933,7 @@
                 if (!armed) {
                     armed = true; btn.textContent = 'ERASE SAVE?'; btn.classList.add('armed');
                     clearTimeout(disarm);
-                    disarm = setTimeout(() => { armed = false; btn.textContent = 'START OVER'; btn.classList.remove('armed'); setTimeout(() => { if (!armed) close(); }, 4000); }, 4000);
+                    disarm = setTimeout(() => { armed = false; btn.textContent = 'START OVER'; btn.classList.remove('armed'); setTimeout(() => { if (!armed) close(); }, 4000); }, 8000);
                     return;
                 }
                 clearTimeout(autoClose);
