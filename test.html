@@ -225,6 +225,17 @@
         #g-start .danger { background: var(--g-red); color: #111; padding: 0 18px; }
         #g-start .cf p { color: #e6e8ec; font-size: 13px; line-height: 1.45; margin: 4px 0 10px; }
         #g-start .cf .row { display: flex; gap: 8px; } #g-start .cf .row button { flex: 1; }
+        /* a returning player is already back at the save point: this only says where, and offers a fresh start */
+        #g-resume { position: fixed; top: 16px; left: 50%; transform: translate(-50%, -140%); z-index: 46; width: min(470px, calc(100% - 32px));
+            background: rgba(8,8,10,.92); border: 1px solid #3c4048; border-radius: 12px; padding: 12px 14px 12px 16px;
+            display: grid; grid-template-columns: 1fr auto; column-gap: 12px; align-items: center; transition: transform .45s cubic-bezier(.22,1,.36,1); }
+        #g-resume.on { transform: translate(-50%, 0); }
+        #g-resume .k { color: var(--g-cyan); font-weight: 700; font-size: 11px; letter-spacing: .1em; }
+        #g-resume .p { color: #fff; font-weight: 800; font-size: 17px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        #g-resume .s { color: #aab0ba; font-size: 12px; }
+        #g-resume button { grid-row: 1 / span 3; grid-column: 2; height: 40px; padding: 0 16px; border-radius: 8px; border: 0; cursor: pointer;
+            background: #1e2024; color: #fff; font-weight: 700; font-size: 13px; letter-spacing: .05em; }
+        #g-resume button.armed { background: var(--g-red); color: #111; }
         /* ---------------- touch: Roblox's mobile layout, and the game's own verb buttons ---------------- */
         #t-controls { display: none; }
         body.touch #t-controls { display: block; position: fixed; inset: 0; z-index: 24; pointer-events: none; font-family: 'Montserrat', system-ui, sans-serif; }
@@ -553,6 +564,10 @@
             <div id="g-confirm" class="hidden cf"><p>This erases your saved expedition: every object you have logged, and where you are.</p>
                 <div class="row"><button id="g-new-yes" class="danger" type="button">Erase and start over</button><button id="g-new-no" class="alt" type="button">Keep it</button></div></div>
         </div>
+    </div>
+    <div id="g-resume" class="g-font" role="status" aria-live="polite">
+        <div id="g-resume-k" class="k"></div><div id="g-resume-p" class="p"></div><div id="g-resume-s" class="s"></div>
+        <button id="g-resume-new" type="button">START OVER</button>
     </div>
     <div id="g-opening" class="hidden" aria-live="polite">
         <div id="g-black"></div>
@@ -4893,28 +4908,35 @@
             await whenLandscape();   // the opening scene and the start screen begin only once the device is sideways
             // no save point reached: you start the walk out again in a fresh suit (your scans are kept)
             if (!hasExpedition(savedProgress)) { oxygen = 100; suitPower = 100; dose = 0; drawCracks(); runOpening(); return; }
+            // A returning player goes straight back to their save point: no screen to click through.
+            // A small notice says where, with START OVER (press twice) for a fresh expedition.
             const d = savedProgress, site = SITE_BY_ID[checkpoint.site] || SITE_BY_ID.tranquility;
-            $('g-start-info').textContent = `${site.name} · ${d.found.length}/20 objects logged · last save point ${timeAgo(checkpoint.at || d.savedAt)}`;
-            $('g-start').classList.remove('hidden');
-            $('g-continue').focus();
-            $('g-continue').onclick = () => {
-                $('g-start').classList.add('hidden');
-                // back at the save point, with the suit as it was there; your scans are all kept
-                pendingSpawn = { x: checkpoint.x, z: checkpoint.z };
-                if (Number.isFinite(checkpoint.oxygen)) oxygen = checkpoint.oxygen;
-                if (Number.isFinite(checkpoint.power)) suitPower = checkpoint.power;
-                if (Number.isFinite(checkpoint.dose)) dose = checkpoint.dose;
-                warpToSite(site);
-                if (d.firstPerson === false) toggleView();
-                // never load straight into a blackout: a near-empty suit comes back with a small reserve
-                if (oxygen < 20) { oxygen = 20; setTimeout(() => showPrompt('Low air. Head for a habitat to refill.'), 3500); }
-                drawCracks();
-                gameStarted = true; renderSuitStatus(); persistProgress();
-                arriveBeat({ title: 'WELCOME BACK', sub: `${site.name} · your expedition continues` });
-            };
-            $('g-new').onclick = () => { $('g-confirm').classList.remove('hidden'); $('g-new-no').focus(); };
-            $('g-new-no').onclick = () => { $('g-confirm').classList.add('hidden'); $('g-continue').focus(); };
-            $('g-new-yes').onclick = () => {
+            pendingSpawn = { x: checkpoint.x, z: checkpoint.z };
+            if (Number.isFinite(checkpoint.oxygen)) oxygen = checkpoint.oxygen;
+            if (Number.isFinite(checkpoint.power)) suitPower = checkpoint.power;
+            if (Number.isFinite(checkpoint.dose)) dose = checkpoint.dose;
+            warpToSite(site);
+            if (d.firstPerson === false) toggleView();
+            // never load straight into a blackout: a near-empty suit comes back with a small reserve
+            if (oxygen < 20) { oxygen = 20; setTimeout(() => showPrompt('Low air. Head for a habitat to refill.'), 3500); }
+            drawCracks();
+            gameStarted = true; renderSuitStatus(); persistProgress();
+            const box = $('g-resume'), btn = $('g-resume-new');
+            $('g-resume-k').textContent = `WELCOME BACK \u00b7 SAVED ${timeAgo(checkpoint.at || d.savedAt).toUpperCase()}`;
+            $('g-resume-p').textContent = site.name;
+            $('g-resume-s').textContent = `${d.found.length} of 20 recovered \u00b7 air ${Math.round(oxygen)}%`;
+            requestAnimationFrame(() => box.classList.add('on'));
+            let armed = false, disarm = 0;
+            const close = () => box.classList.remove('on');
+            const autoClose = setTimeout(() => { if (!armed) close(); }, 12000);
+            btn.onclick = () => {
+                if (!armed) {
+                    armed = true; btn.textContent = 'ERASE SAVE?'; btn.classList.add('armed');
+                    clearTimeout(disarm);
+                    disarm = setTimeout(() => { armed = false; btn.textContent = 'START OVER'; btn.classList.remove('armed'); setTimeout(() => { if (!armed) close(); }, 4000); }, 4000);
+                    return;
+                }
+                clearTimeout(autoClose);
                 wiping = true;
                 try { localStorage.removeItem(SAVE_KEY); localStorage.removeItem(SAVE_BACKUP); localStorage.removeItem(STORAGE_KEY); } catch {}
                 location.reload();
