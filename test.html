@@ -1473,6 +1473,7 @@
                     leg.position.set(Math.cos(a),0.65,Math.sin(a)); leg.rotation.z=Math.cos(a)*0.45; leg.rotation.x=Math.sin(a)*0.45; lander.add(leg);
                 }
                 lander.position.set(-4,getSurfaceHeight(-4,-9,site),-9);
+                group.add(buildGameModelAt(ALSEP12_MODEL, site, 7, -9, .35));
                 group.add(lander);
                 return group;
             }
@@ -1730,6 +1731,11 @@
                     group.add(p);
                 }
             } else if (site.terrainType === 'hadley' || site.terrainType === 'taurus_littrow') {
+                // Falcon's descent stage, the same lander as Eagle, and the reflector out to the south
+                if (site.id === 'hadley') {
+                    group.add(buildGameModelAt(GAME_MODELS.LM_DescentStage, site, -11, -16, .9));
+                    group.add(buildGameModelAt(LRRR15_MODEL, site, -4, 22, 0));
+                }
                 const lrv = createLunarRover();
                 lrv.position.set(4.2, getSurfaceHeight(4.2, -7.5, site), -7.5);
                 lrv.rotation.y = -0.65;
@@ -1759,6 +1765,8 @@
                 beacon.add(base, tower, lightHead);
                 beacon.position.set(3.8, getSurfaceHeight(3.8, -8.0, site), -8.0);
                 group.add(beacon);
+            } else if (site.terrainType === 'farside') {
+                group.add(ranger4Site(site, -4, -9));
             } else {
                 // Survey retroreflector & marker tripod on Tycho / Aristarchus
                 const sci = createScienceInstruments();
@@ -2994,7 +3002,8 @@
             // hardware by looking, and a prompt appears when you are close enough to scan it.
             // Tranquility has a real model of every object, so it is exactly that. The other sites
             // here do not have models for every object yet, so a small ground marker stands in.
-            const MODELLED = site.id === 'tranquility' || !!GAME_SITES[site.id];
+            // Every site now has its real hardware, so nothing is marked anywhere.
+            const MODELLED = true;
             for (const item of FIELD_ITEMS.filter((entry) => entry.site === site.id)) {
                 const group=new THREE.Group(); const ground=getSurfaceHeight(item.x,item.z,site); group.position.set(item.x,ground,item.z);
                 let core=null, ring=null;
@@ -3909,6 +3918,83 @@
             }
             return grp;
         }
+        // A model in the game's part format, set down somewhere else and turned: the parts are moved and
+        // turned as one, so the colliders come out right too.
+        function buildGameModelAt(m, site, wx, wz, rotY = 0) {
+            const c = Math.cos(rotY), sn = Math.sin(rotY);
+            const parts = m.parts.map((p) => {
+                const q = p.slice(); const [x, , z] = [p[1], p[2], p[3]];
+                q[1] = c * x + sn * z; q[3] = -sn * x + c * z;
+                for (let col = 0; col < 3; col++) { const r0 = p[4 + col], r2 = p[10 + col]; q[4 + col] = c * r0 + sn * r2; q[10 + col] = -sn * r0 + c * r2; }
+                return q;
+            });
+            return buildGameModel({ centre: [wx / GS, m.centre[1], wz / GS], size: m.size, parts }, site);
+        }
+        // part helpers: a block or cylinder at (x, y, z) studs, turned rx about X then ry about Y
+        function gp(sh, x, y, z, sx, sy, sz, hex, mat, { rx = 0, ry = 0, rz = 0, t = 0 } = {}) {
+            const e = new THREE.Matrix4().makeRotationFromEuler(new THREE.Euler(rx, ry, rz, 'YXZ')).elements;   // column-major
+            return [sh, x, y, z, e[0], e[4], e[8], e[1], e[5], e[9], e[2], e[6], e[10], sx, sy, sz, hex, mat, t, 0, 1, '', ''];
+        }
+        // Apollo 15's laser reflector: 300 corner cubes, three times Tranquility's, in a large panel and a
+        // smaller one beside it, tilted up toward Earth. Drawn at the same scale the game draws Apollo 11's
+        // (35 cubes standing in for 100), so here 105 stand in for 300.
+        const LRRR15_MODEL = (() => {
+            const parts = [], tilt = .42;
+            const panel = (cx, cols) => {
+                const w = cols * .62 + .4, d = 5 * .62 + .4;
+                parts.push(gp('Bl', cx, .95, 0, w, .4, d, '3a3a40', 'Metal', { rx: tilt }));
+                for (let i = 0; i < cols; i++) for (let j = 0; j < 5; j++) {
+                    const lx = (i - (cols - 1) / 2) * .62, lz = (j - 2) * .62;
+                    parts.push(gp('Bl', cx + lx, .95 + .25 * Math.cos(tilt) - lz * Math.sin(tilt), lz * Math.cos(tilt) + .25 * Math.sin(tilt), .44, .18, .44, '78aadc', 'SmoothPlastic', { rx: tilt, t: .65 }));
+                }
+                for (const [lx, lz] of [[-w / 2 + .3, -d / 2 + .5], [w / 2 - .3, -d / 2 + .5], [-w / 2 + .3, d / 2 - .5], [w / 2 - .3, d / 2 - .5]])
+                    parts.push(gp('Bl', cx + lx, .45, lz, .26, .9 - lz * .16, .26, '96969c', 'Metal'));
+            };
+            panel(-2.9, 12); panel(4.25, 9);
+            parts.push(gp('Bl', .45, .3, 2.6, 1.2, .25, .5, '96969c', 'Metal'));   // the carrying handle and its stand
+            return { centre: [0, 0, 0], size: [14, 3, 5], parts };
+        })();
+        // Apollo 12's ALSEP: the central station with its sunshade and antenna, the SNAP-27 generator off
+        // on its cable, and the seismometer under its foil skirt. Same exaggerated scale as the game's EASEP.
+        const ALSEP12_MODEL = (() => {
+            const P = [];
+            P.push(gp('Bl', 0, .6, 0, 2.4, 1.2, 1.8, 'c8c2b0', 'SmoothPlastic'));            // central station
+            P.push(gp('Bl', 0, 1.55, 0, 2.7, .08, 2.1, 'e8e6e0', 'SmoothPlastic'));          // sunshade
+            for (const [x, z] of [[-1.25, -.95], [1.25, -.95], [-1.25, .95], [1.25, .95]]) P.push(gp('Bl', x, 1.35, z, .08, .4, .08, '96969c', 'Metal'));
+            P.push(gp('Cy', 0, 2.9, .4, 2.6, .12, .12, '96969c', 'Metal', { rz: Math.PI / 2 }));   // antenna mast
+            P.push(gp('Cy', 0, 4.4, .4, .9, .32, .32, 'd8d4c8', 'SmoothPlastic', { rz: Math.PI / 2 }));   // helical antenna
+            // SNAP-27: a finned, dark cylinder on its own pallet, a few metres off
+            P.push(gp('Bl', 7.5, .15, 2.5, 2.2, .3, 2.2, '96969c', 'Metal'));
+            P.push(gp('Cy', 7.5, 1.3, 2.5, 2, 1.1, 1.1, '2c2c30', 'Metal', { rz: Math.PI / 2 }));
+            for (let k = 0; k < 8; k++) { const a = k * Math.PI / 4; P.push(gp('Bl', 7.5 + Math.cos(a) * .85, 1.3, 2.5 + Math.sin(a) * .85, .08, 2, .55, '3a3a40', 'Metal', { ry: -a })); }
+            for (let k = 0; k < 9; k++) P.push(gp('Bl', 1.2 + k * .7, .04, .3 + k * .25, .74, .05, .07, '1e1e20', 'Fabric', { ry: -Math.atan2(.25, .7) }));   // the cable
+            // the seismometer, under its aluminised skirt
+            P.push(gp('Cy', -6, .03, -3, .06, 4.4, 4.4, 'dcdcd8', 'Foil', { rz: Math.PI / 2 }));
+            P.push(gp('Cy', -6, .7, -3, 1.3, 1.1, 1.1, 'd4a63c', 'Foil', { rz: Math.PI / 2 }));
+            for (let k = 0; k < 9; k++) P.push(gp('Bl', -1.3 - k * .52, .04, -.35 - k * .3, .56, .05, .07, '1e1e20', 'Fabric', { ry: -Math.atan2(-.3, -.52) }));
+            return { centre: [0, 0, 0], size: [16, 5, 8], parts: P };
+        })();
+        // Ranger 4 on the far side. It hit at about 9,600 km/h with nothing switched on, so there is no
+        // lander here: a small fresh crater and what was left of it. Its exact impact point has never been found.
+        function ranger4Site(site, wx, wz) {
+            const gy = getSurfaceHeight(wx, wz, site), g = new THREE.Group(); g.position.set(wx, gy, wz);
+            // what was left of it, scattered downrange: torn gold foil, bent frame and panel pieces,
+            // and the balsa capsule's shattered shell
+            const metal = new THREE.MeshStandardMaterial({ color: '#9a9690', metalness: .7, roughness: .45 }),
+                  gold = new THREE.MeshStandardMaterial({ color: '#b08a3a', metalness: .6, roughness: .5 }),
+                  balsa = new THREE.MeshStandardMaterial({ color: '#c8b48a', roughness: .9 }),
+                  dark = new THREE.MeshStandardMaterial({ color: '#2c2c30', metalness: .5, roughness: .6 });
+            const put = (m, x, z, lift, rx, ry, rz) => { m.position.set(x, getSurfaceHeight(wx + x, wz + z, site) - gy + lift, z); m.rotation.set(rx, ry, rz); m.castShadow = m.receiveShadow = true; g.add(m); };
+            for (let k = 0; k < 22; k++) {
+                const a = .6 + (k * 2.399) % 1.9, d = .4 + (k * .61) % 4.2;   // thrown mostly one way: it came in at an angle
+                const sz = .12 + (k % 4) * .09, mat = [metal, gold, metal, dark][k % 4];
+                put(new THREE.Mesh(new THREE.BoxGeometry(sz, .03, sz * 1.8), mat), Math.sin(a) * d, Math.cos(a) * d, .03, k * .7, k * 1.3, k * .4);
+            }
+            put(new THREE.Mesh(new THREE.BoxGeometry(.9, .04, .5), dark), .5, .9, .1, .25, .6, -.3);   // a folded panel, never opened
+            put(new THREE.Mesh(new THREE.CylinderGeometry(.06, .06, 1.1, 8), metal), -.2, 1.6, .08, 0, .9, Math.PI / 2 - .2);   // a bent strut
+            for (let k = 0; k < 5; k++) put(new THREE.Mesh(new THREE.SphereGeometry(.22, 10, 6, 0, Math.PI * 1.1, 0, Math.PI / 2), balsa), 1.2 + k * .5, 2 + (k % 2) * .6, .02, -.4 + k * .3, k, .5);
+            return g;
+        }
         function buildGameSite(site) {
             const data = GAME_SITES[site.id];
             if (!data) return;
@@ -4747,6 +4833,7 @@
                 return out;
             },
             colliders() { return colliders.length; },
+            at(x, z) { player.pos.x = x; player.pos.z = z; },
             go(id) { const st = SITES.find((x) => x.id === id); if (st) warpToSite(st); return !!st; },
             remember(id) { const it = FIELD_ITEMS.find((i) => i.id === id); if (it) runFlashback(it); return !!it; },
             voice() { const e = crewVoice.el; return { src: e.src.split('/').pop(), t: +e.currentTime.toFixed(1), paused: e.paused, vol: +e.volume.toFixed(2), radio: $('g-crewvoice').classList.contains('on'), said: $('g-crewvoice-lines').querySelectorAll('.said').length, active: flashback.active }; },
