@@ -2089,9 +2089,9 @@
         })();
         function updateVisorDust(dt, moving, sprint, airless) {
             if (isInHabitat) visorDust = Math.max(0, visorDust - dt * .5);
-            else if (moving && airless) { visorDust = Math.min(.42, visorDust + dt * (sprint ? .02 : .009)); stillFor = 0; }
+            else if (moving && airless) { visorDust = Math.min(.45, visorDust + dt * (sprint ? .04 : .02)); stillFor = 0; }
             else stillFor += dt;
-            if (!visorWipe && visorDust > .1 && stillFor > 2.5) visorWipe = 0.0001;   // stop for a moment: wipe it
+            if (!visorWipe && visorDust > .06 && stillFor > 2.5) visorWipe = 0.0001;   // stop for a moment: wipe it
             let mask = '';
             if (visorWipe) {
                 visorWipe += dt;
