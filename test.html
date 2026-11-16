@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>Last Signal</title>
     <meta name="description" content="Play the Last Signal interactive field guide: investigate historic NASA hardware across the Moon, Mars and asteroid 433 Eros." />
     <meta name="theme-color" content="#020305" />
@@ -210,6 +210,27 @@
         #g-start .danger { background: var(--g-red); color: #111; padding: 0 18px; }
         #g-start .cf p { color: #e6e8ec; font-size: 13px; line-height: 1.45; margin: 4px 0 10px; }
         #g-start .cf .row { display: flex; gap: 8px; } #g-start .cf .row button { flex: 1; }
+        /* ---------------- touch: Roblox's mobile layout, and the game's own verb buttons ---------------- */
+        #t-controls { display: none; }
+        body.touch #t-controls { display: block; position: fixed; inset: 0; z-index: 24; pointer-events: none; font-family: 'Montserrat', system-ui, sans-serif; }
+        body.touch.in-opening #t-controls { display: none; }
+        body.touch, body.touch #canvas-container { overscroll-behavior: none; -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
+        body.touch button { touch-action: manipulation; }
+        #t-stick { position: absolute; width: 124px; height: 124px; margin: -62px 0 0 -62px; border-radius: 50%; border: 2px solid rgba(255,255,255,.35); background: rgba(10,11,14,.25); opacity: 0; transition: opacity .15s; left: 120px; bottom: 120px; }
+        #t-stick.on { opacity: 1; }
+        #t-knob { position: absolute; left: 50%; top: 50%; width: 52px; height: 52px; margin: -26px 0 0 -26px; border-radius: 50%; background: rgba(255,255,255,.55); }
+        /* the jump button sits where Roblox puts it; the verb grid above it, where the game's Touch script does */
+        #t-jump { pointer-events: auto; position: absolute; right: max(24px, env(safe-area-inset-right)); bottom: max(24px, env(safe-area-inset-bottom)); width: 76px; height: 76px; border-radius: 50%; border: 2px solid rgba(255,255,255,.55); background: rgba(10,11,14,.45); color: #fff; display: grid; place-items: center; }
+        #t-jump:active { background: rgba(255,255,255,.25); }
+        .t-verbs { pointer-events: auto; position: absolute; right: max(16px, env(safe-area-inset-right)); bottom: calc(max(24px, env(safe-area-inset-bottom)) + 92px); display: grid; grid-template-columns: 74px 74px; gap: 8px; }
+        .t-verbs button { height: 50px; padding: 0 2px; border-radius: 8px; border: 1px solid #464a52; background: rgba(14,15,18,.88); color: var(--g-yel); font-weight: 700; font-size: 9.5px; letter-spacing: 0; white-space: nowrap; }
+        .t-verbs button:active { background: rgba(60,62,70,.95); }
+        #t-rotate { display: none; position: absolute; left: 50%; top: calc(max(12px, env(safe-area-inset-top)) + 66px); transform: translateX(-50%); padding: 8px 14px; border-radius: 16px; background: var(--g-ink); border: 1.5px solid var(--g-cyan); color: var(--g-cyan); font-weight: 700; font-size: 11px; white-space: nowrap; }
+        @media (orientation: portrait) { body.touch #t-rotate { display: block; } }
+        /* what the touch layout replaces */
+        body.touch #g-view, body.touch #bottom-console { display: none !important; }
+        body.touch .g-prompt { padding: 10px 18px 10px 10px; } body.touch .g-prompt .key { width: 48px; height: 48px; font-size: 19px; }
+        body.touch .g-imagined { bottom: auto; top: calc(max(12px, env(safe-area-inset-top)) + 56px); }
         #g-whiteout { position: fixed; inset: 0; z-index: 43; background: #fff8ec; opacity: 0; pointer-events: none; transition: opacity .35s ease; }
         #g-skip { position: absolute; top: max(18px, env(safe-area-inset-top)); right: max(18px, env(safe-area-inset-right)); color: #8c929a; font-size: 12px; }
     </style>
@@ -454,6 +475,12 @@
         <button id="g-view" class="g-view" type="button">[V] 3RD PERSON</button>
         <div id="g-imagined" class="g-imagined hidden" role="note">IMAGINED &middot; NO HUMAN HAS EVER BEEN TO EROS</div>
     </div>
+    <div id="t-controls" aria-label="Touch controls">
+        <div id="t-stick" aria-hidden="true"><div id="t-knob"></div></div>
+        <div class="t-verbs"><button type="button" data-verb="remember">REMEMBER</button><button type="button" data-verb="reactivate">REACTIVATE</button><button type="button" data-verb="close">CLOSE</button><button type="button" data-verb="view">VIEW</button></div>
+        <button id="t-jump" type="button" aria-label="Jump"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 14l6-6 6 6"/></svg></button>
+        <div id="t-rotate">Turn your device sideways for the full view</div>
+    </div>
     <div id="g-arrive" class="hidden"><div id="g-arrive-veil"></div><div class="txt"><div id="g-arrive-t" class="t"></div><div id="g-arrive-s" class="s"></div><div id="g-arrive-n" class="n"></div></div></div>
     <div id="g-memory" class="hidden" aria-hidden="true"><div class="vig"></div><div class="grain"></div><div id="g-memory-stamp" class="stamp"></div></div>
     <div id="g-caption" class="g-font" role="status" aria-live="polite"></div>
@@ -504,6 +531,10 @@
         import * as THREE from 'three';
         import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
         import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
+        // a phone or tablet: touch controls, and graphics that a phone's GPU can keep smooth
+        // (?touch=1 shows the touch layout on a desktop, for testing)
+        const IS_TOUCH = matchMedia('(pointer: coarse)').matches || (navigator.maxTouchPoints > 0 && matchMedia('(hover: none)').matches) || new URLSearchParams(location.search).has('touch');
+        if (IS_TOUCH) document.body.classList.add('touch');
 
         // =========================================================================
         // 1. ICONIC NASA APOLLO / LRO / ARTEMIS LUNAR LANDING SITES
@@ -703,7 +734,7 @@
             console.error('Last Signal WebGL initialization failed:', error);
             throw error;
         }
-        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, IS_TOUCH ? 1.5 : 2));
         renderer.setSize(window.innerWidth, window.innerHeight);
         renderer.shadowMap.enabled = true;
         renderer.shadowMap.type = THREE.PCFSoftShadowMap;
@@ -727,8 +758,8 @@
         // Intense Airless Solar Directional Light with high-res shadow frustum
         const sunLight = new THREE.DirectionalLight('#fff9ed', 3.4);
         sunLight.castShadow = true;
-        sunLight.shadow.mapSize.width = 2048;
-        sunLight.shadow.mapSize.height = 2048;
+        sunLight.shadow.mapSize.width = IS_TOUCH ? 1024 : 2048;
+        sunLight.shadow.mapSize.height = IS_TOUCH ? 1024 : 2048;
         sunLight.shadow.camera.near = 1;
         sunLight.shadow.camera.far = 360;
         const shadowExtent = 95;
@@ -840,7 +871,7 @@
                 })
             );
         }
-        const skyStars = buildStarfield(7000);
+        const skyStars = buildStarfield(IS_TOUCH ? 3500 : 7000);
         scene.add(skyStars);
 
         // High-resolution procedural Earth with continents, oceans, polar ice, clouds & atmospheric limb
@@ -1177,7 +1208,7 @@
         scene.add(surfaceWorldGroup);
 
         const TERRAIN_SIZE = 440;
-        const TERRAIN_SEGMENTS = 260;
+        const TERRAIN_SEGMENTS = IS_TOUCH ? 170 : 260;
 
         // Pre-generated crater field per site
         let siteCraters = [];
@@ -1772,7 +1803,7 @@
                 metalness: 0.04
             });
 
-            const boulderCount = site.body === 'Moon' ? 950 : 280;   // the game: 0-2 small rocks per 25.6 m tile
+            const boulderCount = site.body === 'Moon' ? (IS_TOUCH ? 520 : 950) : 280;   // the game: 0-2 small rocks per 25.6 m tile
             rocksInstancedMesh = new THREE.InstancedMesh(rockGeo, site.body === 'Moon' ? rockMat : new THREE.MeshStandardMaterial({ color: site.body === 'Mars' ? '#7d4a30' : '#6e6250', roughness: .95 }), boulderCount);
             rocksInstancedMesh.castShadow = true;
             rocksInstancedMesh.receiveShadow = true;
@@ -1816,7 +1847,7 @@
             surfaceWorldGroup.add(rocksInstancedMesh);
 
             // 3. Foreground Fine Regolith Cobbles & Pebbles (high density near player)
-            const pebbleCount = site.body === 'Moon' ? 1600 : 0;
+            const pebbleCount = site.body === 'Moon' ? (IS_TOUCH ? 700 : 1600) : 0;
             pebblesInstancedMesh = new THREE.InstancedMesh(rockGeo, rockMat, pebbleCount);
             pebblesInstancedMesh.castShadow = true;
             pebblesInstancedMesh.receiveShadow = true;
@@ -2060,6 +2091,7 @@
         });
 
         canvasEl.addEventListener('pointerdown', (e) => {
+            if (e.pointerType === 'touch' && viewMode === 'fpv') { touchDown(e); return; }
             if (viewMode === 'orbit') {
                 lastDragX = e.clientX;
                 lastDragY = e.clientY;
@@ -2081,6 +2113,7 @@
         });
 
         window.addEventListener('pointermove', (e) => {
+            if (e.pointerType === 'touch' && viewMode === 'fpv') { touchMoveEv(e); return; }
             if (viewMode !== 'fpv') return;
 
             const sensitivity = 0.0022;
@@ -2106,6 +2139,7 @@
         });
 
         window.addEventListener('pointerup', (e) => {
+            if (e.pointerType === 'touch' && viewMode === 'fpv') { touchUp(e); return; }
             if (viewMode === 'orbit') {
                 const moveDist = Math.hypot(e.clientX - lastDragX, e.clientY - lastDragY);
                 if (moveDist < 5) {
@@ -2456,7 +2490,9 @@
             if (keys.backward) moveWish.sub(forwardVec);
             if (keys.right) moveWish.add(rightVec);
             if (keys.left) moveWish.sub(rightVec);
-            if (moveWish.lengthSq() > 0) moveWish.normalize();
+            // the thumbstick is analog, as Roblox's is: a light push walks slowly
+            if (touchMove.id !== null) { moveWish.addScaledVector(forwardVec, -touchMove.y); moveWish.addScaledVector(rightVec, touchMove.x); }
+            if (moveWish.lengthSq() > 1) moveWish.normalize();
 
             const maxSpeed = GAME_WALK;   // Roblox Humanoid WalkSpeed 11
             const accel = 30.0;   // a Roblox Humanoid answers the keys at once, on the ground and in the air
@@ -4433,6 +4469,54 @@
                 location.reload();
             };
         }
+
+
+        // ---------- TOUCH (Roblox's mobile controls, and the game's Touch.client.lua verb row) ----------
+        // Left thumb: a dynamic thumbstick that appears wherever it lands and drives an analog walk.
+        // Right thumb: drag to look. Both at once. The round button is jump; REMEMBER, REACTIVATE,
+        // CLOSE and VIEW are the game's own touch verbs. Prompts are tapped or held, as on Roblox.
+        const touchMove = { id: null, x: 0, y: 0, ox: 0, oy: 0 }, touchLook = { id: null, x: 0, y: 0 };
+        const STICK_R = 56;
+        function touchDown(e) {
+            if (e.clientX < innerWidth * 0.45 && touchMove.id === null) {
+                touchMove.id = e.pointerId; touchMove.ox = e.clientX; touchMove.oy = e.clientY; touchMove.x = touchMove.y = 0;
+                const st = $('t-stick'); st.style.left = `${e.clientX}px`; st.style.top = `${e.clientY}px`; st.style.bottom = 'auto'; st.classList.add('on');
+                $('t-knob').style.transform = 'translate(0,0)';
+            } else if (touchLook.id === null) { touchLook.id = e.pointerId; touchLook.x = e.clientX; touchLook.y = e.clientY; }
+            try { canvasEl.setPointerCapture(e.pointerId); } catch (_) {}
+            e.preventDefault();
+        }
+        function touchMoveEv(e) {
+            if (e.pointerId === touchMove.id) {
+                let dx = e.clientX - touchMove.ox, dy = e.clientY - touchMove.oy; const d = Math.hypot(dx, dy);
+                if (d > STICK_R) { dx *= STICK_R / d; dy *= STICK_R / d; }
+                const m = Math.hypot(dx, dy) / STICK_R, dead = 0.08;   // a small dead zone, as Roblox's has
+                const k = m < dead ? 0 : (m - dead) / (1 - dead) / (m || 1);
+                touchMove.x = dx / STICK_R * k * (m || 1) / (m || 1); touchMove.y = dy / STICK_R * k * (m || 1) / (m || 1);
+                $('t-knob').style.transform = `translate(${dx}px,${dy}px)`;
+            } else if (e.pointerId === touchLook.id) {
+                const dx = e.clientX - touchLook.x, dy = e.clientY - touchLook.y; touchLook.x = e.clientX; touchLook.y = e.clientY;
+                const sens = 0.0055;
+                player.yaw -= dx * sens;
+                player.pitch = THREE.MathUtils.clamp(player.pitch - dy * sens, -Math.PI * 0.46, Math.PI * 0.46);
+            }
+        }
+        function touchUp(e) {
+            if (e.pointerId === touchMove.id) { touchMove.id = null; touchMove.x = touchMove.y = 0; $('t-stick').classList.remove('on'); }
+            if (e.pointerId === touchLook.id) touchLook.id = null;
+        }
+        addEventListener('pointercancel', (e) => { if (e.pointerType === 'touch') touchUp(e); });
+        $('t-jump').addEventListener('pointerdown', (e) => { e.preventDefault(); triggerLunarHop(); });
+        document.querySelectorAll('[data-verb]').forEach((b) => b.addEventListener('click', () => {
+            const o = nearestWorldInteractable, item = o && o.kind === 'artifact' ? o.item : null;
+            switch (b.dataset.verb) {
+                case 'remember': if (item && !opening.active) showMemory(item); else showPrompt('Nothing here to remember. Walk up to a piece of equipment.'); break;
+                case 'reactivate': if (item && PUZZLE_FOR[item.id]) { closeModal(); openPuzzle(item); } else showPrompt('Nothing here to bring back online.'); break;
+                case 'close': if (isModalOpen()) closeModal(); else if ($('hud-drawer') && !$('hud-drawer').classList.contains('hidden')) $('hud-toggle-btn').click(); break;
+                case 'view': if (!opening.active) toggleView(); break;
+            }
+        }));
+        if (IS_TOUCH) $('fpv-prompt').textContent = 'Left thumb: walk · Drag on the right: look · Tap or hold a prompt to use it';
 
         // ---------- first / third person (Helmet.client.lua: first person is the default) ----------
         let firstPerson = true;
